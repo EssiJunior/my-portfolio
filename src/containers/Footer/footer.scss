@@ -1,0 +1,141 @@
+@import '../../index.scss';
+footer{
+    background-color: $primary;
+    height: 60vh;
+    
+    @media screen  and (max-width: 550px) {
+        height: 200vh;
+    }
+    @media screen and (min-width: 551px) and (max-width: 800px) {
+        height: 125vh;
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 990px) {
+        height: 80vh;
+    }
+    @media screen and (min-width: 991px) and (max-width: 1200px) {
+        height: 70vh;
+    }
+
+    .footer-info{
+        height: 90%;
+        width: 100%;
+        @include flex(row);
+
+        @media screen  and (max-width: 550px) {
+            align-items: flex-start;
+            height: 97%;
+        }
+        @media screen and (min-width: 551px) and (max-width: 800px) {
+            align-items: flex-start;
+            height: 95%;
+        }
+
+        
+        .container{
+            width: 90%;
+            height: 70%;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr 1fr 1fr;
+            
+
+            @media screen and (max-width: 550px) {
+                grid-template-columns: 1fr;
+            }
+            @media screen and (min-width: 551px) and (max-width: 800px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (min-width: 801px) and (max-width: 990px) {
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            }
+            @media screen and (min-width: 991px) and (max-width: 1200px) {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+
+            aside{
+                @include flex(column);
+                align-items: flex-start;
+                justify-content: space-evenly;
+                
+                @media screen and (max-width: 550px) {
+                    margin: 2rem 0;
+                }
+                @media screen and (min-width: 551px) and (max-width: 800px) {
+                    margin: 2rem 0;
+                }
+                a{
+                    text-decoration: none !important;
+                    color: $white;
+                    font-size: 13px;
+                    line-height: 1.3rem;
+                    &:hover{
+                        color: wheat;
+                    }
+                }
+            }
+            aside.company{
+                // border: 1px solid yellow;
+                .links{
+                    @include flex(row);
+                    justify-content: space-between;
+                    width: 40%;
+                    @media screen  and (max-width: 550px) {
+                        width: 60%;
+                    }
+                    svg{
+                        padding: 0.2rem;
+                        border-radius: 50%;
+                        @include flex(row);
+                        background-color: #f2610050;
+                    }
+                }
+            }
+            aside.categories, aside.shops, aside.help{
+                justify-content: start;
+                .cats, .shop, .info{
+                    margin-top: 2rem;
+                    width: 70%;
+                    
+                    @media screen  and (max-width: 550px) {
+                        width: 100%;
+                    }
+
+                    p{
+                        margin: 0.1rem 0;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .info code{
+                @include flex(row);
+                margin: 0 0 0.5rem 0;
+                color: $white;
+                svg{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .foot-toolbar{
+        height: 10%;
+        background-color: $black;
+        @include flex(row);
+        
+        @media screen  and (max-width: 550px) {
+            height: 3%;
+        }
+        @media screen and (min-width: 551px) and (max-width: 800px) {
+            height: 5%;
+        }
+
+        div.container{
+            @include flex(row);
+            width: 90%;
+            div{
+                width: 8rem;
+            }
+
+        }
+    }
+}

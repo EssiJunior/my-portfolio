@@ -1,0 +1,42 @@
+@import '../../index.scss';
+
+.hero{
+    background: url(../../assets/utilities/wave.svg) center/cover no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 25rem;
+        
+    @media (max-width: #{$breakpoint-sm}) {
+        // styles for screens up to 700px
+        // height: 40vh!important;
+        grid-template-columns: 2fr;
+        position: relative;
+    }
+    
+    .brand{
+        // background-color: $primary;
+        @include flex(column);
+        align-items: flex-start;
+        padding: 0 4rem;
+        @media (max-width: #{$breakpoint-sm}) {
+            // styles for screens up to 700px
+            padding: 0 2rem;
+        }
+        p{
+            color: $white;
+            @media (max-width: #{$breakpoint-sm}) {
+                // styles for screens up to 700px
+                width: 90% !important;
+            }
+        }
+    }
+
+    .actions{
+        background: url(../../assets/utilities/car.png) center/cover no-repeat;
+        @media (max-width: #{$breakpoint-sm}) {
+            // styles for screens up to 700px
+            display: none;
+        }
+    }
+}

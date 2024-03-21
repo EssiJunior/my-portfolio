@@ -1,0 +1,50 @@
+{
+    "///General":"Cette section concerne la traduction des termes fortement utilisés",
+    "name":"Nom",
+    "email":"Email",
+    "message":"Message",
+    "nameE":"Entrez votre nom",
+    "emailE":"Entrez votre email",
+    "emailEx":"xyz@exemple.com",
+    "messageE":"Que voulez-vous nous dire ?",
+    "nameErr":"Veuillez entrer votre nom complet",
+    "emailErr":"Veuillez entrer votre adresse email",
+    "emailErr2":"Veuillez entrer une adresse email valide",
+    "messageErr":"Veuillez entrer votre message",
+    "plus":"En savoir plus...",
+    "more":"Lire d'autres!",
+    "lang":"fr",
+    "check":"En cliquant sur Créer un compte, je reconnais avoir lu et accepté les conditions d'utilisation et la politique de confidentialité.",
+
+    "///Navbar":"Cette section concerne la traduction dans la navbar",
+    "home":"Accueil",
+    "about":"À propos",
+    "contact":"Me contacter",
+    "experience":"Expérience",
+    "skills":"Compétences",
+    "education":"Education",
+    "projects":"Projets",
+    "resume":"CV",
+
+    "///Search":"Cette section concerne la traduction dans la section de recherche",
+    "searchResults":"Résultat de recherche",
+    "noResults":"Aucun résultat",
+    "town":"Ville",
+    "brand":"Marque",
+    "carType":"Type de voiture",
+
+    "///Contact":"Cette section concerne la traduction dans la section Nous Contacter",
+    "send":"Envoyer",
+    "sending":"Envoi...",
+    "sendS":"Envoi de votre message reussi!",
+
+    "///About us":"Cette section concerne la traduction dans la section About us",
+    "aMessage":"NOUS SOMMES FLIKART +",
+    
+    "///Footer":"Cette section concerne la traduction dans le footer",
+    "copyright":"Tout Droits Réservé",
+    "categories":"Catégories",
+    "help":"Aide",
+    "shops":"Boutiques"
+    
+}

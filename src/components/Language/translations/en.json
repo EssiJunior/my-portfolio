@@ -1,0 +1,47 @@
+
+{
+    "///General":"This section concerns translation that is highly used",
+    "name":"Name",
+    "email":"Email",
+    "message":"Message",
+    "nameE":"Enter your name",
+    "emailE":"Enter your email",
+    "emailEx":"xyz@example.com",
+    "messageE":"What do you want to say?",
+    "nameErr":"Please enter your full name",
+    "emailErr":"Please enter your email address",
+    "emailErr2":"Please enter a valid email address",
+    "messageErr":"Please enter your message",
+    "plus":"More about...",
+    "more":"Read more!",
+    "lang":"en",
+    "check":"By clicking Create account, I agree that I have read and accepted the Terms of Use and Privacy Policy.",
+
+    "///Navbar":"This section concerns translation in the navbar",
+    "home":"Home",
+    "about":"About",
+    "contact":"Contact",
+    "experience":"Experience",
+    "skills":"Skills",
+    "education":"Education",
+    "projects":"Projects",
+    "resume":"Resume",
+
+    "///Search":"This section concerns translation in the Search section",
+    "searchResults":"Search results",
+    "noResults":"No results found",
+    "town":"Town",
+    "brand":"Brand",
+    "carType":"Car Type",
+
+    "///Contact":"This section concerns translation in the Contact Us section",
+    "send":"Send",
+    "sending":"Sending",
+    "sendS":"Successfully sent us your message!",
+
+    "///Footer":"This section concerns translation in the footer",
+    "copyright":"All Rights Reserved",
+    "categories":"Categories",
+    "help":"Help",
+    "shops":"Shops"
+}

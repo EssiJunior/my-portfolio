@@ -1,0 +1,76 @@
+@import '../../index.scss';
+
+.input {
+    padding: 1rem 0rem;
+    position: relative;
+    width: 100%;
+    
+}
+
+.icon-suffix,.password-toggle  {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajustez la position de l'icône à droite du champ de texte */
+    transform: translateY(-50%);
+    color: rgb(50, 50, 80);
+}
+
+.input-container {
+    --c-text: rgb(50, 50, 80);
+    --c-bg: rgb(252, 252, 252);
+    display: grid;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    margin: 0 0.1rem;
+    
+}
+
+.input-field {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    height: 27.56px;
+}
+textarea.text-area {
+    min-height: 7rem;
+    max-height: 10rem;
+    max-width: 25rem;
+}
+
+.input-field:not(:placeholder-shown) + .input-label {
+transform: translateY(-220%);
+opacity: 1;
+}
+
+// .input-field:invalid {
+// --c-border: rgb(230, 85, 60);
+// --c-text: rgb(230, 85, 60);
+// --c-outline: rgb(230, 85, 60);
+// }
+
+// .input-field:is(:disabled, :read-only) {
+// --c-border: rgb(150, 150, 150);
+// --c-text: rgb(170, 170, 170);
+// }
+
+.input-field:is(:focus, :focus-visible) {
+outline: 2px solid $secondary;
+outline-offset: 2px;
+}
+
+.input-label {
+--timing: 200ms ease-in;
+position: absolute;
+left: 0;
+top: 50%;
+transition: transform var(--timing),
+    opacity var(--timing);
+transform: translateY(-50%);
+opacity: 0;
+color: var(--c-text);
+font-weight: 500;
+}

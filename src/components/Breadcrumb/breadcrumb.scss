@@ -1,0 +1,9 @@
+@import '../../index.scss';
+
+.breadcrumb{
+    margin:0.5rem 3rem!important;
+}
+.breadcrumb-m{
+    margin:1rem 3rem!important;
+    @include flex('column');
+}
