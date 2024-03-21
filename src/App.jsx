@@ -14,7 +14,7 @@ const lightTheme = {
   colors: {
     navbar:'#fff',
     navbarText:'#0e1217',
-    tag: 'light',
+    footer:'#11998e',
     bg: '#fff',
     text: '#333',
     grey: '#aaa',
@@ -27,6 +27,7 @@ const darkTheme = {
   colors: {
     navbar:'#0e1217',
     navbarText:'#fff',
+    footer:'#0e1217',
     bg: '#333',
     text: '#fff',
     grey: '#555',

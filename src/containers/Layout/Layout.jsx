@@ -13,7 +13,7 @@ const Layout = ({themeToggler, theme}) => {
             <section className='layout'>
                 <Navbar themeToggler={themeToggler} theme={theme} />
                 <Outlet />
-                <Footer />
+                <Footer theme={theme} />
             </section>
         </>
     )

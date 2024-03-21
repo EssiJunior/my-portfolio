@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'
 
 import logo from '../../assets/at-clay.png'
 
-const Footer = () => {
+const Footer = ({theme}) => {
     //State for translation
     const {t,i18n} = useTranslation();
 
@@ -50,7 +50,7 @@ const Footer = () => {
     
     return (
         <footer>
-            <main className='footer-info'>
+            <main className='footer-info' style={{backgroundColor:`${theme.colors.footer}`}}>
                 <section className="container">
                     <aside className="company">
                             <NavLink className='logo' to='/'>
