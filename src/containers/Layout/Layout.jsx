@@ -7,11 +7,11 @@ import './layout.scss'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
-const Layout = () => {
+const Layout = ({themeToggler, theme}) => {
     return (
         <>
             <section className='layout'>
-                <Navbar  />
+                <Navbar themeToggler={themeToggler} theme={theme} />
                 <Outlet />
                 <Footer />
             </section>
