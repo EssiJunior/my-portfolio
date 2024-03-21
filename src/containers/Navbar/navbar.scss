@@ -72,11 +72,7 @@
 
 .drawer{
     font-family: $font-family!important;
-    &:hover{
-        color: $primary;
-    }
     a{
-        color: $black;
         text-decoration: none!important;
         p{
             margin: 2rem!important;

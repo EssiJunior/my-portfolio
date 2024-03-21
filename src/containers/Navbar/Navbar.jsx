@@ -61,7 +61,7 @@ const Navbar = ({themeToggler, theme}) => {
     ]
 
     const DrawerList = (
-        <Box sx={{ width: 300 }} role="presentation" onClick={toggleDrawer(false)} className='drawer'>
+        <Box sx={{ width: 300, height:'100%', backgroundColor:`${theme.colors.navbar}`, color:`${theme.colors.navbarText}`}} role="presentation" onClick={toggleDrawer(false)} className='drawer'>
             <List>
                 {navlinks.map((elt, i) => (
                     <NavLink to={elt.path} key={i}  activeClassName="active">
@@ -131,7 +131,7 @@ const Navbar = ({themeToggler, theme}) => {
                 </section>
             </section>
 
-            <Drawer open={open} anchor='right' onClose={toggleDrawer(false)}>
+            <Drawer open={open} anchor='right' onClose={toggleDrawer(false)} >
                 {DrawerList}
             </Drawer>
         </nav>
