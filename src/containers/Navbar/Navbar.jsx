@@ -78,8 +78,10 @@ const Navbar = () => {
                     is_mobile ?
                     <>
                         <div className="menu">
-                            <Menu sx={{fontSize:'2rem', cursor:'pointer'}} onClick={toggleDrawer(true)}/>
-                            <NavLink to='/'><Typography text='EJ' style={logoStyle}/></NavLink>
+                            <Link className='logo' to='/'>
+                                <img src={logo} alt="Logo" />
+                                <Typography text='Essi Junior' isGradient={true} />
+                            </Link>
                         </div>
                         
                     </>:
@@ -106,12 +108,14 @@ const Navbar = () => {
                     {
                         is_mobile ?
                         <>
-                            <Link className="cart">
-                                <ShoppingCartOutlined sx={{color:color, fontSize:'1.5rem'}} />
-                            </Link>
-                            <Link className="sign" to='signin'>
-                                <Person2Outlined sx={{color:color, fontSize:'1.5rem'}}/>
-                            </Link>
+                            <label className="ui-switch">
+                            <input type="checkbox" />
+                            <div className="slider-2">
+                                <div className="circle"></div>
+                            </div>
+                            </label>
+
+                            <Menu sx={{fontSize:'2.5rem',marginLeft:'0.5rem', cursor:'pointer', color:'#11998e'}} onClick={toggleDrawer(true)}/>
                         </>:
                         <>
                             <label className="switch">
@@ -126,7 +130,7 @@ const Navbar = () => {
                 </section>
             </section>
 
-            <Drawer open={open} onClose={toggleDrawer(false)}>
+            <Drawer open={open} anchor='right' onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
         </nav>
