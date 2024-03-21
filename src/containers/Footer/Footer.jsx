@@ -8,6 +8,8 @@ import Language from '../../components/Language/Language'
 import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
+import logo from '../../assets/at-clay.png'
+
 const Footer = () => {
     //State for translation
     const {t,i18n} = useTranslation();
@@ -17,48 +19,32 @@ const Footer = () => {
     
     const navlinks = [
         {
-            'label':t('exterior'),
-            'path':'/category/exterior'
+            'label':t('about'),
+            'path':'/about'
         },
         {
-            'label':t('evAccesories'),
-            'path':'/category/ev_accesories'
+            'label':t('contact'),
+            'path':'/contact'
         },
         {
-            'label':t('overland'),
-            'path':'/category/overland'
+            'label':t('experience'),
+            'path':'/experience'
         },
         {
-            'label':t('interior'),
-            'path':'/category/interior'
+            'label':t('skills'),
+            'path':'/skills'
         },
         {
-            'label':t('performance'),
-            'path':'/category/performance'
+            'label':t('education'),
+            'path':'/education'
         },
         {
-            'label':t('trailerAndTowing'),
-            'path':'/category/trailer_and_towing'
+            'label':t('projects'),
+            'path':'/projects'
         },
         {
-            'label':t('wheels'),
-            'path':'/category/wheels'
-        },
-        {
-            'label':t('automotiveLighting'),
-            'path':'/category/automotive_lighting'
-        },
-        {
-            'label':t('carCare'),
-            'path':'/category/car_care'
-        },
-        {
-            'label':t('electronics'),
-            'path':'/category/electronics'
-        },
-        {
-            'label':t('all'),
-            'path':'/products'
+            'label':t('resume'),
+            'path':'/category/resume'
         },
     ]
     
@@ -67,7 +53,10 @@ const Footer = () => {
             <main className='footer-info'>
                 <section className="container">
                     <aside className="company">
-                        <NavLink to='/'><Typography text='LOGO HERE' style={{fontWeight:700, fontSize:'1.5rem', width:'100%'}}/></NavLink>
+                            <NavLink className='logo' to='/'>
+                                <img src={logo} alt="Logo" />
+                                <Typography text='Essi Junior'/>
+                            </NavLink>
                         <aside>
                             <NavLink to='/about'><Typography text={t('about')} /></NavLink>
                             <NavLink to='/contact'><Typography text={t('contact')} /></NavLink>
@@ -78,10 +67,10 @@ const Footer = () => {
                             <NavLink to='#'><Twitter /></NavLink>
                             <NavLink to='#'><YouTube /></NavLink>
                         </aside>
-                        <Typography text={<>&copy;Powerksoft solutions 2024, {t('copyright')}</>} style={is_mobile_2?{color:'white', fontSize:'13px', width:'100%'}:{color:'white', fontSize:'13px', width:'70%'}} />
+                        <Typography text={t('copyright')} style={is_mobile_2?{color:'white', fontSize:'13px', width:'100%'}:{color:'white', fontSize:'13px', width:'70%'}} />
                     </aside>
                     <aside className="categories">
-                        <Typography text={t('categories')} style={is_mobile_1? {color:'orange'}:{color:'white'}} />
+                        <Typography text={t('links')} style={is_mobile_1? {color:'orange'}:{color:'white'}} />
                         <aside className="cats">
                             {navlinks.map((elt, i) => (
                             <NavLink to={elt.path} key={i}  activeClassName="active">
@@ -110,11 +99,11 @@ const Footer = () => {
                         <aside className="info">
                             <code>
                                 <Email/>
-                                email@example.com
+                                nessipjunior@gmail.com
                             </code>
                             <code>
                                 <Phone/>
-                                +237 xxx-xxx-xxx
+                                +237 690-743-737
                             </code>
                         </aside>
 
@@ -123,7 +112,7 @@ const Footer = () => {
             </main>
             <main className="foot-toolbar">
                 <div className='container'>
-                    <Typography text='&copy;e-commerce' style={{color:'white'}} />
+                    <Typography text="Essi Junior's portfolio"  style={{color:'white'}} />
                     <div className="lang"><Language /></div>
                 </div>
             </main>

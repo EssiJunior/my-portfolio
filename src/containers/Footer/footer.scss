@@ -31,6 +31,17 @@ footer{
             height: 95%;
         }
 
+        .logo{
+            @include flex(row);
+            img{
+                height: 50px;
+            }
+            p{
+                font-weight:700;
+                font-size:1.3rem;
+
+            }
+        }
         
         .container{
             width: 90%;
