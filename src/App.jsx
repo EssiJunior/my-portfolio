@@ -15,7 +15,7 @@ const lightTheme = {
     navbar:'#fff',
     navbarText:'#0e1217',
     footer:'#11998e',
-    bg: '#fff',
+    bg: '#F2F2F2',
     text: '#333',
     grey: '#aaa',
   },
@@ -50,7 +50,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout themeToggler={toggleTheme} theme={theme} />}>
-            <Route index element={<Home />} />
+            <Route index element={<Home theme={theme} />} />
             {/* <Route path="search" element={<Search />} /> */}
             {/* <Route path="product/:id" element={<SingleProduct />} /> */}
             {/* <Route path="cart" element={<Cart />} /> */}

@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer'
 const Layout = ({themeToggler, theme}) => {
     return (
         <>
-            <section className='layout'>
+            <section className='layout' >
                 <Navbar themeToggler={themeToggler} theme={theme} />
                 <Outlet />
                 <Footer theme={theme} />
