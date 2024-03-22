@@ -19,6 +19,9 @@ const lightTheme = {
     text: '#333',
     grey: '#aaa',
   },
+  hero:{
+    gradient:'primary-gradient'
+  },
   fontSize: '16px',
   tag: 'light',
 };
@@ -31,6 +34,9 @@ const darkTheme = {
     bg: '#333',
     text: '#fff',
     grey: '#555',
+  },
+  hero:{
+    gradient:'black-gradient'
   },
   fontSize: '16px',
   tag: 'dark',

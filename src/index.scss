@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 $primary: #11998e;
-$secondary: #F26100;
+$secondary: #078a65;
 $bg: #F2F2F2;
 $white: #FFFFFF;
 $black: #000000;
 $green: #00B517;
 
-$linear-gradient: linear-gradient(#F26100, #990000);
+$linear-gradient: linear-gradient($primary, $secondary);
 $drop-shadow: drop-shadow(0 0 2em $primary);
 $font-family: Founders Grotesk, monospace, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $border-radius: 0.25rem;
@@ -89,11 +89,11 @@ a{
   );
 }
 .primary-gradient {
-  background: #050816;
-  background: linear-gradient(-90deg, #050816 0%, rgba(10, 8, 14, 0) 100%);
+  background: $primary;
+  background: linear-gradient(-90deg, $primary 0%, rgba(10, 8, 14, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #050816 0%,
+    $primary 0%,
     rgba(10, 8, 14, 0) 100%
   );
 }
