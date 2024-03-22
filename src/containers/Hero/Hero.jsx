@@ -6,6 +6,8 @@ import Button from '../../components/Button/Button'
 import { Link } from 'react-router-dom'
 import { Download, Email, Facebook, GitHub, LinkedIn, Twitter } from '@mui/icons-material'
 
+import resume from "../../assets/data/ESSI Junior - Resume.pdf"
+
 const Hero = ({theme}) => {
     return (
         <section className={`hero ${theme.hero.gradient}`}>       
@@ -16,7 +18,7 @@ const Hero = ({theme}) => {
                     <Typography text='I am a Fullstack software developer and a software engineer.' style={{marginBottom:'3rem'}} />
                     <div className="more">
                         <Link to='products'><Button text='Contact me' bg={theme.tag ===  'light'? 'black':''} /></Link>
-                        <Link to='products'><Button text='Download resume' bg={theme.tag ===  'light'? 'black':''} /></Link>
+                        <a href={resume} target='_blank'><Button text='Download resume' bg={theme.tag ===  'light'? 'black':''} /></a>
 
                     </div>
                 </div>
