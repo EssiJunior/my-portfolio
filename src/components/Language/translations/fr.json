@@ -26,12 +26,10 @@
     "projects":"Projets",
     "resume":"CV",
 
-    "///Search":"Cette section concerne la traduction dans la section de recherche",
-    "searchResults":"Résultat de recherche",
-    "noResults":"Aucun résultat",
-    "town":"Ville",
-    "brand":"Marque",
-    "carType":"Type de voiture",
+    "///About me":"Cette section concerne la traduction dans la section À propos de moi",
+    "aboutMe":"À propos de moi",
+    "in":"Qui je suis",
+    "detail":"Je m'appelle NDANG ESSI Pierre Junior. Je suis un développeur fullstack web et mobile  professionnel, et un ingénieur logiciel dans ma vie quotidienne. J'apprends rapidement et j'ai une attitude d'auto-apprentissage de grande qualité. J'aime apprendre et explorer de nouvelles technologies et je suis passionné par la résolution de problèmes. J'aime presque toutes les piles de développement d'applications. Je suis également très compétitif dans les projets, mon objectif principal étant de travailler sur un grand nombre d'applications très utiles. Mes compétences principales sont basées sur JavaScript, mais mon langage préféré est Python. Je suis disponible pour tout type d'emploi correspondant à mes compétences et à mes intérêts.",
 
     "///Contact":"Cette section concerne la traduction dans la section Nous Contacter",
     "send":"Envoyer",

@@ -103,7 +103,7 @@ const Footer = ({theme}) => {
                             </code>
                             <code>
                                 <Phone/>
-                                +237 690-743-737
+                                +237 690743737
                             </code>
                         </aside>
 

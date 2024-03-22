@@ -4,7 +4,7 @@ import './hero.scss'
 import Typography from '../../components/Typography/Typography'
 import Button from '../../components/Button/Button'
 import { Link } from 'react-router-dom'
-import { Download, Email, Facebook, GitHub, LinkedIn, Twitter } from '@mui/icons-material'
+import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, Twitter } from '@mui/icons-material'
 
 import resume from "../../assets/data/ESSI Junior - Resume.pdf"
 
@@ -16,9 +16,45 @@ const Hero = ({theme}) => {
                     <Typography text='Hi, i am' style={{fontSize:'1.25rem'}} />
                     <Typography text=' Essi Junior' style={{fontSize:'2.75rem', fontWeight:'700'}}/>
                     <Typography text='I am a Fullstack software developer and a software engineer.' style={{marginBottom:'3rem'}} />
+                    
+                    <div className="my-6 flex items-center gap-5">
+
+                        <Link
+                            to='https://github.com/EssiJunior'
+                            target='_blank'
+                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                        >
+                            <GitHub size={30} />
+                        </Link>
+
+                        <Link
+                            to='https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/'
+                            target='_blank'
+                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                        >
+                            <LinkedIn size={30} />
+                        </Link>
+
+                        <Link
+                            to='https://web.facebook.com/torres.essi'
+                            target='_blank'
+                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                        >
+                            <Facebook size={30} />
+                        </Link>
+                        
+                        <Link
+                            to='https://twitter.com/EssiJunior7'
+                            target='_blank'
+                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                        >
+                            <Twitter size={30} />
+                        </Link>
+                    </div>
+
                     <div className="more">
-                        <Link to='products'><Button text='Contact me' bg={theme.tag ===  'light'? 'black':''} /></Link>
-                        <a href={resume} target='_blank'><Button text='Download resume' bg={theme.tag ===  'light'? 'black':''} /></a>
+                        <Link to='products'><Button text='Contact me' bg={theme.tag ===  'light'? 'black':''} icon={<EmailSharp />}/></Link>
+                        <a href={resume} target='_blank'><Button text='Download resume' bg={theme.tag ===  'light'? 'black':''} icon={<DownloadSharp />}/></a>
 
                     </div>
                 </div>
@@ -43,35 +79,35 @@ const Hero = ({theme}) => {
         //             <Link
         //             href='AA'
         //             target='_blank'
-        //             className="transition-all text-pink-500 hover:scale-125 duration-300"
+        //             className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
         //             >
         //             <GitHub size={30} />
         //             </Link>
         //             <Link
         //             href='AA'
         //             target='_blank'
-        //             className="transition-all text-pink-500 hover:scale-125 duration-300"
+        //             className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
         //             >
         //             <LinkedIn size={30} />
         //             </Link>
         //             <Link
         //             href='AA'
         //             target='_blank'
-        //             className="transition-all text-pink-500 hover:scale-125 duration-300"
+        //             className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
         //             >
         //             <Facebook size={30} />
         //             </Link>
         //             <Link
         //             href='AA'
         //             target='_blank'
-        //             className="transition-all text-pink-500 hover:scale-125 duration-300"
+        //             className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
         //             >
         //             <LinkedIn size={30} />
         //             </Link>
         //             <Link
         //             href='AA'
         //             target='_blank'
-        //             className="transition-all text-pink-500 hover:scale-125 duration-300"
+        //             className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
         //             >
         //             <Twitter size={30} />
         //             </Link>
