@@ -30,7 +30,8 @@ const lightTheme = {
   fontSize: '16px',
   tag: 'light',
   global: {
-    subHeading: 'text-secondary'
+    subHeading: 'text-secondary',
+    headingBox: 'secondary',
   }
 };
 
@@ -53,7 +54,8 @@ const darkTheme = {
   fontSize: '16px',
   tag: 'dark',
   global: {
-    subHeading: 'text-primary'
+    subHeading: 'text-primary',
+    headingBox: 'primary',
   }
 };
 

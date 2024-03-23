@@ -93,63 +93,80 @@ const services = [
 //   ];
 
 const experiences = [
-{
-    title: "Python Developer",
-    company_name: "Personal, For individuals, Powerk-soft, Pro service",
-    // icon: shopify,
-    // iconBg: "#383E56",
-    date: "Since - Sept 2021",
-    points: [
-    "Developing and maintaining, fullstack desktop (Tkinter and related) and backend web applications (FastAPI and related).",
-    "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-},
-{
-    title: "Android Developer",
-    company_name: "Personal, For individuals",
-    // icon: shopify,
-    // iconBg: "#383E56",
-    date: "Since - July 2022",
-    points: [
-    "Developing and maintaining, fullstack android application using Kotlin and related technologies.",
-    "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-},
-{
-    title: "React.js Developer",
-    company_name: "Powerk-soft, Pro service",
-    // icon: starbucks,
-    // iconBg: "#383E56",
-    date: "Since - Oct 2022",
-    points: [
-    "Developing and maintaining web applications using React.js and other related technologies.",
-    "Collaborating with cross-functional teams including designers, and other developers to create high-quality products.",
-    "Implementing responsive design and ensuring cross-browser compatibility.",
-    "Participating in code reviews and providing constructive feedback to other developers.",
-    "Beside the work done in these companies, some of my realisations were for individuals."
-    ],
-},
-{
-    title: "React Native Developer",
-    company_name: "Personal",
-    date: "Since - Nov 2022",
-    points: [
-    "Developing mobile cross-platform applications using React Native and other related technologies.",
-    "In some projects teams with friends including designers and other developers to create high-quality products, one of those was presented at the 2022 Github Hackaton.",
-    ],
-},
-{
-    title: "Electron.js Developer",
-    company_name: "Powerk-soft",
-    date: "Since - July 2023",
-    points: [
-    "Developing and maintaining desktop applications using Electron.js.",
-    "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    "Implementing responsive design and ensuring cross-platform compatibility.",
-    "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-},
+    {
+        id:1,
+        title: "Python Developer",
+        company_name: "Personal, For individuals, Powerk-soft, Pro service",
+        // icon: shopify,
+        // iconBg: "#383E56",
+        date: "Since - Sept 2021",
+        points: [
+        "Developing and maintaining, desktop (Tkinter) and backend web applications (FastAPI).",
+        "Collaborating with cross-functional teams including designers, and other developers to create high-quality products.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+        ],
+    },
+    {
+        id:2,
+        title: "Android Developer",
+        company_name: "Personal, For an individual",
+        // icon: shopify,
+        // iconBg: "#383E56",
+        date: "Since - July 2022",
+        points: [
+        "Developing android application using Kotlin and related technologies."
+        ],
+    },
+    {
+        id:3,
+        title: "React.js Developer",
+        company_name: "Powerk-soft, Pro service, Flikart +, For individuals",
+        // icon: starbucks,
+        // iconBg: "#383E56",
+        date: "Since - Oct 2022",
+        points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers."
+        ],
+    },
+    {
+        id:4,
+        title: "React Native Developer",
+        company_name: "Personal, For Individuals, Leratel",
+        date: "Since - Nov 2022",
+        points: [
+            "Developing mobile cross-platform applications using React Native and other related technologies.",
+            "In some projects teams with friends including designers and other developers to create high-quality products, one of those was presented at the 2022 Github Hackaton.",
+        ],
+    },
+    {
+        id:5,
+        title: "Electron.js Developer",
+        company_name: "Powerk-soft",
+        date: "Since - July 2023",
+        points: [
+        "Developing and maintaining desktop applications using Electron.js.",
+        "Collaborating with cross-functional teams including designers, and other developers to create high-quality products.",
+        "Implementing responsive design.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+        ],
+    },
+    {
+        id:6,
+        title: "Software engineer",
+        company_name: "Personal, Powerk-soft, Pro service, Leratel",
+        // icon: shopify,
+        // iconBg: "#383E56",
+        date: "Since - Sept 2021",
+        points: [
+        "Managing software development life cycle in an Agile way using Trello and Github.",
+        "Collaborating with cross-functional teams including designers, product manager, and other developers to create high-quality products.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Producing high quality documentation with Microsoft office and UML modeling softwares."
+        ],
+    },
 ];
 
 const testimonials = [
@@ -172,7 +189,7 @@ const testimonials = [
 {
     testimonial:
     "He made a nice e-commerce dashboard for the management of my products, really nice and cool to use.",
-    name: "Aboubakar",
+    name: "Aboubakar",      
     designation: "CTO",
     company: "Pro Service",
     image: "https://randomuser.me/api/portraits/women/6.jpg",

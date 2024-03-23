@@ -1,78 +1,125 @@
-import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+// @flow strict
 
-import "react-vertical-timeline-component/style.min.css";
+import { experiences } from "@/utils";
+import AnimationLottie from "../../utils/animation-lottie";
+import GlowCard from "../../utils/glow-card";
+import experience from '../../assets/lotties/dev.json';
 
-import { styles } from "../../styles/styles";
-import { experiences } from "../../utils";
-import { textVariant } from "../../utils/motion";
+import bg from  '../../assets/utilities/section.svg'
+import blur from '../../assets/utilities/blur-23.svg'
 
-const ExperienceCard = ({ experience }) => {
+import { FaAndroid, FaPython } from "react-icons/fa6";
+import { SiJavascript } from "react-icons/si";
+import { MdEngineering } from "react-icons/md";
+
+function Experience({theme}) {
+    const experiences_tech = [
+        {
+            id:1,
+            title: "Python Developer",
+            company: "Personal, For individuals, Powerk-soft, Pro service",
+            icon: <FaPython size={30}/>,
+            // iconBg: "#383E56",
+            date: "Since - Sept 2021"
+        },
+        {
+            id:2,
+            title: "Android Developer",
+            company: "Personal, For an individual",
+            icon: <FaAndroid  size={30}/>,
+            // iconBg: "#383E56",
+            date: "Since - July 2022"
+        },
+        {
+            id:3,
+            title: "JavaScript Developer",
+            company: "Powerk-soft, Pro service, Flikart +, For individuals",
+            icon: <SiJavascript size={30}/>,
+            // iconBg: "#383E56",
+            date: "Since - Oct 2022"
+        },
+        {
+            id:6,
+            title: "Software engineer",
+            company: "Personal, Powerk-soft, Pro service, Leratel",
+            icon: <MdEngineering size={30} />,
+            // iconBg: "#383E56",
+            date: "Since - Sept 2021",
+        },
+    ];
+    
+
     return (
-        <VerticalTimelineElement
-        contentStyle={{
-            background: "#004d2f",
-            color: "#fff",
-        }}
-        contentArrowStyle={{ borderRight: "7px solid  #eeba00" }}
-        date={experience.date}
-        iconStyle={{ background: '#eeba00' }}
-        icon={
-            <div className='flex justify-center items-center w-3/5 h-3/5' />
-        }
-        >
-        <div>
-            <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-            <p
-            className='text-secondary text-[16px] font-semibold'
-            style={{ margin: 0 }}
-            >
-            {experience.company_name}
-            </p>
-        </div>
+        <section  className={`experience ${theme.hero.gradient}`}>
+            <div id="experience" className="relative z-50 my-12 lg:my-24 ">
+            <img
+                src={bg}
+                alt="Hero"
+                width={1572}
+                height={795}
+                className="absolute top-0 -z-10"
+            />
 
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
-            {experience.points.map((point, index) => (
-            <li
-                key={`experience-point-${index}`}
-                className='text-white-100 text-[14px] pl-1 tracking-wider'
-            >
-                {point}
-            </li>
-            ))}
-        </ul>
-        </VerticalTimelineElement>
+            <div className="flex justify-center my-5 lg:py-8">
+                <div className="flex  items-center">
+                <span className={`w-24 h-[2px] bg-${theme.global.headingBox}`}></span>
+                <span className={`bg-${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
+                    Experiences
+                </span>
+                <span className={`w-24 h-[2px] bg-${theme.global.headingBox}`}></span>
+                </div>
+            </div>
+
+            <div className="py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                <div className="flex justify-center items-start">
+                    <div className="w-full h-full">
+                    <AnimationLottie animationPath={experience} />
+                    </div>
+                </div>
+
+                <div>
+                    <div className="flex flex-col gap-6">
+                    {
+                        experiences_tech.map(experience => (
+                        <GlowCard key={experience.id} identifier={`experience-${experience.id}`} theme={theme}>
+                            <div className="p-3 relative">
+                            <img
+                                src={blur}
+                                alt="Hero"
+                                width={1080}
+                                height={200}
+                                className="absolute bottom-0 opacity-80"
+                            />
+                            <div className="flex justify-center">
+                                <p className={`text-xs sm:text-sm text-${theme.global.headingBox}`}>
+                                {experience.date}
+                                </p>
+                            </div>
+                            <div className="flex items-center gap-x-8 px-3 py-5">
+                                <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
+                                    {experience.icon}
+                                </div>
+                                <div>
+                                <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                                    {experience.title}
+                                </p>
+                                <p className="text-sm sm:text-base">
+                                    {experience.company}
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                        </GlowCard>
+                        ))
+                    }
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
     );
-};
-
-const Experience = ({theme}) => {
-    return (
-        <>
-        <motion.div variants={textVariant()}>
-            <p className={`${styles.sectionSubText} text-center`}>
-            What I have done so far
-            </p>
-            <h2 className={`${styles.sectionHeadText} text-center`}>
-            Work Experience.
-            </h2>
-        </motion.div>
-
-        <div className='mt-20 flex flex-col'>
-            <VerticalTimeline>
-            {experiences.map((experience, index) => (
-                <ExperienceCard
-                key={`experience-${index}`}
-                experience={experience}
-                />
-            ))}
-            </VerticalTimeline>
-        </div>
-        </>
-    );
-};
+}
 
 export default Experience;

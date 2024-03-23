@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience, theme }) => {
         <VerticalTimelineElement
         contentStyle={{
             background: theme.experience.cardBackground,
-            color: "#fff",
+            color: theme.colors.text,
         }}
         contentArrowStyle={{ borderRight: `7px solid  ${theme.experience.cardDot}` }}
         date={experience.date}
@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience, theme }) => {
             </p>
         </div>
 
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
+        <ul className='mt-5 list-disc ml-5 space-y-2 text-white'>
             {experience.points.map((point, index) => (
             <li
                 key={`experience-point-${index}`}

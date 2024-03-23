@@ -9,7 +9,7 @@ const Home = ({theme}) => {
             
             <Hero theme={theme}/>
             <About theme={theme}/>
-            {/* <Experience theme={theme}/> */}
+            <Experience theme={theme}/>
 
             Home
         </main>
