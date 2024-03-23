@@ -1,6 +1,5 @@
 // @flow strict
 
-import { experiences } from "@/utils";
 import AnimationLottie from "../../utils/animation-lottie";
 import GlowCard from "../../utils/glow-card";
 import experience from '../../assets/lotties/dev.json';
@@ -11,6 +10,11 @@ import blur from '../../assets/utilities/blur-23.svg'
 import { FaAndroid, FaPython } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
 import { MdEngineering } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
+import { NextPlan } from "@mui/icons-material";
+
+import './experience.scss'
 
 function Experience({theme}) {
     const experiences_tech = [
@@ -50,7 +54,7 @@ function Experience({theme}) {
     
 
     return (
-        <section  className={`experience ${theme.hero.gradient}`}>
+        <section className={`experience ${theme.hero.gradient}`}>
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
             <img
                 src={bg}
@@ -62,11 +66,11 @@ function Experience({theme}) {
 
             <div className="flex justify-center my-5 lg:py-8">
                 <div className="flex  items-center">
-                <span className={`w-24 h-[2px] bg-${theme.global.headingBox}`}></span>
-                <span className={`bg-${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
+                <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
+                <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
                     Experiences
                 </span>
-                <span className={`w-24 h-[2px] bg-${theme.global.headingBox}`}></span>
+                <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                 </div>
             </div>
 
@@ -92,7 +96,7 @@ function Experience({theme}) {
                                 className="absolute bottom-0 opacity-80"
                             />
                             <div className="flex justify-center">
-                                <p className={`text-xs sm:text-sm text-${theme.global.headingBox}`}>
+                                <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
                                 {experience.date}
                                 </p>
                             </div>
@@ -118,6 +122,11 @@ function Experience({theme}) {
                 </div>
             </div>
             </div>
+
+            <div className="action">    
+                <Link to='/experience'><Button text='Learn more...' bg={theme.tag ===  'light'? 'black':''} icon={<NextPlan />}/></Link>
+            </div>
+
         </section>
     );
 }

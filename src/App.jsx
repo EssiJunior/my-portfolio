@@ -27,11 +27,14 @@ const lightTheme = {
     cardBackground:'#078a65',
     cardDot:'#11998e',
   },
+  skills:{
+    divider:'via-secondary',
+  },
   fontSize: '16px',
   tag: 'light',
   global: {
     subHeading: 'text-secondary',
-    headingBox: 'secondary',
+    headingBox: 'bg-secondary',
   }
 };
 
@@ -51,11 +54,14 @@ const darkTheme = {
     cardBackground:'#11998e',
     cardDot:'#078a65',
   },
+  skills:{
+    divider:'via-primary',
+  },
   fontSize: '16px',
   tag: 'dark',
   global: {
     subHeading: 'text-primary',
-    headingBox: 'primary',
+    headingBox: 'bg-primary',
   }
 };
 

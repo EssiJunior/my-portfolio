@@ -1,3 +1,11 @@
+@import '../../index.scss';
+
 .experience{
-    
+    // height: 200vh;
+    padding-bottom: 2rem;
+    .action{
+        width: 50%;
+        margin: 2rem auto;
+        @include flex(column);
+    }
 }
