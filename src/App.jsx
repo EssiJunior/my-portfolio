@@ -30,6 +30,9 @@ const lightTheme = {
   skills:{
     divider:'via-secondary',
   },
+  contact:{
+    bg:'contact-bloc',
+  },
   fontSize: '16px',
   tag: 'light',
   global: {
@@ -56,6 +59,9 @@ const darkTheme = {
   },
   skills:{
     divider:'via-primary',
+  },
+  contact:{
+    bg:'contact-bloc-dark',
   },
   fontSize: '16px',
   tag: 'dark',

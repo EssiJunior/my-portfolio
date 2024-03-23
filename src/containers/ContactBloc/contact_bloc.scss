@@ -1,0 +1,13 @@
+@import '../../index.scss';
+
+.contact-bloc-dark{
+    background: #171717;
+    background: linear-gradient(180deg, #171717 48%, #111111 100%);
+    border:0px;
+}
+
+.contact-bloc{
+    background: $secondary;
+    background: linear-gradient(180deg, $secondary 48%, $primary 100%);
+    border:0px;
+}

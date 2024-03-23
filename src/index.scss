@@ -188,6 +188,12 @@ a{
 }
 
 
+.action{
+  width: 50%;
+  margin: 2rem auto;
+  @include flex(column);
+}
+
 #sticky-card-1 {
   --index: 1;
 }

@@ -12,7 +12,7 @@ import { SiJavascript } from "react-icons/si";
 import { MdEngineering } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import { NextPlan } from "@mui/icons-material";
+import { GrNext } from "react-icons/gr";
 
 import './experience.scss'
 
@@ -124,7 +124,7 @@ function Experience({theme}) {
             </div>
 
             <div className="action">    
-                <Link to='/experience'><Button text='Learn more...' bg={theme.tag ===  'light'? 'black':''} icon={<NextPlan />}/></Link>
+                <Link to='/experience'><Button text='Learn more...' bg={theme.tag ===  'light'? 'black':''} icon={<GrNext />}/></Link>
             </div>
 
         </section>

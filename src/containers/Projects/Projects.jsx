@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
 import ProjectCard from '../../components/PojectsCard/ProjectsCard';
 import { projects } from '../../utils';
+import Button from '../../components/Button/Button';
+import { GrNext } from "react-icons/gr";
 
 const Projects = ({theme}) => {
 
@@ -22,14 +25,20 @@ const Projects = ({theme}) => {
                     <div
                     id={`sticky-card-${project.id}`}
                     key={project.id}
-                    className="sticky-card w-full mx-auto max-w-2xl sticky"
+                    className="sticky-card mx-auto max-w-2xl sticky"
+                    style={{width:"90%"}}
                     >
-                    <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                        <ProjectCard project={project} theme={theme} />
-                    </div>
+                        <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+                            <ProjectCard project={project} theme={theme} />
+                        </div>
                     </div>
                 ))}
                 </div>
+            </div>
+
+            
+            <div className="action">    
+                <Link to='/projects'><Button text='Learn more...' bg={theme.tag ===  'light'? 'black':''} icon={<GrNext />}/></Link>
             </div>
         </main>
     );

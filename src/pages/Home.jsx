@@ -5,6 +5,7 @@ import Experience from '../containers/Experience/Experience'
 import Skills from '../containers/Skills/Skills'
 import Education from '../containers/Education/Education'
 import Projects from '../containers/Projects/Projects'
+import ContactBloc from '../containers/ContactBloc/ContactBloc'
 
 const Home = ({theme}) => {
     return (
@@ -16,8 +17,7 @@ const Home = ({theme}) => {
             <Skills theme={theme}/>
             <Education theme={theme}/>
             <Projects theme={theme}/>
-
-            Home
+            <ContactBloc theme={theme}/> 
         </main>
     )
 }
