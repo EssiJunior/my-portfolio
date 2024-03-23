@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 
 import '../styles/glow.scss'
-const GlowCard = ({ children , identifier, theme}) => {
+const GlowCard = ({ children , identifier}) => {
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
@@ -70,7 +70,7 @@ const GlowCard = ({ children , identifier, theme}) => {
 
   return (
     <div className={`glow-container-${identifier} glow-container`}>
-      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-${theme.global.headingBox} transition-all duration-300 relative bg-[#171717] text-white rounded-xl hover:border-transparent w-4/5`}>
+      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-secondary transition-all duration-300 relative bg-[#171717] text-white rounded-xl hover:border-transparent w-4/5`}>
         <div className="glows"></div>
         {children}
       </article>

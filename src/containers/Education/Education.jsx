@@ -60,7 +60,7 @@ function Education({theme}) {
                     <div className="flex flex-col gap-6">
                     {
                         eduation.map(eduation => (
-                        <GlowCard key={eduation.id} identifier={`eduation-${eduation.id}`} theme={theme}>
+                        <GlowCard key={eduation.id} identifier={`eduation-${eduation.id}`} >
                             <div className="p-3 relative">
                             <img
                                 src={blur}

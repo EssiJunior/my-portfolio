@@ -196,182 +196,88 @@ const testimonials = [
 },
 ];
 
-// const projects = [
-// {
-//     name: "My Portfolio",
-//     description:
-//     "Website presenting me, my works and my experience in my developper life. This will indeed open this site again.",
-//     tags: [
-//     {
-//         name: "react",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//     },
-//     {
-//         name: "tailwind",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: portfolio,
-//     demo_link: "https://essijunior-portfolio.vercel.app/",
-// },
-// {
-//     name: "Pro Service",
-//     description:
-//     "e-commerce site that enables users to buy products online in a rapid, simple, organised and control manner.",
-//     tags: [
-//     {
-//         name: "react",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "fastapi",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//     },
-//     {
-//         name: "bootstrap",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: ps,
-//     demo_link: "https://proservice.cm/",
-// },
-// {
-//     name: "Recho",
-//     description:
-//     "Web application that enables users to manage echographic consultations in a rapid, simple, organised and control manner.",
-//     tags: [
-//     {
-//         name: "react",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "node.js",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//     },
-//     {
-//         name: "tailwind",
-//         color: "pink-text-gradient",
-//     },
-//     {
-//         name: "preline",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: recho,
-//     demo_link: "https://recho-xi.vercel.app/",
-// },
-// {
-//     name: "Real estate",
-//     description:
-//     "Web application that permits to manage/visualise real estate products online in a rapid, simple, organised, secured and control manner.",
-//     tags: [
-//     {
-//         name: "react",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "electron",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "fastapi",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//     },
-//     {
-//         name: "bootstrap",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: estate,
-//     demo_link: "#",
-// },
-// {
-//     name: "Bus tickets",
-//     description:
-//     "Web application that permits to manage/reserve bus tickets online in a rapid, simple, organised, secured and control manner.",
-//     tags: [
-//     {
-//         name: "react",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "electron",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "fastapi",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//     },
-//     {
-//         name: "bootstrap",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: bus,
-//     demo_link: "#",
-// },
-// {
-//     name: "Pastor Aissatou website",
-//     description:
-//     "The website of Pastor Aissatou Esther, presenting her and her faith, simplified and comprehensive interface.",
-//     tags: [
-//     {
-//         name: "html",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "JavaScript",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "css",
-//         color: "pink-text-gradient",
-//     },
-//     ],
-//     image: bs,
-//     demo_link: "#",
-// },
-// {
-//     name: "Pharma",
-//     description:
-//     "An Android app offering the presentation of utility medical equipments and materials.",
-//     tags: [
-//     {
-//         name: "Android-xml",
-//         color: "blue-text-gradient",
-//     },
-//     {
-//         name: "Kotlin",
-//         color: "orange-text-gradient",
-//     },
-//     {
-//         name: "Sqlite",
-//         color: "green-text-gradient",
-//     },
-//     ],
-//     image: pharma,
-//     demo_link: "#",
-// },
-// ];
+const projects = [
+    // {
+    //     id: 1,
+    //     name: 'E-commerce',
+    //     description: "I and my team built an e-commerce web application. We used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
+    //     tools: ['React', 'TailwindCSS', 'Material UI','ThreeJS', 'NodeJS','ExpressJS','Nodemailer','Swagger UI', 'Mongoose', 'MongoDB', 'CPanel', 'Git','Github'],
+    //     role: 'Fullstack Developer',
+    //     code: '',
+    //     demo: '',
+    //     image: '',
+    // },
+    {
+        id: 1,
+        name: 'Flikart +',
+        description: "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
+        tools: ['React', 'TailwindCSS', 'Material UI','ThreeJS', 'NodeJS','ExpressJS','Nodemailer','Swagger UI', 'Mongoose', 'MongoDB', 'CPanel', 'Git','Github'],
+        role: 'Fullstack Developer',
+        code: '',
+        demo: 'flikart.org',
+        image: '',
+    },
+    {
+        id: 2,
+        name: 'Pro Service',
+        description: "I and a friend built an e-commerce web applcation for a company. We used ReactJS, TailwindCSS, and other npm libraries for the UI. We utilized FastAPI and related libraries to develop Rest APIs. The database was a NoSQL type, MongoDB. We used Pymongo to bear it. We used the SCRUM agile methodology to manage the software lifecycle.",
+        tools: ['React', 'Bootstrap', 'Material UI', 'FastAPI', 'Pymongo', 'MongoDB', 'JWT', 'CPanel', 'Trello', 'Git','Github'],
+        role: 'Fullstack Developer and software engineer',
+        code: '',
+        demo: 'proservice.cm',
+        image: '',
+    },
+    {
+        id: 3,
+        name: 'Dask',
+        description: "I and my team built a task management cross platform mobile applcation we presented at github hackaton. We used React native, and other npm libraries for the UI. We utilized Node.js, Socket.io and related libraries to develop websocket. The database was an SQL type, SQLite. We also used firebase to bear authentication.",
+        tools: ['React native', 'SQLite', 'Trello', 'Git','Github'],
+        role: 'React native Developer',
+        code: 'https://github.com/EssiJunior/Dask',
+        demo: 'https://play.google.com/store/apps/details?id=com.dilane3.dask',
+        image: '',
+    },
+    {
+        id: 4,
+        name: 'Recho',
+        description: 'I and a friend developed a web app for Echographic consultations. We created the UI using ReactJS, Material UI, TailwindCSS, Preline and related npm libraries. We developped the rest APIs with Node.JS, express.JS, nodemailer and related npm libraries. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.',
+        tools: ['React', 'Tailwind CSS', "Material UI", "Preline", "NodeJS", "Express", "Nodemailer","MongoDB",  "Mongoose", 'Git','Github'],
+        role: 'Full Stack Developer',
+        code: '',
+        demo: '',
+        image: '',
+    },
+    {
+        id: 5,
+        name: 'Real Estate',
+        description: 'I developped a fullstack real estate web app. I used FastAPI, Python, Pymongo and related packages to develop the API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.',
+        tools: ['React', 'Bootstrap', 'Material UI', 'Redux toolkit', 'Python', 'FastAPI', 'MongoDB', 'Pymongo', 'JWT', 'Git','Github'],
+        code: '',
+        role: 'Full Stack Developer',
+        demo: '',
+        image: '',
+    },
+    {
+        id: 6,
+        name: 'Bus tickets',
+        description: 'I developped a fullstack bus tickets reservation web and desktop app. I used FastAPI, Python, Pymongo and related packages to develop the web and desktop API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the web UI, and ElectronJS to develop the desktop UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.',
+        tools: ['React', 'Bootstrap', 'Material UI', 'Redux toolkit', 'Python', 'FastAPI', 'MongoDB', 'Pymongo', 'JWT', 'ElectronJS', 'Git','Github'],
+        code: '',
+        role: 'Full Stack Developer',
+        demo: '',
+        image: '',
+    },
+    {
+        id: 7,
+        name: 'Pharma',
+        description: "I developped the beta version of an android mobile app which manages, organises and presents medical drugs to users. I used Koltlin programming language to develop the backend. I utilized Android XML, Material Design, and related packages to develop the android UI. The database was an SQL type, SQLite.",
+        tools: ['Android', 'Kotlin', 'Material design', 'XML', "SQLite"],
+        code: '',
+        demo: '',
+        image: '',
+        role: 'Android Developer',
+    }
+];
 
-export { services, experiences, testimonials };
+
+export { services, experiences, testimonials, projects };

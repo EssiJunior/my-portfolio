@@ -1,10 +1,12 @@
 // @flow strict
 
 import Marquee from "react-fast-marquee";
-import { FaAndroid, FaAws, FaBootstrap, FaCss3, FaDocker, FaFigma, FaGit, FaHtml5, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact } from "react-icons/fa6";
-import { SiCanva, SiFastapi, SiJavascript, SiKotlin, SiMaterialdesign, SiMicrosoftoffice, SiMongodb, SiMysql, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import { FaAndroid, FaAws, FaBootstrap, FaCss3, FaDocker, FaFigma, FaGit, FaHtml5, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact, FaSass } from "react-icons/fa6";
+import { SiCanva, SiFastapi, SiJavascript, SiKotlin, SiMaterialdesign, SiMicrosoftoffice, SiMongodb, SiMysql, SiPostgresql, SiRedux, SiSwagger, SiTailwindcss } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 import { IoLogoElectron } from "react-icons/io5";
+import { SiMui } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
 
 const skillsData = [
     {
@@ -74,13 +76,13 @@ const skillsData = [
     },
     {
         id: 14,
-        icon: <SiMaterialdesign size={40}/>,
+        icon: <SiMui size={40}/>,
         tag: 'MaterialUI',
     },
     {   
         id: 15,
         icon: <FaNodeJs size={40}/>,
-        tag: 'Node JS',
+        tag: 'NodeJS',
     },
     {
         id: 16,
@@ -100,7 +102,7 @@ const skillsData = [
     {
         id: 19,
         icon: <SiMicrosoftoffice size={40}/>,
-        tag: 'Microsoft Office',
+        tag: 'M. Office',
     },
     {
         id: 20,
@@ -125,18 +127,38 @@ const skillsData = [
     {
         id: 24,
         icon: <RiReactjsLine  size={40}/>,
-        tag: 'React Native',
+        tag: 'React-Native',
     },
     {
         id: 25,
         icon: <IoLogoElectron size={40}/>,
-        tag: 'Electron JS',
+        tag: 'ElectronJS',
     },
     {   
         id: 26,
         icon: <FaAndroid size={40}/>,
         tag: 'Android',
     },
+    {
+        id: 27,
+        icon: <FaSass size={40}/>,
+        tag: 'Scss',
+    },
+    {
+        id: 28,
+        icon: <SiRedux  size={40}/>,
+        tag: 'Redux',
+    },
+    {
+        id: 29,
+        icon: <TbBrandThreejs  size={40}/>,
+        tag: 'ThreeJS',
+    },
+    {
+        id: 30,
+        icon: <SiSwagger size={40}/>,
+        tag: 'Swagger',
+    }
 ]
 
 function Skills({theme}) {

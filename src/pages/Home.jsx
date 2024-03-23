@@ -4,6 +4,7 @@ import About from '../containers/About/About'
 import Experience from '../containers/Experience/Experience'
 import Skills from '../containers/Skills/Skills'
 import Education from '../containers/Education/Education'
+import Projects from '../containers/Projects/Projects'
 
 const Home = ({theme}) => {
     return (
@@ -14,6 +15,8 @@ const Home = ({theme}) => {
             <Experience theme={theme}/>
             <Skills theme={theme}/>
             <Education theme={theme}/>
+            <Projects theme={theme}/>
+
             Home
         </main>
     )

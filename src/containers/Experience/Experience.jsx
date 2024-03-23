@@ -86,7 +86,7 @@ function Experience({theme}) {
                     <div className="flex flex-col gap-6">
                     {
                         experiences_tech.map(experience => (
-                        <GlowCard key={experience.id} identifier={`experience-${experience.id}`} theme={theme}>
+                        <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
                             <div className="p-3 relative">
                             <img
                                 src={blur}
