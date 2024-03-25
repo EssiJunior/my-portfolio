@@ -11,7 +11,7 @@ import resume from "../../assets/data/ESSI Junior - Resume.pdf"
 const Hero = ({theme}) => {
     return (
         <section className={`hero ${theme.hero.gradient}`}>       
-            <div className="container-hero">
+            <div className="container-hero ">
                 <div className="brand" style={{color:theme.colors.text}}>
                     <Typography text='Hi, i am' style={{fontSize:'1.25rem'}} />
                     <Typography text=' Essi Junior' style={{fontSize:'2.75rem', fontWeight:'700'}}/>

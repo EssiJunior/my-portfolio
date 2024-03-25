@@ -2,9 +2,11 @@
 
 .doing{
     padding: 3rem 0;
+    height: 80vh;
     .wrapper{
         @include flex(column);
         width: 80%;
+        height: 100%;
         margin: 0 auto;
         
         p{

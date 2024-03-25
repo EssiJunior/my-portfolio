@@ -4,22 +4,48 @@
     width: 100%;
     height: 100vh;
 
-    section{
-        height: 20%;
+    @media screen and (max-width: 400px) {
+        height: 130vh;
     }
+    @media screen and (min-width: 401px) and (max-width: 450px) {
+        height: 120vh;
+    }
+    @media screen and (min-width: 451px) and (max-width: 650px) {
+        height: 100vh;
+    }
+    @media screen and (min-width: 651px) and (max-width: 990px) {
+        height: 80vh;
+    }
+    // section{
+    //     // height: 20%;
+    // }
+    
     .detail{
         height: 70%;
         width: 90%;
         margin: 0 auto;
         @include flex(row);
 
+        @media screen  and (max-width: 990px) {
+            width: 100%;
+        }
+
         .description{
             width: 50%;
+            
+            @media screen and (max-width: 990px) {
+                width: 70%;
+                height: 90%;
+            }
         }
         .illustration{
             background: url(../../assets/utilities/me-ca2852c0.png) center/cover no-repeat;
             width: 40%;
             height: 100%;
+            @media screen  and (max-width: 990px) {
+                // width: 80%;
+                display: none;
+            }
 
         }
     }

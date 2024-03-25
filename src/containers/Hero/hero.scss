@@ -3,7 +3,7 @@
 .hero{
     // background: url(../../assets/utilities/hero.svg) center/cover no-repeat;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
         
     @media (max-width: #{$breakpoint-sm}) {
         // styles for screens up to 700px
@@ -18,6 +18,10 @@
         height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: #{$breakpoint-sm}) {
+            // styles for screens up to 700px
+            grid-template-columns: 1fr;
+        }
         
         .brand{
             // background-color: $primary;
@@ -38,6 +42,10 @@
                 @include flex(row);
                 justify-content: space-between;
                 width: 60%;
+                @media (max-width: 700px) {
+                    // styles for screens up to 700px
+                    width: 100%;
+                }
             }
         }
 

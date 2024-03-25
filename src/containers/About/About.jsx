@@ -11,7 +11,7 @@ const About = ({theme}) => {
     return (
         <main className='about' id="about-me" style={{color:theme.colors.text}}>
             <section
-                className={`${styles.padding} min-h-[200px]`}
+                className={`${styles.padding} min-h-[165px]`}
             >
                 <motion.div 
                 // variants={textVariant()} 

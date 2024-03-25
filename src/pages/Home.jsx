@@ -9,7 +9,7 @@ import ContactBloc from '../containers/ContactBloc/ContactBloc'
 
 const Home = ({theme}) => {
     return (
-        <main style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
+        <main className='home' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
             
             <Hero theme={theme}/>
             <About theme={theme}/>

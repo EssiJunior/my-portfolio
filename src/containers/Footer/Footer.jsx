@@ -8,6 +8,11 @@ import Language from '../../components/Language/Language'
 import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
+import { FaAndroid, FaNodeJs, FaPython, FaReact } from "react-icons/fa6";
+import { SiFastapi, } from "react-icons/si";
+import { RiReactjsLine } from "react-icons/ri";
+import { IoLogoElectron } from "react-icons/io5";
+
 import logo from '../../assets/at-clay.png'
 
 const Footer = ({theme}) => {
@@ -30,24 +35,57 @@ const Footer = ({theme}) => {
             'label':t('experience'),
             'path':'/experience'
         },
-        {
-            'label':t('skills'),
-            'path':'/skills'
-        },
-        {
-            'label':t('education'),
-            'path':'/education'
-        },
+        // {
+        //     'label':t('skills'),
+        //     'path':'/skills'
+        // },
+        // {
+        //     'label':t('education'),
+        //     'path':'/education'
+        // },
         {
             'label':t('projects'),
             'path':'/projects'
         },
         {
             'label':t('resume'),
-            'path':'/category/resume'
+            'path':'/resume'
         },
     ]
-    
+    const tech = [
+        {
+            'label':'Python',
+            'icon':<FaPython size='20' />
+        },
+        {
+            'label':'JavaScript',
+            'icon':<IoLogoElectron size='20' />
+        },
+        {
+            'label':'FastAPI',
+            'icon':<SiFastapi size='20' />
+        },
+        {
+            'label':'React',
+            'icon':<FaReact size='20' />
+        },
+        {
+            'label':'React Native',
+            'icon':<RiReactjsLine size='20' />
+        },
+        {
+            'label':'Electron',
+            'icon':<IoLogoElectron size='20' />
+        },
+        {
+            'label':'NodeJS',
+            'icon':<FaNodeJs size='20' />
+        },
+        {
+            'label':'Android',
+            'icon':<FaAndroid size='20' />
+        },
+    ]
     return (
         <footer>
             <main className='footer-info' style={{backgroundColor:`${theme.colors.footer}`}}>
@@ -79,20 +117,18 @@ const Footer = ({theme}) => {
                             ))}
                         </aside>
                     </aside>
-                    <aside className="shops">
-                        <Typography text={t('shops')} style={is_mobile_1? {color:'orange'}:{color:'white'}} />
-                        <aside className="shop">
-                            <Typography text='Yaounde' style={{color:'white'}} />
-                            <Typography text='Bastos traffic circle, street 403-2' style={{color:'white'}} />
+                    <aside className="tech text-white">
+                        <Typography text='Top techs' style={is_mobile_1? {color:'orange'}:{color:'white'}} />
+                        
+                        <aside className="elts">
+                            {tech.map((elt, i) => (
+                                <div key={i}>
+                                    {elt.icon}
+                                    <Typography text={elt.label} style={{marginLeft:'0.5rem'}}/>
+                                </div>
+                            ))}
                         </aside>
-                        <aside className="shop">
-                            <Typography text='Douala' style={{color:'white'}} />
-                            <Typography text='Akwa, street 1001-24' style={{color:'white'}} />
-                        </aside>
-                        <aside className="shop">
-                            <Typography text='Berlin' style={{color:'white'}} />
-                            <Typography text='Town center, xxx-xx-xxxx' style={{color:'white'}} />
-                        </aside>
+                        
                     </aside>
                     <aside className="help">
                         <Typography text={t('help')} style={is_mobile_1? {color:'orange'}:{color:'white'}} />

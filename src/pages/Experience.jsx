@@ -14,7 +14,7 @@ import ExperienceCard from "../components/ExperienceCard/ExperienceCard";
 const Experience = ({theme}) => {
     return (
         <main className="experience py-12" style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
-            <motion.div variants={textVariant()}>
+            <motion.div variants={textVariant()} className="mt-12">
                 <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>
                 What I have done so far
                 </p>

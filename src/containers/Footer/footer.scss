@@ -102,9 +102,9 @@ footer{
                     }
                 }
             }
-            aside.categories, aside.shops, aside.help{
+            aside.categories, aside.tech, aside.help{
                 justify-content: start;
-                .cats, .shop, .info{
+                .cats, .elts, .info{
                     margin-top: 2rem;
                     width: 70%;
                     
@@ -117,6 +117,9 @@ footer{
                         font-size: 13px;
                     }
                 }
+            }
+            .elts div{
+                @include flex(row);
             }
             .info code{
                 @include flex(row);

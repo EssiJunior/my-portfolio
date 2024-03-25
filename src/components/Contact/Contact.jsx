@@ -106,7 +106,7 @@ const Contact = ({theme}) => {
           {
             page !== 'contact' &&
             <>
-              <p className={styles.sectionSubText}>{t('inTouch')}</p>
+              <p className={styles.sectionSubText}>{t('inTouch')} (In development)</p>
               <h3 className={`${styles.sectionHeadText} text-outline text-white`}>{t('contact')}</h3>
             </>
           }

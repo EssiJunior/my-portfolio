@@ -42,21 +42,21 @@ const Navbar = ({themeToggler, theme}) => {
             'label':t('experience'),
             'path':'/experience'
         },
-        {
-            'label':t('skills'),
-            'path':'/skills'
-        },
-        {
-            'label':t('education'),
-            'path':'/education'
-        },
+        // {
+        //     'label':t('skills'),
+        //     'path':'/skills'
+        // },
+        // {
+        //     'label':t('education'),
+        //     'path':'/education'
+        // },
         {
             'label':t('projects'),
             'path':'/projects'
         },
         {
             'label':t('resume'),
-            'path':'/category/resume'
+            'path':'/resume'
         },
     ]
 
