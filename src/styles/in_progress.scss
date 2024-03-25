@@ -1,0 +1,16 @@
+@import '../index.scss';
+
+.doing{
+    padding: 3rem 0;
+    .wrapper{
+        @include flex(column);
+        width: 80%;
+        margin: 0 auto;
+        
+        p{
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+    }
+}

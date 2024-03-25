@@ -10,6 +10,7 @@ import Layout from '@/containers/Layout/Layout'
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
 import Experience from './pages/Experience';
+import InProgress from './pages/InProgress';
 
 const lightTheme = {
   colors: {
@@ -87,10 +88,10 @@ function App() {
           <Route path="/" element={<Layout themeToggler={toggleTheme} theme={theme} />}>
             <Route index element={<Home theme={theme} />} />
             <Route path="experience" element={<Experience theme={theme} />} />
-            {/* <Route path="product/:id" element={<SingleProduct />} /> */}
-            {/* <Route path="cart" element={<Cart />} /> */}
-            {/* <Route path="checkout" element={<Checkout />} /> */}
-            {/* <Route path="signup" element={<Signup />} /> */}
+            <Route path="about" element={<InProgress theme={theme} />} />
+            <Route path="contact" element={<InProgress theme={theme} />} />
+            <Route path="projects" element={<InProgress theme={theme} />} />
+            <Route path="resume" element={<InProgress theme={theme} />} />
           </Route>
         </Routes>
       </BrowserRouter>
