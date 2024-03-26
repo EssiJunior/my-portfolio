@@ -10,7 +10,7 @@ import blur from '../../assets/utilities/blur-23.svg'
 import { GrCertificate } from "react-icons/gr";
 
 
-function Education({theme}) {
+function Education({theme, educationRef}) {
     const eduation = [
         {
             id:1,
@@ -28,7 +28,7 @@ function Education({theme}) {
     
 
     return (
-        <section className={`experience ${theme.hero.gradient}`}>
+        <section className={`experience ${theme.hero.gradient}`} ref={educationRef} >
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
             <img
                 src={bg}

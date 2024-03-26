@@ -8,16 +8,16 @@ export const SEOProps = {
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
 };
 
 export const themeProps = {
-    colors: PropTypes.object.isRequired,
-    hero: PropTypes.object.isRequired,
-    experience: PropTypes.object.isRequired,
-    skills: PropTypes.object.isRequired,
-    contact: PropTypes.object.isRequired,
-    fontSize: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    global: PropTypes.object.isRequired,
+    colors: PropTypes.object,
+    hero: PropTypes.object,
+    experience: PropTypes.object,
+    skills: PropTypes.object,
+    contact: PropTypes.object,
+    fontSize: PropTypes.string,
+    tag: PropTypes.string,
+    global: PropTypes.object,
 }

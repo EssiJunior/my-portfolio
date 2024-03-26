@@ -1,23 +1,25 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Typography from '../../components/Typography/Typography'
 
 import './navbar.scss'
 
-import { Menu } from '@mui/icons-material'
-import { Link, NavLink } from 'react-router-dom'
-import { Box, Drawer, List, useMediaQuery } from '@mui/material'
+import { Menu, Pages } from '@mui/icons-material'
+import { Link, NavLink, useParams } from 'react-router-dom'
+import { Box, Divider, Drawer, List, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import Language from '../../components/Language/Language'
 import logo from '../../assets/at-color.png'
 import logoWhite from '../../assets/at-clay.png'
+import { ScrollToRef } from '../../utils/Scroll'
 
-const Navbar = ({themeToggler, theme}) => {
-    
+const Navbar = ({themeToggler, theme,  languageRef, skillsRef,  educationRef }) => {
+    const [page, setPage] = useState(window.location.pathname)
     //State for translation
     const {t} = useTranslation();
+    const params = useParams()
 
     const is_mobile = useMediaQuery('(max-width: 1100px)')
-    const is_mobile_1 = useMediaQuery('(max-width: 700px)')
+    // const is_mobile_1 = useMediaQuery('(max-width: 700px)')
     // const is_mobile_2 = useMediaQuery('(max-width: 420px)')
 
     const [open, setOpen] = useState(false);
@@ -56,6 +58,21 @@ const Navbar = ({themeToggler, theme}) => {
             'path':'/resume'
         },
     ]
+    const reflinks = [
+        {
+            'label':t('skills'),
+            'ref':skillsRef
+        },
+        {
+            'label':t('education'),
+            'ref':educationRef
+        },
+        {
+            'label':t('language'),
+            'ref':languageRef
+        },
+    ]
+
 
     const DrawerList = (
         <Box sx={{ width: 300, height:'100%', backgroundColor:`${theme.colors.navbar}`, color:`${theme.colors.navbarText}`}} role="presentation" onClick={toggleDrawer(false)} className='drawer'>
@@ -66,9 +83,22 @@ const Navbar = ({themeToggler, theme}) => {
                     </NavLink>
                 ))}
             </List>
+            <Divider sx={{backgroundColor:theme.colors.grey}} />
+            <Typography text={t('language')} className='text-center my-2' />
+            
+            <div className="translation" style={{backgroundColor: theme.experience.cardBackground, padding:'1rem', width:'50%', margin:'0 auto'}}>
+                
+                <Language page = 'drawer' style={{flexDirection:'column',alignItems:'flex-start'}}/>
+            </div>
         </Box>
     );
     
+    useEffect(() => {
+        return () => {
+            console.log(params)
+            setPage(window.location.pathname)
+        };
+    }, [ params])
     return (
         <nav className='navbar' style={{backgroundColor:`${theme.colors.navbar}`, color:`${theme.colors.navbarText}`}}>
             <section className="toolbar">
@@ -78,19 +108,19 @@ const Navbar = ({themeToggler, theme}) => {
                         <div className="menu">
                             <Link className='logo' to='/'>
                                 <img src={theme.tag === 'light'? logo : logoWhite} alt="Logo" />
-                                <Typography text='Essi Junior' isGradient={theme.tag === 'light'? true : false} />
+                                <Typography text='EssiJunior' isGradient={theme.tag === 'light'? true : false} />
                             </Link>
                         </div>
                         
                     </>:
                     <Link className='logo' to='/'>
                         <img src={theme.tag === 'light'? logo : logoWhite} alt="Logo" />
-                        <Typography text='Essi Junior' isGradient={theme.tag === 'light'? true : false} />
+                        <Typography text='EssiJunior' isGradient={theme.tag === 'light'? true : false} />
                     </Link>
                 }
                 
                 
-                <nav className='links' style={is_mobile ? {display:'none'}:{}}>
+                <nav className='links' style={is_mobile ? {display:'none'}:{}} >
                     {
                         navlinks.map((elt, i) => {
                             return (
@@ -100,6 +130,23 @@ const Navbar = ({themeToggler, theme}) => {
                             )
                         })
                     }
+
+                    {
+                        page === '/' ?
+                        reflinks.map((elt, i) => {
+                            return (
+                                <div key={i} onClick={() => ScrollToRef(elt.ref)} className='wide-language'>
+                                    <Typography text={elt.label}/>
+                                </div>
+                            )
+                        })
+                        :
+                        <div onClick={() => ScrollToRef(languageRef)} className='wide-language'>
+                            <Typography text={t('language')}/>
+                        </div>
+
+                    }
+                    
                 </nav>
                 
                 <section className="actions">

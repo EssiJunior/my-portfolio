@@ -39,11 +39,12 @@ h1 {
   line-height: 1.1;
 }
 
-a{
+a, .wide-language{
   text-decoration: none !important;
   color: inherit;
   font-size: 13px;
   font-weight: 600;
+  cursor: pointer;
   &:hover{
       color: $primary;
   }

@@ -1,16 +1,18 @@
-// REACT IMPORTS
+// REACT COMPONENTS IMPORTS
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useRef, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
 // PAGES
 import Home from '@/pages/Home'
+import Experience from '@/pages/Experience';
+import InProgress from '@/pages/InProgress';
+
+// CUSTOMIZED CONTAINERS
+import Layout from '@/containers/Layout/Layout'
 
 // UTILS
-import ScrollToTop from '@/utils/ScrollToTop'
-import Layout from '@/containers/Layout/Layout'
-import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
-import Experience from './pages/Experience';
-import InProgress from './pages/InProgress';
+import { ScrollToTop } from '@/utils/Scroll';
 
 const lightTheme = {
   colors: {
@@ -73,6 +75,10 @@ const darkTheme = {
 };
 
 function App() {
+  const skillsRef = useRef()
+  const languageRef = useRef()
+  const educationRef = useRef()
+
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = () => {
@@ -85,8 +91,8 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Layout themeToggler={toggleTheme} theme={theme} />}>
-            <Route index element={<Home theme={theme} />} />
+          <Route path="/" element={<Layout themeToggler={toggleTheme} theme={theme} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef}   />}>
+            <Route index element={<Home theme={theme} skillsRef={skillsRef} educationRef={educationRef} />} />
             <Route path="experience" element={<Experience theme={theme} />} />
             <Route path="about" element={<InProgress theme={theme} />} />
             <Route path="contact" element={<InProgress theme={theme} />} />

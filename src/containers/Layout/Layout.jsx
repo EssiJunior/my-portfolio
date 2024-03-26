@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import { Outlet } from 'react-router-dom'
 
@@ -7,13 +7,16 @@ import './layout.scss'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
-const Layout = ({themeToggler, theme}) => {
+const Layout = ({themeToggler, theme, languageRef, skillsRef,  educationRef}) => {
+    console.log(languageRef)
+    console.log(skillsRef)
+    console.log(educationRef)
     return (
         <>
             <section className='layout' >
-                <Navbar themeToggler={themeToggler} theme={theme} />
+                <Navbar themeToggler={themeToggler} theme={theme} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef} />
                 <Outlet className='outlet'/>
-                <Footer theme={theme} />
+                <Footer theme={theme} languageRef={languageRef} />
             </section>
         </>
     )

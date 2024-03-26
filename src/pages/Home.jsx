@@ -17,8 +17,9 @@ import { themeProps } from '../utils/prop-types'
 // STYLES
 import '@/styles/home.scss'
 
-const Home = ({theme}) => {
+const Home = ({theme, skillsRef, educationRef }) => {
     return (
+        
         <main className='home' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
             {/* SEO COMPONENT */}
             <SEO 
@@ -32,8 +33,8 @@ const Home = ({theme}) => {
             <Hero theme={theme}/>
             <About theme={theme}/>
             <Experience theme={theme}/>
-            <Skills theme={theme}/>
-            <Education theme={theme}/>
+            <Skills theme={theme} skillsRef={skillsRef} />
+            <Education theme={theme} educationRef={educationRef} />
             <Projects theme={theme}/>
             <ContactBloc theme={theme}/> 
         </main>

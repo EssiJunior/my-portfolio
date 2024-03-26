@@ -15,7 +15,7 @@ import { IoLogoElectron } from "react-icons/io5";
 
 import logo from '../../assets/at-clay.png'
 
-const Footer = ({theme}) => {
+const Footer = ({theme, languageRef}) => {
     //State for translation
     const {t,i18n} = useTranslation();
 
@@ -86,6 +86,7 @@ const Footer = ({theme}) => {
             'icon':<FaAndroid size='20' />
         },
     ]
+    
     return (
         <footer>
             <main className='footer-info' style={{backgroundColor:`${theme.colors.footer}`}}>
@@ -149,7 +150,7 @@ const Footer = ({theme}) => {
             <main className="foot-toolbar">
                 <div className='container'>
                     <Typography text="Essi Junior's portfolio"  style={{color:'white'}} />
-                    <div className="lang"><Language /></div>
+                    <div className="lang"><Language languageRef={languageRef} /></div>
                 </div>
             </main>
         </footer>
