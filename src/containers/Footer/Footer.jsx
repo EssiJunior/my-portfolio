@@ -173,7 +173,7 @@ const Footer = ({theme, languageRef}) => {
             </main>
             <main className="foot-toolbar">
                 <div className='container'>
-                    <Typography text="Essi Junior's portfolio"  style={{color:'white'}} />
+                    <Typography text="@EssiJunior"  style={{color:'white'}} />
                     <div className="lang"><Language languageRef={languageRef} /></div>
                 </div>
             </main>

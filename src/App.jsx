@@ -106,7 +106,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">...</Worker>;
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"></Worker>
     </ThemeProvider>
   )
 }
