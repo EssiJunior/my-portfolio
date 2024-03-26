@@ -14,6 +14,8 @@ import Layout from '@/containers/Layout/Layout'
 // UTILS
 import { ScrollToTop } from '@/utils/Scroll';
 import Contact from './pages/Contact';
+import Resume from './pages/Resume';
+import { Worker } from '@react-pdf-viewer/core';
 
 const lightTheme = {
   colors: {
@@ -100,10 +102,11 @@ function App() {
             <Route path="about" element={<InProgress theme={theme} />} />
             <Route path="contact" element={<Contact theme={theme} />} />
             <Route path="projects" element={<InProgress theme={theme} />} />
-            <Route path="resume" element={<InProgress theme={theme} />} />
+            <Route path="resume" element={<Resume theme={theme} />} />
           </Route>
         </Routes>
       </BrowserRouter>
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">...</Worker>;
     </ThemeProvider>
   )
 }

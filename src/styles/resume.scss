@@ -1,0 +1,11 @@
+.resume{
+    background-color: red;
+    width: 100%;
+    .wrapper{
+        background-color: green;
+        margin: 3rem;
+        @media (max-width: 600px) {
+            margin: 2rem 0.5rem;
+        }
+    }
+}
