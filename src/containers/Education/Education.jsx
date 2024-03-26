@@ -74,7 +74,7 @@ function Education({theme, educationRef}) {
                                 {eduation.date}
                                 </p>
                             </div>
-                            <div className="flex items-center gap-x-8 px-3 py-5">
+                        <div className="flex items-center gap-x-8 px-3 py-5">
                                 <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
                                     <GrCertificate  size={30}/>
                                 </div>

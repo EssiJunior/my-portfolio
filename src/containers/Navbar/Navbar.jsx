@@ -95,7 +95,6 @@ const Navbar = ({themeToggler, theme,  languageRef, skillsRef,  educationRef }) 
     
     useEffect(() => {
         return () => {
-            console.log(params)
             setPage(window.location.pathname)
         };
     }, [ params])
