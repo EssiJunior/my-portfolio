@@ -7,6 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 // CUSTOMIZED COMPONENTS
 import ExperienceCard from "../components/ExperienceCard/ExperienceCard";
+import SEO from "../components/SEO/SEO";
 
 // UTILITIES
 import { baseURL, experiences } from "../utils";
@@ -16,8 +17,6 @@ import { themeProps } from "../utils/prop-types";
 // STYLES
 import { styles } from "../styles/styles";
 import '../styles/experience.scss';
-import SEO from "../components/SEO/SEO";
-
 
 const Experience = ({theme}) => {
     return (

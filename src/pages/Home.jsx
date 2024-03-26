@@ -1,14 +1,21 @@
-import '@/styles/home.scss'
-import Hero from '../containers/Hero/Hero'
-import About from '../containers/About/About'
-import Experience from '../containers/Experience/Experience'
-import Skills from '../containers/Skills/Skills'
-import Education from '../containers/Education/Education'
-import Projects from '../containers/Projects/Projects'
-import ContactBloc from '../containers/ContactBloc/ContactBloc'
+// CUSTOMIZED CONTAINERS
+import Hero from '@/containers/Hero/Hero'
+import About from '@/containers/About/About'
+import Experience from '@/containers/Experience/Experience'
+import Skills from '@/containers/Skills/Skills'
+import Education from '@/containers/Education/Education'
+import Projects from '@/containers/Projects/Projects'
+import ContactBloc from '@/containers/ContactBloc/ContactBloc'
+
+// CUSTOMIZED COMPONENTS
 import SEO from '../components/SEO/SEO'
+
+// UTILITIES
 import { baseURL } from '../utils'
 import { themeProps } from '../utils/prop-types'
+
+// STYLES
+import '@/styles/home.scss'
 
 const Home = ({theme}) => {
     return (
