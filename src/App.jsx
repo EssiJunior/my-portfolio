@@ -8,7 +8,7 @@ import Home from '@/pages/Home'
 import ScrollToTop from '@/utils/ScrollToTop'
 import Layout from '@/containers/Layout/Layout'
 import { ThemeProvider } from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Experience from './pages/Experience';
 import InProgress from './pages/InProgress';
 

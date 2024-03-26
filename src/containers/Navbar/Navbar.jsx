@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Typography from '../../components/Typography/Typography'
-import SearchBar from '../../components/SearchBar/SearchBar'
 
 import './navbar.scss'
 
-import { Menu, Person2, Person2Outlined, Search, ShoppingCart, ShoppingCartOutlined } from '@mui/icons-material'
+import { Menu } from '@mui/icons-material'
 import { Link, NavLink } from 'react-router-dom'
 import { Box, Drawer, List, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
@@ -12,12 +11,10 @@ import Language from '../../components/Language/Language'
 import logo from '../../assets/at-color.png'
 import logoWhite from '../../assets/at-clay.png'
 
-const color = '#F26100'
-const logoStyle = {fontWeight:700, fontSize:'1.5rem', width:'20%'}
 const Navbar = ({themeToggler, theme}) => {
     
     //State for translation
-    const {t,i18n} = useTranslation();
+    const {t} = useTranslation();
 
     const is_mobile = useMediaQuery('(max-width: 1100px)')
     const is_mobile_1 = useMediaQuery('(max-width: 700px)')

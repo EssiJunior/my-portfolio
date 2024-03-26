@@ -11,9 +11,10 @@ import './contact.scss'
 // import { route } from "../../utils/routes";
 import { CircularProgress } from "@mui/joy";
 import { Alert } from "@mui/material";
+import { themeProps } from "../../utils/prop-types";
 
-const Contact = ({theme}) => {
-  const {t,i18n} = useTranslation();
+const Contact = () => {
+  const {t} = useTranslation();
   const page = '';
   const formRef = useRef();
   const [messageE, setMessageE] = useState('')
@@ -84,7 +85,6 @@ const Contact = ({theme}) => {
 
   };
 
-  console.log(theme)
 
   return (
     <main>
@@ -92,7 +92,7 @@ const Contact = ({theme}) => {
         page === 'contact' && 
         <motion.div variants={textVariant()} className="intro">
           <p className={`${styles.sectionSubText} text-center`}>{t('inTouch')}</p>
-          <h2 className={`${styles.sectionHeadText} text-center orange-text-gradient`}>{t('contact')}</h2>
+          <h1 className={`${styles.sectionHeadText} text-center orange-text-gradient`}>{t('contact')}</h1>
         </motion.div>
       }
       <section
@@ -107,7 +107,7 @@ const Contact = ({theme}) => {
             page !== 'contact' &&
             <>
               <p className={styles.sectionSubText}>{t('inTouch')} (In development)</p>
-              <h3 className={`${styles.sectionHeadText} text-outline text-white`}>{t('contact')}</h3>
+              <h2 className={`${styles.sectionHeadText} text-outline text-white`}>{t('contact')}</h2>
             </>
           }
 

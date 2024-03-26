@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next'
 import './about.scss'
 
 import { styles } from "../../styles/styles";
+import { themeProps } from "../../utils/prop-types";
 
 const About = ({theme}) => {
     //State for translation
-    const {t,i18n} = useTranslation();
+    const {t} = useTranslation();
 
     return (
         <main className='about' id="about-me" style={{color:theme.colors.text}}>
@@ -17,11 +18,11 @@ const About = ({theme}) => {
                 // variants={textVariant()} 
                     className="intro">
                     <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`} >{t('in')}</p>
-                    <h2 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}</h2>
+                    <h1 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}</h1>
                 </motion.div>
             </section>
         
-            <div className="detail ">
+            <section className="detail">
                 <motion.p
                 // variants={fadeIn("", "", 0.1, 1)}
                 className='description text-[17px] '
@@ -31,9 +32,10 @@ const About = ({theme}) => {
                 </motion.p>
 
                 <motion.div className="illustration"/>
-            </div>
+            </section>
         </main>
     )
 }
 
+About.propTypes = themeProps;
 export default About
