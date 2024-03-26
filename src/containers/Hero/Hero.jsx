@@ -10,7 +10,7 @@ import Button from '@/components/Button/Button'
 import { themeProps } from '@/utils/prop-types'
 
 // ASSETS 
-import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, Twitter } from '@mui/icons-material'
+import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, Twitter, X } from '@mui/icons-material'
 import resume from "@/assets/data/ESSI Junior - Resume.pdf"
 
 // STYLES
@@ -20,6 +20,28 @@ const Hero = ({theme}) => {
     //State for translation
     const {t} = useTranslation();
 
+    const social = [
+        {
+            "Name": "Github",
+            "link":'https://github.com/EssiJunior',
+            "icon": <GitHub size={50} />
+        },
+        {
+            "Name": "LinkedIn",
+            "link":'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
+            "icon": <LinkedIn size={50} />
+        },
+        {
+            "Name": "Facebook",
+            "link":'https://web.facebook.com/torres.essi',
+            "icon": <Facebook size={50} />
+        },
+        {
+            "Name": "X (Formally Twitter)",
+            "link":'https://twitter.com/EssiJunior7',
+            "icon": <X size={50} />
+        },
+    ]
     return (
         <section className={`hero ${theme.hero.gradient}`}>       
             <div className="container-hero ">
@@ -29,38 +51,20 @@ const Hero = ({theme}) => {
                     <Typography text={t('intro')} style={{marginBottom:'3rem'}} />
                     
                     <div className="my-6 flex items-center gap-5">
-
-                        <Link
-                            to='https://github.com/EssiJunior'
-                            target='_blank'
-                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                            <GitHub size={30} />
-                        </Link>
-
-                        <Link
-                            to='https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/'
-                            target='_blank'
-                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                            <LinkedIn size={30} />
-                        </Link>
-
-                        <Link
-                            to='https://web.facebook.com/torres.essi'
-                            target='_blank'
-                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                            <Facebook size={30} />
-                        </Link>
-                        
-                        <Link
-                            to='https://twitter.com/EssiJunior7'
-                            target='_blank'
-                            className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                            <Twitter size={30} />
-                        </Link>
+                        {
+                            social.map((elt, i) => {
+                                return (
+                                    <Link
+                                        key={i}
+                                        to={elt.link}
+                                        target='_blank'
+                                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                                    >
+                                        {elt.icon}
+                                    </Link>
+                                )
+                            })
+                        }
                     </div>
 
                     <div className="more">

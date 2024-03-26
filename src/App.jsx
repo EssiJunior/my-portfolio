@@ -13,6 +13,7 @@ import Layout from '@/containers/Layout/Layout'
 
 // UTILS
 import { ScrollToTop } from '@/utils/Scroll';
+import Contact from './pages/Contact';
 
 const lightTheme = {
   colors: {
@@ -35,6 +36,7 @@ const lightTheme = {
   },
   contact:{
     bg:'contact-bloc',
+    bgPage:'contact-bloc-contact',
   },
   fontSize: '16px',
   tag: 'light',
@@ -65,6 +67,7 @@ const darkTheme = {
   },
   contact:{
     bg:'contact-bloc-dark',
+    bgPage:'contact-bloc-contact-dark',
   },
   fontSize: '16px',
   tag: 'dark',
@@ -95,7 +98,7 @@ function App() {
             <Route index element={<Home theme={theme} skillsRef={skillsRef} educationRef={educationRef} />} />
             <Route path="experience" element={<Experience theme={theme} />} />
             <Route path="about" element={<InProgress theme={theme} />} />
-            <Route path="contact" element={<InProgress theme={theme} />} />
+            <Route path="contact" element={<Contact theme={theme} />} />
             <Route path="projects" element={<InProgress theme={theme} />} />
             <Route path="resume" element={<InProgress theme={theme} />} />
           </Route>

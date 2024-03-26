@@ -12,10 +12,15 @@ import './contact.scss'
 import { CircularProgress } from "@mui/joy";
 import { Alert } from "@mui/material";
 import { themeProps } from "../../utils/prop-types";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Contact = () => {
+  const [page, setPage] = useState(window.location.pathname)
+  //State for translation
   const {t} = useTranslation();
-  const page = '';
+  const params = useParams()
+  
   const formRef = useRef();
   const [messageE, setMessageE] = useState('')
   const [form, setForm] = useState({
@@ -85,14 +90,19 @@ const Contact = () => {
 
   };
 
+  useEffect(() => {
+    return () => {
+        setPage(window.location.pathname)
+    };
+}, [ params])
 
   return (
     <main>
       {
-        page === 'contact' && 
-        <motion.div variants={textVariant()} className="intro">
-          <p className={`${styles.sectionSubText} text-center`}>{t('inTouch')}</p>
-          <h1 className={`${styles.sectionHeadText} text-center orange-text-gradient`}>{t('contact')}</h1>
+        page === '/contact' && 
+        <motion.div variants={textVariant()} className="intro mt-12" >
+          <p className={`${styles.sectionSubText} text-center text-primary`}>{t('inTouch')}</p>
+          <h1 className={`${styles.sectionHeadText} text-center green-text-gradient`}>{t('contact')}</h1>
         </motion.div>
       }
       <section
@@ -100,11 +110,11 @@ const Contact = () => {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className={ page === 'contact' ? 'bg-flik-orange flex-[0.75] p-8 rounded-2xl':`contact flex-[0.75] p-8 rounded-2xl`}
+          className={ page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl':`contact flex-[0.75] p-8 rounded-2xl`}
           
         >
           {
-            page !== 'contact' &&
+            page !== '/contact' &&
             <>
               <p className={styles.sectionSubText}>{t('inTouch')} (In development)</p>
               <h2 className={`${styles.sectionHeadText} text-outline text-white`}>{t('contact')}</h2>
@@ -117,36 +127,36 @@ const Contact = () => {
             className='mt-7 flex flex-col gap-8'
           >
             <label className='flex flex-col'>
-              <span className={ page === 'contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('name')}</span>
+              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('name')}</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
                 placeholder={t('nameE')}
-                className={page === 'contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={ page === 'contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('email')}</span>
+              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('email')}</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t('emailE')}
-                className={page === 'contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={ page === 'contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('message')}</span>
+              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('message')}</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t('messageE')}
-                className={page === 'contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
               {
@@ -164,7 +174,7 @@ const Contact = () => {
 
             <button
               type='submit'
-              className={page === 'contact' ? `bg-flik-red py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white`: `bg-flik-orange py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
+              className={page === '/contact' ? `bg-flik-red py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white`: `bg-flik-orange py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
             >
               {
                 loading ?

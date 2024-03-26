@@ -3,7 +3,7 @@ import React from 'react'
 import './footer.scss'
 import { NavLink } from 'react-router-dom'
 import Typography from '../../components/Typography/Typography'
-import { Email, Instagram, Phone, PhoneAndroid, Public, Twitter, Web, YouTube } from '@mui/icons-material'
+import { Email, Facebook, GitHub, LinkedIn, Phone, X } from '@mui/icons-material'
 import Language from '../../components/Language/Language'
 import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
@@ -50,6 +50,29 @@ const Footer = ({theme, languageRef}) => {
         {
             'label':t('resume'),
             'path':'/resume'
+        },
+    ]
+    
+    const social = [
+        {
+            "Name": "Github",
+            "link":'https://github.com/EssiJunior',
+            "icon": <GitHub size={30} />
+        },
+        {
+            "Name": "LinkedIn",
+            "link":'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
+            "icon": <LinkedIn size={30} />
+        },
+        {
+            "Name": "Facebook",
+            "link":'https://web.facebook.com/torres.essi',
+            "icon": <Facebook size={30} />
+        },
+        {
+            "Name": "X (Formally Twitter)",
+            "link":'https://twitter.com/EssiJunior7',
+            "icon": <X size={30} />
         },
     ]
     const tech = [
@@ -101,10 +124,11 @@ const Footer = ({theme, languageRef}) => {
                             <NavLink to='/contact'><Typography text={t('contact')} /></NavLink>
                         </aside>
                         <aside className="links">
-                            <NavLink to='#'><Instagram /></NavLink>
-                            <NavLink to='#'><Public /></NavLink>
-                            <NavLink to='#'><Twitter /></NavLink>
-                            <NavLink to='#'><YouTube /></NavLink>
+                            {social.map((elt, i) => (
+                                <NavLink to={elt.link} key={i}>
+                                    {elt.icon}
+                                </NavLink>
+                            ))}
                         </aside>
                         <Typography text={t('copyright')} style={is_mobile_2?{color:'white', fontSize:'13px', width:'100%'}:{color:'white', fontSize:'13px', width:'70%'}} />
                     </aside>
@@ -134,14 +158,14 @@ const Footer = ({theme, languageRef}) => {
                     <aside className="help">
                         <Typography text={t('help')} style={is_mobile_1? {color:'orange'}:{color:'white'}} />
                         <aside className="info">
-                            <code>
+                            <a href="mailto:nessipjunior@gmail.com">
                                 <Email/>
                                 nessipjunior@gmail.com
-                            </code>
-                            <code>
+                            </a>
+                            <a href='tel:+237690743737'>
                                 <Phone/>
                                 +237 690743737
-                            </code>
+                            </a>
                         </aside>
 
                     </aside>

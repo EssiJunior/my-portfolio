@@ -121,7 +121,7 @@ footer{
             .elts div{
                 @include flex(row);
             }
-            .info code{
+            .info a{
                 @include flex(row);
                 margin: 0 0 0.5rem 0;
                 color: $white;
