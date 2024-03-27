@@ -10,7 +10,7 @@ import Button from '@/components/Button/Button'
 import { themeProps } from '@/utils/prop-types'
 
 // ASSETS 
-import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, Twitter, X } from '@mui/icons-material'
+import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, X } from '@mui/icons-material'
 import resume from "@/assets/data/ESSI Junior - Resume.pdf"
 
 // STYLES
@@ -68,8 +68,8 @@ const Hero = ({theme}) => {
                     </div>
 
                     <div className="more">
-                        <Link to='products'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':''} icon={<EmailSharp />}/></Link>
-                        <a href={resume} target='_blank'><Button text={t('download')} bg={theme.tag ===  'light'? 'black':''} icon={<DownloadSharp />}/></a>
+                        <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':''} icon={<EmailSharp />}/></Link>
+                        <Link to='/resume'><Button text={t('download')} bg={theme.tag ===  'light'? 'black':''} icon={<DownloadSharp />}/></Link>
 
                     </div>
                 </div>
