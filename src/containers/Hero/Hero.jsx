@@ -8,15 +8,20 @@ import Button from '@/components/Button/Button'
 
 // UTILITIES
 import { themeProps } from '@/utils/prop-types'
+import AnimationLottie from "@/utils/animation-lottie";
 
 // ASSETS 
 import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, X } from '@mui/icons-material'
 import resume from "@/assets/data/ESSI Junior - Resume.pdf"
+import dev from '../../assets/lotties/coder.json';
 
 // STYLES
 import './hero.scss'
+import { useMediaQuery } from '@mui/material'
 
 const Hero = ({theme}) => {
+    const is_lg = useMediaQuery('(max-width: 990px)')
+
     //State for translation
     const {t} = useTranslation();
 
@@ -73,7 +78,9 @@ const Hero = ({theme}) => {
 
                     </div>
                 </div>
-                <div className="actions"/>
+                <div className="actions">  
+                    <AnimationLottie animationPath={dev}  width={is_lg ? '90%' :'70%'}/>                  
+                </div>
             </div>
         </section>
         

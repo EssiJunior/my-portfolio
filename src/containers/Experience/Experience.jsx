@@ -52,7 +52,6 @@ function Experience({theme}) {
         },
     ];
     
-
     return (
         <section className={`experience ${theme.hero.gradient}`}>
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">

@@ -70,8 +70,10 @@
         }
 
         .actions{
-            background: url(../../assets/utilities/car.png) center/cover no-repeat;
-            @media (max-width: #{$breakpoint-sm}) {
+            // background: url(../../assets/utilities/car.png) center/cover no-repeat;
+            // background-color: red;
+            @include flex(row);
+            @media (max-width: 900px) {
                 // styles for screens up to 700px
                 display: none;
             }
