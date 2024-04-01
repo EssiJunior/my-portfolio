@@ -14,6 +14,7 @@ import { Alert } from "@mui/material";
 import { themeProps } from "../../utils/prop-types";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [page, setPage] = useState(window.location.pathname)
@@ -23,8 +24,9 @@ const Contact = () => {
   
   const formRef = useRef();
   const [messageE, setMessageE] = useState('')
+  
   const [form, setForm] = useState({
-    name: "",
+    from_name: "",
     email: "",
     message: "",
   });
@@ -49,44 +51,64 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    
-    // if(form.name === "" || form.email === "" || form.message === "" )
-    // {
-    //     if (form.name === ""){
-    //       setLoading(false)
-    //       return setMessageE(t('nameErr'))
-    //     } 
-    //     else if (form.email === ""){
-    //       setLoading(false)
-    //       return setMessageE(t('emailErr'))
-    //     }
-    //     else if (form.message === ""){
-    //       setLoading(false)
-    //       return setMessageE(t('messageErr'))
-    //     }
-    // }
-    // else if (!isValidEmail(form.email)) {
-    //   setLoading(false)
-    //   return setMessageE(t('emailErr2'))
-    // }
+    console.log(e.target);
 
-    // else{
-    //   axios.post(`${route}/api/message`, form)
-    //   .then((response)=>{
-    //       setLoading(false)
-    //       console.log(response.data);
-    //       setMessageE(t('sendS'))
-    //       setForm({
-    //         name: '',
-    //         email: '',
-    //         message: '',
-    //       })
-    //   }).catch( (error) => {
-    //       setLoading(false)
-    //       console.log(error)
-    //       setMessageE('There was an error while sending your message.')
-    //   })
-    // }
+    if(form.from_name === "" || form.email === "" || form.message === "" )
+    {
+        if (form.from_name === ""){
+          setLoading(false)
+          return setMessageE(t('nameErr'))
+        } 
+        else if (form.email === ""){
+          setLoading(false)
+          return setMessageE(t('emailErr'))
+        }
+        else if (form.message === ""){
+          setLoading(false)
+          return setMessageE(t('messageErr'))
+        }
+    }
+    else if (!isValidEmail(form.email)) {
+      setLoading(false)
+      return setMessageE(t('emailErr2'))
+    }
+
+    else{
+      emailjs
+      .sendForm('service_bbhl8h9', 'template_zu4duzl', e.target, {
+        publicKey: 'Dexav6OsKx1PMUYUx',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+            setMessageE(t('sendS'))
+            setForm({
+              from_name: '',
+              email: '',
+              message: '',
+            })
+            setLoading(false)
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+      // axios.post(`${route}/api/message`, form)
+      // .then((response)=>{
+      //     setLoading(false)
+      //     console.log(response.data);
+      //     setMessageE(t('sendS'))
+      //     setForm({
+      //       name: '',
+      //       email: '',
+      //       message: '',
+      //     })
+      // }).catch( (error) => {
+      //     setLoading(false)
+      //     console.log(error)
+      //     setMessageE('There was an error while sending your message.')
+      // })
+    }
 
   };
 
@@ -130,8 +152,8 @@ const Contact = () => {
               <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('name')}</span>
               <input
                 type='text'
-                name='name'
-                value={form.name}
+                name='from_name'
+                value={form.from_name}
                 onChange={handleChange}
                 placeholder={t('nameE')}
                 className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
@@ -174,11 +196,11 @@ const Contact = () => {
 
             <button
               type='submit'
-              className={page === '/contact' ? `bg-flik-red py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white`: `bg-flik-orange py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
+              className={page === '/contact' ? `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white`: `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
             >
               {
                 loading ?
-                <><CircularProgress color='warning' variant='solid' size='sm'/>{t('sending')}</>
+                <><CircularProgress color='success' variant='solid' size='sm' sx={{marginRight:'1rem'}}/>{t('sending')}</>
                 :
                 t('send')
               }
