@@ -138,7 +138,7 @@ const Contact = () => {
           {
             page !== '/contact' &&
             <>
-              <p className={styles.sectionSubText}>{t('inTouch')} (In development)</p>
+              <p className={styles.sectionSubText}>{t('inTouch')}</p>
               <h2 className={`${styles.sectionHeadText} text-outline text-white`}>{t('contact')}</h2>
             </>
           }
