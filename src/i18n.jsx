@@ -1,19 +1,25 @@
-import i18n from 'i18next';
+// REACT COMPONENTS IMPORTS
 import { initReactI18next } from 'react-i18next';
-import translateEn from "./components/Language/translations/en.json"
-import translateFr from "./components/Language/translations/fr.json"
+
+// PLUGIN
+import i18n from 'i18next';
+
+// TRANSLATIONS
+import translateEn from "@/components/Language/translations/en.json"
+import translateFr from "@/components/Language/translations/fr.json"
 
 
-//The translations
+// Translations
 const resources = {
-    fr:{
-        translation:translateFr
-      },
-    en: {
-      translation:translateEn
-    }
+  fr:{
+      translation:translateFr
+    },
+  en: {
+    translation:translateEn
   }
+}
 
+// Plugin configuration
 i18n
   .use(initReactI18next)
   .init({

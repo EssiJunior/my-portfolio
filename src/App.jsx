@@ -2,30 +2,33 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Worker } from '@react-pdf-viewer/core';
 
 // PAGES
 import Home from '@/pages/Home'
 import Experience from '@/pages/Experience';
 import InProgress from '@/pages/InProgress';
+import Contact from '@/pages/Contact';
+import Resume from '@/pages/Resume';
 
 // CUSTOMIZED CONTAINERS
 import Layout from '@/containers/Layout/Layout'
 
 // UTILS
 import { ScrollToTop } from '@/utils/Scroll';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
-import { Worker } from '@react-pdf-viewer/core';
-import { darkTheme, lightTheme } from './utils/theme';
+import { darkTheme, lightTheme } from '@/utils/theme';
 
 
 function App() {
+  // Utility refs
   const skillsRef = useRef()
   const languageRef = useRef()
   const educationRef = useRef()
 
+  // Theme state
   const [theme, setTheme] = useState(lightTheme);
 
+  // Theme toggler
   const toggleTheme = () => {
     console.log(theme.tag)
     setTheme(theme === lightTheme ? darkTheme : lightTheme);
