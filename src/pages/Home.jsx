@@ -8,12 +8,11 @@ import Projects from '@/containers/Projects/Projects'
 import ContactBloc from '@/containers/ContactBloc/ContactBloc'
 
 // CUSTOMIZED COMPONENTS
-import SEO from '../components/SEO/SEO'
+import SEO from '@/components/SEO/SEO'
 
 // UTILITIES
-import { baseURL } from '../utils'
-import { themeProps } from '../utils/prop-types'
-
+import { baseURL } from '@/utils'
+import { themeProps } from '@/utils/prop-types'
 
 const Home = ({theme, skillsRef, educationRef }) => {
     return (

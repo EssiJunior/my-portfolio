@@ -1,8 +1,18 @@
-import '../styles/in_progress.scss'
-import AnimationLottie from '../utils/animation-lottie'
-import doing from '../assets/lotties/doing.json'
-import Typography from '../components/Typography/Typography'
+// REACT COMPONENTS IMPORTS
 import { Link } from 'react-router-dom'
+
+// CUSTOMIZED CONTAINERS
+import Typography from '@/components/Typography/Typography'
+
+// UTILITIES
+import { themeProps } from '@/utils/prop-types'
+import AnimationLottie from '@/utils/animation-lottie'
+
+// STYLES
+import '@/styles/in_progress.scss'
+
+// ASSETS
+import doing from '@/assets/lotties/doing.json'
 
 const InProgress = ({theme}) => {
     return (
@@ -16,4 +26,5 @@ const InProgress = ({theme}) => {
     )
 }
 
+InProgress.propTypes = themeProps;
 export default InProgress

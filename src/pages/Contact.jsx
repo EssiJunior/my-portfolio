@@ -1,5 +1,8 @@
-import SEO from "../components/SEO/SEO"
-import ContactBloc from "../containers/ContactBloc/ContactBloc"
+// CUSTOMIZED CONTAINERS
+import ContactBloc from "@/containers/ContactBloc/ContactBloc"
+
+// UTILS
+import { themeProps } from "@/utils/prop-types";
 
 const Contact = ({theme}) => {
     return (
@@ -9,4 +12,5 @@ const Contact = ({theme}) => {
     )
 }
 
+Contact.propTypes = themeProps;
 export default Contact
