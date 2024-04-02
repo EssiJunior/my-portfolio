@@ -1,7 +1,12 @@
-"use client"
+// REACT COMPONENT IMPORTS
 import { useEffect } from 'react';
 
+// UTIL
+import { glowCardProps } from './prop-types';
+
+// STYLE
 import '../styles/glow.scss'
+
 const GlowCard = ({ children , identifier}) => {
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
@@ -78,4 +83,5 @@ const GlowCard = ({ children , identifier}) => {
   );
 };
 
+GlowCard.propTypes = glowCardProps;
 export default GlowCard;

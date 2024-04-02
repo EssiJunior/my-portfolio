@@ -1,11 +1,14 @@
-
+// REACT COMPONENT IMPORTS
 import Lottie from "lottie-react";
 
-const AnimationLottie = ({ animationPath, width = '95%' }) => {
+// UTILS
+import { lottieProps } from "./prop-types";
+
+const AnimationLottie = ({ animation, width = '95%' }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationPath,
+    animationData: animation,
     style: {
       width: width,
       margin: '0 auto',
@@ -17,4 +20,5 @@ const AnimationLottie = ({ animationPath, width = '95%' }) => {
   );
 };
 
+AnimationLottie.propTypes = lottieProps;
 export default AnimationLottie;
