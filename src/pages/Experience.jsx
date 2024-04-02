@@ -16,7 +16,6 @@ import { themeProps } from "../utils/prop-types";
 
 // STYLES
 import { styles } from "../styles/styles";
-import '../styles/experience.scss';
 
 const Experience = ({theme}) => {
     return (

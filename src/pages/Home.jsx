@@ -14,8 +14,6 @@ import SEO from '../components/SEO/SEO'
 import { baseURL } from '../utils'
 import { themeProps } from '../utils/prop-types'
 
-// STYLES
-import '@/styles/home.scss'
 
 const Home = ({theme, skillsRef, educationRef }) => {
     return (

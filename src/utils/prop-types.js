@@ -1,7 +1,6 @@
 // PROPS BEARER
 import PropTypes from 'prop-types';
 
-
 // PROPS 
 export const SEOProps = {
     title: PropTypes.string.isRequired,
