@@ -82,7 +82,7 @@ function Experience({ theme }) {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                         <div className="flex justify-center items-start">
                             <div className="w-full h-full">
-                                <AnimationLottie animationPath={experience} width="90%" />
+                                <AnimationLottie animation={experience} width="90%" />
                             </div>
                         </div>
 
