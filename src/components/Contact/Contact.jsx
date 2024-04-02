@@ -1,30 +1,36 @@
-import { useRef, useState } from "react";
+// REACT COMPONENTS
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
-import { styles } from "../../styles/styles";
-import { EarthCanvas } from "../canvas";
-import { SectionWrapper } from "../../hoc";
-import { slideIn, textVariant } from "../../utils/motion";
-import './contact.scss'
-// import axios from "axios";
-// import { route } from "../../utils/routes";
 import { CircularProgress } from "@mui/joy";
 import { Alert } from "@mui/material";
-import { themeProps } from "../../utils/prop-types";
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+// CUSTOMIZED COMPONENT
+import { EarthCanvas } from "../canvas";
+
+// PLUGIN
 import emailjs from '@emailjs/browser';
+
+// HOC
+import { SectionWrapper } from "@/hoc";
+
+// UTILITIES
+import { slideIn, textVariant } from "@/utils/motion";
+
+// STYLES
+import { styles } from "@/styles/styles";
+import './contact.scss'
 
 const Contact = () => {
   const [page, setPage] = useState(window.location.pathname)
   //State for translation
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const params = useParams()
-  
+
   const formRef = useRef();
   const [messageE, setMessageE] = useState('')
-  
+
   const [form, setForm] = useState({
     from_name: "",
     email: "",
@@ -53,34 +59,33 @@ const Contact = () => {
     setLoading(true);
     console.log(e.target);
 
-    if(form.from_name === "" || form.email === "" || form.message === "" )
-    {
-        if (form.from_name === ""){
-          setLoading(false)
-          return setMessageE(t('nameErr'))
-        } 
-        else if (form.email === ""){
-          setLoading(false)
-          return setMessageE(t('emailErr'))
-        }
-        else if (form.message === ""){
-          setLoading(false)
-          return setMessageE(t('messageErr'))
-        }
+    if (form.from_name === "" || form.email === "" || form.message === "") {
+      if (form.from_name === "") {
+        setLoading(false)
+        return setMessageE(t('nameErr'))
+      }
+      else if (form.email === "") {
+        setLoading(false)
+        return setMessageE(t('emailErr'))
+      }
+      else if (form.message === "") {
+        setLoading(false)
+        return setMessageE(t('messageErr'))
+      }
     }
     else if (!isValidEmail(form.email)) {
       setLoading(false)
       return setMessageE(t('emailErr2'))
     }
 
-    else{
+    else {
       emailjs
-      .sendForm('service_bbhl8h9', 'template_zu4duzl', e.target, {
-        publicKey: 'Dexav6OsKx1PMUYUx',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
+        .sendForm('service_bbhl8h9', 'template_zu4duzl', e.target, {
+          publicKey: 'Dexav6OsKx1PMUYUx',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
             setMessageE(t('sendS'))
             setForm({
               from_name: '',
@@ -88,11 +93,11 @@ const Contact = () => {
               message: '',
             })
             setLoading(false)
-        },
-        (error) => {
-          console.log('FAILED...', error);
-        },
-      );
+          },
+          (error) => {
+            console.log('FAILED...', error);
+          },
+        );
       // axios.post(`${route}/api/message`, form)
       // .then((response)=>{
       //     setLoading(false)
@@ -114,14 +119,14 @@ const Contact = () => {
 
   useEffect(() => {
     return () => {
-        setPage(window.location.pathname)
+      setPage(window.location.pathname)
     };
-}, [ params])
+  }, [params])
 
   return (
     <main>
       {
-        page === '/contact' && 
+        page === '/contact' &&
         <motion.div variants={textVariant()} className="intro mt-12" >
           <p className={`${styles.sectionSubText} text-center text-primary`}>{t('inTouch')}</p>
           <h1 className={`${styles.sectionHeadText} text-center green-text-gradient`}>{t('contact')}</h1>
@@ -132,8 +137,8 @@ const Contact = () => {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className={ page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl':`contact flex-[0.75] p-8 rounded-2xl`}
-          
+          className={page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl' : `contact flex-[0.75] p-8 rounded-2xl`}
+
         >
           {
             page !== '/contact' &&
@@ -149,60 +154,60 @@ const Contact = () => {
             className='mt-7 flex flex-col gap-8'
           >
             <label className='flex flex-col'>
-              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('name')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('name')}</span>
               <input
                 type='text'
                 name='from_name'
                 value={form.from_name}
                 onChange={handleChange}
                 placeholder={t('nameE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('email')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('email')}</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t('emailE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={ page === '/contact' ? 'text-white font-medium mb-2':'text-black font-medium mb-2'}>{t('message')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('message')}</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t('messageE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium': 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
-              {
-                messageE !== '' && (messageE !== t('sendS')) && 
-                <div className="alert" onClick={() => setMessageE('')}>
-                  <Alert severity="error">{messageE}</Alert>
-                </div>
-              }
-              {
-                messageE === t('sendS') && 
-                <div className="alert" onClick={() => setMessageE('')}>
-                  <Alert severity="success">{messageE}</Alert>
-                </div>
-              }
+            {
+              messageE !== '' && (messageE !== t('sendS')) &&
+              <div className="alert" onClick={() => setMessageE('')}>
+                <Alert severity="error">{messageE}</Alert>
+              </div>
+            }
+            {
+              messageE === t('sendS') &&
+              <div className="alert" onClick={() => setMessageE('')}>
+                <Alert severity="success">{messageE}</Alert>
+              </div>
+            }
 
             <button
               type='submit'
-              className={page === '/contact' ? `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white`: `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
+              className={page === '/contact' ? `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary flex items-center text-white` : `bg-secondary py-3 px-8 rounded-xl outline-none w-fit  font-bold shadow-md shadow-primary  flex items-center text-white`}
             >
               {
                 loading ?
-                <><CircularProgress color='success' variant='solid' size='sm' sx={{marginRight:'1rem'}}/>{t('sending')}</>
-                :
-                t('send')
+                  <><CircularProgress color='success' variant='solid' size='sm' sx={{ marginRight: '1rem' }} />{t('sending')}</>
+                  :
+                  t('send')
               }
             </button>
           </form>

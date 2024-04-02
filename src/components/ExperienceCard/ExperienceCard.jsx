@@ -1,4 +1,8 @@
+// PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+
+// UTILITIES
+import { experienceCardProps } from "../../utils/prop-types";
 
 const ExperienceCard = ({ experience, theme }) => {
     return (
@@ -38,4 +42,5 @@ const ExperienceCard = ({ experience, theme }) => {
     );
 };
 
+ExperienceCard.propTypes = experienceCardProps;
 export default ExperienceCard

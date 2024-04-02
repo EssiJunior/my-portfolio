@@ -1,5 +1,7 @@
-import React from 'react'
+// UTILITIES
+import { typographyProps } from '@/utils/prop-types';
 
+// STYLE
 import './typography.scss'
 
 const Typography = ({text, style, isGradient=false, className}) => {
@@ -8,4 +10,5 @@ const Typography = ({text, style, isGradient=false, className}) => {
     )
 }
 
+Typography.propTypes = typographyProps;
 export default Typography
