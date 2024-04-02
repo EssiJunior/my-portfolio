@@ -57,7 +57,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(e.target);
 
     if (form.from_name === "" || form.email === "" || form.message === "") {
       if (form.from_name === "") {
@@ -80,8 +79,8 @@ const Contact = () => {
 
     else {
       emailjs
-        .sendForm('service_bbhl8h9', 'template_zu4duzl', e.target, {
-          publicKey: 'Dexav6OsKx1PMUYUx',
+        .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
         })
         .then(
           () => {
@@ -161,7 +160,7 @@ const Contact = () => {
                 value={form.from_name}
                 onChange={handleChange}
                 placeholder={t('nameE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
@@ -172,7 +171,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t('emailE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             <label className='flex flex-col'>
@@ -183,7 +182,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t('messageE')}
-                className={page === '/contact' ? 'bg-flik-yellow py-4 px-6 placeholder:text-[#777777] text-black rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
               />
             </label>
             {
