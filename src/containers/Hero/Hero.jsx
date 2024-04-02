@@ -12,8 +12,7 @@ import AnimationLottie from "@/utils/animation-lottie";
 
 // ASSETS 
 import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, X } from '@mui/icons-material'
-import resume from "@/assets/data/ESSI Junior - Resume.pdf"
-import dev from '../../assets/lotties/coder.json';
+import dev from '@/assets/lotties/coder.json';
 
 // STYLES
 import './hero.scss'

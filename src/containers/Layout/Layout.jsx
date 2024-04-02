@@ -1,12 +1,18 @@
-import React, { useRef } from 'react'
-
+// REACT COMPONENTS IMPORTS
 import { Outlet } from 'react-router-dom'
 
-// Page style
-import './layout.scss'
+// CONTAINERS
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
-import BackToTop from '../../components/BackToTop/BackToTop.jsx'
+
+// COMPONENTS
+import BackToTop from '@/components/BackToTop/BackToTop.jsx'
+
+// UTILS
+import { themeProps } from '@/utils/prop-types.js'
+
+// STYLES
+import './layout.scss'
 
 const Layout = ({themeToggler, theme, languageRef, skillsRef,  educationRef}) => {
     // console.log(languageRef)
@@ -25,4 +31,5 @@ const Layout = ({themeToggler, theme, languageRef, skillsRef,  educationRef}) =>
     )
 }
 
+Layout.propTypes = themeProps
 export default Layout

@@ -1,9 +1,13 @@
+// REACT IMPORTS
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next'
-import './about.scss'
 
-import { styles } from "../../styles/styles";
-import { themeProps } from "../../utils/prop-types";
+// UTILS
+import { themeProps } from "@/utils/prop-types";
+
+// STYLES
+import { styles } from "@/styles/styles";
+import './about.scss'
 
 const About = ({theme}) => {
     //State for translation
