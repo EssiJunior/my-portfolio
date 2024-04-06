@@ -32,9 +32,13 @@
             @include flex(column);
             align-items: flex-start;
             padding: 0 4rem;
-            @media (max-width: #{$breakpoint-sm}) {
+            @media screen and (max-width: 360px) {
                 // styles for screens up to 700px
-                padding: 0 2rem;
+                padding: 0 0.75rem;
+            }
+            @media screen and (min-width: 361px) and (max-width: #{$breakpoint-sm}) {
+                // styles for screens up to 700px
+                padding: 0 1.5rem;
             }
             p{
                 @media (max-width: #{$breakpoint-sm}) {
@@ -47,7 +51,11 @@
                 @include flex(row);
                 justify-content: space-between;
                 width: 60%;
-                @media (max-width: 400px) {
+                @media screen and (max-width: 360px) {
+                    // styles for screens up to 700px
+                    width: 100%;
+                }
+                @media screen and (min-width: 361px) and (max-width: 400px) {
                     // styles for screens up to 700px
                     width: 100%;
                 }
