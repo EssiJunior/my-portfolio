@@ -20,40 +20,44 @@ import blur from '@/assets/utilities/blur-23.svg'
 
 // STYLES
 import './experience.scss'
+import { useTranslation } from "react-i18next";
 
 function Experience({ theme }) {
+    //State for translation
+    const {t} = useTranslation();
+
     const experiences_tech = [
         {
             id: 1,
-            title: "Python Developer",
-            company: "Personal, For individuals, Powerk-soft, Pro service",
-            icon: <FaPython size={30} />,
+            title: t('se'),
+            company: `${t('p')}, Powerk-soft, Pro service, Leratel`,
+            icon: <MdEngineering size={30} />,
             // iconBg: "#383E56",
-            date: "Since - Sept 2021"
+            date: `${t('since')} - Sept 2022`,
         },
         {
             id: 2,
-            title: "Android Developer",
-            company: "Personal, For an individual",
-            icon: <FaAndroid size={30} />,
+            title: t('js'),
+            company: `Powerk-soft, Pro service, Flikart +, ${t('i')}`,
+            icon: <SiJavascript size={30} />,
             // iconBg: "#383E56",
-            date: "Since - July 2022"
+            date: `${t('since')} - Sept 2022`
         },
         {
             id: 3,
-            title: "JavaScript Developer",
-            company: "Powerk-soft, Pro service, Flikart +, For individuals",
-            icon: <SiJavascript size={30} />,
+            title: t('ad'),
+            company: `${t('p')}, ${t('i')}`,
+            icon: <FaAndroid size={30} />,
             // iconBg: "#383E56",
-            date: "Since - Oct 2022"
+            date: `${t('since')} - Mar 2022`
         },
         {
-            id: 6,
-            title: "Software engineer",
-            company: "Personal, Powerk-soft, Pro service, Leratel",
-            icon: <MdEngineering size={30} />,
+            id: 4,
+            title: t('py'),
+            company: `${t('p')}, ${t('i')}, Powerk-soft, Pro service`,
+            icon: <FaPython size={30} />,
             // iconBg: "#383E56",
-            date: "Since - Sept 2021",
+            date: `${t('since')} - Sept 2020`
         },
     ];
 
@@ -72,7 +76,7 @@ function Experience({ theme }) {
                     <div className="flex  items-center">
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                         <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-14 text-xl rounded-md`}>
-                            Experiences
+                            {t('ex')}
                         </span>
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                     </div>
@@ -128,7 +132,7 @@ function Experience({ theme }) {
             </div>
 
             <div className="action">
-                <Link to='/experience'><Button text='Learn more...' bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
+                <Link to='/experience'><Button text={t('more')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
             </div>
 
         </section>
