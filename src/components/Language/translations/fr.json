@@ -50,10 +50,21 @@
     "sk":"Compétences",
 
     "///Education":"Cette section concerne la traduction dans la section Education",
-    "exp":"expérience",
+    "ed":"éducation",
     "uy1":"Université de Yaoundé 1",
     "gbhsy":"Lycée BIlingue de Yaoundé",
     "ud":"Licence en système d'information et génie logiciel",
+
+    "///Projects":"Cette section concerne la traduction dans la section des projects",
+    "prs":"projets",
+    "pr":"projet",
+    "nameP":"nom",
+    "tools":"outils",
+    "role":"monRole",
+    "fsd":"Dévelopeur fullstack",
+    "swe":"Génie logiciel",
+    "rnd":"Dévelopeur React native",
+    "add":"Dévelopeur Android",
 
     "///Resume":"Cette section concerne la traduction dans la section CV",
     "download":"Télecharger CV",

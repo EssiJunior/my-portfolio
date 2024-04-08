@@ -15,6 +15,7 @@ import blur from '@/assets/utilities/blur-23.svg'
 function Education({ theme, educationRef }) {
     //State for translation
     const {t} = useTranslation();
+    
     const education = [
         {
             id: 1,
@@ -46,7 +47,7 @@ function Education({ theme, educationRef }) {
                     <div className="flex  items-center">
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                         <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md capitalize`}>
-                            {t('exp')}
+                            {t('ed')}
                         </span>
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                     </div>

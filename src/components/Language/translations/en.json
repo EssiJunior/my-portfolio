@@ -51,10 +51,21 @@
     "sk":"Skills",
 
     "///Education":"This section concerns translation in the Education section",
-    "exp":"experience",
+    "ed":"education",
     "uy1":"University of Yaounde 1",
     "gbhsy":"Government BIlingual High School Yaounde",
     "ud":"Bachelor degree in information system and software engineering",
+
+    "///Projects":"This section concerns translation in the Projects section",
+    "prs":"projects",
+    "pr":"project",
+    "nameP":"name",
+    "tools":"Tools",
+    "role":"myRole",
+    "fsd":"Fullstack Developer",
+    "swe":"Software engineer",
+    "rnd":"React native Developer",
+    "add":"Android Developer",
 
     "///Resume":"This section concerns translation in the Resume section",
     "download":"Download resume",

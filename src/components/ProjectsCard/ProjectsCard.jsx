@@ -6,8 +6,11 @@ import Typography from '../Typography/Typography';
 
 // UTILS
 import { projectCardProps } from '@/utils/prop-types';
+import { useTranslation } from 'react-i18next';
 
 function ProjectCard({ project }) {
+    //State for translation
+    const {t} = useTranslation();
 
     return (
         <div className="from-[#171717] border-secondary relative rounded-lg border bg-gradient-to-r to-[#272727] w-full">
@@ -27,19 +30,19 @@ function ProjectCard({ project }) {
                 <code className="font-mono text-xs md:text-sm lg:text-base">
                     <div className="blink">
                         <span className="mr-2 text-pink-500">const</span>
-                        <span className="mr-2 text-white">project</span>
+                        <span className="mr-2 text-white">{t('pr')}</span>
                         <span className="mr-2 text-pink-500">=</span>
                         <span className="text-gray-400">{'{'}</span>
                     </div>
                     <div>
-                        <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+                        <span className="ml-4 lg:ml-8 mr-2 text-white">{t('nameP')}:</span>
                         <span className="text-gray-400">{`'`}</span>
                         <span className="text-tertiary">{project.name}</span>
                         <span className="text-gray-400">{`',`}</span>
                     </div>
 
                     <div className="ml-4 lg:ml-8 mr-2">
-                        <span className=" text-white">tools:</span>
+                        <span className=" text-white">{t('tools')}:</span>
                         <span className="text-gray-400">{` ['`}</span>
                         {
                             project.tools.map((tag, i) => (
@@ -55,7 +58,7 @@ function ProjectCard({ project }) {
                         <span className="text-gray-400">{"],"}</span>
                     </div>
                     <div>
-                        <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
+                        <span className="ml-4 lg:ml-8 mr-2 text-white">{t('role')}:</span>
                         <span className="text-orange-400">{project.role}</span>
                         <span className="text-gray-400">,</span>
                     </div>
