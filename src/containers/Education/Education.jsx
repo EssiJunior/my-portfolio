@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { useTranslation } from "react-i18next";
 import { GrCertificate } from "react-icons/gr";
 
 // UTILS
@@ -12,18 +13,20 @@ import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
 
 function Education({ theme, educationRef }) {
+    //State for translation
+    const {t} = useTranslation();
     const education = [
         {
             id: 1,
-            title: "Bachelor degree in software engineering",
-            school: "University of Yaounde 1",
-            date: "Since - August 2022"
+            title: t('ud'),
+            school: t('uy1'),
+            date: `${t('since')} - Sept 2022`
         },
         {
             id: 2,
             title: "GCE - Advanced level",
-            school: "Government Bilingual High School Yaounde",
-            date: "Since - August 2018"
+            school: t('gbhsy'),
+            date: `${t('since')} - Sept 2018`
         }
     ];
 
@@ -42,8 +45,8 @@ function Education({ theme, educationRef }) {
                 <div className="flex justify-center my-5 lg:py-8">
                     <div className="flex  items-center">
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
-                        <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
-                            Education
+                        <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md capitalize`}>
+                            {t('exp')}
                         </span>
                         <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                     </div>

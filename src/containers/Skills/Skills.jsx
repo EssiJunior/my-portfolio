@@ -9,6 +9,7 @@ import { SiCanva, SiFastapi, SiJavascript, SiKotlin, SiMicrosoftoffice, SiMongod
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
+import { useTranslation } from "react-i18next";
 
 const skillsData = [
     {
@@ -164,6 +165,8 @@ const skillsData = [
 ]
 
 function Skills({ theme, skillsRef }) {
+    //State for translation
+    const {t} = useTranslation();
 
     return (
         <div id="skills" className={`skills relative z-50`} ref={skillsRef}>
@@ -179,7 +182,7 @@ function Skills({ theme, skillsRef }) {
                 <div className="flex  items-center">
                     <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                     <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
-                        Skills
+                        {t('sk')}
                     </span>
                     <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
                 </div>

@@ -47,6 +47,15 @@
     "js":"JAVASCRIPT DEVELOPER",
     "se":"SOFTWARE ENGINEER",
 
+    "///Skills":"This section concerns translation in the Skills section",
+    "sk":"Skills",
+
+    "///Education":"This section concerns translation in the Education section",
+    "exp":"experience",
+    "uy1":"University of Yaounde 1",
+    "gbhsy":"Government BIlingual High School Yaounde",
+    "ud":"Bachelor degree in information system and software engineering",
+
     "///Resume":"This section concerns translation in the Resume section",
     "download":"Download resume",
 
