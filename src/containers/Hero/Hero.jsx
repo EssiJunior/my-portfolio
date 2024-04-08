@@ -51,7 +51,7 @@ const Hero = ({theme}) => {
             <div className="container-hero ">
                 <div className="brand" style={{color:theme.colors.text}}>
                     <Typography text={t('present')} style={{fontSize:'1.25rem'}} />
-                    <Typography text={t('me')} style={{fontSize:'2.75rem', fontWeight:'700'}}/>
+                    <Typography text={t('me')} style={{fontSize:'2.75rem', fontWeight:'700', color:'white'}}/>
                     <Typography text={t('intro')} style={{marginBottom:'3rem'}} />
                     
                     <div className="my-6 flex items-center gap-5">
