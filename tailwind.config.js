@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#11998e",
-        secondary: "#078a65",
+        primary: "#0183b4",
+        secondary: "#0fcde7",
         tertiary: "#fbb863",
         "red": "#de3e39",
-        "green": "#13a96e",
+        "green": "#078a65",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

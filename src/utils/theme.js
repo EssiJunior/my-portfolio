@@ -2,17 +2,17 @@ export const lightTheme = {
     colors: {
         navbar:'#fff',
         navbarText:'#0e1217',
-        footer:'#11998e',
+        footer:'#0183b4',
         bg: '#F2F2F2',
         text: '#333',
         grey: '#aaa',
     },
     hero:{
-        gradient:'primary-gradient'
+        gradient:'primary-gradient  '
     },
     experience:{
-        cardBackground:'#078a65',
-        cardDot:'#11998e',
+        cardDot:'#0fcde7',
+        cardBackground:'#0183b4',
     },
     skills:{
         divider:'via-secondary',
@@ -42,8 +42,8 @@ export const darkTheme = {
         gradient:'black-gradient'
     },
     experience:{
-        cardBackground:'#11998e',
-        cardDot:'#078a65',
+        cardDot:'#0183b4',
+        cardBackground:'#0fcde7',
     },
     skills:{
         divider:'via-primary',

@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary: #11998e;
-$secondary: #078a65;
+$primary: #0183b4;
+$secondary: #0fcde7;
 $bg: #F2F2F2;
 $white: #FFFFFF;
 $black: #000000;
@@ -133,16 +133,16 @@ a, .wide-language{
 }
 
 .green-text-gradient {
-  background: #11998e; /* fallback for old browsers */
+  background: $primary; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
-    #11998e,
-    #38ef7d
+    $primary,
+    $secondary
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    #11998e,
-    #38ef7d
+    $primary,
+    $secondary
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   background-clip: text;

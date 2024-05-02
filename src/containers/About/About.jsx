@@ -8,6 +8,7 @@ import { themeProps } from "@/utils/prop-types";
 // STYLES
 import { styles } from "@/styles/styles";
 import './about.scss'
+import { me, meDark, meGrey, meMozaic } from "../../assets/profile";
 
 const About = ({theme}) => {
     //State for translation
@@ -35,7 +36,14 @@ const About = ({theme}) => {
                     {t('detail')}
                 </motion.p>
 
-                <motion.div className="illustration"/>
+                <motion.div className="illustration">
+                    <div className="gallery">
+                        <img src={me} alt="Me" />
+                        <img src={meDark} alt="Me dark" />
+                        <img src={meGrey} alt="Me grey" />
+                        <img src={meMozaic} alt="Me mozaic" />
+                    </div>
+                </motion.div>
             </section>
         </main>
     )
