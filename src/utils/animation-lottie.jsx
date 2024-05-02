@@ -4,14 +4,15 @@ import Lottie from "lottie-react";
 // UTILS
 import { lottieProps } from "./prop-types";
 
-const AnimationLottie = ({ animation, width = '95%' }) => {
+const AnimationLottie = ({ animation, width = '95%', margin='auto', height='auto' }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animation,
     style: {
       width: width,
-      margin: 'auto',
+      height: height,
+      margin: margin,
     }
   };
 

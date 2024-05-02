@@ -1,5 +1,5 @@
 // REACT COMPONENTS IMPORTS
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Worker } from '@react-pdf-viewer/core';
@@ -10,6 +10,7 @@ import Experience from '@/pages/Experience';
 import InProgress from '@/pages/InProgress';
 import Contact from '@/pages/Contact';
 import Resume from '@/pages/Resume';
+import NotFound from '@/pages/NotFound';
 
 // CUSTOMIZED CONTAINERS
 import Layout from '@/containers/Layout/Layout'
@@ -39,6 +40,8 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          <Route path="*" element={<Navigate to="/notfound" replace />} />
+          <Route path="/notfound" element={<NotFound />}></Route>
           <Route path="/" element={<Layout themeToggler={toggleTheme} theme={theme} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef}   />}>
             <Route index element={<Home theme={theme} skillsRef={skillsRef} educationRef={educationRef} />} />
             <Route path="experience" element={<Experience theme={theme} />} />

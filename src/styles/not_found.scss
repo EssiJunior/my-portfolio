@@ -1,0 +1,33 @@
+@import '../index.scss';
+
+main.not-found {
+  @include flex(column);
+  height: 100vh;
+
+  .heading{
+    text-align: center;
+    color:$primary;
+    font-weight:600;
+    font-size:50px;
+    line-height:46.4px;
+    margin: 1rem 0;
+    width: 90%;
+  }
+  .description{
+    text-align: center;
+    color:$black;
+    font-weight:400;
+    font-size:25px;
+    margin-bottom: 2rem;
+    width: 90%;
+
+  }
+  .to-home{
+      @include flex(row);
+      justify-content: space-evenly;
+      width: 7rem;
+  }
+}
+
+
+
