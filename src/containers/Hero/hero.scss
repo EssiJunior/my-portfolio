@@ -78,9 +78,12 @@
         }
 
         .actions{
-            // background: url(../../assets/utilities/car.png) center/cover no-repeat;
+            background: url(../../assets/profile/profile.png) center/cover no-repeat;
             // background-color: red;
             @include flex(row);
+            height: 90%;
+            width: 90%;
+            margin: auto;
             @media (max-width: 900px) {
                 // styles for screens up to 700px
                 display: none;

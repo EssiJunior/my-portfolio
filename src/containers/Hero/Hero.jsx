@@ -77,9 +77,7 @@ const Hero = ({theme}) => {
 
                     </div>
                 </div>
-                <div className="actions">  
-                    <AnimationLottie animation={dev}  width={is_lg ? '90%' :'70%'}/>                  
-                </div>
+                <div className="actions" />  
             </div>
         </section>
         
