@@ -11,7 +11,7 @@ const AnimationLottie = ({ animation, width = '95%' }) => {
     animationData: animation,
     style: {
       width: width,
-      margin: '0 auto',
+      margin: 'auto',
     }
   };
 
