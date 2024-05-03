@@ -167,7 +167,7 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
                                     </div>
                                 </label>
 
-                                <Menu sx={{ fontSize: '2.5rem', marginLeft: '0.5rem', cursor: 'pointer', color: '#11998e' }} onClick={toggleDrawer(true)} />
+                                <Menu sx={{ fontSize: '2.5rem', marginLeft: '0.5rem', cursor: 'pointer', color: '#0183b4' }} onClick={toggleDrawer(true)} />
                             </> :
                             <>
                                 <label className="switch">
