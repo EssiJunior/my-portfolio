@@ -16,8 +16,12 @@ import { themeProps } from "@/utils/prop-types";
 
 // STYLES
 import { styles } from "@/styles/styles";
+import { useTranslation } from "react-i18next";
 
 const Experience = ({ theme }) => {
+    //State for translation
+    const { t } = useTranslation();
+
     return (
         <main className="experience py-12" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }}>
             <SEO
@@ -29,10 +33,10 @@ const Experience = ({ theme }) => {
 
             <motion.div variants={textVariant()} className="mt-12">
                 <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>
-                    What I have done so far
+                    {t('e1')}
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center`}>
-                    Work Experience.
+                    {t('e2')}
                 </h2>
             </motion.div>
 

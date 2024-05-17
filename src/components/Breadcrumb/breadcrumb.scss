@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.breadcrumb{
+    margin:0.5rem 3rem!important;
+    width: 80%;
+}
+.breadcrumb-m{
+    margin:1rem 3rem!important;
+    @include flex(column);
+}
+.link{
+    @include flex(row);
+    // background-color: red;
+}

@@ -11,6 +11,7 @@ import InProgress from '@/pages/InProgress';
 import Contact from '@/pages/Contact';
 import Resume from '@/pages/Resume';
 import NotFound from '@/pages/NotFound';
+import Projects from '@/pages/Projects';
 
 // CUSTOMIZED CONTAINERS
 import Layout from '@/containers/Layout/Layout'
@@ -47,7 +48,7 @@ function App() {
             <Route path="experience" element={<Experience theme={theme} />} />
             <Route path="about" element={<InProgress theme={theme} />} />
             <Route path="contact" element={<Contact theme={theme} />} />
-            <Route path="projects" element={<InProgress theme={theme} />} />
+            <Route path="projects" element={<Projects theme={theme} />} />
             <Route path="resume" element={<Resume theme={theme} />} />
           </Route>
         </Routes>
