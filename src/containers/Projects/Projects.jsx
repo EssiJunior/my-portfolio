@@ -30,7 +30,7 @@ const Projects = ({ theme }) => {
 
             <div className="pt-24">
                 <div className="flex flex-col gap-6">
-                    {projects.map(project => (
+                    {projects.slice(0,5).map(project => (
                         <div
                             id={`sticky-card-${project.id}`}
                             key={project.id}
