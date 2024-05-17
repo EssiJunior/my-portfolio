@@ -71,7 +71,7 @@ function ProjectCard({ project }) {
                         project.demo !== '' &&
                         <div className="ml-4 lg:ml-8 mr-2">
                             <span className="text-white">{t('demo')}:</span>
-                            <a className="text-green" href={project.demo}>{' ' + project.demo}</a>
+                            <a className="text-green" href={project.demo} target='_blank'>{' ' + project.demo}</a>
                             <span className="text-gray-400">,</span>
                         </div>
                     }
@@ -79,7 +79,7 @@ function ProjectCard({ project }) {
                         project.code !== '' &&
                         <div className="ml-4 lg:ml-8 mr-2">
                             <span className="text-white">{t('code')}:</span>
-                            <a className="text-green" href={project.code}>{' ' + project.code}</a>
+                            <a className="text-green" href={project.code} target='_blank'>{' ' + project.code}</a>
                             <span className="text-gray-400">,</span>
                         </div>
                     }

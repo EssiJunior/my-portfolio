@@ -47,7 +47,7 @@ const Projects = ({ theme }) => {
 
 
             <div className="action">
-                <Link to='/projects'><Button text={t('more')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
+                <Link to='/projects'><Button text={t('all')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
             </div>
         </main>
     );
