@@ -1,7 +1,8 @@
 @import '../../index.scss';
 footer{
     background-color: $primary;
-    height: 60vh;
+    height: 70vh;
+    // background-color: red;
     
     @media screen  and (max-width: 550px) {
         height: 200vh;
@@ -9,14 +10,14 @@ footer{
     @media screen and (min-width: 551px) and (max-width: 800px) {
         height: 125vh;
     }
-
+    
     @media screen and (min-width: 801px) and (max-width: 990px) {
-        height: 80vh;
+        height: 90vh;
     }
     @media screen and (min-width: 991px) and (max-width: 1200px) {
-        height: 70vh;
+        height: 80vh;
     }
-
+    
     .footer-info{
         height: 90%;
         width: 100%;
