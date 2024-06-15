@@ -14,7 +14,7 @@ git clone https://github.com/EssiJunior/my-portfolio.git
 
 
 ## ⚙️ Setting Up The Development Environment
-This code was written using [React - JavaScript library](https://react.dev/). Below are the instructions to follow to run our application.
+This code was written using [React - JavaScript library](https://react.dev/). Below are the instructions to follow to run our application locally.
 
 ### → `STEP #0`
 
