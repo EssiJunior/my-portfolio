@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { themeProps } from '@/utils/prop-types';
 import Typography from '../Typography/Typography';
 
-const Breadcrumb = ({theme}) => {
+const Breadcrumb = ({theme, label, to}) => {
     //State for translation
     const { t } = useTranslation();
     const is_mobile_1 = useMediaQuery('(max-width: 700px)')
@@ -25,14 +25,14 @@ const Breadcrumb = ({theme}) => {
                 </lord-icon>
                 <Typography text={t('home')} />
             </Link>
-            <Link underline="hover" color={{color: `${theme.colors.text}`}} href='/products' className='link' >
+            <Link underline="hover" color={{color: `${theme.colors.text}`}} href={to} className='link' >
                 <lord-icon
                     src="https://cdn.lordicon.com/ppyvfomi.json"
                     trigger="hover"
                     colors={`primary:${theme.colors.text}`}
                     style={{width:'30px', height:'30px'}}>
                 </lord-icon>
-                <Typography text={t('projects')} />
+                <Typography text={t(label)} />
             </Link>
         </Breadcrumbs>
     )
