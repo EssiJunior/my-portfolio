@@ -1,76 +1,50 @@
+import { Download, Email, Facebook, GitHub, LinkedIn, Twitter } from "@mui/icons-material"
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion";
 
-const About = () => {
+// CUSTOMIZED COMPONENTS
+import SEO from "@/components/SEO/SEO";
+
+// UTILS
+import { themeProps } from "@/utils/prop-types";
+import { baseURL } from "@/utils";
+import { textVariant } from "@/utils/motion";
+
+// STYLES
+import { styles } from "@/styles/styles";
+import '../styles/about.scss';
+import { useState } from "react";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
+import { useTranslation } from "react-i18next";
+import { me1, me2, me3, me4, me5 } from "../assets/me";
+
+const About = ({theme}) => {
+    //State for translation
+    const { t } = useTranslation();
+    const [inTrans, setInTrans] = useState(false);
+
     return (
-        <div>
-            About page
-            {/* <section className="hero relative flex flex-col items-center justify-between py-4 lg:py-12">       
-                
-                <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
-                    <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-                    <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[1.6rem] lg:leading-[2.5rem]">
-                        Hello, <br />
-                        I am {' '}
-                        <span className=" text-pink-500">Essi Junior</span>
-                        {` , I'm a `}
-                        <span className=" text-[#16f2b3]">FullStack developer and software engineer.</span>
-                        .
-                    </h1>
+        <main className="about" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
+            <Breadcrumb theme={theme} label='about' to='/about' icon="kthelypq.json" />
+            <SEO
+                title={`Essi Junior's portfolio - About`}
+                description="This is Essi Junior's portfolio website about page. Here you can know more about me personaly."
+                name='Essi Junior'
+                type='about'
+                link={`${baseURL}/about`} />
 
-                    <div className="my-12 flex items-center gap-5">
-                        <Link
-                        href='AA'
-                        target='_blank'
-                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                        <GitHub size={30} />
-                        </Link>
-                        <Link
-                        href='AA'
-                        target='_blank'
-                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                        <LinkedIn size={30} />
-                        </Link>
-                        <Link
-                        href='AA'
-                        target='_blank'
-                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                        <Facebook size={30} />
-                        </Link>
-                        <Link
-                        href='AA'
-                        target='_blank'
-                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                        <LinkedIn size={30} />
-                        </Link>
-                        <Link
-                        href='AA'
-                        target='_blank'
-                        className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
-                        >
-                        <Twitter size={30} />
-                        </Link>
-                    </div>
+            <motion.div variants={textVariant()} className="mt-12">
+                <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>
+                    {t('allA')}
+                </p>
+                <h2 className={`${styles.sectionHeadText} text-center`}>
+                    {t('about')}
+                </h2>
+            </motion.div>
 
-                    <div className="flex items-center gap-3">
-                        <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
-                        <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
-                            <span>Contact me</span>
-                            <Email size={16} />
-                        </button>
-                        </Link>
-
-                        <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href='AA'
-                        >
-                        <span>Get Resume</span>
-                        <Download size={16} />
-                        </Link>
-                    </div>
-
-                    </div>
-
+            
+            <section className="hero relative flex flex-col items-center justify-between py-4 lg:py-12">       
+                <div className="grid">
                     <div className="order-1 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative  border bg-gradient-to-r to-[#0a0d37]">
                     <div className="flex flex-row">
                         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
@@ -166,10 +140,34 @@ const About = () => {
                     </div>
                     </div>
                 </div>
-                
-            </section> */}
-        </div>
+
+            </section>
+
+            <div className="parallax">
+                <div className={inTrans ? `box`:`box super-box`} >
+                    <img src={me2} alt="1" />
+                    <span>CSS</span>
+                </div>
+                <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
+                    <img src={me3} alt="1" />
+                    <span>Image</span>
+                </div>
+                <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
+                    <img src={me4} alt="1" />
+                    <span>Hover</span>
+                </div>
+                <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
+                    <img src={me1} alt="1" />
+                    <span>Effect</span>
+                </div>
+                <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
+                    <img src={me5} alt="1" />
+                    <span>Effect</span>
+                </div>
+            </div>
+        </main>
     )
 }
 
+About.propTypes = themeProps;
 export default About
