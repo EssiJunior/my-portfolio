@@ -38,14 +38,17 @@ const BackToTop = ({ theme }) => {
 
     return (
         <div className={`back-to-top ${theme.global.headingBox}`}
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            // onMouseEnter={() => setIsHover(true)}
+            // onMouseLeave={() => setIsHover(false)}
             style={scrolling ? { display: display } : { display: "none" }}>
-            {isHover &&
+            {/* {isHover &&
                 <div onClick={goToTop} className="back-to-top-content">
                     <PiArrowFatLinesUpDuotone />
                 </div>
-            }
+            } */}
+            <div onClick={goToTop} className="back-to-top-content">
+                <PiArrowFatLinesUpDuotone />
+            </div>
         </div>
     )
 }

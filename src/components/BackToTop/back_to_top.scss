@@ -5,29 +5,16 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 5rem;
-    width: 1rem;
+    width: 2.5rem;
     // background-color: $primary;
     position: fixed;
     top: 45%;
     right: 0;
     z-index: 1201;
-    transition: width 0.5s;
-    -webkit-transition: width 0.5s;
     text-align: center;
     @include flex(row);
-    transition: var(--transition);
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
-
-    &:hover {
-        width: 3rem;
-        transition: width 0.5s;
-        -webkit-transition: width 0.5s;
-    }
-    
-    &:hover > .back-to-top-content svg {
-        animation: toggle 3s infinite ;
-    }
 
     .back-to-top-content{
         cursor:pointer;
@@ -49,6 +36,7 @@
             transition: width 0.5s;
             -webkit-transition: width 0.5s;
             color: white;
+            animation: toggle 3s infinite ;
         }
     
     }
