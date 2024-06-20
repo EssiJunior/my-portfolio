@@ -87,8 +87,14 @@
     "sending":"Envoi...",
     "sendS":"Envoi de votre message reussi!",
 
-    "///About us":"Cette section concerne la traduction dans la section About us",
-    "aMessage":"NOUS SOMMES FLIKART +",
+    "///About page":"This section concerns translation in the About page",
+    "newsMessage":"Voulez-vous créer un logiciel de haute qualité ?",
+    "ai":"Je suis EssiJunior",
+    "a1":"Je suis un développeur de logiciels full-stack web/mobile, et un ingénieur logiciel intermédiaire.",
+    "a2":"J'ai une expertise dans les langages de programmation Python, JavaScript, Java et Kotlin.",
+    "a3":"Mon objectif est de travailler sur le plus grand nombre possible de projets logiciels à grande échelle.",
+    "a4":"J'aime beaucoup concevoir des interfaces. Je m'efforce toujours de produire une bonne expérience utilisateur.",
+    "a5":"Tant que j'ai des mains, je peux coder n'importe quoi.",
     
     "///Footer":"Cette section concerne la traduction dans le footer",
     "copyright":"Dévelopé avec amour par @EssiJunior",

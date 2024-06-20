@@ -88,6 +88,15 @@
     "sending":"Sending",
     "sendS":"Successfully sent us your message!",
 
+    "///About page":"This section concerns translation in the About page",
+    "newsMessage":"Do you want to create a high-quality software ?",
+    "ai":"I am EssiJunior",
+    "a1":"I am a full-stack web/mobile software developer, and an intermediate software engineer.",
+    "a2":"I have expertise in Python, JavaScript, Java and Kotlin programming languages.",
+    "a3":"My goal is to work on as many large-scale software projects as possible.",
+    "a4":"I really love designing interfaces. I always work hard to produce a good user experience.",
+    "a5":"As long as I have hands, I can code anything.",
+
     "///Footer":"This section concerns translation in the footer",
     "copyright":"Developed with love by @EssiJunior",
     "links":"Quick links",

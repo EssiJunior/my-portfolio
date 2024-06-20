@@ -1,4 +1,4 @@
-import { Download, Email, Facebook, GitHub, LinkedIn, Twitter } from "@mui/icons-material"
+import { Download, Email, EmailSharp, Facebook, GitHub, LinkedIn, Twitter } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 
@@ -18,6 +18,7 @@ import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { useTranslation } from "react-i18next";
 import { me1, me2, me3, me4, me5 } from "../assets/me";
 import Typography from "../components/Typography/Typography";
+import Button from "../components/Button/Button";
 
 const About = ({theme}) => {
     //State for translation
@@ -44,7 +45,7 @@ const About = ({theme}) => {
             </motion.div>
 
             
-            <section className="hero relative flex flex-col items-center justify-between py-4 lg:py-12">       
+            <section className="relative flex flex-col items-center justify-between py-4 lg:py-12 w-11/12">       
                 <div className="grid">
                     <div className="order-1 lg:order-2 from-[#0d1224] border-secondary relative  border bg-gradient-to-r to-[#0a0d37]">
                     <div className="flex flex-row">
@@ -172,29 +173,35 @@ const About = ({theme}) => {
 
             </section>
             
-            <Typography text='_I am EssiJunior'  style={{fontSize:'1.75rem', width:'90%', margin:'0 auto', fontStyle:'italic'}} className={`${theme.global.subHeading}`}/>
+            <Typography text={`_${t('ai')}`}  style={{fontSize:'1.75rem', width:'90%', margin:'2rem auto 0 auto', fontStyle:'italic', fontWeight:600}} className={`${theme.global.subHeading}`}/>
+
             <div className="parallax">
                 <div className={inTrans ? `box`:`box super-box`} >
                     <img src={me2} alt="my image" loading='lazy' />
-                    <span>Software developper</span>
+                    <span className={`bg-primary text-white`}>{t('a1')}</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
                     <img src={me3} alt="my image" loading='lazy' />
-                    <span>Python</span>
+                    <span className={`bg-primary text-white`}>{t('a2')}</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
                     <img src={me4} alt="my image" loading='lazy' />
-                    <span>JavaScript</span>
+                    <span className={`bg-primary text-white`}>{t('a3')}</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
                     <img src={me1} alt="my image" loading='lazy' />
-                    <span>Futur Designer</span>
+                    <span className={`bg-primary text-white`}>{t('a4')}</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
                     <img src={me5} alt="my image" loading='lazy' />
-                    <span>Hard worker</span>
+                    <span className={`bg-primary text-white`}>{t('a5')}</span>
                 </div>
             </div>
+            
+            <div className="footer-heading">
+                <Typography className="gradient__text" text={`_${t('newsMessage')}`} />
+                <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':'white'} color={theme.colors.bg} fontWeight={600} icon={<EmailSharp sx={{color:theme.colors.bg}} />}/></Link>
+                </div>
         </main>
     )
 }
