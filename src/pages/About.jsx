@@ -17,6 +17,7 @@ import { useState } from "react";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { useTranslation } from "react-i18next";
 import { me1, me2, me3, me4, me5 } from "../assets/me";
+import Typography from "../components/Typography/Typography";
 
 const About = ({theme}) => {
     //State for translation
@@ -142,27 +143,28 @@ const About = ({theme}) => {
                 </div>
 
             </section>
-
+            
+            <Typography text='_I am EssiJunior'  style={{fontSize:'1.75rem', width:'90%', margin:'0 auto', fontStyle:'italic'}} className={`${theme.global.subHeading}`}/>
             <div className="parallax">
                 <div className={inTrans ? `box`:`box super-box`} >
-                    <img src={me2} alt="1" />
-                    <span>CSS</span>
+                    <img src={me2} alt="my image" loading='lazy' />
+                    <span>Software developper</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
-                    <img src={me3} alt="1" />
-                    <span>Image</span>
+                    <img src={me3} alt="my image" loading='lazy' />
+                    <span>Python</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
-                    <img src={me4} alt="1" />
-                    <span>Hover</span>
+                    <img src={me4} alt="my image" loading='lazy' />
+                    <span>JavaScript</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
-                    <img src={me1} alt="1" />
-                    <span>Effect</span>
+                    <img src={me1} alt="my image" loading='lazy' />
+                    <span>Futur Designer</span>
                 </div>
                 <div className="box" onMouseEnter={() => setInTrans(true)} onMouseLeave={() => setInTrans(false)}>
-                    <img src={me5} alt="1" />
-                    <span>Effect</span>
+                    <img src={me5} alt="my image" loading='lazy' />
+                    <span>Hard worker</span>
                 </div>
             </div>
         </main>
