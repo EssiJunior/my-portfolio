@@ -46,7 +46,7 @@ const About = ({theme}) => {
             
             <section className="hero relative flex flex-col items-center justify-between py-4 lg:py-12">       
                 <div className="grid">
-                    <div className="order-1 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative  border bg-gradient-to-r to-[#0a0d37]">
+                    <div className="order-1 lg:order-2 from-[#0d1224] border-secondary relative  border bg-gradient-to-r to-[#0a0d37]">
                     <div className="flex flex-row">
                         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
                         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -72,20 +72,38 @@ const About = ({theme}) => {
                             <span className="text-amber-300">NDANG ESSI Pierre Junior</span>
                             <span className="text-gray-400">{`',`}</span>
                         </div>
+                        <div>
+                            <span className="ml-4 lg:ml-8 mr-2 text-white">nationality:</span>
+                            <span className="text-gray-400">{`'`}</span>
+                            <span className="text-amber-300">Cameroonian</span>
+                            <span className="text-gray-400">{`',`}</span>
+                        </div>
+                        <div className="ml-4 lg:ml-8 mr-2">
+                            <span className=" text-white">languages:</span>
+                            <span className="text-gray-400">{`['`}</span>
+                            <span className="text-amber-300">English</span>
+                            <span className="text-gray-400">{"', '"}</span>
+                            <span className="text-amber-300">French</span>
+                            <span className="text-gray-400">{"'],"}</span>
+                        </div>
                         <div className="ml-4 lg:ml-8 mr-2">
                             <span className=" text-white">skills:</span>
                             <span className="text-gray-400">{`['`}</span>
                             <span className="text-amber-300">React</span>
                             <span className="text-gray-400">{"', '"}</span>
-                            <span className="text-amber-300">NextJS</span>
+                            <span className="text-amber-300">React Native</span>
                             <span className="text-gray-400">{"', '"}</span>
                             <span className="text-amber-300">Redux</span>
                             <span className="text-gray-400">{"', '"}</span>
                             <span className="text-amber-300">Express</span>
                             <span className="text-gray-400">{"', '"}</span>
-                            <span className="text-amber-300">NestJS</span>
+                            <span className="text-amber-300">FastAPI</span>
                             <span className="text-gray-400">{"', '"}</span>
                             <span className="text-amber-300">MySql</span>
+                            <span className="text-gray-400">{"'"}</span>
+                            <br />
+                            <span className="text-gray-400">{", '"}</span>
+                            <span className="text-amber-300">PostgreSQL</span>
                             <span className="text-gray-400">{"', '"}</span>
                             <span className="text-amber-300">MongoDB</span>
                             <span className="text-gray-400">{"', '"}</span>
@@ -96,6 +114,11 @@ const About = ({theme}) => {
                         </div>
                         <div>
                             <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
+                            <span className="text-orange-400">true</span>
+                            <span className="text-gray-400">,</span>
+                        </div>
+                        <div>
+                            <span className="ml-4 lg:ml-8 mr-2 text-white">disciplined:</span>
                             <span className="text-orange-400">true</span>
                             <span className="text-gray-400">,</span>
                         </div>
@@ -121,6 +144,11 @@ const About = ({theme}) => {
                         <div>
                             <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
                             <span className="mr-2 text-white">hardWorker</span>
+                            <span className="text-amber-300">&amp;&amp;</span>
+                        </div>
+                        <div>
+                            <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
+                            <span className="mr-2 text-white">disciplined</span>
                             <span className="text-amber-300">&amp;&amp;</span>
                         </div>
                         <div>
