@@ -1,22 +1,26 @@
 
-export const navLinks = [
+export const navlinks = (t) => [
     {
-        id: "about",
-        title: "About",
+        'label': t('about'),
+        'path': '/about'
     },
     {
-        id: "experience",
-        title: "Experience",
+        'label': t('contact'),
+        'path': '/contact'
     },
     {
-        id: "project",
-        title: "Projects",
+        'label': t('experience'),
+        'path': '/experience'
     },
     {
-        id: "contact",
-        title: "Contact",
+        'label': t('projects'),
+        'path': '/projects'
     },
-];
+    {
+        'label': t('resume'),
+        'path': '/resume'
+    },
+]
 
 const services = [
     {

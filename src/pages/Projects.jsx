@@ -33,6 +33,8 @@ const Projects = ({theme}) => {
                     {t('projects')}.
                 </h2>
             </motion.div>
+
+            <h1 className="gradient__text">#TODO</h1>
         </main>
     )
 }

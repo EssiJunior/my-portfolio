@@ -16,7 +16,7 @@ import logoWhite from '@/assets/at-clay.png'
 // UTILITIES
 import { ScrollToRef } from '@/utils/Scroll'
 import { themeProps } from '@/utils/prop-types'
-
+import {navlinks} from '../../utils'
 // STYLE
 import './navbar.scss'
 
@@ -36,36 +36,6 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
         setOpen(newOpen);
     };
 
-    const navlinks = [
-        {
-            'label': t('about'),
-            'path': '/about'
-        },
-        {
-            'label': t('contact'),
-            'path': '/contact'
-        },
-        {
-            'label': t('experience'),
-            'path': '/experience'
-        },
-        // {
-        //     'label':t('skills'),
-        //     'path':'/skills'
-        // },
-        // {
-        //     'label':t('education'),
-        //     'path':'/education'
-        // },
-        {
-            'label': t('projects'),
-            'path': '/projects'
-        },
-        {
-            'label': t('resume'),
-            'path': '/resume'
-        },
-    ]
     const reflinks = [
         {
             'label': t('skills'),
@@ -85,7 +55,7 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
     const DrawerList = (
         <Box sx={{ width: 300, height: '100%', backgroundColor: `${theme.colors.navbar}`, color: `${theme.colors.navbarText}` }} role="presentation" onClick={toggleDrawer(false)} className='drawer'>
             <List>
-                {navlinks.map((elt, i) => (
+                {navlinks(t).map((elt, i) => (
                     <NavLink to={elt.path} key={i} activeClassName="active">
                         <Typography text={elt.label} />
                     </NavLink>
@@ -129,7 +99,7 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
 
                 <nav className='links' style={is_mobile ? { display: 'none' } : {}} >
                     {
-                        navlinks.map((elt, i) => {
+                        navlinks(t).map((elt, i) => {
                             return (
                                 <NavLink to={elt.path} key={i} activeClassName="active">
                                     <Typography text={elt.label} />

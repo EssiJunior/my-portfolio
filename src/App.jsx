@@ -7,7 +7,6 @@ import { Worker } from '@react-pdf-viewer/core';
 // PAGES
 import Home from '@/pages/Home'
 import Experience from '@/pages/Experience';
-import InProgress from '@/pages/InProgress';
 import Contact from '@/pages/Contact';
 import Resume from '@/pages/Resume';
 import NotFound from '@/pages/NotFound';
