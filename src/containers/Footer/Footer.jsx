@@ -10,6 +10,7 @@ import Language from '@/components/Language/Language'
 
 // UTILITIES
 import { themeProps } from '@/utils/prop-types';
+import { social, tech } from '@/utils/utilities';
 import { navlinks } from '@/utils';
 
 // STYLES
@@ -17,7 +18,6 @@ import './footer.scss'
 
 // ASSETS
 import logo from '@/assets/at-clay.png'
-import { social, tech } from '../../utils/utilities';
 
 const Footer = ({ theme, languageRef }) => {
     //State for translation

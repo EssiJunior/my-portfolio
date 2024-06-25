@@ -16,7 +16,7 @@ import logoWhite from '@/assets/at-clay.png'
 // UTILITIES
 import { ScrollToRef } from '@/utils/Scroll'
 import { themeProps } from '@/utils/prop-types'
-import {navlinks} from '../../utils'
+import {navlinks} from '@/utils'
 // STYLE
 import './navbar.scss'
 

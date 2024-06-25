@@ -1,168 +1,11 @@
 // REACT COMPONENTS
 import Marquee from "react-fast-marquee";
-import { RiReactjsLine } from "react-icons/ri";
-import { IoLogoElectron } from "react-icons/io5";
-import { SiMui } from "react-icons/si";
-import { TbBrandThreejs } from "react-icons/tb";
-import { FaAndroid, FaAws, FaBootstrap, FaCss3, FaDocker, FaFigma, FaGit, FaHtml5, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact, FaSass } from "react-icons/fa6";
-import { SiCanva, SiFastapi, SiJavascript, SiKotlin, SiMicrosoftoffice, SiMongodb, SiMysql, SiPostgresql, SiRedux, SiSwagger, SiTailwindcss } from "react-icons/si";
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
 import { useTranslation } from "react-i18next";
+import { skills } from "../../utils/utilities";
 
-const skillsData = [
-    {
-        id: 1,
-        icon: <FaHtml5 size={40} />,
-        tag: 'HTML',
-    },
-    {
-        id: 2,
-        icon: <FaCss3 size={40} />,
-        tag: 'CSS',
-    },
-    {
-        id: 3,
-        icon: <SiJavascript size={40} />,
-        tag: 'Javascript',
-    },
-    {
-        id: 4,
-        icon: <FaReact size={40} />,
-        tag: 'React',
-    },
-    {
-        id: 5,
-        icon: <SiTailwindcss size={40} />,
-        tag: 'Tailwind',
-    },
-    {
-        id: 6,
-        icon: <SiMongodb size={40} />,
-        tag: 'MongoDB',
-    },
-    {
-        id: 7,
-        icon: <SiMysql size={40} />,
-        tag: 'MySQL',
-    },
-    {
-        id: 8,
-        icon: <SiPostgresql size={40} />,
-        tag: 'PostgreSQL',
-    },
-    {
-        id: 9,
-        icon: <FaGit size={40} />,
-        tag: 'Git',
-    },
-    {
-        id: 10,
-        icon: <FaAws size={40} />,
-        tag: 'AWS',
-    },
-    {
-        id: 11,
-        icon: <FaBootstrap size={40} />,
-        tag: 'Bootstrap',
-    },
-    {
-        id: 12,
-        icon: <FaDocker size={40} />,
-        tag: 'Docker',
-    },
-    {
-        id: 13,
-        icon: <FaFigma size={40} />,
-        tag: 'Figma',
-    },
-    {
-        id: 14,
-        icon: <SiMui size={40} />,
-        tag: 'MaterialUI',
-    },
-    {
-        id: 15,
-        icon: <FaNodeJs size={40} />,
-        tag: 'NodeJS',
-    },
-    {
-        id: 16,
-        icon: <FaPython size={40} />,
-        tag: 'Python',
-    },
-    {
-        id: 17,
-        icon: <SiFastapi size={40} />,
-        tag: 'FastAPI',
-    },
-    {
-        id: 18,
-        icon: <FaMarkdown size={40} />,
-        tag: 'Markdown',
-    },
-    {
-        id: 19,
-        icon: <SiMicrosoftoffice size={40} />,
-        tag: 'M. Office',
-    },
-    {
-        id: 20,
-        icon: <FaBootstrap size={40} />,
-        tag: 'Bootstrap',
-    },
-    {
-        id: 21,
-        icon: <FaJava size={40} />,
-        tag: 'Java',
-    },
-    {
-        id: 22,
-        icon: <SiKotlin size={40} />,
-        tag: 'Kotlin',
-    },
-    {
-        id: 23,
-        icon: <SiCanva size={40} />,
-        tag: 'Canva',
-    },
-    {
-        id: 24,
-        icon: <RiReactjsLine size={40} />,
-        tag: 'React-Native',
-    },
-    {
-        id: 25,
-        icon: <IoLogoElectron size={40} />,
-        tag: 'ElectronJS',
-    },
-    {
-        id: 26,
-        icon: <FaAndroid size={40} />,
-        tag: 'Android',
-    },
-    {
-        id: 27,
-        icon: <FaSass size={40} />,
-        tag: 'Scss',
-    },
-    {
-        id: 28,
-        icon: <SiRedux size={40} />,
-        tag: 'Redux',
-    },
-    {
-        id: 29,
-        icon: <TbBrandThreejs size={40} />,
-        tag: 'ThreeJS',
-    },
-    {
-        id: 30,
-        icon: <SiSwagger size={40} />,
-        tag: 'Swagger',
-    }
-]
 
 function Skills({ theme, skillsRef }) {
     //State for translation
@@ -198,7 +41,7 @@ function Skills({ theme, skillsRef }) {
                     play={true}
                     direction="left"
                 >
-                    {skillsData.map(skill => (
+                    {skills.map(skill => (
                         <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
                             key={skill.id}>
                             <div className={`h-full w-full rounded-lg border border-[#1f223c] ${theme.global.headingBox} shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500`}>
