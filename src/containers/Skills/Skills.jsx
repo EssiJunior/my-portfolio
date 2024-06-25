@@ -1,11 +1,10 @@
 // REACT COMPONENTS
+import { useTranslation } from "react-i18next";
 import Marquee from "react-fast-marquee";
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
-import { useTranslation } from "react-i18next";
-import { skills } from "../../utils/utilities";
-
+import { skills } from "@/utils/utilities";
 
 function Skills({ theme, skillsRef }) {
     //State for translation
