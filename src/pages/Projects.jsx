@@ -5,12 +5,14 @@ import { themeProps } from '@/utils/prop-types';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO/SEO';
-import { baseURL } from '../utils';
+import { baseURL, projects } from '../utils';
 import { motion } from 'framer-motion';
 
 // STYLES
 import { styles } from "@/styles/styles";
 import '@/styles/projects.scss'
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
 const Projects = ({theme}) => {
     //State for translation
     const { t } = useTranslation();
@@ -34,7 +36,20 @@ const Projects = ({theme}) => {
                 </h2>
             </motion.div>
 
-            <h1 className="gradient__text">#TODO</h1>
+            {/* <h1 className="gradient__text">#TODO</h1> */}
+
+            
+            <div className='mt-20 flex flex-col'>
+                <VerticalTimeline>
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={`project-${index}`}
+                            project={project}
+                            theme={theme}
+                        />
+                    ))}
+                </VerticalTimeline>
+            </div>
         </main>
     )
 }

@@ -11,9 +11,9 @@ import { themeProps } from '@/utils/prop-types'
 import AnimationLottie from "@/utils/animation-lottie";
 
 // ASSETS 
-import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkedIn, X } from '@mui/icons-material'
+import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkRounded, LinkedIn, MoreOutlined, WorkHistory, X } from '@mui/icons-material'
 import dev from '@/assets/lotties/coder.json';
-
+import profile from '../../assets/profile/profile.png'
 // STYLES
 import './hero.scss'
 import { useMediaQuery } from '@mui/material'
@@ -73,11 +73,13 @@ const Hero = ({theme}) => {
 
                     <div className="more">
                         <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':''} icon={<EmailSharp />}/></Link>
-                        <Link to='/resume'><Button text={t('download')} bg={theme.tag ===  'light'? 'black':''} icon={<DownloadSharp />}/></Link>
+                        <Link to='/projects'><Button text={t('download')} bg={theme.tag ===  'light'? 'black':''} icon={<WorkHistory />} margin='0 1rem'/></Link>
 
                     </div>
                 </div>
-                <div className="actions" />  
+                <div className="actions">
+                    <img src={profile} alt="Profile banner" />
+                </div>  
             </div>
         </section>
         

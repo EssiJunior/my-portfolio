@@ -37,18 +37,18 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
     };
 
     const reflinks = [
-        {
-            'label': t('skills'),
-            'ref': skillsRef
-        },
-        {
-            'label': t('education'),
-            'ref': educationRef
-        },
-        {
-            'label': t('language'),
-            'ref': languageRef
-        },
+        // {
+        //     'label': t('skills'),
+        //     'ref': skillsRef
+        // },
+        // {
+        //     'label': t('education'),
+        //     'ref': educationRef
+        // },
+        // {
+        //     'label': t('language'),
+        //     'ref': languageRef
+        // },
     ]
 
 
@@ -102,7 +102,7 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
                         navlinks(t).map((elt, i) => {
                             return (
                                 <NavLink to={elt.path} key={i} activeClassName="active">
-                                    <Typography text={elt.label} />
+                                    <Typography text={elt.label} style={{fontSize:'1.025rem'}} />
                                 </NavLink>
                             )
                         })
@@ -118,9 +118,10 @@ const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) =
                                 )
                             })
                             :
-                            <div onClick={() => ScrollToRef(languageRef)} className='wide-language'>
-                                <Typography text={t('language')} />
-                            </div>
+                            <></>
+                            // <div onClick={() => ScrollToRef(languageRef)} className='wide-language'>
+                            //     <Typography text={t('language')} />
+                            // </div>
 
                     }
 

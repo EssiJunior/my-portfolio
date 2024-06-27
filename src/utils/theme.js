@@ -12,6 +12,8 @@ export const lightTheme = {
     },
     experience:{
         cardDot:'#0fcde7',
+        skillDot:'bg-[#0fcde7]',
+        links:'text-yellow-400',
         cardBackground:'#0183b4',
     },
     skills:{
@@ -43,6 +45,8 @@ export const darkTheme = {
     },
     experience:{
         cardDot:'#0183b4',
+        skillDot:'bg-[#0183b4]',
+        links:'text-yellow-700',
         cardBackground:'#0fcde7',
     },
     skills:{
