@@ -31,7 +31,9 @@ export const themeProps = {
     tag: PropTypes.string,
     global: PropTypes.object,
 }
-
+export const toggleThemeProps ={
+    toggle: PropTypes.func.isRequired,
+}
 export const buttonProps = {
     text: PropTypes.string,
     width: PropTypes.string,

@@ -23,12 +23,18 @@ import { useTheme } from "styled-components";
 
 const Experience = () => {
     const theme = useTheme()
-    
+
     //State for translation
     const { t } = useTranslation();
 
     return (
-        <main className="experience-page" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
+        <motion.main 
+        
+        // initial={{opacity:0}}
+        // animate={{opacity:1}}
+        // exit={{opacity:0, transition: {duration:1}}}
+
+        className="experience-page" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
             <Breadcrumb theme={theme} label='experience' to='/experience' />
             <SEO
                 title={`Essi Junior's portfolio - Experience`}
@@ -57,7 +63,7 @@ const Experience = () => {
                     ))}
                 </VerticalTimeline>
             </div>
-        </main>
+        </motion.main>
     );
 };
 

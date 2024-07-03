@@ -21,7 +21,13 @@ const Projects = () => {
     const { t } = useTranslation();
 
     return (
-        <main className='projects' style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }}>
+        <motion.main 
+        
+        // initial={{opacity:0}}
+        // animate={{opacity:1}}
+        // exit={{opacity:0, transition: {duration:1}}}
+
+        className='projects' style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }}>
             <Breadcrumb theme={theme} label='projects' to='/projects' />
             <SEO
                 title={`Essi Junior's portfolio - Projects`}
@@ -53,7 +59,7 @@ const Projects = () => {
                     ))}
                 </VerticalTimeline>
             </div>
-        </main>
+        </motion.main>
     )
 }
 

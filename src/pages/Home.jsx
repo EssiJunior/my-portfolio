@@ -6,6 +6,7 @@ import Skills from '@/containers/Skills/Skills'
 import Education from '@/containers/Education/Education'
 import Projects from '@/containers/Projects/Projects'
 import ContactBloc from '@/containers/ContactBloc/ContactBloc'
+import {motion} from 'framer-motion'
 
 // CUSTOMIZED COMPONENTS
 import SEO from '@/components/SEO/SEO'
@@ -20,7 +21,13 @@ const Home = ({ skillsRef, educationRef }) => {
     
     return (
         
-        <main className='home' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
+        <motion.main 
+        
+        // initial={{opacity:0}}
+        // animate={{opacity:1}}
+        // exit={{opacity:0, transition: {duration:1}}}
+
+        className='home' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
             {/* SEO COMPONENT */}
             <SEO 
                 title={`Essi Junior's portfolio - Homepage`} 
@@ -37,7 +44,7 @@ const Home = ({ skillsRef, educationRef }) => {
             <Education theme={theme} educationRef={educationRef} />
             <Projects theme={theme}/>
             <ContactBloc theme={theme}/> 
-        </main>
+        </motion.main>
     )
 }
 

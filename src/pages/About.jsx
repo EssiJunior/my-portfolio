@@ -29,7 +29,13 @@ const About = () => {
     const [inTrans, setInTrans] = useState(false);
 
     return (
-        <main className="about" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
+        <motion.main 
+        
+        // initial={{opacity:0}}
+        // animate={{opacity:1}}
+        // exit={{opacity:0, transition: {duration:1}}}
+
+        className="about" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
             <Breadcrumb theme={theme} label='about' to='/about' icon="kthelypq.json" />
             <SEO
                 title={`Essi Junior's portfolio - About`}
@@ -205,7 +211,7 @@ const About = () => {
                 <Typography className="gradient__text" text={`_${t('newsMessage')}`} />
                 <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':'white'} color={theme.colors.bg} fontWeight={600} icon={<EmailSharp sx={{color:theme.colors.bg}} />}/></Link>
                 </div>
-        </main>
+        </motion.main>
     )
 }
 

@@ -1,57 +1,31 @@
 // REACT COMPONENTS IMPORTS
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Worker } from '@react-pdf-viewer/core';
 
-// PAGES
-import Home from '@/pages/Home'
-import Experience from '@/pages/Experience';
-import Contact from '@/pages/Contact';
-import Resume from '@/pages/Resume';
-import NotFound from '@/pages/NotFound';
-import Projects from '@/pages/Projects';
-
-// CUSTOMIZED CONTAINERS
-import Layout from '@/containers/Layout/Layout'
+// CUSTOMISED COMPONENT
+import AnimatedRoutes from './components/AnimatedRoutes/AnimatedRoutes';
 
 // UTILS
 import { ScrollToTop } from '@/utils/Scroll';
 import { darkTheme, lightTheme } from '@/utils/theme';
-import About from './pages/About';
-
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
-  // Utility refs
-  const skillsRef = useRef()
-  const languageRef = useRef()
-  const educationRef = useRef()
 
   // Theme state
   const [theme, setTheme] = useState(lightTheme);
 
   // Theme toggler
   const toggleTheme = () => {
-    console.log(theme.tag)
     setTheme(theme === lightTheme ? darkTheme : lightTheme);
   };
-  
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="*" element={<Navigate to="/notfound" replace />} />
-          <Route path="/notfound" element={<NotFound />}></Route>
-          <Route path="/" element={<Layout themeToggler={toggleTheme} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef}   />}>
-            <Route index element={<Home skillsRef={skillsRef} educationRef={educationRef} />} />
-            <Route path="experience" element={<Experience />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="resume" element={<Resume />} />
-          </Route>
-        </Routes>
+        <AnimatedRoutes toggle={toggleTheme} />
       </BrowserRouter>
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"></Worker>
     </ThemeProvider>
