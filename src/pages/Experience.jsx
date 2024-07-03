@@ -19,8 +19,11 @@ import { styles } from "@/styles/styles";
 import '../styles/experience_page.scss';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
+import { useTheme } from "styled-components";
 
-const Experience = ({ theme }) => {
+const Experience = () => {
+    const theme = useTheme()
+    
     //State for translation
     const { t } = useTranslation();
 

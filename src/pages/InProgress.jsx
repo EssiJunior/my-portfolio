@@ -13,8 +13,11 @@ import '@/styles/in_progress.scss'
 
 // ASSETS
 import doing from '@/assets/lotties/doing.json'
+import { useTheme } from 'styled-components'
 
-const InProgress = ({theme}) => {
+const InProgress = () => {
+    const theme = useTheme()
+    
     return (
         <main className='doing' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
             <div className="wrapper">

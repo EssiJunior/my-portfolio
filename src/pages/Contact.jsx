@@ -1,16 +1,12 @@
 // CUSTOMIZED CONTAINERS
 import ContactBloc from "@/containers/ContactBloc/ContactBloc"
 
-// UTILS
-import { themeProps } from "@/utils/prop-types";
-
-const Contact = ({theme}) => {
+const Contact = () => {
     return (
         <main>
-            <ContactBloc theme={theme}/>
+            <ContactBloc />
         </main>
     )
 }
 
-Contact.propTypes = themeProps;
 export default Contact

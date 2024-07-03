@@ -1,4 +1,4 @@
-import { Download, Email, EmailSharp, Facebook, GitHub, LinkedIn, Twitter } from "@mui/icons-material"
+import {  EmailSharp } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion";
 
@@ -19,8 +19,11 @@ import { useTranslation } from "react-i18next";
 import { me1, me2, me3, me4, me5 } from "../assets/me";
 import Typography from "../components/Typography/Typography";
 import Button from "../components/Button/Button";
+import { useTheme } from "styled-components";
 
-const About = ({theme}) => {
+const About = () => {
+    const theme = useTheme()
+
     //State for translation
     const { t } = useTranslation();
     const [inTrans, setInTrans] = useState(false);

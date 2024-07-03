@@ -13,7 +13,10 @@ import { styles } from "@/styles/styles";
 import '@/styles/projects.scss'
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-const Projects = ({theme}) => {
+import { useTheme } from "styled-components";
+const Projects = () => {
+    const theme = useTheme()
+
     //State for translation
     const { t } = useTranslation();
 

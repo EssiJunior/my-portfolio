@@ -13,8 +13,11 @@ import { themeProps } from '@/utils/prop-types.js'
 
 // STYLES
 import './layout.scss'
+import { useTheme } from 'styled-components'
 
-const Layout = ({themeToggler, theme, languageRef, skillsRef,  educationRef}) => {
+const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
+    const theme = useTheme()
+    
     // console.log(languageRef)
     // console.log(skillsRef)
     // console.log(educationRef)

@@ -11,8 +11,11 @@ import { themeProps } from '@/utils/prop-types'
 
 // STYLES
 import './contact_bloc.scss'
+import { useTheme } from 'styled-components'
 
-const ContactBloc = ({ theme }) => {
+const ContactBloc = () => {
+  const theme = useTheme()
+  
   const [page, setPage] = useState(window.location.pathname)
 
   const params = useParams()

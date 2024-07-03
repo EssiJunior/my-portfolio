@@ -13,8 +13,11 @@ import SEO from '@/components/SEO/SEO'
 // UTILITIES
 import { baseURL } from '@/utils'
 import { themeProps } from '@/utils/prop-types'
+import { useTheme } from 'styled-components'
 
-const Home = ({theme, skillsRef, educationRef }) => {
+const Home = ({ skillsRef, educationRef }) => {
+    const theme = useTheme()
+    
     return (
         
         <main className='home' style={{backgroundColor:`${theme.colors.bg}`, color:`${theme.colors.text}`}}>
