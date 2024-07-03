@@ -23,7 +23,7 @@ const About = ({theme}) => {
                 // variants={textVariant()} 
                     className="intro">
                     <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`} >{t('in')}</p>
-                    <h1 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}</h1>
+                    <h1 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}test</h1>
                 </motion.div>
             </section>
         
