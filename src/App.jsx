@@ -14,7 +14,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
 
   // Theme state
-  const [theme, setTheme] = useState(lightTheme);
+  const [theme, setTheme] = useState(darkTheme);
 
   // Theme toggler
   const toggleTheme = () => {

@@ -17,43 +17,45 @@ import profile from '../../assets/profile/profile.png'
 // STYLES
 import './hero.scss'
 import { useMediaQuery } from '@mui/material'
+import { ScrollParallax } from 'react-just-parallax'
+import { tech } from '../../utils/utilities'
 
-const Hero = ({theme}) => {
+const Hero = ({ theme }) => {
     const is_lg = useMediaQuery('(max-width: 990px)')
 
     //State for translation
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const social = [
         {
             "Name": "Github",
-            "link":'https://github.com/EssiJunior',
+            "link": 'https://github.com/EssiJunior',
             "icon": <GitHub size={50} />
         },
         {
             "Name": "LinkedIn",
-            "link":'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
+            "link": 'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
             "icon": <LinkedIn size={50} />
         },
         {
             "Name": "Facebook",
-            "link":'https://web.facebook.com/torres.essi',
+            "link": 'https://web.facebook.com/torres.essi',
             "icon": <Facebook size={50} />
         },
         {
             "Name": "X (Formally Twitter)",
-            "link":'https://twitter.com/EssiJunior7',
+            "link": 'https://twitter.com/EssiJunior7',
             "icon": <X size={50} />
         },
     ]
     return (
-        <section className={`hero ${theme.hero.gradient}`}>       
+        <section className={`hero ${theme.hero.gradient}`}>
             <div className="container-hero ">
-                <div className="brand" style={{color:theme.colors.text}}>
-                    <Typography text={t('present')} style={{fontSize:'1.25rem'}} />
-                    <Typography text={t('me')} style={{fontSize:'2.75rem', fontWeight:'700', color:'white'}}/>
-                    <Typography text={t('intro')} style={{marginBottom:'3rem'}} />
-                    
+                <div className="brand" style={{ color: theme.colors.text }}>
+                    <Typography text={t('present')} style={{ fontSize: '1.25rem' }} />
+                    <Typography text={t('me')} style={{ fontSize: '2.75rem', fontWeight: '700', color: 'white' }} />
+                    <Typography text={t('intro')} style={{ marginBottom: '3rem' }} />
+
                     <div className="my-6 flex items-center gap-5">
                         {
                             social.map((elt, i) => {
@@ -72,17 +74,27 @@ const Hero = ({theme}) => {
                     </div>
 
                     <div className="more">
-                        <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag ===  'light'? 'black':''} icon={<EmailSharp />}/></Link>
-                        <Link to='/projects'><Button text={t('download')} bg={theme.tag ===  'light'? 'black':''} icon={<WorkHistory />} margin='0 1rem'/></Link>
+                        <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag === 'light' ? 'black' : ''} icon={<EmailSharp />} /></Link>
+                        <Link to='/projects'><Button text={t('download')} bg={theme.tag === 'light' ? 'black' : ''} icon={<WorkHistory />} margin='0 1rem' /></Link>
 
                     </div>
                 </div>
-                <div className="actions">
+                <div className="actions relative">
                     <img src={profile} alt="Profile banner" />
-                </div>  
+
+                    <ScrollParallax isAbsolutelyPositioned>
+                        <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                            {tech.map((elt, index) => (
+                                <li className="p-5" key={index}>
+                                    {elt.icon}
+                                </li>
+                            ))}
+                        </ul>
+                    </ScrollParallax>
+                </div>
             </div>
         </section>
-        
+
     )
 }
 Hero.propTypes = themeProps
