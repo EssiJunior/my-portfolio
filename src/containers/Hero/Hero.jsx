@@ -56,7 +56,7 @@ const Hero = ({ theme }) => {
                     <Typography text={t('me')} style={{ fontSize: '2.75rem', fontWeight: '700', color: 'white' }} />
                     <Typography text={t('intro')} style={{ marginBottom: '3rem' }} />
 
-                    <div className="my-6 flex items-center gap-5">
+                    <div className="xl:hidden my-6 flex items-center gap-5">
                         {
                             social.map((elt, i) => {
                                 return (
@@ -89,6 +89,24 @@ const Hero = ({ theme }) => {
                                     {elt.icon}
                                 </li>
                             ))}
+                        </ul>
+                    </ScrollParallax>
+                    <ScrollParallax isAbsolutelyPositioned>
+                        <ul className="hidden absolute right-[3.5rem] top-[5rem] px-1 py-1 bg-primary/30 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                        {
+                            social.map((elt, i) => {
+                                return (
+                                    <Link
+                                        key={i}
+                                        to={elt.link}
+                                        target='_blank'
+                                        className={`p-5 transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                                    >
+                                        {elt.icon}
+                                    </Link>
+                                )
+                            })
+                        }
                         </ul>
                     </ScrollParallax>
                 </div>

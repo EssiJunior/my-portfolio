@@ -2,7 +2,7 @@ import { Facebook, GitHub, LinkedIn, X } from "@mui/icons-material"
 import { RiReactjsLine } from "react-icons/ri";
 import { IoLogoElectron } from "react-icons/io5";
 import { BiLogoJavascript } from "react-icons/bi";
-import { SiMui } from "react-icons/si";
+import { SiMui, SiNextdotjs } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { FaAndroid, FaAws, FaDocker, FaFigma, FaGit, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact, FaSass } from "react-icons/fa6";
 import { SiFastapi, SiJavascript, SiKotlin, SiMongodb, SiMysql, SiPostgresql, SiRedux, SiSwagger, SiTailwindcss } from "react-icons/si";
@@ -60,6 +60,10 @@ export const tech = [
         'icon': <SiFastapi size='20' />
     },
     {
+        'label': 'Next',
+        'icon': <SiNextdotjs size='20' />
+    },
+    {
         'label': 'React',
         'icon': <FaReact size='20' />
     },
@@ -67,18 +71,18 @@ export const tech = [
         'label': 'React Native',
         'icon': <RiReactjsLine size='20' />
     },
-    {
-        'label': 'Electron',
-        'icon': <IoLogoElectron size='20' />
-    },
-    {
-        'label': 'NodeJS',
-        'icon': <FaNodeJs size='20' />
-    },
-    {
-        'label': 'Android',
-        'icon': <FaAndroid size='20' />
-    },
+    // {
+    //     'label': 'Electron',
+    //     'icon': <IoLogoElectron size='20' />
+    // },
+    // {
+    //     'label': 'NodeJS',
+    //     'icon': <FaNodeJs size='20' />
+    // },
+    // {
+    //     'label': 'Android',
+    //     'icon': <FaAndroid size='20' />
+    // },
 ]
 
 export const skills = [
@@ -199,6 +203,11 @@ export const skills = [
     },
     {
         id: 30,
+        icon: <SiNextdotjs size={40} />,
+        tag: 'NextJS',
+    },
+    {
+        id: 31,
         icon: <SiSwagger size={40} />,
         tag: 'Swagger',
     }
