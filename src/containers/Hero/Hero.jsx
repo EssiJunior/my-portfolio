@@ -18,7 +18,7 @@ import profile from '../../assets/profile/profile.png'
 import './hero.scss'
 import { useMediaQuery } from '@mui/material'
 import { ScrollParallax } from 'react-just-parallax'
-import { tech } from '../../utils/utilities'
+import { social, tech } from '../../utils/utilities'
 
 const Hero = ({ theme }) => {
     const is_lg = useMediaQuery('(max-width: 990px)')
@@ -26,28 +26,6 @@ const Hero = ({ theme }) => {
     //State for translation
     const { t } = useTranslation();
 
-    const social = [
-        {
-            "Name": "Github",
-            "link": 'https://github.com/EssiJunior',
-            "icon": <GitHub size={50} />
-        },
-        {
-            "Name": "LinkedIn",
-            "link": 'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
-            "icon": <LinkedIn size={50} />
-        },
-        {
-            "Name": "Facebook",
-            "link": 'https://web.facebook.com/torres.essi',
-            "icon": <Facebook size={50} />
-        },
-        {
-            "Name": "X (Formally Twitter)",
-            "link": 'https://twitter.com/EssiJunior7',
-            "icon": <X size={50} />
-        },
-    ]
     return (
         <section className={`hero ${theme.hero.gradient}`}>
             <div className="container-hero ">

@@ -31,7 +31,7 @@ export const social = [
     },
     {
         "Name": "LinkedIn",
-        "link": 'https://www.linkedin.com/in/pierre-junior-ndang-essi-86290b254/',
+        "link": 'https://www.linkedin.com/in/essijunior/',
         "icon": <LinkedIn size={30} />
     },
     {

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./me.png" alt="My Logo" width="300">
+  <img src="/public/me.png" alt="My Logo" width="300">
   <h1>Welcome to Essi Junior's portfolio website repository</h1>
 </div>
 <br>
