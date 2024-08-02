@@ -8,7 +8,8 @@ export const lightTheme = {
         grey: '#aaa',
     },
     hero:{
-        gradient:'primary-gradient  '
+        gradient:'primary-gradient',
+        glass:'border-white'
     },
     experience:{
         cardDot:'#0fcde7',
@@ -41,7 +42,8 @@ export const darkTheme = {
         grey: '#555',
     },
     hero:{
-        gradient:'black-gradient'
+        gradient:'black-gradient',
+        glass:'border-secondary'
     },
     experience:{
         cardDot:'#0183b4',

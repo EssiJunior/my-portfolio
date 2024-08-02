@@ -61,16 +61,16 @@ const Hero = ({ theme }) => {
                     <img src={profile} alt="Profile banner" />
 
                     <ScrollParallax isAbsolutelyPositioned>
-                        <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                        <ul className={`hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-2xl xl:flex`}>
                             {tech.map((elt, index) => (
-                                <li className="p-5" key={index}>
+                                <li className="p-5 text-white" key={index}>
                                     {elt.icon}
                                 </li>
                             ))}
                         </ul>
                     </ScrollParallax>
                     <ScrollParallax isAbsolutelyPositioned>
-                        <ul className="hidden absolute right-[3.5rem] top-[5rem] px-1 py-1 bg-primary/30 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                        <ul className={`hidden absolute right-[3.5rem] top-[5rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-2xl xl:flex`}>
                         {
                             social.map((elt, i) => {
                                 return (
@@ -78,7 +78,7 @@ const Hero = ({ theme }) => {
                                         key={i}
                                         to={elt.link}
                                         target='_blank'
-                                        className={`p-5 transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
+                                        className={`p-5 transition-all text-white hover:scale-125 duration-300`}
                                     >
                                         {elt.icon}
                                     </Link>
