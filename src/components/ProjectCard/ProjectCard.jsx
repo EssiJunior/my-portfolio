@@ -32,14 +32,24 @@ const ProjectCard = ({ project, theme }) => {
             </p>
         </div>
 
-        <div className='mt-5 list-disc space-y-2 grid grid-cols-2 md:grid-cols-3'>
+        <div className='mt-5 list-disc space-y-2 flex flex-wrap'>
             {project.tools.map((tool, index) => (
-            <span
-                key={`project-tool-${index}`}
-                className={`text-white-100 text-[14px] pl-1 m-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
-            >
-                {tool}
-            </span>
+                
+                typeof tool === 'string' ? (
+                    <span
+                        key={`project-tool-${index}`}
+                        className={`text-white-100 text-[15px] px-2 mx-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
+                    >
+                        {tool}
+                    </span>
+                ) : (
+                    <span
+                        key={`project-tool-${index}`}
+                        className={`text-white-100 text-[10px] mx-2 p-2 w-15 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
+                    >
+                        {tool}
+                    </span>
+                )
             ))}
         </div>
 

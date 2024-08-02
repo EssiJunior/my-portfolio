@@ -16,9 +16,9 @@ import logoWhite from '@/assets/at-clay.png'
 // UTILITIES
 import { ScrollToRef } from '@/utils/Scroll'
 import { themeProps } from '@/utils/prop-types'
-import {navlinks} from '@/utils'
 // STYLE
 import './navbar.scss'
+import { navlinks } from '../../utils'
 
 const Navbar = ({ themeToggler, theme, languageRef, skillsRef, educationRef }) => {
     const [page, setPage] = useState(window.location.pathname)

@@ -7,7 +7,6 @@ import SEO from "@/components/SEO/SEO";
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
-import { baseURL } from "@/utils";
 import { textVariant } from "@/utils/motion";
 
 // STYLES
@@ -20,6 +19,7 @@ import { me1, me2, me3, me4, me5 } from "../assets/me";
 import Typography from "../components/Typography/Typography";
 import Button from "../components/Button/Button";
 import { useTheme } from "styled-components";
+import { baseURL } from "../utils";
 
 const About = () => {
     const theme = useTheme()

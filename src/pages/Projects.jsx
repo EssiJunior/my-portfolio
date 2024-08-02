@@ -5,7 +5,6 @@ import { themeProps } from '@/utils/prop-types';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO/SEO';
-import { baseURL, projects } from '../utils';
 import { motion } from 'framer-motion';
 
 // STYLES
@@ -14,6 +13,8 @@ import '@/styles/projects.scss'
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import { useTheme } from "styled-components";
+import { baseURL, projects } from "../utils";
+
 const Projects = () => {
     const theme = useTheme()
 
@@ -50,6 +51,11 @@ const Projects = () => {
             
             <div className='mt-20 flex flex-col'>
                 <VerticalTimeline>
+                        {/* <ProjectCard
+                            key={`project-${1}`}
+                            project={projects[0]}
+                            theme={theme}
+                        /> */}
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={`project-${index}`}

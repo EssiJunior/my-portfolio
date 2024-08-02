@@ -12,9 +12,9 @@ import {motion} from 'framer-motion'
 import SEO from '@/components/SEO/SEO'
 
 // UTILITIES
-import { baseURL } from '@/utils'
 import { themeProps } from '@/utils/prop-types'
 import { useTheme } from 'styled-components'
+import { baseURL } from '../utils'
 
 const Home = ({ skillsRef, educationRef }) => {
     const theme = useTheme()

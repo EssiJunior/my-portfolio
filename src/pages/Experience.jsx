@@ -10,7 +10,6 @@ import ExperienceCard from "@/components/ExperienceCard/ExperienceCard";
 import SEO from "@/components/SEO/SEO";
 
 // UTILITIES
-import { baseURL, experiences } from "@/utils";
 import { textVariant } from "@/utils/motion";
 import { themeProps } from "@/utils/prop-types";
 
@@ -20,6 +19,7 @@ import '../styles/experience_page.scss';
 import { useTranslation } from "react-i18next";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { useTheme } from "styled-components";
+import { baseURL, experiences } from "../utils";
 
 const Experience = () => {
     const theme = useTheme()

@@ -7,9 +7,9 @@ import ProjectCard from '@/components/ProjectsCard/ProjectsCard';
 import Button from '@/components/Button/Button';
 
 // UTILITIES
-import { projects } from '@/utils';
 import { themeProps } from '@/utils/prop-types';
 import { useTranslation } from 'react-i18next';
+import { projects } from '../../utils';
 
 const Projects = ({ theme }) => {
     //State for translation
