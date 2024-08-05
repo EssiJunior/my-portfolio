@@ -38,14 +38,14 @@ const ProjectCard = ({ project, theme }) => {
                 typeof tool === 'string' ? (
                     <span
                         key={`project-tool-${index}`}
-                        className={`text-white-100 text-[15px] px-2 mx-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
+                        className={`hover:scale-105 transition-all duration-300 ease-in-out cursor-crosshair text-white-100 text-[15px] px-2 mx-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
                     >
                         {tool}
                     </span>
                 ) : (
                     <span
                         key={`project-tool-${index}`}
-                        className={`text-white-100 text-[10px] mx-2 p-2 w-15 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
+                        className={`hover:scale-105 transition-all duration-300 cursor-crosshair text-white-100 text-[10px] mx-2 p-2 w-15 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
                     >
                         {tool}
                     </span>
