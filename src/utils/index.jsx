@@ -1,9 +1,9 @@
-import { FaGitAlt, FaNodeJs, FaSass } from "react-icons/fa6";
+// import { FaGitAlt, FaNodeJs, FaSass } from "react-icons/fa6";
 import { cara, flikart, flytravel, portfolio, proservice, recho } from "../assets/projects";
-import { SiMongodb, SiMui, SiTailwindcss } from "react-icons/si";
-import { GitHub } from "@mui/icons-material";
-import { GrReactjs } from "react-icons/gr";
-import { TbBrandThreejs } from "react-icons/tb";
+// import { SiMongodb, SiMui, SiTailwindcss } from "react-icons/si";
+// import { GitHub } from "@mui/icons-material";
+// import { GrReactjs } from "react-icons/gr";
+// import { TbBrandThreejs } from "react-icons/tb";
 
 export const navlinks = (t) => [
     {
@@ -178,22 +178,22 @@ const experiences = [
         ],
     },
 ];
-const react = <GrReactjs size='30' />
-const tailwind = <SiTailwindcss size='20' />
-const mui = <SiMui size='20' />
-const sass = <FaSass size='20' />
-const github = <GitHub size='20' />
-const git = <FaGitAlt size='20' />
-const threejs = <TbBrandThreejs size='20' />
-const node = <FaNodeJs size='20' />
-const mongo = <SiMongodb size='20' />
+// const react = <GrReactjs size='30' />
+// const tailwind = <SiTailwindcss size='20' />
+// const mui = <SiMui size='20' />
+// const sass = <FaSass size='20' />
+// const github = <GitHub size='20' />
+// const git = <FaGitAlt size='20' />
+// const threejs = <TbBrandThreejs size='20' />
+// const node = <FaNodeJs size='20' />
+// const mongo = <SiMongodb size='20' />
 
 const projects = [
     {
         id: 1,
         name: 'My portfolio',
         description: "This is my portfolio website (this site). I used ReactJS, TailwindCSS, Material UI, ThreeJS, and other npm libraries for the UI. I utilised emailJS to bear mail messages. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
-        tools: [react, tailwind, mui, 'i18next', sass, 'emailJS', 'CPanel', git, github, 'Github actions'],
+        tools: ['React', 'Tailwind CSS', 'Material UI', 'i18next', 'sass', 'emailJS', 'CPanel', 'Git', 'Github', 'Github actions'],
         role: 'React Developer',
         code: 'https://github.com/EssiJunior/my-portfolio.git',
         demo: 'https://essijunior.com',
@@ -203,7 +203,7 @@ const projects = [
         id: 2,
         name: 'Flikart +',
         description: "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
-        tools: [react, tailwind, mui, threejs, node, 'ExpressJS', 'Swagger UI', mongo, 'CPanel', git, github],
+        tools: ['React', 'Tailwind CSS', 'Material UI', 'Threejs', 'node', 'ExpressJS', 'Swagger UI', 'MongoDB', 'CPanel', 'Git', 'Github'],
         role: 'Fullstack Developer',
         code: '',
         demo: 'https://flikart.org',
@@ -213,7 +213,7 @@ const projects = [
         id: 3,
         name: 'CARA',
         description: "I built the web site of a company that promotes services for African and Russian partneships. I used ReactJS, Tailwind CSS, Preline UI and other npm libraries for the UI. I utilized nodemailer to bear mail messages.",
-        tools: [react, tailwind, mui, 'Preline UI', 'CPanel', git, github],
+        tools: ['React', 'Tailwind CSS', 'Preline UI', 'CPanel', 'Git', 'Github'],
         role: 'React Developer',
         code: '',
         demo: 'https://russiaafrica.org',
@@ -223,7 +223,7 @@ const projects = [
         id: 4,
         name: 'CHP compta',
         description: "I built a medical items task management cross platform mobile application. I used React native, and other npm libraries for the UI. I utilized FastAPI and related libraries to develop the server. The database was a NoSQL type, MongoDB.",
-        tools: ['React native', 'FastAPI', 'Redux', mongo, git, github],
+        tools: ['React native', 'FastAPI', 'Redux', 'MongoDB', 'Git', 'Github'],
         role: 'React native Developer',
         code: '',
         demo: '',
@@ -233,7 +233,7 @@ const projects = [
         id: 5,
         name: 'Pro Service',
         description: "I and a friend built an e-commerce web application for a company. We used ReactJS, TailwindCSS, and other npm libraries for the UI. We utilized FastAPI and related libraries to develop Rest APIs. The database was a NoSQL type, MongoDB. We used Pymongo to bear it. We used the SCRUM agile methodology to manage the software lifecycle.",
-        tools: [react, mui, 'FastAPI', mongo, 'CPanel', 'Trello', git, github],
+        tools: ['React', 'Material UI', 'FastAPI', 'MongoDB', 'CPanel', 'Trello', 'Git', 'Github'],
         role: 'Fullstack Developer and software engineer',
         code: '',
         demo: 'proservice.cm',
@@ -243,7 +243,7 @@ const projects = [
         id: 6,
         name: 'Car components e-commerce',
         description: "I and my team built an car items e-commerce web application. We used ReactJS, TailwindCSS, Material UI, and other npm libraries for the UI. We utilized Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an SQL type, PostgreSQL.",
-        tools: [react, tailwind, mui, 'Django', 'Django-rest', 'Swagger UI', 'PostgreSQL', 'AWS Amplify', 'AWS Apprunner', git, github],
+        tools: ['React', 'Tailwind CSS', 'Material UI', 'Django', 'Django-rest', 'Swagger UI', 'PostgreSQL', 'AWS Amplify', 'AWS Apprunner', 'Git', 'Github'],
         role: 'React Developer and software engineer',
         code: '',
         demo: '',
@@ -253,7 +253,7 @@ const projects = [
         id: 7,
         name: 'Fly Travel Agency',
         description: "I built the static website of a traveling agency company. I used ReactJS, TailwindCSS, Material UI, emailJS, saas, i18next and other npm libraries for the UI.",
-        tools: [react, tailwind, mui, sass, 'CPanel', git, github],
+        tools: ['React', 'Tailwind CSS', 'Material UI', 'sass', 'CPanel', 'Git', 'Github'],
         role: 'React Developer',
         code: '',
         demo: 'https://flytravel.agency',
@@ -263,7 +263,7 @@ const projects = [
         id: 8,
         name: 'Real Estate',
         description: 'I developed a fullstack real estate web app. I used FastAPI, Python, Pymongo and related packages to develop the API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.',
-        tools: [react, mui, 'Redux', 'FastAPI', mongo, git, github],
+        tools: ['React', 'Material UI', 'Redux', 'FastAPI', 'MongoDB', 'Git', 'Github'],
         code: '',
         role: 'Fullstack Developer',
         demo: '',
@@ -273,7 +273,7 @@ const projects = [
         id: 9,
         name: 'Bus tickets',
         description: 'I developed a fullstack bus tickets reservation web and desktop app. I used FastAPI, Python, Pymongo and related packages to develop the web and desktop API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the web UI, and ElectronJS to develop the desktop UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.',
-        tools: [react, mui, 'Redux', 'FastAPI', 'MongoDB', 'ElectronJS', git, github],
+        tools: ['React', 'Material UI', 'Redux', 'FastAPI', 'MongoDB', 'ElectronJS', 'Git', 'Github'],
         code: '',
         role: 'Fullstack Developer',
         demo: '',
@@ -283,7 +283,7 @@ const projects = [
         id: 10,
         name: 'Recho',
         description: 'I and a friend developed a web app for Echographic consultations. We created the UI using ReactJS, Material UI, TailwindCSS, Preline and related npm libraries. We developed the rest APIs with Node.JS, express.JS, nodemailer and related npm libraries. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.',
-        tools: [react, tailwind, mui, "Preline", node, "Express", mongo, git, github],
+        tools: ['React', 'Tailwind CSS', 'Material UI', "Preline", 'node', "Express", 'MongoDB', 'Git', 'Github'],
         role: 'Fullstack Developer',
         code: '',
         demo: '',
