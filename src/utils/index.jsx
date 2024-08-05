@@ -1,11 +1,9 @@
-import { FaGit, FaGitAlt, FaNodeJs, FaReact, FaSass } from "react-icons/fa6";
+import { FaGitAlt, FaNodeJs, FaSass } from "react-icons/fa6";
 import { cara, flikart, flytravel, portfolio, proservice, recho } from "../assets/projects";
-import { SiMongodb, SiMui, SiSwagger, SiTailwindcss } from "react-icons/si";
+import { SiMongodb, SiMui, SiTailwindcss } from "react-icons/si";
 import { GitHub } from "@mui/icons-material";
-import { DiReact } from "react-icons/di";
 import { GrReactjs } from "react-icons/gr";
 import { TbBrandThreejs } from "react-icons/tb";
-import { t } from "i18next";
 
 export const navlinks = (t) => [
     {
