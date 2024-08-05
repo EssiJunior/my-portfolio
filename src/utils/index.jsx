@@ -188,7 +188,7 @@ const github = <GitHub size='20' />
 const git = <FaGitAlt size='20' />
 const threejs = <TbBrandThreejs size='20' />
 const node = <FaNodeJs size='20' />
-const mongo = <SiMongodb size={40} />
+const mongo = <SiMongodb size='20' />
 
 const projects = [
     {
