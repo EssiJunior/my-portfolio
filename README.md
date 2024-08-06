@@ -1,6 +1,6 @@
 <div align="center">
   <img src="/public/me.png" alt="My Logo" width="300">
-  <h1>Welcome to Essi Junior's portfolio website repository</h1>
+  <h1>Welcome to Essi Junior's portfolio  repository</h1>
 </div>
 <br>
 
