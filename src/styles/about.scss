@@ -1,71 +1,83 @@
 @import '../index.scss';
 
-.about{
-    padding: 5rem 0;
+main.about-page {
     width: 100%;
-    @include flex(column);
-    
-    .parallax {
-        display: flex;
-        width: 100%;
-        padding: 1.125rem 2%;
-        // margin: 2rem 0;
-        box-sizing: border-box;
-        height: 100vh;
-        // background-color: green;
-        
-        .box {
-            flex: 1;
-            overflow: hidden;
-            transition: .5s;
-            margin: 0 2%;
-            box-shadow: 0 20px 30px rgba(0,0,0,.1);
-            line-height: 0;
-            & > img {
-                width: 200%;
-                height: 100%;
-                object-fit: cover; 
-                transition: .5s;
-                }
-            & > span {
-                font-size: 1rem;
-                display: block;
-                text-align: justify;
-                height: 10vh;
-                line-height: 1.25;
-                padding: 0.5rem 0.25rem;
-                @media screen and (max-width:990px) {
-                    font-size: 0.75rem;
-                }
-                // background-color: red;
-                // word-wrap: break-word;
-                // white-space: pre-wrap;
-                // white-space: -moz-pre-wrap;
-            }
-            
-            &:hover { flex: 1 1 50%; }
-            &:hover > img {
-                width: 100%;
-                height: calc(100% - 10vh);
-            }
-        }
-        .super-box{
-            flex: 1 1 50%;
-        }
-    }
-    
-    .footer-heading {
-        width: 90%;
-        text-align: flex-start;
 
-        margin: 2rem 0;
-        p{
-            font-size: 1.75rem;
-            font-weight: 600;
-            font-style: italic;
-            margin-bottom: 1rem;
+    section.about-container {
+        padding: 5rem 0;
+        max-width: 1300px;
+        margin: 0 auto;
+        @include flex(column);
+        .parallax {
+            display: flex;
+            width: 100%;
+            padding: 1.125rem 2%;
+            // margin: 2rem 0;
+            box-sizing: border-box;
+            height: 100vh;
+            // background-color: green;
+
+            .box {
+                flex: 1;
+                overflow: hidden;
+                transition: .5s;
+                margin: 0 2%;
+                box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+                line-height: 0;
+
+                &>img {
+                    width: 200%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+
+                &>span {
+                    font-size: 1rem;
+                    display: block;
+                    text-align: justify;
+                    height: 10vh;
+                    line-height: 1.25;
+                    padding: 0.5rem 0.25rem;
+
+                    @media screen and (max-width:990px) {
+                        font-size: 0.75rem;
+                    }
+
+                    // background-color: red;
+                    // word-wrap: break-word;
+                    // white-space: pre-wrap;
+                    // white-space: -moz-pre-wrap;
+                }
+
+                &:hover {
+                    flex: 1 1 50%;
+                }
+
+                &:hover>img {
+                    width: 100%;
+                    height: calc(100% - 10vh);
+                }
+            }
+
+            .super-box {
+                flex: 1 1 50%;
+            }
         }
+
+        .footer-heading {
+            width: 90%;
+            text-align: flex-start;
+
+            margin: 2rem 0;
+
+            p {
+                font-size: 1.75rem;
+                font-weight: 600;
+                font-style: italic;
+                margin-bottom: 1rem;
+            }
+        }
+
     }
 }
-
-
