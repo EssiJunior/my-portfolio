@@ -38,7 +38,7 @@ function Experience({ theme }) {
         {
             id: 2,
             title: t('js'),
-            company: `Powerk-soft, Pro service, Flikart +, ${t('i')}`,
+            company: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t('i')}`,
             icon: <SiJavascript size={30} />,
             // iconBg: "#383E56",
             date: `${t('since')} - Sept 2022`
