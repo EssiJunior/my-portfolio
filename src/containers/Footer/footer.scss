@@ -46,6 +46,8 @@ footer{
         
         .container{
             width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
             height: 70%;
             display: grid;
             grid-template-columns: 2.5fr 1fr 1fr 1fr;
@@ -147,6 +149,8 @@ footer{
         div.container{
             @include flex(row);
             width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
             div{
                 width: 8rem;
             }
