@@ -6,6 +6,8 @@ import Marquee from "react-fast-marquee";
 import { themeProps } from "@/utils/prop-types";
 import { skills } from "@/utils/utilities";
 
+// STYLES
+import './skills.scss'
 function Skills({ theme, skillsRef }) {
     //State for translation
     const {t} = useTranslation();
