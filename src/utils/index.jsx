@@ -1,5 +1,5 @@
 // import { FaGitAlt, FaNodeJs, FaSass } from "react-icons/fa6";
-import { cara, flikart, flytravel, portfolio, proservice, recho, colorfol, cia, eCommerce } from "../assets/projects";
+import { cara, flikart, flytravel, portfolio, proservice, recho, colorfol, cia, eCommerce, realEstate } from "../assets/projects";
 // import { SiMongodb, SiMui, SiTailwindcss } from "react-icons/si";
 // import { GitHub } from "@mui/icons-material";
 // import { GrReactjs } from "react-icons/gr";
@@ -269,7 +269,7 @@ const projects = [
         code: '',
         role: 'Fullstack Developer',
         demo: '',
-        image: '',
+        image: realEstate,
     },
     {
         id: 11,

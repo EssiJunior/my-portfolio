@@ -7,5 +7,6 @@ import recho from './recho.png'
 import colorfol from './colorfol.png'
 import cia from './cia.png'
 import eCommerce from './e-commerce.png'
+import realEstate from './real-estate.png'
 
-export {flikart, proservice, flytravel, portfolio, recho, cara, colorfol, cia, eCommerce} 
+export {flikart, proservice, flytravel, portfolio, recho, cara, colorfol, cia, eCommerce, realEstate} 
