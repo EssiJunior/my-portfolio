@@ -20,7 +20,7 @@ This code was written using [React - JavaScript library](https://react.dev/). Be
 
 > Make sure you have node 16 or above installed on your machine. Take a look at the [official guide](https://nodejs.org/en/download) for installation. After installation, run the following command in your terminal for a double check.
 
-##### node v16.0.0 or above // Expected result
+##### node v16.0.0 or above ( Expected result )
 ```sh
 node --version
 ```
