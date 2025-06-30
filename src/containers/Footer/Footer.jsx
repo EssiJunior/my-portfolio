@@ -16,7 +16,7 @@ import { social, tech } from '@/utils/utilities';
 import './footer.scss'
 
 // ASSETS
-import logo from '@/assets/at-clay.png'
+import { logoDark, logoLight } from "@/assets/logo";
 import { navlinks } from '../../utils'
 
 const Footer = ({ theme, languageRef }) => {
@@ -32,8 +32,7 @@ const Footer = ({ theme, languageRef }) => {
                 <section className="container">
                     <aside className="company">
                         <NavLink className='logo' to='/'>
-                            <img src={logo} alt="Logo" />
-                            <Typography text='Essi Junior' />
+                            <img src={logoLight} alt="Logo" />
                         </NavLink>
                         <aside>
                             <NavLink to='/about'><Typography text={t('about')} /></NavLink>
