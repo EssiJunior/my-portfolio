@@ -66,18 +66,10 @@ export const tech = [
         'label': 'React Native',
         'icon': <RiReactjsLine size='20' />
     },
-    // {
-    //     'label': 'Electron',
-    //     'icon': <IoLogoElectron size='20' />
-    // },
-    // {
-    //     'label': 'NodeJS',
-    //     'icon': <FaNodeJs size='20' />
-    // },
-    // {
-    //     'label': 'Android',
-    //     'icon': <FaAndroid size='20' />
-    // },
+    {
+        'label': 'PHP',
+        'icon': <SiPhp size='20' />
+    }
 ]
 
 export const skills = [

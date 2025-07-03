@@ -1,61 +1,68 @@
 @import '../../index.scss';
-footer{
+
+footer {
     background-color: $primary;
     height: 70vh;
     // background-color: red;
-    
-    @media screen  and (max-width: 550px) {
+
+    @media screen and (max-width: 550px) {
         height: 200vh;
     }
+
     @media screen and (min-width: 551px) and (max-width: 800px) {
         height: 125vh;
     }
-    
+
     @media screen and (min-width: 801px) and (max-width: 990px) {
         height: 90vh;
     }
+
     @media screen and (min-width: 991px) and (max-width: 1200px) {
         height: 80vh;
     }
-    
-    .footer-info{
+
+    .footer-info {
         height: 90%;
         width: 100%;
         @include flex(row);
 
-        @media screen  and (max-width: 550px) {
+        @media screen and (max-width: 550px) {
             align-items: flex-start;
             height: 97%;
         }
+
         @media screen and (min-width: 551px) and (max-width: 800px) {
             align-items: flex-start;
             height: 95%;
         }
 
-        .logo{
+        .logo {
             @include flex(row);
-            img{
+
+            img {
                 height: 50px;
             }
-            p{
-                font-weight:700;
-                font-size:1.3rem;
+
+            p {
+                font-weight: 700;
+                font-size: 1.3rem;
 
             }
         }
-        
-        .container{
+
+        .container {
             width: 90%;
             max-width: 1300px;
             margin: 0 auto;
             height: 70%;
             display: grid;
             grid-template-columns: 2.5fr 1fr 1fr 1fr;
-            
+
 
             @media screen and (max-width: 550px) {
                 grid-template-columns: 1fr;
             }
+
             @media screen and (min-width: 551px) and (max-width: 800px) {
                 grid-template-columns: 1fr 1fr;
             }
@@ -63,41 +70,50 @@ footer{
             @media screen and (min-width: 801px) and (max-width: 990px) {
                 grid-template-columns: 1.5fr 1fr 1fr 1fr;
             }
+
             @media screen and (min-width: 991px) and (max-width: 1200px) {
                 grid-template-columns: 2fr 1fr 1fr 1fr;
             }
 
-            aside{
+            aside {
                 @include flex(column);
                 align-items: flex-start;
                 justify-content: space-evenly;
-                
+
                 @media screen and (max-width: 550px) {
                     margin: 2rem 0;
                 }
+
                 @media screen and (min-width: 551px) and (max-width: 800px) {
                     margin: 2rem 0;
                 }
-                a{
+
+                a {
                     text-decoration: none !important;
                     color: $white;
                     font-size: 13px;
                     line-height: 1.3rem;
-                    &:hover{
+
+                    &:hover {
                         color: wheat;
                     }
                 }
             }
-            aside.company{
+
+            aside.company {
+
                 // border: 1px solid yellow;
-                .links{
+                .links {
                     @include flex(row);
                     justify-content: space-between;
-                    width: 40%;
-                    @media screen  and (max-width: 550px) {
+                    // width: 40%;
+                    gap: 1rem;
+
+                    @media screen and (max-width: 550px) {
                         width: 60%;
                     }
-                    svg{
+
+                    svg {
                         padding: 0.2rem;
                         border-radius: 50%;
                         @include flex(row);
@@ -105,53 +121,65 @@ footer{
                     }
                 }
             }
-            aside.categories, aside.tech, aside.help{
+
+            aside.categories,
+            aside.tech,
+            aside.help {
                 justify-content: start;
-                .cats, .elts, .info{
+
+                .cats,
+                .elts,
+                .info {
                     margin-top: 2rem;
                     width: 70%;
-                    
-                    @media screen  and (max-width: 550px) {
+
+                    @media screen and (max-width: 550px) {
                         width: 100%;
                     }
 
-                    p{
+                    p {
                         margin: 0.1rem 0;
                         font-size: 13px;
                     }
                 }
             }
-            .elts div{
+
+            .elts div {
                 @include flex(row);
             }
-            .info a{
+
+            .info a {
                 @include flex(row);
                 margin: 0 0 0.5rem 0;
                 color: $white;
-                svg{
+
+                svg {
                     margin-right: 5px;
                 }
             }
         }
     }
-    .foot-toolbar{
+
+    .foot-toolbar {
         height: 10%;
         background-color: $black;
         @include flex(row);
-        
-        @media screen  and (max-width: 550px) {
+
+        @media screen and (max-width: 550px) {
             height: 3%;
         }
+
         @media screen and (min-width: 551px) and (max-width: 800px) {
             height: 5%;
         }
 
-        div.container{
+        div.container {
             @include flex(row);
             width: 90%;
             max-width: 1300px;
             margin: 0 auto;
-            div{
+
+            div {
                 width: 8rem;
             }
 
