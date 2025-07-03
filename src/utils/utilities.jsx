@@ -2,7 +2,7 @@ import { GitHub, LinkedIn, X } from "@mui/icons-material"
 import { RiReactjsLine } from "react-icons/ri";
 import { IoLogoElectron } from "react-icons/io5";
 import { BiLogoJavascript } from "react-icons/bi";
-import { SiMui, SiNextdotjs } from "react-icons/si";
+import { SiMui, SiNextdotjs, SiPhp } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { FaAndroid, FaAws, FaDocker, FaFigma, FaGit, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact, FaSass } from "react-icons/fa6";
 import { SiFastapi, SiJavascript, SiKotlin, SiMongodb, SiMysql, SiPostgresql, SiRedux, SiSwagger, SiTailwindcss } from "react-icons/si";
@@ -205,5 +205,10 @@ export const skills = [
         id: 31,
         icon: <SiSwagger size={40} />,
         tag: 'Swagger',
+    },
+    {
+        id: 32,
+        icon: <SiPhp size={40} />,
+        tag: 'PHP',
     }
 ]

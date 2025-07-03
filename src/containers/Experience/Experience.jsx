@@ -1,9 +1,7 @@
 // REACT COMPONENTS IMPORTS
-import { FaAndroid, FaPython } from "react-icons/fa6";
-import { SiJavascript } from "react-icons/si";
-import { MdEngineering } from "react-icons/md";
 import { GrNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // CUSTOMIZED COMPONENTS IMPORTS
 import Button from "@/components/Button/Button";
@@ -12,6 +10,7 @@ import Button from "@/components/Button/Button";
 import AnimationLottie from "@/utils/animation-lottie";
 import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
+import { experiences_tech } from "@/utils";
 
 // ASSETS
 import experience from '@/assets/lotties/dev.json';
@@ -20,46 +19,10 @@ import blur from '@/assets/utilities/blur-23.svg'
 
 // STYLES
 import './experience.scss'
-import { useTranslation } from "react-i18next";
 
 function Experience({ theme }) {
     //State for translation
     const {t} = useTranslation();
-
-    const experiences_tech = [
-        {
-            id: 1,
-            title: t('se'),
-            company: `${t('p')}, Powerk-soft, Pro service, Leratel`,
-            icon: <MdEngineering size={30} />,
-            // iconBg: "#383E56",
-            date: `${t('since')} - Sept 2022`,
-        },
-        {
-            id: 2,
-            title: t('js'),
-            company: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t('i')}`,
-            icon: <SiJavascript size={30} />,
-            // iconBg: "#383E56",
-            date: `${t('since')} - Sept 2022`
-        },
-        {
-            id: 3,
-            title: t('ad'),
-            company: `${t('p')}, ${t('i')}`,
-            icon: <FaAndroid size={30} />,
-            // iconBg: "#383E56",
-            date: `${t('since')} - Mar 2022`
-        },
-        {
-            id: 4,
-            title: t('py'),
-            company: `${t('p')}, ${t('i')}, Powerk-soft, Pro service`,
-            icon: <FaPython size={30} />,
-            // iconBg: "#383E56",
-            date: `${t('since')} - Sept 2020`
-        },
-    ];
 
     return (
         <section className={`experience ${theme.hero.gradient} `}>
@@ -93,7 +56,7 @@ function Experience({ theme }) {
                         <div>
                             <div className="flex flex-col gap-6">
                                 {
-                                    experiences_tech.map(experience => (
+                                    experiences_tech(t).map(experience => (
                                         <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
                                             <div className="p-3 relative">
                                                 <img
