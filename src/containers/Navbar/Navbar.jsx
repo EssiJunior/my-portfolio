@@ -141,7 +141,7 @@ const Navbar = ({
           })}
 
           {
-            page === "/" ? (
+            page === "/" && (
               reflinks.map((elt, i) => {
                 return (
                   <div
@@ -153,12 +153,7 @@ const Navbar = ({
                   </div>
                 );
               })
-            ) : (
-              <></>
             )
-            // <div onClick={() => ScrollToRef(languageRef)} className='wide-language'>
-            //     <Typography text={t('language')} />
-            // </div>
           }
         </nav>
 

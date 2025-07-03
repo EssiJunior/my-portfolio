@@ -1,71 +1,76 @@
 @import '../../index.scss';
 
-.navbar{
+.navbar {
     width: 100%;
     height: 4rem;
     @include flex(column);
     position: fixed;
     z-index: 1000;
 
-    .toolbar{
+    .toolbar {
         width: 100%;
         height: 100%;
         max-width: 1300px;
         margin: 0 auto;
         @include flex(row);
-        justify-content: space-evenly!important;
-        
+        justify-content: space-evenly !important;
+
         @media (max-width: #{$breakpoint-md}) {
-            justify-content: space-between!important;
+            justify-content: space-between !important;
         }
-        .menu{
+
+        .menu {
             @include flex(row);
             justify-content: space-evenly;
             margin-left: 1rem;
             width: 40%;
+
             @media (max-width: #{$breakpoint-md}) {
-                justify-content: space-between!important;
+                justify-content: space-between !important;
                 width: 100%;
             }
-            .logo{
-                width:70%;
-            }
 
         }
-        .logo{
-            width:15%;
+
+        .logo {
+            // width: 15%;
             @include flex(row);
-            img{
+
+            img {
                 height: 50px;
             }
-            p{
-                font-weight:700;
-                font-size:1.3rem;
+
+            p {
+                font-weight: 700;
+                font-size: 1.3rem;
 
             }
         }
-        .links{
+
+        .links {
             height: 25px;
             width: 55%;
             margin: 0.5rem 0;
             @include flex(row);
             justify-content: space-evenly;
-            
+
         }
 
-        .actions{
-            width:10%;
+        .actions {
+            width: 10%;
             height: 50px;
             @include flex(row);
-            justify-content: space-evenly!important;
-            
+            justify-content: space-evenly !important;
+
             @media (max-width: #{$breakpoint-md}) {
                 // styles for screens up to 990px
-                width:30%;
+                width: 30%;
                 margin-right: 1rem;
             }
 
-            .sign, .cart, .menu{
+            .sign,
+            .cart,
+            .menu {
                 height: 100%;
                 @include flex(column);
 
@@ -74,54 +79,58 @@
     }
 }
 
-.drawer{
-    font-family: $font-family!important;
-    a{
-        text-decoration: none!important;
-        p{
-            margin: 2rem!important;
-            font-size: 1rem!important;
-            font-weight: 600!important;
+.drawer {
+    font-family: $font-family !important;
+
+    a {
+        text-decoration: none !important;
+
+        p {
+            margin: 2rem !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
 
 
         }
-        &:hover{
+
+        &:hover {
             color: $primary;
         }
 
     }
-    .active{
-    color: $primary;
+
+    .active {
+        color: $primary;
     }
 }
 
 .switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 34px;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
 }
-  
-  .switch input {
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $secondary;
+    background-color: #b3952b;
     transition: .4s;
     border-radius: 30px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 30px;
@@ -132,18 +141,18 @@
     z-index: 2;
     background-color: #e8e8e8;
     transition: .4s;
-  }
-  
-  .sun svg {
+}
+
+.sun svg {
     position: absolute;
     top: 6px;
     left: 36px;
     z-index: 1;
     width: 24px;
     height: 24px;
-  }
-  
-  .moon svg {
+}
+
+.moon svg {
     fill: #73C0FC;
     position: absolute;
     top: 5px;
@@ -151,60 +160,62 @@
     z-index: 1;
     width: 24px;
     height: 24px;
-  }
-  
-  /* .switch:hover */.sun svg {
+}
+
+/* .switch:hover */
+.sun svg {
     animation: rotate 15s linear infinite;
-  }
-  
-  @keyframes rotate {
-   
+}
+
+@keyframes rotate {
+
     0% {
-      transform: rotate(0);
+        transform: rotate(0);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  /* .switch:hover */.moon svg {
+}
+
+/* .switch:hover */
+.moon svg {
     animation: tilt 5s linear infinite;
-  }
-  
-  @keyframes tilt {
-   
+}
+
+@keyframes tilt {
+
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     25% {
-      transform: rotate(-10deg);
+        transform: rotate(-10deg);
     }
-  
+
     75% {
-      transform: rotate(10deg);
+        transform: rotate(10deg);
     }
-  
+
     100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  }
-  
-  .input:checked + .slider {
+}
+
+.input:checked+.slider {
     background-color: $primary;
-  }
-  
-  .input:focus + .slider {
+}
+
+.input:focus+.slider {
     box-shadow: 0 0 1px $primary;
-  }
-  
-  .input:checked + .slider:before {
+}
+
+.input:checked+.slider:before {
     transform: translateX(30px);
-  }
+}
 
 
-  /* switch settings 👇 */
+/* switch settings 👇 */
 
 .ui-switch {
     /* switch */
@@ -215,13 +226,13 @@
     --circle-diameter: 32px;
     --circle-bg: #0183b4;
     --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
-  }
-  
-  .ui-switch input {
+}
+
+.ui-switch input {
     display: none;
-  }
-  
-  .slider-2 {
+}
+
+.slider-2 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -231,9 +242,9 @@
     border-radius: 999px;
     position: relative;
     cursor: pointer;
-  }
-  
-  .slider-2 .circle {
+}
+
+.slider-2 .circle {
     top: calc(var(--circle-inset) * -1);
     left: 0;
     width: var(--circle-diameter);
@@ -256,11 +267,11 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     ;
-  }
-  
-  .slider-2 .circle::before {
+}
+
+.slider-2 .circle::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -271,20 +282,20 @@
     -o-transition: all 500ms;
     transition: all 500ms;
     opacity: 0;
-  }
-  
-  /* actions */
-  
-  .ui-switch input:checked+.slider-2 .circle {
+}
+
+/* actions */
+
+.ui-switch input:checked+.slider-2 .circle {
     left: calc(100% - var(--circle-diameter));
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
-  }
-  
-  .ui-switch input:active+.slider-2 .circle::before {
+}
+
+.ui-switch input:active+.slider-2 .circle::before {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;
     opacity: 1;
     width: 0;
     height: 0;
-  }
+}
