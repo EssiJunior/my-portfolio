@@ -22,9 +22,6 @@ import { navlinks } from "@/utils";
 const Navbar = ({
   themeToggler,
   theme,
-  languageRef,
-  skillsRef,
-  educationRef,
 }) => {
   const [page, setPage] = useState(window.location.pathname);
   //State for translation
@@ -32,8 +29,6 @@ const Navbar = ({
   const params = useParams();
 
   const is_mobile = useMediaQuery("(max-width: 1100px)");
-  // const is_mobile_1 = useMediaQuery('(max-width: 700px)')
-  // const is_mobile_2 = useMediaQuery('(max-width: 420px)')
 
   const [open, setOpen] = useState(false);
 

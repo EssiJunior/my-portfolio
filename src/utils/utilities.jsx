@@ -1,4 +1,4 @@
-import { Facebook, GitHub, LinkedIn, X } from "@mui/icons-material"
+import { GitHub, LinkedIn, X } from "@mui/icons-material"
 import { RiReactjsLine } from "react-icons/ri";
 import { IoLogoElectron } from "react-icons/io5";
 import { BiLogoJavascript } from "react-icons/bi";
@@ -33,11 +33,6 @@ export const social = [
         "Name": "LinkedIn",
         "link": 'https://www.linkedin.com/in/essijunior/',
         "icon": <LinkedIn size={30} />
-    },
-    {
-        "Name": "Facebook",
-        "link": 'https://web.facebook.com/torres.essi',
-        "icon": <Facebook size={30} />
     },
     {
         "Name": "X (Formally Twitter)",

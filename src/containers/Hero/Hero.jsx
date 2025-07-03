@@ -1,6 +1,7 @@
 // REACT COMPONENTS IMPORTS
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ScrollParallax } from 'react-just-parallax'
 
 // CUSTOMIZED COMPONENTS
 import Typography from '@/components/Typography/Typography'
@@ -8,21 +9,16 @@ import Button from '@/components/Button/Button'
 
 // UTILITIES
 import { themeProps } from '@/utils/prop-types'
-import AnimationLottie from "@/utils/animation-lottie";
+import { social, tech } from '@/utils/utilities'
 
 // ASSETS 
-import { DownloadSharp, EmailSharp, Facebook, GitHub, LinkRounded, LinkedIn, MoreOutlined, WorkHistory, X } from '@mui/icons-material'
-import dev from '@/assets/lotties/coder.json';
-import profile from '../../assets/profile/profile.png'
+import { EmailSharp, WorkHistory } from '@mui/icons-material'
+import profile from '@/assets/profile/profile.png'
+
 // STYLES
 import './hero.scss'
-import { useMediaQuery } from '@mui/material'
-import { ScrollParallax } from 'react-just-parallax'
-import { social, tech } from '../../utils/utilities'
 
 const Hero = ({ theme }) => {
-    const is_lg = useMediaQuery('(max-width: 990px)')
-
     //State for translation
     const { t } = useTranslation();
 
@@ -52,16 +48,15 @@ const Hero = ({ theme }) => {
                     </div>
 
                     <div className="more">
-                        <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag === 'light' ? 'black' : ''} icon={<EmailSharp />} /></Link>
-                        <Link to='/projects'><Button text={t('download')} bg={theme.tag === 'light' ? 'black' : ''} icon={<WorkHistory />} margin='0 1rem' /></Link>
-
+                        <Link to='/contact'><Button text={t('contactMe')} bg={theme.tag === 'light' ? 'black' : 'white'} color={theme.tag === 'light' ? 'white' : 'black'} icon={<EmailSharp sx={{color: theme.tag === 'light' ? 'white' : 'black'}}/>}/></Link>
+                        <Link to='/projects'><Button text={t('download')} bg={theme.tag === 'light' ? 'black' : 'white'} color={theme.tag === 'light' ? 'white' : 'black'} icon={<WorkHistory sx={{color: theme.tag === 'light' ? 'white' : 'black'}}/>} margin='0 1rem' /></Link>
                     </div>
                 </div>
                 <div className="actions relative">
-                    <img src={profile} alt="Profile banner" />
+                    <img src={profile} alt="Profile banner" loading='lazy' />
 
                     <ScrollParallax isAbsolutelyPositioned>
-                        <ul className={`hidden absolute -left-[7.5rem] bottom-[5rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl xl:flex`}>
+                        <ul className={`absolute xl:-left-[7.5rem] left-1/2 max-xl:-translate-x-1/2 xl:bottom-[5rem] bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}>
                             {tech.map((elt, index) => (
                                 <li className="p-3 text-white" key={index}>
                                     {elt.icon}
@@ -70,7 +65,7 @@ const Hero = ({ theme }) => {
                         </ul>
                     </ScrollParallax>
                     <ScrollParallax isAbsolutelyPositioned>
-                        <ul className={`hidden absolute left-[3.5rem] -top-[0px] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl xl:flex`}>
+                        <ul className={` absolute left-[6rem] -top-[0px] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}>
                         {
                             social.map((elt, i) => {
                                 return (
