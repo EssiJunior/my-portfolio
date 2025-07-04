@@ -13,7 +13,7 @@ import '@/styles/projects.scss'
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import { useTheme } from "styled-components";
-import { baseURL, projects } from "../utils";
+import { baseURL, projects, realisations } from "../utils";
 
 const Projects = () => {
     const theme = useTheme()
@@ -34,7 +34,7 @@ const Projects = () => {
                 title={`Essi Junior's portfolio - Projects`}
                 description="This is Essi Junior's portfolio website projects page. Here you can view all my work."
                 name='Essi Junior'
-                type='experience'
+                type='projects'
                 link={`${baseURL}/projects`} />
 
             <motion.div variants={textVariant()} className="mt-12">
@@ -57,6 +57,36 @@ const Projects = () => {
                             theme={theme}
                         /> */}
                     {projects.map((project, index) => (
+                        <ProjectCard
+                            key={`project-${index}`}
+                            project={project}
+                            theme={theme}
+                        />
+                    ))}
+                </VerticalTimeline>
+            </div>
+
+            
+            <motion.div variants={textVariant()} className="mt-24">
+                <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>
+                    {t('p2')}
+                </p>
+                <h2 className={`${styles.sectionHeadText} text-center`}>
+                    {t('p3')}.
+                </h2>
+            </motion.div>
+
+            {/* <h1 className="gradient__text">#TODO</h1> */}
+
+            
+            <div className='mt-20 flex flex-col'>
+                <VerticalTimeline>
+                        {/* <ProjectCard
+                            key={`project-${1}`}
+                            project={projects[0]}
+                            theme={theme}
+                        /> */}
+                    {realisations.map((project, index) => (
                         <ProjectCard
                             key={`project-${index}`}
                             project={project}

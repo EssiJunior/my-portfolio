@@ -7,6 +7,11 @@ import {
   colorfol,
   eCommerce,
   realEstate,
+  scoreify,
+  vasesDhonneur,
+  threeR,
+  syneduc,
+  studentResultSystem,
 } from "../assets/projects";
 import { FaAndroid, FaPython, FaPersonChalkboard } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
@@ -172,6 +177,132 @@ const projects = [
   },
   {
     id: 2,
+    name: "Scoreify",
+    description:
+      "I build the web app that manages exams results. I use ReactJS, TailwindCSS, Framer Motion, React Hook Form, and other npm libraries for the UI. I use FastAPI, Python, and other libraries to develop and document Rest APIs. The database is a NoSQL type, MongoDB. I use pymongo to bear it.",
+    tools: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Hook Form",
+      "FastAPI",
+      "Python",
+      "Swagger UI",
+      "MongoDB",
+      "Vercel",
+      "Git",
+      "Github",
+    ],
+    role: "Fullstack Developer",
+    code: "",
+    demo: "https://exam-average-calculator.vercel.app",
+    image: scoreify,
+  },
+  {
+    id: 3,
+    name: "Reduce-Reuse-Recycle",
+    description:
+      "I and my team built the web site for the 2024 Mountain Hub Hackathon. We used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an NoSQL type, MongoDB. I intervened in the development of the frontend. ",
+    tools: [
+      "NextJS",
+      "Tailwind CSS",
+      "Aceternity UI",
+      "Vercel",
+      "Git",
+      "Github"
+    ],
+    role: "NextJS Developer",
+    code: "",
+    demo: "https://3r-platform.vercel.app/",
+    image: threeR,
+  },
+];
+
+const realisations = [
+  {
+    id: 1,
+    name: "Assemblee des Vases d'honneur",
+    description:
+      "I built the web site of a Christian association. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
+    tools: [
+      "NextJS",
+      "Tailwind CSS",
+      "Aceternity UI",
+      "CPanel",
+      "Git",
+      "Github",
+      "Github actions",
+    ],
+    role: "NextJS Developer",
+    code: "",
+    demo: "https://ass-vasesdhonneur.com/",
+    image: vasesDhonneur,
+  },
+  {
+    id: 2,
+    name: "CARA",
+    description:
+      "I built the web site of a company that promotes services for African and Russian partneships. I used ReactJS, Tailwind CSS, Preline UI and other npm libraries for the UI. I utilized nodemailer to bear mail messages.",
+    tools: ["React", "Tailwind CSS", "Preline UI", "CPanel", "Git", "Github"],
+    role: "React Developer",
+    code: "",
+    demo: "https://russiaafrica.org",
+    image: cara,
+  },
+  {
+    id: 3,
+    name: "Fly Travel Agency",
+    description:
+      "I built the static website of a traveling agency company. I used ReactJS, TailwindCSS, Material UI, emailJS, saas, i18next and other npm libraries for the UI.",
+    tools: [
+      "React",
+      "Tailwind CSS",
+      "Material UI",
+      "sass",
+      "CPanel",
+      "Git",
+      "Github",
+    ],
+    role: "React Developer",
+    code: "",
+    demo: "https://flytravel.agency",
+    image: flytravel,
+  },
+  {
+    id: 4,
+    name: "Colorfol artists",
+    description:
+      "I maintained and built new interfaces of Colorfol artists web app. I used ReactJS, TailwindCSS, Material UI and other npm libraries for the UI.",
+    tools: ["React", "Tailwind CSS", "Material UI", "Git", "Gitlab"],
+    role: "React Developer",
+    code: "",
+    demo: "https://www.artists.colorfol.com/",
+    image: colorfol,
+  },
+  {
+    id: 5,
+    name: "Student Result System",
+    description:
+      "I and my team worked on the development of a desktop app that manages exams results for a school in the South region of Cameroon. We used ElectronJS for the UI, NodeJS, ExpressJS, and other npm libraries for the backend, MySQL for the database, Git for version control, and Github for the hosting of the code.",
+    tools: ["ElectronJS", "NodeJS", "ExpressJS", "MySQL", "Git", "Github"],
+    role: "ElectronJS Developer",
+    code: "",
+    demo: "",
+    image: studentResultSystem,
+  },
+  {
+    id: 6,
+    name: "Syneduc",
+    description:
+      "I worked in the development of an e-learning platform for a company. We used Laravel. I improved my PHP level and my knowledge of the Laravel framework.",
+    tools: ["Laravel", "PHP", "MySQL", "Git", "Gitlab"],
+    role: "React Developer",
+    code: "",
+    demo: "https://syneduc.com/",
+    image: syneduc,
+  },
+  {
+    id: 7,
     name: "Flikart +",
     description:
       "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
@@ -194,29 +325,7 @@ const projects = [
     image: flikart,
   },
   {
-    id: 3,
-    name: "Colorfol artists",
-    description:
-      "I maintained and built new interfaces of Colorfol artists web app. I used ReactJS, TailwindCSS, Material UI and other npm libraries for the UI.",
-    tools: ["React", "Tailwind CSS", "Material UI", "Git", "Gitlab"],
-    role: "React Developer",
-    code: "",
-    demo: "https://www.artists.colorfol.com/",
-    image: colorfol,
-  },
-  {
-    id: 4,
-    name: "CARA",
-    description:
-      "I built the web site of a company that promotes services for African and Russian partneships. I used ReactJS, Tailwind CSS, Preline UI and other npm libraries for the UI. I utilized nodemailer to bear mail messages.",
-    tools: ["React", "Tailwind CSS", "Preline UI", "CPanel", "Git", "Github"],
-    role: "React Developer",
-    code: "",
-    demo: "https://russiaafrica.org",
-    image: cara,
-  },
-  {
-    id: 5,
+    id: 8,
     name: "CHP compta",
     description:
       "I built a medical items task management cross platform mobile application. I used React native, and other npm libraries for the UI. I utilized FastAPI and related libraries to develop the server. The database was a NoSQL type, MongoDB.",
@@ -227,7 +336,7 @@ const projects = [
     image: "",
   },
   {
-    id: 8,
+    id: 9,
     name: "Car components e-commerce",
     description:
       "I and my team built an car items e-commerce web application. We used ReactJS, TailwindCSS, Material UI, and other npm libraries for the UI. We utilized Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an SQL type, PostgreSQL.",
@@ -248,25 +357,6 @@ const projects = [
     code: "",
     demo: "",
     image: eCommerce,
-  },
-  {
-    id: 9,
-    name: "Fly Travel Agency",
-    description:
-      "I built the static website of a traveling agency company. I used ReactJS, TailwindCSS, Material UI, emailJS, saas, i18next and other npm libraries for the UI.",
-    tools: [
-      "React",
-      "Tailwind CSS",
-      "Material UI",
-      "sass",
-      "CPanel",
-      "Git",
-      "Github",
-    ],
-    role: "React Developer",
-    code: "",
-    demo: "https://flytravel.agency",
-    image: flytravel,
   },
   {
     id: 10,
@@ -346,4 +436,4 @@ const myImage =
 // const baseURL = 'http://localhost:5173'
 const baseURL = "https://essijunior.com";
 
-export { services, experiences_tech, experiences, projects, myImage, baseURL };
+export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL };
