@@ -2,6 +2,7 @@
 import { GrNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED COMPONENTS IMPORTS
 import Button from "@/components/Button/Button";
@@ -20,8 +21,8 @@ import blur from '@/assets/utilities/blur-23.svg'
 // STYLES
 import './experience.scss'
 
-function Experience({ theme }) {
-    //State for translation
+function Experience() {
+    const theme = useTheme()
     const {t} = useTranslation();
 
     return (

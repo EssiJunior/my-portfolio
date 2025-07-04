@@ -13,10 +13,8 @@ import { themeProps } from '@/utils/prop-types.js'
 
 // STYLES
 import './layout.scss'
-import { useTheme } from 'styled-components'
 
 const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
-    const theme = useTheme()
     
     // console.log(languageRef)
     // console.log(skillsRef)
@@ -24,11 +22,11 @@ const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
     return (
         <>
             <section className='layout' >
-                <BackToTop theme={theme}/>
+                <BackToTop />
 
-                <Navbar themeToggler={themeToggler} theme={theme} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef} />
+                <Navbar themeToggler={themeToggler} languageRef={languageRef} skillsRef={skillsRef} educationRef={educationRef} />
                 <Outlet className='outlet'/>
-                <Footer theme={theme} languageRef={languageRef} />
+                <Footer languageRef={languageRef} />
             </section>
         </>
     )

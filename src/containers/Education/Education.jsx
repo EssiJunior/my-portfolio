@@ -1,6 +1,7 @@
 // REACT COMPONENTS IMPORTS
 import { useTranslation } from "react-i18next";
 import { GrCertificate } from "react-icons/gr";
+import { useTheme } from 'styled-components'
 
 // UTILS
 import AnimationLottie from "@/utils/animation-lottie";
@@ -12,8 +13,8 @@ import experience from '@/assets/lotties/education.json';
 import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
 
-function Education({ theme, educationRef }) {
-    //State for translation
+function Education({ educationRef }) {
+    const theme = useTheme()
     const {t} = useTranslation();
     
     const education = [

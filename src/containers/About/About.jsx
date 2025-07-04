@@ -1,6 +1,7 @@
 // REACT IMPORTS
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next'
+import { useTheme } from 'styled-components'
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
@@ -10,8 +11,8 @@ import { styles } from "@/styles/styles";
 import './about.scss'
 import { me, meDark, meGrey, meMozaic } from "../../assets/profile";
 
-const About = ({theme}) => {
-    //State for translation
+const About = () => {
+    const theme = useTheme()
     const {t} = useTranslation();
 
     return (

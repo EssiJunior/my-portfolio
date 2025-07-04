@@ -1,10 +1,12 @@
+import { useTheme } from "styled-components";
 // PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 // UTILITIES
 import { projectCardProps } from "../../utils/prop-types";
 
-const ProjectCard = ({ project, theme }) => {
+const ProjectCard = ({ project }) => {
+  const theme = useTheme();
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -22,14 +24,8 @@ const ProjectCard = ({ project, theme }) => {
         {project.image !== "" && (
           <img src={project.image} alt="" className="my-10 w-4/5 m-auto" />
         )}
-        <h3
-          className="text-[24px] font-bold"
-        >
-          {project.name}
-        </h3>
-        <p className={`text-[16px] font-semibold`}>
-          {project.description}
-        </p>
+        <h3 className="text-[24px] font-bold">{project.name}</h3>
+        <p className={`text-[16px] font-semibold`}>{project.description}</p>
       </div>
 
       <div className="mt-5 list-disc space-y-2 flex flex-wrap">
@@ -38,7 +34,7 @@ const ProjectCard = ({ project, theme }) => {
             <span
               key={`project-tool-${index}`}
               className={`hover:scale-105 transition-all duration-300 ease-in-out cursor-crosshair text-white-100 text-[15px] px-2 mx-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-xl`}
-              style={{color:theme.experience.cardHeadingText }}
+              style={{ color: theme.experience.cardHeadingText }}
             >
               {tool}
             </span>
@@ -46,7 +42,7 @@ const ProjectCard = ({ project, theme }) => {
             <span
               key={`project-tool-${index}`}
               className={`hover:scale-105 transition-all duration-300 cursor-crosshair text-white-100 text-[10px] mx-2 p-2 w-15 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-2xl`}
-              style={{color:theme.experience.cardHeadingText }}
+              style={{ color: theme.experience.cardHeadingText }}
             >
               {tool}
             </span>

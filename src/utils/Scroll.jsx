@@ -11,4 +11,4 @@ const ScrollToTop = () => {
 
 const ScrollToRef = (ref) => ref.current.scrollIntoView()
 
-export { ScrollToTop, ScrollToRef}
+export {ScrollToTop, ScrollToRef}

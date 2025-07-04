@@ -4,6 +4,7 @@ import { Menu } from "@mui/icons-material";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { Box, Divider, Drawer, List, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { useTheme } from 'styled-components'
 
 // COMPONENTS
 import Typography from "@/components/Typography/Typography";
@@ -19,12 +20,9 @@ import { themeProps } from "@/utils/prop-types";
 import "./navbar.scss";
 import { navlinks } from "@/utils";
 
-const Navbar = ({
-  themeToggler,
-  theme,
-}) => {
+const Navbar = ({themeToggler}) => {
+  const theme = useTheme()
   const [page, setPage] = useState(window.location.pathname);
-  //State for translation
   const { t } = useTranslation();
   const params = useParams();
 

@@ -1,6 +1,7 @@
 // REACT COMPONENTS
 import { useTranslation } from "react-i18next";
 import Marquee from "react-fast-marquee";
+import { useTheme } from 'styled-components'
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
@@ -8,7 +9,8 @@ import { skills } from "@/utils/utilities";
 
 // STYLES
 import './skills.scss'
-function Skills({ theme, skillsRef }) {
+function Skills({ skillsRef }) {
+    const theme = useTheme()
     //State for translation
     const {t} = useTranslation();
 

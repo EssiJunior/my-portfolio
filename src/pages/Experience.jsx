@@ -35,7 +35,7 @@ const Experience = () => {
         // exit={{opacity:0, transition: {duration:1}}}
 
         className="experience-page" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}`}}>
-            <Breadcrumb theme={theme} label='experience' to='/experience' />
+            <Breadcrumb  label='experience' to='/experience' />
             <SEO
                 title={`Essi Junior's portfolio - Experience`}
                 description="This is Essi Junior's portfolio website experience page. Here you can view all his professional skills, public works and work mentatility."
@@ -58,7 +58,6 @@ const Experience = () => {
                         <ExperienceCard
                             key={`experience-${index}`}
                             experience={experience}
-                            theme={theme}
                         />
                     ))}
                 </VerticalTimeline>

@@ -3,6 +3,7 @@ import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Email, Phone} from '@mui/icons-material'
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED COMPONENTS 
 import Typography from '@/components/Typography/Typography'
@@ -19,8 +20,8 @@ import './footer.scss'
 import { logoDark, logoLight } from "@/assets/logo";
 import { navlinks } from '../../utils'
 
-const Footer = ({ theme, languageRef }) => {
-    //State for translation
+const Footer = ({languageRef }) => {
+    const theme = useTheme()
     const { t } = useTranslation();
 
     const is_mobile_1 = useMediaQuery('(max-width: 800px)')

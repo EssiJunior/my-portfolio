@@ -8,10 +8,11 @@ import { useTranslation } from 'react-i18next';
 // UTILS
 import { themeProps } from '@/utils/prop-types';
 import Typography from '../Typography/Typography';
+import { useTheme } from 'styled-components';
 
-const Breadcrumb = ({theme, label, to, icon='ppyvfomi.json'}) => {
-    //State for translation
+const Breadcrumb = ({label, to, icon='ppyvfomi.json'}) => {
     const { t } = useTranslation();
+    const theme = useTheme();
     const is_mobile_1 = useMediaQuery('(max-width: 700px)')
 
     return (

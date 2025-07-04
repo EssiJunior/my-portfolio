@@ -13,7 +13,7 @@ import {
   syneduc,
   studentResultSystem,
 } from "../assets/projects";
-import { FaAndroid, FaPython, FaPersonChalkboard } from "react-icons/fa6";
+import { FaPython, FaPersonChalkboard } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
 import { MdEngineering } from "react-icons/md";
 

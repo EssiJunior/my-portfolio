@@ -37,13 +37,13 @@ const Home = ({ skillsRef, educationRef }) => {
                 link={`${baseURL}`} />
             
             {/* PAGE COMPONENTS */}
-            <Hero theme={theme}/>
-            <About theme={theme}/>
-            <Experience theme={theme}/>
-            <Skills theme={theme} skillsRef={skillsRef} />
-            <Education theme={theme} educationRef={educationRef} />
-            <Projects theme={theme}/>
-            <ContactBloc theme={theme}/> 
+            <Hero/>
+            <About/>
+            <Experience/>
+            <Skills skillsRef={skillsRef} />
+            <Education educationRef={educationRef} />
+            <Projects />
+            <ContactBloc/> 
         </motion.main>
     )
 }

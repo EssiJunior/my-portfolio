@@ -1,6 +1,7 @@
 // REACT COMPONENTS
 import { Link } from 'react-router-dom';
 import { GrNext } from "react-icons/gr";
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED COMPONENTS
 import ProjectCard from '@/components/ProjectsCard/ProjectsCard';
@@ -11,8 +12,8 @@ import { themeProps } from '@/utils/prop-types';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../../utils';
 
-const Projects = ({ theme }) => {
-    //State for translation
+const Projects = () => {
+    const theme = useTheme()
     const {t} = useTranslation();
 
     return (

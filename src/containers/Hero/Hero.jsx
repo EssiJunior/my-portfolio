@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ScrollParallax } from 'react-just-parallax'
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED COMPONENTS
 import Typography from '@/components/Typography/Typography'
@@ -18,8 +19,8 @@ import profile from '@/assets/profile/profile.png'
 // STYLES
 import './hero.scss'
 
-const Hero = ({ theme }) => {
-    //State for translation
+const Hero = () => {
+    const theme = useTheme()
     const { t } = useTranslation();
 
     return (

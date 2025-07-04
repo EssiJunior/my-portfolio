@@ -38,7 +38,7 @@ const About = () => {
             className="about-page" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }}>
             <section className="about-container">
 
-                <Breadcrumb theme={theme} label='about' to='/about' icon="kthelypq.json" />
+                <Breadcrumb label='about' to='/about' icon="kthelypq.json" />
                 <SEO
                     title={`Essi Junior's portfolio - About`}
                     description="This is Essi Junior's portfolio website about page. Here you can know more about me personaly."

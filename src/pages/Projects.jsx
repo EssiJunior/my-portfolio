@@ -29,7 +29,7 @@ const Projects = () => {
         // exit={{opacity:0, transition: {duration:1}}}
 
         className='projects' style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }}>
-            <Breadcrumb theme={theme} label='projects' to='/projects' />
+            <Breadcrumb  label='projects' to='/projects' />
             <SEO
                 title={`Essi Junior's portfolio - Projects`}
                 description="This is Essi Junior's portfolio website projects page. Here you can view all my work."
