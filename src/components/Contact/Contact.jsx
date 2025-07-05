@@ -126,7 +126,7 @@ const Contact = () => {
     <main>
       {
         page === '/contact' &&
-        <motion.div variants={textVariant()} className="intro mt-12" >
+        <motion.div variants={textVariant()} className="mt-12" >
           <p className={`${styles.sectionSubText} text-center text-primary`}>{t('inTouch')}</p>
           <h1 className={`${styles.sectionHeadText} text-center green-text-gradient`}>{t('contact')}</h1>
         </motion.div>

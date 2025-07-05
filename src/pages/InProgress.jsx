@@ -1,5 +1,6 @@
 // REACT COMPONENTS IMPORTS
 import { Link } from 'react-router-dom'
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED CONTAINERS
 import Typography from '@/components/Typography/Typography'
@@ -13,7 +14,6 @@ import '@/styles/in_progress.scss'
 
 // ASSETS
 import doing from '@/assets/lotties/doing.json'
-import { useTheme } from 'styled-components'
 
 const InProgress = () => {
     const theme = useTheme()

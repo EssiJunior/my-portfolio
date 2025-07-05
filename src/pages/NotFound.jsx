@@ -1,9 +1,18 @@
-import notFoundLottie  from '../assets/lotties/not_found.json'
+// REACT COMPONENT
 import { useMediaQuery } from '@mui/material'
 import { Link } from 'react-router-dom';
-import Typography from '../components/Typography/Typography';
+
+// CUSTOMIZED COMPONENTS
+import Typography from '@/components/Typography/Typography';
+
+// ASSETS
+import notFoundLottie from '@/assets/lotties/not_found.json'
+
+// UTILS
+import AnimationLottie from '@/utils/animation-lottie';
+
+// STYLES
 import '@/styles/not_found.scss'
-import AnimationLottie from '../utils/animation-lottie';
 
 const NotFound = () => {
     const is_sm = useMediaQuery('(max-width: 990px)')

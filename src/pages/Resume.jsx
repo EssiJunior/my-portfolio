@@ -1,12 +1,14 @@
 // REACT PLUGIN
-import { useTheme } from 'styled-components';
-import { Viewer } from '@react-pdf-viewer/core';
-import { themePlugin } from '@react-pdf-viewer/theme';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import { Viewer } from "@react-pdf-viewer/core";
+import { themePlugin } from "@react-pdf-viewer/theme";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+
+// HOOKS
+import { useTheme } from "styled-components";
 
 // REACT PLUGIN STYLE   
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 // UTILS
 import { themeProps } from '@/utils/prop-types';
@@ -17,7 +19,6 @@ import '@/styles/resume.scss'
 const Resume = () => {
     const theme = useTheme()
 
-    // Create new plugin instance
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
     const themePluginInstance = themePlugin();
     return (
@@ -25,7 +26,6 @@ const Resume = () => {
             <section className="wrapper">
                 <Viewer fileUrl={`${window.location.origin}/resume.pdf`}
                     plugins={[
-                        // Register plugins
                         defaultLayoutPluginInstance,
                         themePluginInstance
                     ]} />
