@@ -1,6 +1,7 @@
 // REACT COMPONENTS IMPORTS
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useTheme } from 'styled-components'
 
 // CUSTOMIZED COMPONENTS IMPORTS
 import Contact from '@/components/Contact/Contact'
@@ -11,7 +12,6 @@ import { themeProps } from '@/utils/prop-types'
 
 // STYLES
 import './contact_bloc.scss'
-import { useTheme } from 'styled-components'
 
 const ContactBloc = () => {
   const theme = useTheme()

@@ -9,6 +9,7 @@ import { skills } from "@/utils/utilities";
 
 // STYLES
 import './skills.scss'
+
 function Skills({ skillsRef }) {
     const theme = useTheme()
     //State for translation

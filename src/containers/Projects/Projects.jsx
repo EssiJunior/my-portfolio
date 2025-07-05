@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { GrNext } from "react-icons/gr";
 import { useTheme } from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
 // CUSTOMIZED COMPONENTS
 import ProjectCard from '@/components/ProjectsCard/ProjectsCard';
@@ -9,8 +10,7 @@ import Button from '@/components/Button/Button';
 
 // UTILITIES
 import { themeProps } from '@/utils/prop-types';
-import { useTranslation } from 'react-i18next';
-import { projects } from '../../utils';
+import { projects } from '@/utils';
 
 const Projects = () => {
     const theme = useTheme()

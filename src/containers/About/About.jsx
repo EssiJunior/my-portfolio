@@ -6,10 +6,12 @@ import { useTheme } from 'styled-components'
 // UTILS
 import { themeProps } from "@/utils/prop-types";
 
+// ASSETS
+import { me, meDark, meGrey, meMozaic } from "@/assets/profile";
+
 // STYLES
 import { styles } from "@/styles/styles";
 import './about.scss'
-import { me, meDark, meGrey, meMozaic } from "../../assets/profile";
 
 const About = () => {
     const theme = useTheme()
@@ -21,7 +23,6 @@ const About = () => {
                 className={`${styles.padding} min-h-[165px]`}
             >
                 <motion.div 
-                // variants={textVariant()} 
                     className="intro">
                     <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`} >{t('in')}</p>
                     <h1 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}</h1>
@@ -30,7 +31,6 @@ const About = () => {
         
             <section className="detail">
                 <motion.p
-                // variants={fadeIn("", "", 0.1, 1)}
                 className='description text-[17px] '
                 style={{ margin:'auto'}}
                 >

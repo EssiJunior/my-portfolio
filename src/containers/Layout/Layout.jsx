@@ -16,9 +16,6 @@ import './layout.scss'
 
 const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
     
-    // console.log(languageRef)
-    // console.log(skillsRef)
-    // console.log(educationRef)
     return (
         <>
             <section className='layout' >

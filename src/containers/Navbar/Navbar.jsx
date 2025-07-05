@@ -16,9 +16,10 @@ import { logoDark, logoLight } from "@/assets/logo";
 // UTILITIES
 import { ScrollToRef } from "@/utils/Scroll";
 import { themeProps } from "@/utils/prop-types";
+import { navlinks } from "@/utils";
+
 // STYLE
 import "./navbar.scss";
-import { navlinks } from "@/utils";
 
 const Navbar = ({themeToggler}) => {
   const theme = useTheme()

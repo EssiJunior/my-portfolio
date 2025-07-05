@@ -17,8 +17,8 @@ import { social, tech } from '@/utils/utilities';
 import './footer.scss'
 
 // ASSETS
-import { logoDark, logoLight } from "@/assets/logo";
-import { navlinks } from '../../utils'
+import { logoLight } from "@/assets/logo";
+import { navlinks } from '@/utils'
 
 const Footer = ({languageRef }) => {
     const theme = useTheme()
