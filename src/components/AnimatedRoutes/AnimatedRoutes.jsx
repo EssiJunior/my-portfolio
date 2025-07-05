@@ -1,6 +1,7 @@
 // REACT COMPONENTS IMPORTS
 import { useRef } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion';
 
 // PAGES
 import Home from '@/pages/Home'
@@ -15,8 +16,7 @@ import About from '@/pages/About';
 import Layout from '@/containers/Layout/Layout'
 
 // UTILS
-import { toggleThemeProps } from '../../utils/prop-types';
-import { AnimatePresence } from 'framer-motion';
+import { toggleThemeProps } from '@/utils/prop-types';
 
 const AnimatedRoutes = ({ toggle }) => {
     const location = useLocation()

@@ -9,7 +9,6 @@ import { projectCardProps } from '@/utils/prop-types';
 import { useTranslation } from 'react-i18next';
 
 function ProjectCard({ project }) {
-    //State for translation
     const {t} = useTranslation();
 
     return (

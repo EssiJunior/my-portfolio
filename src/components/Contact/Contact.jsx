@@ -24,7 +24,7 @@ import './contact.scss'
 
 const Contact = () => {
   const [page, setPage] = useState(window.location.pathname)
-  //State for translation
+
   const { t } = useTranslation();
   const params = useParams()
 
@@ -39,7 +39,6 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // Email validation
   function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
   }
@@ -97,21 +96,6 @@ const Contact = () => {
             console.log('FAILED...', error);
           },
         );
-      // axios.post(`${route}/api/message`, form)
-      // .then((response)=>{
-      //     setLoading(false)
-      //     console.log(response.data);
-      //     setMessageE(t('sendS'))
-      //     setForm({
-      //       name: '',
-      //       email: '',
-      //       message: '',
-      //     })
-      // }).catch( (error) => {
-      //     setLoading(false)
-      //     console.log(error)
-      //     setMessageE('There was an error while sending your message.')
-      // })
     }
 
   };

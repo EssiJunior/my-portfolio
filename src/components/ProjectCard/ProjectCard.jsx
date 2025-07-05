@@ -1,4 +1,6 @@
+// REACT COMPONENTS
 import { useTheme } from "styled-components";
+
 // PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 

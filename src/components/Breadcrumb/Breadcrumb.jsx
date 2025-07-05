@@ -1,14 +1,18 @@
+// REACT COMPONENTS
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import { useMediaQuery } from '@mui/material';
-
-import './breadcrumb.scss'
 import { useTranslation } from 'react-i18next';
+import { useTheme } from 'styled-components';
+
+// ASSETS
+import Typography from '@/components/Typography/Typography';
+
+// STYLES
+import './breadcrumb.scss'
 
 // UTILS
 import { themeProps } from '@/utils/prop-types';
-import Typography from '../Typography/Typography';
-import { useTheme } from 'styled-components';
 
 const Breadcrumb = ({label, to, icon='ppyvfomi.json'}) => {
     const { t } = useTranslation();

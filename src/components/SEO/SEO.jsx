@@ -1,9 +1,9 @@
 // HELMET (HTML head tag)
 import { Helmet } from 'react-helmet-async';
 
-// PROPS BEARER
-import { SEOProps } from '../../utils/prop-types';
-import { myImage } from '../../utils';
+// UTILITIES
+import { SEOProps } from '@/utils/prop-types';
+import { myImage } from '@/utils';
 
 
 export default function SEO({title, description, name, type, link, image = myImage}) {

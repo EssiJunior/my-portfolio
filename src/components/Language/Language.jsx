@@ -17,7 +17,6 @@ import { languageProps } from '@/utils/prop-types';
 // STYLE
 import './language.scss'
 
-//Component in charge of changing the language of the site
 function Language({ style, text = true, page = 'default', languageRef }) {
   const [language, setLanguage] = useState('en');
   const onOptionChangeHandler = (language) => {

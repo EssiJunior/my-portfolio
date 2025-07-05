@@ -1,9 +1,11 @@
+// REACT COMPONENTS
+import { useTheme } from "styled-components";
+
 // PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 // UTILITIES
 import { experienceCardProps } from "@/utils/prop-types";
-import { useTheme } from "styled-components";
 
 const ExperienceCard = ({ experience }) => {
     const theme = useTheme();
