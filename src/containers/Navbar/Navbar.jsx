@@ -173,7 +173,7 @@ const Navbar = ({themeToggler}) => {
             </>
           ) : (
             <>
-              <label className="switch">
+              <label className="switch" htmlFor="themeToggler">
                 <span className="sun">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g fill="#ffd43b">
@@ -189,6 +189,7 @@ const Navbar = ({themeToggler}) => {
                 </span>
                 <input
                   type="checkbox"
+                  id="themeToggler"
                   className="input"
                   onClick={themeToggler}
                 />
