@@ -25,17 +25,17 @@ export const defaultLottieOptions = (lottie) => {
 
 export const social = [
     {
-        "Name": "Github",
+        "name": "Github",
         "link": 'https://github.com/EssiJunior',
         "icon": <GitHub size={30} />
     },
     {
-        "Name": "LinkedIn",
+        "name": "LinkedIn",
         "link": 'https://www.linkedin.com/in/essijunior/',
         "icon": <LinkedIn size={30} />
     },
     {
-        "Name": "X (Formally Twitter)",
+        "name": "X (Formally Twitter)",
         "link": 'https://twitter.com/EssiJunior7',
         "icon": <X size={30} />
     },

@@ -41,7 +41,7 @@ const Footer = ({languageRef }) => {
                         </aside>
                         <aside className="links">
                             {social.map((elt, i) => (
-                                <NavLink to={elt.link} key={i}>
+                                <NavLink to={elt.link} key={i} aria-label={'Essi Junior\'s '+elt.name+' link'} target="_blank">
                                     {elt.icon}
                                 </NavLink>
                             ))}
