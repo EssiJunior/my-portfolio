@@ -92,7 +92,7 @@ const Hero = () => {
             </ul>
           </ScrollParallax>
           <ScrollParallax isAbsolutelyPositioned>
-            <ul
+            <div
               className={` absolute left-[6rem] -top-[0px] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
             >
               {social.map((elt, i) => {
@@ -108,7 +108,7 @@ const Hero = () => {
                   </Link>
                 );
               })}
-            </ul>
+            </div>
           </ScrollParallax>
         </div>
       </div>
