@@ -58,7 +58,7 @@ function Skills({ skillsRef }) {
                                     <div className="h-8 sm:h-10">
                                         {skill.icon}
                                     </div>
-                                    <p className="text-white text-sm sm:text-lg">
+                                    <p className=" text-sm sm:text-lg">
                                         {skill.tag}
                                     </p>
                                 </div>

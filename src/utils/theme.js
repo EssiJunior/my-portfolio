@@ -66,6 +66,6 @@ export const darkTheme = {
     tag: 'dark',
     global: {
         subHeading: 'text-secondary',
-        headingBox: 'bg-primary',
+        headingBox: 'bg-[#015779]',
     }
 };
