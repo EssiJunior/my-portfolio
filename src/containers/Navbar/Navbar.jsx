@@ -4,7 +4,7 @@ import { Menu } from "@mui/icons-material";
 import { Link, NavLink } from "react-router-dom";
 import { Box, Divider, Drawer, List, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { useTheme } from 'styled-components'
+import { useTheme } from "styled-components";
 
 // COMPONENTS
 import Typography from "@/components/Typography/Typography";
@@ -20,8 +20,8 @@ import { navlinks } from "@/utils";
 // STYLE
 import "./navbar.scss";
 
-const Navbar = ({themeToggler}) => {
-  const theme = useTheme()
+const Navbar = ({ themeToggler }) => {
+  const theme = useTheme();
   const { t } = useTranslation();
 
   const is_mobile = useMediaQuery("(max-width: 1100px)");
@@ -153,6 +153,7 @@ const Navbar = ({themeToggler}) => {
                   id="themeToggler"
                   className="input"
                   onClick={themeToggler}
+                  aria-label="Theme Toggler"
                 />
                 <span className="slider"></span>
               </label>
