@@ -37,14 +37,15 @@ const Hero = () => {
           <div className="xl:hidden my-6 flex items-center gap-5">
             {social.map((elt, i) => {
               return (
-                <Link
+                <a
+                  aria-label={'Essi Junior\'s '+elt.name+' link'}
                   key={i}
-                  to={elt.link}
+                  href={elt.link}
                   target="_blank"
                   className={`transition-all text-[${theme.colors.text}] hover:scale-125 duration-300`}
                 >
                   {elt.icon}
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -97,15 +98,15 @@ const Hero = () => {
             >
               {social.map((elt, i) => {
                 return (
-                  <Link
+                  <a
                     aria-label={'Essi Junior\'s '+elt.name+' link'}
                     key={i}
-                    to={elt.link}
+                    href={elt.link}
                     target="_blank"
                     className={`p-2 transition-all text-white hover:scale-125 duration-300`}
                   >
                     {elt.icon}
-                  </Link>
+                  </a>
                 );
               })}
             </div>
