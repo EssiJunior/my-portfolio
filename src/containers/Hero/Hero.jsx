@@ -78,6 +78,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
+        
         <div className="actions relative">
           <img src={profile} alt="Profile banner" loading="lazy" />
 

@@ -1,7 +1,7 @@
 // REACT COMPONENTS IMPORTS
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu } from "@mui/icons-material";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Box, Divider, Drawer, List, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useTheme } from 'styled-components'
@@ -14,7 +14,6 @@ import Language from "@/components/Language/Language";
 import { logoDark, logoLight } from "@/assets/logo";
 
 // UTILITIES
-import { ScrollToRef } from "@/utils/Scroll";
 import { themeProps } from "@/utils/prop-types";
 import { navlinks } from "@/utils";
 
@@ -23,9 +22,7 @@ import "./navbar.scss";
 
 const Navbar = ({themeToggler}) => {
   const theme = useTheme()
-  const [page, setPage] = useState(window.location.pathname);
   const { t } = useTranslation();
-  const params = useParams();
 
   const is_mobile = useMediaQuery("(max-width: 1100px)");
 
@@ -34,21 +31,6 @@ const Navbar = ({themeToggler}) => {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
-  const reflinks = [
-    // {
-    //     'label': t('skills'),
-    //     'ref': skillsRef
-    // },
-    // {
-    //     'label': t('education'),
-    //     'ref': educationRef
-    // },
-    // {
-    //     'label': t('language'),
-    //     'ref': languageRef
-    // },
-  ];
 
   const DrawerList = (
     <Box
@@ -89,11 +71,6 @@ const Navbar = ({themeToggler}) => {
     </Box>
   );
 
-  useEffect(() => {
-    return () => {
-      setPage(window.location.pathname);
-    };
-  }, [params]);
   return (
     <nav
       className="navbar"
@@ -133,22 +110,6 @@ const Navbar = ({themeToggler}) => {
               </NavLink>
             );
           })}
-
-          {
-            page === "/" && (
-              reflinks.map((elt, i) => {
-                return (
-                  <div
-                    key={i}
-                    onClick={() => ScrollToRef(elt.ref)}
-                    className="wide-language"
-                  >
-                    <Typography text={elt.label} />
-                  </div>
-                );
-              })
-            )
-          }
         </nav>
 
         <section className="actions">

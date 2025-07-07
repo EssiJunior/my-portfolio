@@ -35,7 +35,7 @@ const Footer = ({languageRef }) => {
                         <NavLink className='logo' to='/'>
                             <img src={logoLight} alt="Logo" />
                         </NavLink>
-                        <aside>
+                        <aside className="[&_*]:text-[24px]">
                             <NavLink to='/about'><Typography text={t('about')} /></NavLink>
                             <NavLink to='/contact'><Typography text={t('contact')} /></NavLink>
                         </aside>

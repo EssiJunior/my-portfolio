@@ -9,7 +9,7 @@ const Button = ({text = null, margin, width, icon, bg, fontWeight,borderWidth, c
         <button style={{background:bg, width:width, margin:margin}} className='button-s'>
             {icon}
             {
-                text !== null && <span  style={{fontWeight: fontWeight,borderWidth:borderWidth, color:color}}>{text}</span>
+                text !== null && <span style={{fontWeight: fontWeight,borderWidth:borderWidth, color:color}}>{text}</span>
             }
         </button>
     )
