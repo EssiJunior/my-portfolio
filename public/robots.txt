@@ -1,0 +1,12 @@
+# robots.txt for https://essijunior.com
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Autoriser tout le reste
+Allow: /
+
+# Sitemap (important si tu en as un)
+Sitemap: https://essijunior.com/sitemap.xml
