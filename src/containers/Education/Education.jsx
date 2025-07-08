@@ -9,9 +9,10 @@ import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
 
 // ASSETS
-import experience from '@/assets/lotties/education.json';
 import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
+
+import { education as educationAnimation } from "@/assets/lotties";
 
 function Education({ educationRef }) {
     const theme = useTheme()
@@ -58,7 +59,7 @@ function Education({ educationRef }) {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                         <div className="flex justify-center items-start">
                             <div className="w-full h-full">
-                                <AnimationLottie animation={experience} width='60%' />
+                                <AnimationLottie animation={educationAnimation} width='60%' />
                             </div>
                         </div>
 

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Typography from '@/components/Typography/Typography';
 
 // ASSETS
-import notFoundLottie from '@/assets/lotties/not_found.json'
+import { notFound } from '@/assets/lotties';
 
 // UTILS
 import AnimationLottie from '@/utils/animation-lottie';
@@ -18,7 +18,7 @@ const NotFound = () => {
     const is_sm = useMediaQuery('(max-width: 990px)')
     return (
         <main className='not-found' >
-            <AnimationLottie animation={notFoundLottie} width={is_sm ? 300 : 500} margin='0' height={is_sm ? 200 :350}/>
+            <AnimationLottie animation={notFound} width={is_sm ? 300 : 500} margin='0' height={is_sm ? 200 :350}/>
             
             <Typography text="Page not found"  className='heading' style={is_sm ? {fontSize:'35px'}:{}}/>
 

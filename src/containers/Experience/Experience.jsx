@@ -14,9 +14,9 @@ import { themeProps } from "@/utils/prop-types";
 import { experiences_tech } from "@/utils";
 
 // ASSETS
-import experience from '@/assets/lotties/dev.json';
 import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
+import { experience } from "@/assets/lotties";
 
 // STYLES
 import './experience.scss'
