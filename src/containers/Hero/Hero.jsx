@@ -14,7 +14,7 @@ import { social, tech } from "@/utils/utilities";
 
 // ASSETS
 import { EmailSharp, WorkHistory } from "@mui/icons-material";
-import profile from "@/assets/profile/profile.png";
+import { profile } from "@/assets/profile";
 
 // STYLES
 import "./hero.scss";

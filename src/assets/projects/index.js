@@ -1,28 +1,24 @@
-import flytravel from "./flytravel.png";
-import flikart from "./flikart.png";
-import cara from "./cara.png";
-import portfolio from "./portfolio.png";
-import proservice from "./proservice.png";
-import recho from "./recho.png";
-import colorfol from "./colorfol.png";
-import cia from "./cia.png";
-import eCommerce from "./e-commerce.png";
-import realEstate from "./real-estate.png";
-import scoreify from "./scoreify.png";
-import vasesDhonneur from "./vasesdhonneur.png";
-import threeR from "./3r.png";
-import syneduc from "./syneduc.png";
-import studentResultSystem from "./studentResultSystem.png";
+import flytravel from "./flytravel.webp";
+import flikart from "./flikart.webp";
+import cara from "./cara.webp";
+import portfolio from "./portfolio.webp";
+import recho from "./recho.webp";
+import colorfol from "./colorfol.webp";
+import eCommerce from "./e-commerce.webp";
+import realEstate from "./real-estate.webp";
+import scoreify from "./scoreify.webp";
+import vasesDhonneur from "./vasesdhonneur.webp";
+import threeR from "./3r.webp";
+import syneduc from "./syneduc.webp";
+import studentResultSystem from "./studentResultSystem.webp";
 
 export {
     flikart,
-    proservice,
     flytravel,
     portfolio,
     recho,
     cara,
     colorfol,
-    cia,
     eCommerce,
     realEstate,
     scoreify,

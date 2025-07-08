@@ -1,6 +1,13 @@
-import me from './me.jpeg';
-import meDark from './me_dark.jpeg';
-import meGrey from './me_grey.jpeg';
-import meMozaic from './me_mozaic.jpeg';
+import me from './me.webp';
+import meDark from './me_dark.webp';
+import meGrey from './me_grey.webp';
+import meMozaic from './me_mozaic.webp';
+import profile from './profile.webp';
 
-export { me, meDark, meGrey, meMozaic };
+export {
+    me,
+    meDark,
+    meGrey,
+    meMozaic,
+    profile
+};
