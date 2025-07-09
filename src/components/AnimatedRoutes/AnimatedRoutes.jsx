@@ -1,19 +1,19 @@
 // REACT COMPONENTS IMPORTS
-import { useRef } from 'react';
+import { useRef, lazy } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 
 // PAGES
-import Home from '@/pages/Home'
-import Experience from '@/pages/Experience';
-import Contact from '@/pages/Contact';
-import Resume from '@/pages/Resume';
-import NotFound from '@/pages/NotFound';
-import Projects from '@/pages/Projects';
-import About from '@/pages/About';
+const Home = lazy(() => import('@/pages/Home'))
+const Experience = lazy(() => import('@/pages/Experience'))
+const Contact = lazy(() => import('@/pages/Contact'))
+const Resume = lazy(() => import('@/pages/Resume'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
+const Projects = lazy(() => import('@/pages/Projects'))
+const About = lazy(() => import('@/pages/About'))
 
 // CUSTOMIZED CONTAINERS
-import Layout from '@/containers/Layout/Layout'
+const Layout = lazy(() => import('@/containers/Layout/Layout'))
 
 // UTILS
 import { toggleThemeProps } from '@/utils/prop-types';
