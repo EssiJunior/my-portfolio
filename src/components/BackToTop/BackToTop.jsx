@@ -1,5 +1,5 @@
 // REACT COMPONENTS
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState, memo, useCallback } from "react";
 import { PiArrowFatLinesUpDuotone } from "react-icons/pi";
 import { useTheme } from 'styled-components'
 
@@ -14,28 +14,28 @@ const BackToTop = memo(function BackToTop() {
     const [scrolling, setScrolling] = useState(false);
     const [display, setDisplay] = useState("");
 
-    const listenScrollEvent = () => {
+    const listenScrollEvent = useCallback(() => {
         if (window.scrollY > 700) {
             setScrolling(true)
             setDisplay('block')
         } else {
             setDisplay('none')
         }
-    }
+    }, [])
 
-    const goToTop = () => {
+    const goToTop = useCallback(() => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
         });
-    };
+    }, [])
 
     useEffect(() => {
         window.addEventListener('scroll', listenScrollEvent);
 
         return () =>
             window.removeEventListener('scroll', listenScrollEvent);
-    }, []);
+    }, [listenScrollEvent]);
 
     return (
         <div className={`back-to-top ${theme.global.headingBox}`}
