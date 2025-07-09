@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { GrCertificate } from "react-icons/gr";
 import { useTheme } from 'styled-components'
@@ -14,7 +15,7 @@ import blur from '@/assets/utilities/blur-23.svg'
 
 import { education as educationAnimation } from "@/assets/lotties";
 
-function Education({ educationRef }) {
+const Education = memo(function Education({ educationRef }) {
     const theme = useTheme()
     const {t} = useTranslation();
     
@@ -105,7 +106,7 @@ function Education({ educationRef }) {
             </div>
         </section>
     );
-}
+})
 
 Education.propTypes = themeProps;
 export default Education;

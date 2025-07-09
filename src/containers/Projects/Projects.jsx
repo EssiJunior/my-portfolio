@@ -1,4 +1,5 @@
 // REACT COMPONENTS
+import { memo } from 'react'
 import { Link } from 'react-router-dom';
 import { GrNext } from "react-icons/gr";
 import { useTheme } from 'styled-components'
@@ -12,7 +13,7 @@ import Button from '@/components/Button/Button';
 import { themeProps } from '@/utils/prop-types';
 import { projects } from '@/utils';
 
-const Projects = () => {
+const Projects = memo(function Projects() {
     const theme = useTheme()
     const {t} = useTranslation();
 
@@ -52,7 +53,7 @@ const Projects = () => {
             </div>
         </main>
     );
-};
+})
 
 Projects.propTypes = themeProps;
 export default Projects;

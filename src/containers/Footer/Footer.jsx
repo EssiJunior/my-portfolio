@@ -1,4 +1,5 @@
 // REACT COMPONENTS
+import { memo } from 'react'
 import { useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
@@ -20,7 +21,7 @@ import './footer.scss'
 import { logoLight } from "@/assets/logo";
 import { navlinks } from '@/utils'
 
-const Footer = ({languageRef }) => {
+const Footer = memo(function Footer({languageRef }) {
     const theme = useTheme()
     const { t } = useTranslation();
 
@@ -95,7 +96,7 @@ const Footer = ({languageRef }) => {
             </main>
         </footer>
     )
-}
+})
 
 Footer.propTypes = themeProps;
 export default Footer

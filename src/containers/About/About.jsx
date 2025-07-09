@@ -1,4 +1,5 @@
 // REACT IMPORTS
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next'
 import { useTheme } from 'styled-components'
@@ -13,7 +14,7 @@ import { me, meDark, meGrey, meMozaic } from "@/assets/profile";
 import { styles } from "@/styles/styles";
 import './about.scss'
 
-const About = () => {
+const About = memo(function About() {
     const theme = useTheme()
     const {t} = useTranslation();
 
@@ -48,7 +49,7 @@ const About = () => {
             </section>
         </main>
     )
-}
+})
 
 About.propTypes = themeProps;
 export default About

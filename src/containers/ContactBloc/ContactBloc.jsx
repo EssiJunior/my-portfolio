@@ -1,5 +1,5 @@
 // REACT COMPONENTS IMPORTS
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useTheme } from 'styled-components'
 
@@ -13,7 +13,7 @@ import { themeProps } from '@/utils/prop-types'
 // STYLES
 import './contact_bloc.scss'
 
-const ContactBloc = () => {
+const ContactBloc = memo(function ContactBloc() {
   const theme = useTheme()
   
   const [page, setPage] = useState(window.location.pathname)
@@ -31,7 +31,7 @@ const ContactBloc = () => {
       <StarsCanvas />
     </main>
   )
-}
+})
 
 ContactBloc.propTypes = themeProps;
 export default ContactBloc

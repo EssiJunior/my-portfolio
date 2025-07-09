@@ -18,8 +18,9 @@ import { profile } from "@/assets/profile";
 
 // STYLES
 import "./hero.scss";
+import { memo } from "react";
 
-const Hero = () => {
+const Hero = memo(function Hero() {
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -116,6 +117,7 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+})
+
 Hero.propTypes = themeProps;
 export default Hero;

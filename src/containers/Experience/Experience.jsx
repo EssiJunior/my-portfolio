@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { memo } from "react";
 import { GrNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -21,7 +22,7 @@ import { experience } from "@/assets/lotties";
 // STYLES
 import './experience.scss'
 
-function Experience() {
+const Experience = memo(function Experience() {
     const theme = useTheme()
     const {t} = useTranslation();
 
@@ -101,7 +102,7 @@ function Experience() {
 
         </section>
     );
-}
+})
 
 Experience.propTypes = themeProps;
 export default Experience;

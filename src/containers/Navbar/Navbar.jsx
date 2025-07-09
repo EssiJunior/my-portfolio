@@ -1,5 +1,5 @@
 // REACT COMPONENTS IMPORTS
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Menu } from "@mui/icons-material";
 import { Link, NavLink } from "react-router-dom";
 import { Box, Divider, Drawer, List, useMediaQuery } from "@mui/material";
@@ -20,7 +20,7 @@ import { navlinks } from "@/utils";
 // STYLE
 import "./navbar.scss";
 
-const Navbar = ({ themeToggler }) => {
+const Navbar = memo(function Navbar({ themeToggler }) {
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -167,7 +167,7 @@ const Navbar = ({ themeToggler }) => {
       </Drawer>
     </nav>
   );
-};
+})
 
 Navbar.propTypes = themeProps;
 export default Navbar;

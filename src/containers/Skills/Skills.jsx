@@ -1,4 +1,5 @@
 // REACT COMPONENTS
+import { memo } from 'react'
 import { useTranslation } from "react-i18next";
 import Marquee from "react-fast-marquee";
 import { useTheme } from 'styled-components'
@@ -10,9 +11,9 @@ import { skills } from "@/utils/utilities";
 // STYLES
 import './skills.scss'
 
-function Skills({ skillsRef }) {
+const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()
-    //State for translation
+
     const {t} = useTranslation();
 
     return (
@@ -69,7 +70,7 @@ function Skills({ skillsRef }) {
             </div>
         </div>
     );
-}
+})
 
 Skills.propTypes = themeProps;
 export default Skills;

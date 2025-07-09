@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { memo } from 'react'
 import { Outlet } from 'react-router-dom'
 
 // CONTAINERS
@@ -14,7 +15,7 @@ import { themeProps } from '@/utils/prop-types.js'
 // STYLES
 import './layout.scss'
 
-const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
+const Layout = memo(function Layout({themeToggler, languageRef, skillsRef,  educationRef}) {
     
     return (
         <>
@@ -27,7 +28,7 @@ const Layout = ({themeToggler, languageRef, skillsRef,  educationRef}) => {
             </section>
         </>
     )
-}
+})
 
 Layout.propTypes = themeProps
 export default Layout
