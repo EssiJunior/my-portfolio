@@ -11,7 +11,14 @@ $green: #00B517;
 
 $linear-gradient: linear-gradient($primary, $secondary);
 $drop-shadow: drop-shadow(0 0 2em $primary);
-$font-family: Founders Grotesk, monospace, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family: Founders Grotesk,
+monospace,
+Inter,
+system-ui,
+Avenir,
+Helvetica,
+Arial,
+sans-serif;
 $border-radius: 0.25rem;
 
 $breakpoint-es: 500px;
@@ -19,38 +26,54 @@ $breakpoint-sm: 700px;
 $breakpoint-md: 1100px;
 
 @mixin flex($direction) {
-  display: flex;
-  flex-direction:$direction;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
-  font-family: $font-family;
-  margin: 0;
-  min-width: 320px;
-  // width: 100vw;
-  min-height: 100vh;
-  background-color: $bg;
+    font-family: $font-family;
+    margin: 0;
+    min-width: 320px;
+    // width: 100vw;
+    min-height: 100vh;
+    background-color: $bg;
+}
+
+
+* {
+    scrollbar-width: thin;
+
+    @media (prefers-color-scheme: dark) {
+        scrollbar-color: $primary #000000;
+    }
+
+    @media (prefers-color-scheme: light) {
+        scrollbar-color: $primary #ffffff;
+    }
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
-a, .wide-language{
-  text-decoration: none !important;
-  color: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  &:hover{
-      color: $primary;
-  }
+a,
+.wide-language {
+    text-decoration: none !important;
+    color: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+    }
 }
-.active{
-  color: $primary;
+
+.active {
+    color: $primary;
 }
 
 .gradient__text {
@@ -58,164 +81,156 @@ a, .wide-language{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .text-outline {
-    text-shadow: -1px -1px 0 #ff4a3f,  
-                  1px -1px 0 #ff4a3f,
-                  -1px 1px 0 #ff4a3f,
-                  1px 1px 0 #ff4a3f;
-  }
-  
+}
+
+.text-outline {
+    text-shadow: -1px -1px 0 #ff4a3f,
+        1px -1px 0 #ff4a3f,
+        -1px 1px 0 #ff4a3f,
+        1px 1px 0 #ff4a3f;
+}
+
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #171717,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #171717,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+            #171717,
+            #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,
+            #171717,
+            #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
+    background: #804dee;
+    background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+    background: -webkit-linear-gradient(-90deg,
+            #804dee 0%,
+            rgba(60, 51, 80, 0) 100%);
 }
+
 .primary-gradient {
-  background: $primary;
-  background: linear-gradient(-90deg, $primary 0%, rgba(10, 8, 14, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    $primary 0%,
-    rgba(10, 8, 14, 0) 100%
-  );
+    background: $primary;
+    background: linear-gradient(-90deg, $primary 0%, rgba(10, 8, 14, 0) 100%);
+    background: -webkit-linear-gradient(-90deg,
+            $primary 0%,
+            rgba(10, 8, 14, 0) 100%);
 }
 
 .secondary-gradient {
-  background: #eeba00;
-  background: linear-gradient(-90deg, #eeba00 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #eeba00 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
+    background: #eeba00;
+    background: linear-gradient(-90deg, #eeba00 0%, rgba(60, 51, 80, 0) 100%);
+    background: -webkit-linear-gradient(-90deg,
+            #eeba00 0%,
+            rgba(60, 51, 80, 0) 100%);
 }
 
 .green-yellow-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #eec42e 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #eec42e 97.5%);
+    background: "#00cea8";
+    background: linear-gradient(90.13deg, #00cea8 1.9%, #eec42e 97.5%);
+    background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #eec42e 97.5%);
 }
 
 .orange-text-gradient {
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: #f12711;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,
+            #f12711,
+            #f5af19);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,
+            #f12711,
+            #f5af19);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .green-text-gradient {
-  background: $primary; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    $primary,
-    $secondary
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    $primary,
-    $secondary
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: $primary;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,
+            $primary,
+            $secondary);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,
+            $primary,
+            $secondary);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    background: #56ccf2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,
+            #2f80ed,
+            #56ccf2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,
+            #2f80ed,
+            #56ccf2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .pink-text-gradient {
-  background: #ec008c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: #ec008c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,
+            #ec008c,
+            #fc6767);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,
+            #ec008c,
+            #fc6767);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 .gradient__text {
-  background: linear-gradient(89.97deg, #ff4a3f 1.84%, #ebdc57 102.67%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(89.97deg, #ff4a3f 1.84%, #ebdc57 102.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
-.action{
-  width: 50%;
-  margin: 2rem auto;
-  @include flex(column);
+.action {
+    width: 50%;
+    margin: 2rem auto;
+    @include flex(column);
 }
 
 #sticky-card-1 {
-  --index: 1;
+    --index: 1;
 }
 
 #sticky-card-2 {
-  --index: 2;
+    --index: 2;
 }
 
 #sticky-card-3 {
-  --index: 3;
+    --index: 3;
 }
 
 #sticky-card-4 {
-  --index: 4;
+    --index: 4;
 }
+
 #sticky-card-5 {
-  --index: 5;
+    --index: 5;
 }
 
 // #sticky-card-6 {
@@ -227,6 +242,6 @@ a, .wide-language{
 // }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
-  top: calc(var(--index) * 4rem);
+    // padding-top: calc(var(--index) * 2.5rem);
+    top: calc(var(--index) * 4rem);
 }
