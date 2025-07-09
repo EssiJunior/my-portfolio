@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { memo } from "react"
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -21,7 +22,7 @@ import { baseURL, experiences } from "@/utils";
 import { styles } from "@/styles/styles";
 import "@/styles/experience_page.scss";
 
-const Experience = () => {
+const Experience = memo(function Experience() {
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -64,7 +65,7 @@ const Experience = () => {
       </div>
     </motion.main>
   );
-};
+})
 
 Experience.propTypes = themeProps;
 export default Experience;

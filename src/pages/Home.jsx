@@ -1,3 +1,6 @@
+// REACT COMPONENTS
+import { memo } from "react";
+
 // HOOKS
 import { useTheme } from "styled-components";
 
@@ -17,7 +20,7 @@ import SEO from "@/components/SEO/SEO";
 import { themeProps } from "@/utils/prop-types";
 import { baseURL } from "@/utils";
 
-const Home = ({ skillsRef, educationRef }) => {
+const Home = memo(function Home({ skillsRef, educationRef }) {
   const theme = useTheme();
 
   return (
@@ -45,7 +48,7 @@ const Home = ({ skillsRef, educationRef }) => {
       <ContactBloc />
     </main>
   );
-};
+})
 
 Home.propTypes = themeProps;
 export default Home;

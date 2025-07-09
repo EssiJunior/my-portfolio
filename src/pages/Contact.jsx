@@ -1,12 +1,15 @@
+// REACT COMPONENTS
+import { memo } from "react"
+
 // CUSTOMIZED CONTAINERS
 import ContactBloc from "@/containers/ContactBloc/ContactBloc"
 
-const Contact = () => {
+const Contact = memo(function Contact() {
     return (
         <main>
             <ContactBloc />
         </main>
     )
-}
+})
 
 export default Contact

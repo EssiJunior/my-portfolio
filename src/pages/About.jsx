@@ -1,5 +1,5 @@
 // REACT COMPONENTS
-import { useState } from "react";
+import { memo, useState } from "react";
 import { EmailSharp, Phone } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -25,7 +25,7 @@ import { styles } from "@/styles/styles";
 import "@/styles/about.scss";
 import AboutObjectSnippet from "../components/AboutObjectSnippet";
 
-const About = () => {
+const About = memo(function About() {
   const theme = useTheme();
 
   const { t } = useTranslation();
@@ -143,7 +143,7 @@ const About = () => {
       </section>
     </motion.main>
   );
-};
+})
 
 About.propTypes = themeProps;
 export default About;

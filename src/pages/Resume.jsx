@@ -1,3 +1,6 @@
+// REACT COMPONENTS
+import { memo } from "react";
+
 // REACT PLUGIN
 import { Viewer } from "@react-pdf-viewer/core";
 import { themePlugin } from "@react-pdf-viewer/theme";
@@ -16,7 +19,7 @@ import { themeProps } from '@/utils/prop-types';
 // PAGE STYLES
 import '@/styles/resume.scss'
 
-const Resume = () => {
+const Resume = memo(function Resume() {
     const theme = useTheme()
 
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
@@ -32,7 +35,7 @@ const Resume = () => {
             </section>
         </main>
     )
-}
+})
 
 Resume.propTypes = themeProps;
 export default Resume

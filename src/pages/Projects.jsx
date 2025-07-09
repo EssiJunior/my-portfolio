@@ -1,4 +1,5 @@
 // REACT COMPONENTS IMPORTS
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { VerticalTimeline } from "react-vertical-timeline-component";
@@ -18,7 +19,7 @@ import { baseURL, projects, realisations } from "@/utils";
 import { styles } from "@/styles/styles";
 import "@/styles/projects.scss";
 
-const Projects = () => {
+const Projects = memo(function Projects() {
   const theme = useTheme();
 
   const { t } = useTranslation();
@@ -81,7 +82,7 @@ const Projects = () => {
       </div>
     </main>
   );
-};
+})
 
 Projects.propTypes = themeProps;
 export default Projects;

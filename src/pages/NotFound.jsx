@@ -1,4 +1,5 @@
-// REACT COMPONENT
+// REACT COMPONENTS
+import { memo } from "react";
 import { useMediaQuery } from '@mui/material'
 import { Link } from 'react-router-dom';
 
@@ -14,7 +15,7 @@ import AnimationLottie from '@/utils/animation-lottie';
 // STYLES
 import '@/styles/not_found.scss'
 
-const NotFound = () => {
+const NotFound = memo(function NotFound() {
     const is_sm = useMediaQuery('(max-width: 990px)')
     return (
         <main className='not-found' >
@@ -38,6 +39,6 @@ const NotFound = () => {
 
         </main>
     );
-}
+})
 
 export default NotFound;
