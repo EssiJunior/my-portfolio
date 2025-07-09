@@ -1,5 +1,6 @@
 // REACT COMPONENTS
 import { useTheme } from "styled-components";
+import { memo } from "react";
 
 // PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
@@ -7,7 +8,7 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 // UTILITIES
 import { experienceCardProps } from "@/utils/prop-types";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = memo(function ExperienceCard({ experience }) {
     const theme = useTheme();
     return (
         <VerticalTimelineElement
@@ -44,7 +45,7 @@ const ExperienceCard = ({ experience }) => {
         </ul>
         </VerticalTimelineElement>
     );
-};
+})
 
 ExperienceCard.propTypes = experienceCardProps;
 export default ExperienceCard

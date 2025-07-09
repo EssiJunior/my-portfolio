@@ -1,5 +1,5 @@
 // REACT COMPONENTS
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, memo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { CircularProgress } from "@mui/joy";
@@ -22,7 +22,7 @@ import { slideIn, textVariant } from "@/utils/motion";
 import { styles } from "@/styles/styles";
 import './contact.scss'
 
-const Contact = () => {
+const Contact = memo(function Contact() {
   const [page, setPage] = useState(window.location.pathname)
 
   const { t } = useTranslation();
@@ -205,6 +205,6 @@ const Contact = () => {
       </section>
     </main>
   );
-};
+})
 
 export default SectionWrapper(Contact, "contact");

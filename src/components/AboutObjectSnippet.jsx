@@ -1,5 +1,6 @@
+import { memo } from "react";
 
-const AboutObjectSnippet = () => {
+const AboutObjectSnippet = memo(function AboutObjectSnippet() {
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12 w-11/12">
       <div className="grid">
@@ -150,6 +151,6 @@ const AboutObjectSnippet = () => {
       </div>
     </section>
   );
-};
+})
 
 export default AboutObjectSnippet;

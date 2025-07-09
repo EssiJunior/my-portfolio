@@ -1,3 +1,6 @@
+// REACT COMPONENT
+import { memo } from 'react';
+
 // HELMET (HTML head tag)
 import { Helmet } from 'react-helmet-async';
 
@@ -6,7 +9,7 @@ import { SEOProps } from '@/utils/prop-types';
 import { myImage } from '@/utils';
 
 
-export default function SEO({title, description, name, type, link, image = myImage}) {
+const SEO = memo(function SEO({title, description, name, type, link, image = myImage}) {
     return (
         <Helmet>
             { /* Standard metadata tags */ }
@@ -32,6 +35,7 @@ export default function SEO({title, description, name, type, link, image = myIma
             { /* End Twitter tags */ }
         </Helmet>
     )
-}
+})
 
 SEO.propTypes = SEOProps;
+export default SEO;

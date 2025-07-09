@@ -1,4 +1,5 @@
 // REACT COMPONENTS
+import { memo } from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import { useMediaQuery } from '@mui/material';
@@ -14,7 +15,7 @@ import './breadcrumb.scss'
 // UTILS
 import { themeProps } from '@/utils/prop-types';
 
-const Breadcrumb = ({label, to, icon='ppyvfomi.json'}) => {
+const Breadcrumb = memo(function Breadcrumb({label, to, icon='ppyvfomi.json'}) {
     const { t } = useTranslation();
     const theme = useTheme();
     const is_mobile_1 = useMediaQuery('(max-width: 700px)')
@@ -41,7 +42,7 @@ const Breadcrumb = ({label, to, icon='ppyvfomi.json'}) => {
             </Link>
         </Breadcrumbs>
     )
-}
+})
 
 Breadcrumb.propTypes = themeProps;
 export default Breadcrumb

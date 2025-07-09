@@ -1,5 +1,5 @@
 // REACT COMPONENT
-import * as React from 'react';
+import React, { memo } from 'react';
 
 // CUSTOMIZED COMPONENT
 import Typography from '../Typography/Typography';
@@ -8,7 +8,7 @@ import Typography from '../Typography/Typography';
 import { projectCardProps } from '@/utils/prop-types';
 import { useTranslation } from 'react-i18next';
 
-function ProjectCard({ project }) {
+const ProjectCard = memo(function ProjectCard({ project }) {
     const {t} = useTranslation();
 
     return (
@@ -87,7 +87,7 @@ function ProjectCard({ project }) {
             </div>
         </div>
     );
-}
+})
 
 ProjectCard.propTypes = projectCardProps;
 export default ProjectCard;

@@ -1,4 +1,5 @@
 // REACT COMPONENTS
+import { memo } from "react";
 import { useTheme } from "styled-components";
 
 // PLUGIN
@@ -7,7 +8,7 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 // UTILITIES
 import { projectCardProps } from "../../utils/prop-types";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = memo(function ProjectCard({ project }) {
   const theme = useTheme();
   return (
     <VerticalTimelineElement
@@ -78,7 +79,7 @@ const ProjectCard = ({ project }) => {
       </div>
     </VerticalTimelineElement>
   );
-};
+})
 
 ProjectCard.propTypes = projectCardProps;
 export default ProjectCard;

@@ -1,5 +1,5 @@
 // REACT COMPONENTS
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { PiArrowFatLinesUpDuotone } from "react-icons/pi";
 import { useTheme } from 'styled-components'
 
@@ -9,7 +9,7 @@ import { themeProps } from "@/utils/prop-types";
 // STYLE
 import './back_to_top.scss'
 
-const BackToTop = () => {
+const BackToTop = memo(function BackToTop() {
     const theme = useTheme()
     const [scrolling, setScrolling] = useState(false);
     const [display, setDisplay] = useState("");
@@ -45,7 +45,7 @@ const BackToTop = () => {
             </div>
         </div>
     )
-}
+})
 
 BackToTop.propTypes = themeProps;
 export default BackToTop
