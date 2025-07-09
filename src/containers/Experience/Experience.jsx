@@ -30,6 +30,7 @@ const Experience = memo(function Experience() {
         <section className={`experience ${theme.hero.gradient} `}>
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
                 <img
+                    loading="lazy"
                     src={bg}
                     alt="Hero"
                     width={1572}
@@ -62,6 +63,7 @@ const Experience = memo(function Experience() {
                                         <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
                                             <div className="p-3 relative">
                                                 <img
+                                                    loading="lazy"
                                                     src={blur}
                                                     alt="Hero"
                                                     width={1080}

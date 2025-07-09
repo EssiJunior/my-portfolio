@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/public/me.webp" alt="My Logo" width="300">
+  <img src="/public/me.webp" alt="My Logo" width="300" loading="lazy">
   <h1>Welcome to Essi Junior's portfolio  repository</h1>
 </div>
 <br>

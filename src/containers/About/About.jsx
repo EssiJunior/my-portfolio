@@ -40,10 +40,10 @@ const About = memo(function About() {
 
                 <motion.div className="illustration">
                     <div className="gallery">
-                        <img src={me} alt="Me" />
-                        <img src={meDark} alt="Me dark" />
-                        <img src={meGrey} alt="Me grey" />
-                        <img src={meMozaic} alt="Me mozaic" />
+                        <img loading="lazy" src={me} alt="Me" />
+                        <img loading="lazy" src={meDark} alt="Me dark" />
+                        <img loading="lazy" src={meGrey} alt="Me grey" />
+                        <img loading="lazy" src={meMozaic} alt="Me mozaic" />
                     </div>
                 </motion.div>
             </section>

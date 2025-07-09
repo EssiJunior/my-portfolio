@@ -39,6 +39,7 @@ const Education = memo(function Education({ educationRef }) {
         <section className={`experience ${theme.hero.gradient}`} ref={educationRef} >
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
                 <img
+                    loading="lazy"
                     src={bg}
                     alt="Hero"
                     width={1572}
@@ -71,6 +72,7 @@ const Education = memo(function Education({ educationRef }) {
                                         <GlowCard key={education.id} identifier={`education-${education.id}`} >
                                             <div className="p-3 relative">
                                                 <img
+                                                    loading="lazy"
                                                     src={blur}
                                                     alt="Hero"
                                                     width={1080}

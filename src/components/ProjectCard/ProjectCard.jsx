@@ -25,7 +25,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
     >
       <div>
         {project.image !== "" && (
-          <img src={project.image} alt="" className="my-10 w-4/5 m-auto" />
+          <img src={project.image} alt="" className="my-10 w-4/5 m-auto" loading="lazy"/>
         )}
         <h3 className="text-[24px] font-bold">{project.name}</h3>
         <p className={`text-[16px] font-semibold`}>{project.description}</p>
