@@ -65,7 +65,6 @@ const experiences_tech = (t) => [
     title: t("se"),
     company: `${t("p")}, Powerk-soft, Pro service, Leratel`,
     icon: <MdEngineering size={30} />,
-    // iconBg: "#383E56",
     date: `${t("since")} - Sept 2022`,
   },
   {
@@ -73,7 +72,6 @@ const experiences_tech = (t) => [
     title: t("js"),
     company: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t("i")}`,
     icon: <SiJavascript size={30} />,
-    // iconBg: "#383E56",
     date: `${t("since")} - Sept 2022`,
   },
   {
@@ -81,7 +79,6 @@ const experiences_tech = (t) => [
     title: t("py"),
     company: `${t("p")}, ${t("i")}, Powerk-soft, Pro service`,
     icon: <FaPython size={30} />,
-    // iconBg: "#383E56",
     date: `${t("since")} - Sept 2020`,
   },
 ];
@@ -91,8 +88,6 @@ const experiences = (t) => [
     id: 1,
     title: t("itIns"),
     company_name: "CIA Formation",
-    // icon: starbucks,
-    // iconBg: "#383E56",
     date: `${t("since")} - Oct 2024`,
     points: [
       t("exp.it_instructor.point1"),
@@ -109,8 +104,6 @@ const experiences = (t) => [
     company_name: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t(
       "i"
     )}`,
-    // icon: starbucks,
-    // iconBg: "#383E56",
     date: `${t("since")} - Oct 2022`,
     points: [
       t("exp.js_developer.point1"),
@@ -127,8 +120,6 @@ const experiences = (t) => [
     id: 3,
     title: t("py"),
     company_name: `${t("p")}, ${t("i")}, Powerk-soft, Pro service`,
-    // icon: shopify,
-    // iconBg: "#383E56",
     date: `${t("since")} - Sept 2021`,
     points: [
       t("exp.python_developer.point1"),
@@ -140,8 +131,6 @@ const experiences = (t) => [
     id: 4,
     title: t("se"),
     company_name: `${t("p")}, Powerk-soft, Pro service, Leratel, Acedmic`,
-    // icon: shopify,
-    // iconBg: "#383E56",
     date: `${t("since")} - Sept 2021`,
     points: [
       t("exp.software_engineer.point1"),
@@ -433,7 +422,8 @@ const realisations = [
 
 const myImage =
   "https://z-p3-scontent.fnsi1-2.fna.fbcdn.net/v/t39.30808-6/422269500_1743037766183745_2393162712879109188_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE8hoVEqHlImYi7FT0iVx45OT-p4lnyOOs5P6niWfI4659BJzi1gBbU_JCiV4ybHxSXZXM5JRoZTTp8LUxNqm7f&_nc_ohc=hyuVx3kqXY8AX8PNgdR&_nc_zt=23&_nc_ht=z-p3-scontent.fnsi1-2.fna&oh=00_AfCnaQc0K-0otOsUXUzNpjR1UcJPYKza6QbIlllvpLTcYQ&oe=660769FB";
-// const baseURL = 'http://localhost:5173'
+
+  // const baseURL = 'http://localhost:5173'
 const baseURL = "https://essijunior.com";
 
 export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL };
