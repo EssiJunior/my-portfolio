@@ -9,11 +9,10 @@ import App from './App.jsx'
 // GLOBAL APP STYLE
 import './index.scss'
 
-// const helmetContext = {};
+const helmetContext = {};
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <HelmetProvider context={helmetContext}> */}
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <App />
     </HelmetProvider>
   </React.StrictMode>,
