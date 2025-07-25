@@ -1,7 +1,0 @@
-@import '../index.scss';
-
-.projects{
-    @include flex(column);
-    padding: 5rem 0;
-    width: 100%;
-}

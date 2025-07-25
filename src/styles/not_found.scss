@@ -10,9 +10,9 @@ main.not-found {
     font-weight:600;
     font-size:50px;
     line-height:46.4px;
-    // margin: 1rem 0;
     width: 90%;
   }
+
   .description{
     text-align: center;
     color:$black;
@@ -20,14 +20,11 @@ main.not-found {
     font-size:25px;
     margin-bottom: 1.5rem;
     width: 90%;
-
   }
+
   .to-home{
       @include flex(row);
       justify-content: space-evenly;
       width: 7rem;
   }
 }
-
-
-

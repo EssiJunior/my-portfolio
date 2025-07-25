@@ -8,14 +8,13 @@ main.about-page {
         max-width: 1300px;
         margin: 0 auto;
         @include flex(column);
+
         .parallax {
             display: flex;
             width: 100%;
             padding: 1.125rem 2%;
-            // margin: 2rem 0;
             box-sizing: border-box;
             height: 100vh;
-            // background-color: green;
 
             .box {
                 flex: 1;
@@ -43,11 +42,6 @@ main.about-page {
                     @media screen and (max-width:990px) {
                         font-size: 0.75rem;
                     }
-
-                    // background-color: red;
-                    // word-wrap: break-word;
-                    // white-space: pre-wrap;
-                    // white-space: -moz-pre-wrap;
                 }
 
                 &:hover {
@@ -68,7 +62,6 @@ main.about-page {
         .footer-heading {
             width: 90%;
             text-align: flex-start;
-
             margin: 2rem 0;
 
             p {
@@ -78,6 +71,5 @@ main.about-page {
                 margin-bottom: 1rem;
             }
         }
-
     }
 }

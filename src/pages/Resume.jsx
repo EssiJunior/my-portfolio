@@ -9,15 +9,8 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 // HOOKS
 import { useTheme } from "styled-components";
 
-// REACT PLUGIN STYLE   
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
-
 // UTILS
 import { themeProps } from '@/utils/prop-types';
-
-// PAGE STYLES
-import '@/styles/resume.scss'
 
 const Resume = memo(function Resume() {
     const theme = useTheme()
@@ -25,8 +18,8 @@ const Resume = memo(function Resume() {
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
     const themePluginInstance = themePlugin();
     return (
-        <main className="resume py-12" style={{ backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }} >
-            <section className="wrapper">
+        <main className="resume !py-12 !w-full" style={{backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }} >
+            <section className="wrapper m-12 max-[600px]:my-8 max-[600px]:mx-2">
                 <Viewer fileUrl={`${window.location.origin}/resume.pdf`}
                     plugins={[
                         defaultLayoutPluginInstance,

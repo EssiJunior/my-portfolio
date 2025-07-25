@@ -1,7 +1,5 @@
-// REACT COMPONENTS
 import { memo } from "react"
 
-// CUSTOMIZED CONTAINERS
 import ContactBloc from "@/containers/ContactBloc/ContactBloc"
 
 const Contact = memo(function Contact() {

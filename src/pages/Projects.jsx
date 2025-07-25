@@ -17,7 +17,6 @@ import { baseURL, projects, realisations } from "@/utils";
 
 // STYLES
 import { styles } from "@/styles/styles";
-import "@/styles/projects.scss";
 
 const Projects = memo(function Projects() {
   const theme = useTheme();
@@ -26,7 +25,7 @@ const Projects = memo(function Projects() {
 
   return (
     <main
-      className="projects"
+      className="projects py-20 w-full flex flex-col justify-center items-center"
       style={{
         backgroundColor: `${theme.colors.bg}`,
         color: `${theme.colors.text}`,
@@ -42,14 +41,8 @@ const Projects = memo(function Projects() {
       />
 
       <motion.div variants={textVariant()} className="mt-12">
-        <p
-          className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}
-        >
-          {t("p1")}
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          {t("projects")}.
-        </h2>
+        <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>{t("p1")}</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>{t("projects")}.</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
@@ -61,11 +54,7 @@ const Projects = memo(function Projects() {
       </div>
 
       <motion.div variants={textVariant()} className="mt-24">
-        <p
-          className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}
-        >
-          {t("p2")}
-        </p>
+        <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>{t("p2")}</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>{t("p3")}.</h2>
       </motion.div>
 

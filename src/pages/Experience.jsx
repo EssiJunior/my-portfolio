@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
-// REACT COMPONENTS STYLE(S)
-import "react-vertical-timeline-component/style.min.css";
-
 // CUSTOMIZED COMPONENTS
 import ExperienceCard from "@/components/ExperienceCard/ExperienceCard";
 import SEO from "@/components/SEO/SEO";
@@ -20,7 +17,6 @@ import { baseURL, experiences } from "@/utils";
 
 // STYLES
 import { styles } from "@/styles/styles";
-import "@/styles/experience_page.scss";
 
 const Experience = memo(function Experience() {
   const theme = useTheme();
@@ -28,7 +24,7 @@ const Experience = memo(function Experience() {
 
   return (
     <motion.main
-      className="experience-page"
+      className="experience-page py-20 w-full flex flex-col justify-center items-center"
       style={{
         backgroundColor: `${theme.colors.bg}`,
         color: `${theme.colors.text}`,

@@ -31,6 +31,8 @@ const About = memo(function About() {
   const { t } = useTranslation();
   const [inTrans, setInTrans] = useState(false);
 
+  const meImages = [me2, me3, me4, me5];
+
   return (
     <motion.main
       className="about-page"
@@ -60,7 +62,7 @@ const About = memo(function About() {
           </h2>
         </motion.div>
 
-        <AboutObjectSnippet/>
+        <AboutObjectSnippet />
 
         <Typography
           text={`_${t("ai")}`}
@@ -76,41 +78,22 @@ const About = memo(function About() {
 
         <div className="parallax">
           <div className={inTrans ? `box` : `box super-box`}>
-            <img src={me2} alt="my image" loading="lazy" />
+            <img src={me1} alt="my image" loading="lazy" />
             <span className={`bg-primary text-white`}>{t("a1")}</span>
           </div>
-          <div
-            className="box"
-            onMouseEnter={() => setInTrans(true)}
-            onMouseLeave={() => setInTrans(false)}
-          >
-            <img src={me3} alt="my image" loading="lazy" />
-            <span className={`bg-primary text-white`}>{t("a2")}</span>
-          </div>
-          <div
-            className="box"
-            onMouseEnter={() => setInTrans(true)}
-            onMouseLeave={() => setInTrans(false)}
-          >
-            <img src={me4} alt="my image" loading="lazy" />
-            <span className={`bg-primary text-white`}>{t("a3")}</span>
-          </div>
-          <div
-            className="box"
-            onMouseEnter={() => setInTrans(true)}
-            onMouseLeave={() => setInTrans(false)}
-          >
-            <img src={me1} alt="my image" loading="lazy" />
-            <span className={`bg-primary text-white`}>{t("a4")}</span>
-          </div>
-          <div
-            className="box"
-            onMouseEnter={() => setInTrans(true)}
-            onMouseLeave={() => setInTrans(false)}
-          >
-            <img src={me5} alt="my image" loading="lazy" />
-            <span className={`bg-primary text-white`}>{t("a5")}</span>
-          </div>
+          {
+            meImages.map((image, index) => (
+              <div
+                key={index}
+                className="box"
+                onMouseEnter={() => setInTrans(true)}
+                onMouseLeave={() => setInTrans(false)}
+              >
+                <img src={image} alt="my image" loading="lazy" />
+                <span className={`bg-primary text-white`}>{t(`a${index + 2}`)}</span>
+              </div>
+            ))
+          }
         </div>
 
         <div className="footer-heading">
