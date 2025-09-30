@@ -16,21 +16,26 @@ export default defineConfig({
     optimizeDeps: {
         exclude: ['js-big-decimal']
     },
-    // Configuration Vite pour le build
     build: {
         rollupOptions: {
             output: {
-                // Ajouter des hash aux fichiers pour le cache busting
-                assetFileNames: 'assets/[name].[hash].[ext]',
-                chunkFileNames: 'assets/[name].[hash].js',
-                entryFileNames: 'assets/[name].[hash].js',
+                // IMPORTANT: Ajouter des hash aux fichiers
+                assetFileNames: (assetInfo) => {
+                    let extType = assetInfo.name.split('.').pop();
+                    if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+                        extType = 'img';
+                    } else if (/woff|woff2|eot|ttf|otf/i.test(extType)) {
+                        extType = 'fonts';
+                    }
+                    return `assets/${extType}/[name]-[hash][extname]`;
+                },
+                chunkFileNames: 'assets/js/[name]-[hash].js',
+                entryFileNames: 'assets/js/[name]-[hash].js',
             },
         },
-    },
-    // Pour le serveur de dev (optionnel)
-    server: {
-        headers: {
-            'Cache-Control': 'public, max-age=31536000',
-        },
+        // Générer le manifest pour le cache busting
+        manifest: true,
+        // Optimiser les chunks
+        chunkSizeWarningLimit: 1000,
     },
 })
