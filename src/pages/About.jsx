@@ -35,13 +35,13 @@ const About = memo(function About() {
 
   return (
     <motion.main
-      className="about-page"
+      className="about-page w-full"
       style={{
         backgroundColor: `${theme.colors.bg}`,
         color: `${theme.colors.text}`,
       }}
     >
-      <section className="about-container">
+      <section className="about-container flex items-center justify-center flex-col py-20 px-0 max-w-[1300px] my-0 mx-auto">
         <Breadcrumb label="about" to="/about" icon="kthelypq.json" />
         <SEO
           title={`Essi Junior's portfolio - About`}
@@ -76,7 +76,7 @@ const About = memo(function About() {
           className={`${theme.global.subHeading}`}
         />
 
-        <div className="parallax">
+        <div className="parallax flex w-full h-screen box-border py-[1.125rem] px-[2%]">
           <div className={inTrans ? `box` : `box super-box`}>
             <img src={me1} alt="my image" loading="lazy" />
             <span className={`bg-primary text-white`}>{t("a1")}</span>
@@ -96,7 +96,7 @@ const About = memo(function About() {
           }
         </div>
 
-        <div className="footer-heading">
+        <div className="footer-heading w-[90%] text-start my-8 mx-0">
           <Typography
             className="gradient__text"
             text={`_${t("newsMessage")}`}

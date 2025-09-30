@@ -1,21 +1,6 @@
-@import '../index.scss';
-
 main.about-page {
-    width: 100%;
-
     section.about-container {
-        padding: 5rem 0;
-        max-width: 1300px;
-        margin: 0 auto;
-        @include flex(column);
-
         .parallax {
-            display: flex;
-            width: 100%;
-            padding: 1.125rem 2%;
-            box-sizing: border-box;
-            height: 100vh;
-
             .box {
                 flex: 1;
                 overflow: hidden;
@@ -60,10 +45,6 @@ main.about-page {
         }
 
         .footer-heading {
-            width: 90%;
-            text-align: flex-start;
-            margin: 2rem 0;
-
             p {
                 font-size: 1.75rem;
                 font-weight: 600;
