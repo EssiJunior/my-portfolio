@@ -12,6 +12,7 @@ import {
   threeR,
   syneduc,
   studentResultSystem,
+  evShine,
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
@@ -209,7 +210,26 @@ const projects = [
 
 const realisations = [
   {
-    id: 1,
+    id: "ev-shine",
+    name: "Evangéliste Shine Ministries",
+    description:
+      "I built the web site of a Christian evangelist. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
+    tools: [
+      "NextJS",
+      "Tailwind CSS",
+      "Aceternity UI",
+      "OVH",
+      "Git",
+      "Github",
+      "Github actions",
+    ],
+    role: "NextJS Developer",
+    code: "",
+    demo: "https://evangeliste-shine-ministries.com/",
+    image: evShine,
+  },
+  {
+    id: "vases-d-honneurs",
     name: "Assemblee des Vases d'honneur",
     description:
       "I built the web site of a Christian association. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
@@ -228,7 +248,7 @@ const realisations = [
     image: vasesDhonneur,
   },
   {
-    id: 2,
+    id: "cara",
     name: "CARA",
     description:
       "I built the web site of a company that promotes services for African and Russian partneships. I used ReactJS, Tailwind CSS, Preline UI and other npm libraries for the UI. I utilized nodemailer to bear mail messages.",
@@ -239,7 +259,7 @@ const realisations = [
     image: cara,
   },
   {
-    id: 3,
+    id: "fly-travel",
     name: "Fly Travel Agency",
     description:
       "I built the static website of a traveling agency company. I used ReactJS, TailwindCSS, Material UI, emailJS, saas, i18next and other npm libraries for the UI.",
@@ -258,7 +278,7 @@ const realisations = [
     image: flytravel,
   },
   {
-    id: 4,
+    id: "colorfol-artists",
     name: "Colorfol artists",
     description:
       "I maintained and built new interfaces of Colorfol artists web app. I used ReactJS, TailwindCSS, Material UI and other npm libraries for the UI.",
@@ -269,7 +289,7 @@ const realisations = [
     image: colorfol,
   },
   {
-    id: 5,
+    id: "srms",
     name: "Student Result System",
     description:
       "I and my team worked on the development of a desktop app that manages exams results for a school in the South region of Cameroon. We used ElectronJS for the UI, NodeJS, ExpressJS, and other npm libraries for the backend, MySQL for the database, Git for version control, and Github for the hosting of the code.",
@@ -280,7 +300,7 @@ const realisations = [
     image: studentResultSystem,
   },
   {
-    id: 6,
+    id: "syneduc",
     name: "Syneduc",
     description:
       "I worked in the development of an e-learning platform for a company. We used Laravel. I improved my PHP level and my knowledge of the Laravel framework.",
@@ -291,7 +311,7 @@ const realisations = [
     image: syneduc,
   },
   {
-    id: 7,
+    id: "flikart",
     name: "Flikart +",
     description:
       "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
@@ -314,7 +334,7 @@ const realisations = [
     image: flikart,
   },
   {
-    id: 8,
+    id: "chp-compta",
     name: "CHP compta",
     description:
       "I built a medical items task management cross platform mobile application. I used React native, and other npm libraries for the UI. I utilized FastAPI and related libraries to develop the server. The database was a NoSQL type, MongoDB.",
@@ -325,7 +345,7 @@ const realisations = [
     image: "",
   },
   {
-    id: 9,
+    id: "e-c",
     name: "Car components e-commerce",
     description:
       "I and my team built an car items e-commerce web application. We used ReactJS, TailwindCSS, Material UI, and other npm libraries for the UI. We utilized Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an SQL type, PostgreSQL.",
@@ -348,7 +368,7 @@ const realisations = [
     image: eCommerce,
   },
   {
-    id: 10,
+    id: "r-e",
     name: "Real Estate",
     description:
       "I developed a fullstack real estate web app. I used FastAPI, Python, Pymongo and related packages to develop the API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
@@ -367,7 +387,7 @@ const realisations = [
     image: realEstate,
   },
   {
-    id: 11,
+    id: "b-t",
     name: "Bus tickets",
     description:
       "I developed a fullstack bus tickets reservation web and desktop app. I used FastAPI, Python, Pymongo and related packages to develop the web and desktop API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the web UI, and ElectronJS to develop the desktop UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
@@ -387,7 +407,7 @@ const realisations = [
     image: "",
   },
   {
-    id: 12,
+    id: "recho",
     name: "Recho",
     description:
       "I and a friend developed a web app for Echographic consultations. We created the UI using ReactJS, Material UI, TailwindCSS, Preline and related npm libraries. We developed the rest APIs with Node.JS, express.JS, nodemailer and related npm libraries. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
@@ -408,7 +428,7 @@ const realisations = [
     image: recho,
   },
   {
-    id: 13,
+    id: "pharma",
     name: "Pharma",
     description:
       "I developed the beta version of an android mobile app which manages, organizes and presents medical drugs to users. I used Kotlin programming language to develop the backend. I utilized Android XML, Material Design, and related packages to develop the android UI. The database was an SQL type, SQLite.",

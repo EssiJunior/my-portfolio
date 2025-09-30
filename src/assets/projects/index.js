@@ -5,6 +5,7 @@ import portfolio from "./portfolio.webp";
 import recho from "./recho.webp";
 import colorfol from "./colorfol.webp";
 import eCommerce from "./e-commerce.webp";
+import evShine from "./ev-shine.webp";
 import realEstate from "./real-estate.webp";
 import scoreify from "./scoreify.webp";
 import vasesDhonneur from "./vasesdhonneur.webp";
@@ -20,6 +21,7 @@ export {
     cara,
     colorfol,
     eCommerce,
+    evShine,
     realEstate,
     scoreify,
     vasesDhonneur,
