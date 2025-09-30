@@ -39,7 +39,7 @@ const Hero = memo(function Hero() {
             {social.map((elt, i) => {
               return (
                 <a
-                  aria-label={'Essi Junior\'s '+elt.name+' link'}
+                  aria-label={"Essi Junior's " + elt.name + " link"}
                   key={i}
                   href={elt.link}
                   target="_blank"
@@ -79,9 +79,21 @@ const Hero = memo(function Hero() {
             </Link>
           </div>
         </div>
-        
+
         <div className="actions relative">
-          <img src={profile} alt="Profile banner" loading="lazy" />
+          <img
+            src={profile}
+            alt="Hero image"
+            title="Hero image"
+            width="797"
+            height="797"
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              contentVisibility: "auto",
+              containIntrinsicSize: "797px 797px",
+            }}
+          />
 
           <ScrollParallax isAbsolutelyPositioned>
             <ul
@@ -101,7 +113,7 @@ const Hero = memo(function Hero() {
               {social.map((elt, i) => {
                 return (
                   <a
-                    aria-label={'Essi Junior\'s '+elt.name+' link'}
+                    aria-label={"Essi Junior's " + elt.name + " link"}
                     key={i}
                     href={elt.link}
                     target="_blank"
@@ -117,7 +129,7 @@ const Hero = memo(function Hero() {
       </div>
     </section>
   );
-})
+});
 
 Hero.propTypes = themeProps;
 export default Hero;
