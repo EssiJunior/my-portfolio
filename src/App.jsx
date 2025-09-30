@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Worker } from '@react-pdf-viewer/core';
 
 // CUSTOMISED COMPONENT
-import AnimatedRoutes from '@/components/AnimatedRoutes';
+import AnimatedRoutes from '@/containers/AnimatedRoutes';
 
 // UTILS
 import { ScrollToTop } from '@/utils/Scroll';

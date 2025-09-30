@@ -13,7 +13,7 @@ const Projects = lazy(() => import("@/pages/Projects"));
 const About = lazy(() => import("@/pages/About"));
 
 // CUSTOMIZED CONTAINERS
-const Layout = lazy(() => import("@/containers/Layout/Layout"));
+const Layout = lazy(() => import("@/layouts/Layout"));
 
 // UTILS
 import { toggleThemeProps } from "@/utils/prop-types";
