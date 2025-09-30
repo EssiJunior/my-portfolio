@@ -16,7 +16,7 @@ jobs:
           node-version: '20'
       - name: 🔨 Build Project
         run: |
-          npm install
+          npm install --legacy-peer-deps
           npm run build
       
       - name: 📂 Sync files
