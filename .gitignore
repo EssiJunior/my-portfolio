@@ -27,3 +27,4 @@ dist-ssr
 docs
 .env
 compress.js
+/test
