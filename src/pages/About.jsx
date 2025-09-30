@@ -8,7 +8,7 @@ import { useTheme } from "styled-components";
 
 // CUSTOMIZED COMPONENTS
 import SEO from "@/components/SEO/SEO";
-import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import Typography from "@/components/Typography/Typography";
 import Button from "@/components/Button/Button";
 

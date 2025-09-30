@@ -9,9 +9,6 @@ import { useTheme } from 'styled-components';
 // ASSETS
 import Typography from '@/components/Typography/Typography';
 
-// STYLES
-import './breadcrumb.scss'
-
 // UTILS
 import { themeProps } from '@/utils/prop-types';
 
@@ -21,8 +18,8 @@ const Breadcrumb = memo(function Breadcrumb({label, to, icon='ppyvfomi.json'}) {
     const is_mobile_1 = useMediaQuery('(max-width: 700px)')
 
     return (
-        <Breadcrumbs aria-label="breadcrumb" className={is_mobile_1 ? 'breadcrumb-m':'breadcrumb'} color={{color: `${theme.colors.text}`}}>
-            <Link underline="hover" color={{color: `${theme.colors.text}`}} href="/" className='link'>
+        <Breadcrumbs aria-label="breadcrumb" className={is_mobile_1 ? 'my-4 mx-12 flex flex-col justify-center items-center':'my-2 mx-12 w-4/5 max-w-[1000px]'} color={{color: `${theme.colors.text}`}}>
+            <Link underline="hover" color={{color: `${theme.colors.text}`}} href="/" className='link flex justify-center items-center'>
                 <lord-icon
                     src="https://cdn.lordicon.com/cnpvyndp.json"
                     trigger="hover"
@@ -31,7 +28,7 @@ const Breadcrumb = memo(function Breadcrumb({label, to, icon='ppyvfomi.json'}) {
                 </lord-icon>
                 <Typography text={t('home')} />
             </Link>
-            <Link underline="hover" color={{color: `${theme.colors.text}`}} href={to} className='link' >
+            <Link underline="hover" color={{color: `${theme.colors.text}`}} href={to} className='link flex justify-center items-center' >
                 <lord-icon
                     src={`https://cdn.lordicon.com/${icon}`}
                     trigger="hover"

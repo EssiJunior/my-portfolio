@@ -6,7 +6,7 @@ import { useTheme } from 'styled-components'
 import { useTranslation } from 'react-i18next';
 
 // CUSTOMIZED COMPONENTS
-import ProjectCard from '@/components/ProjectsCard/ProjectsCard';
+import ProjectsCard from '@/components/ProjectsCard';
 import Button from '@/components/Button/Button';
 
 // UTILITIES
@@ -40,7 +40,7 @@ const Projects = memo(function Projects() {
                             style={{ width: "90%" }}
                         >
                             <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-                                <ProjectCard project={project} theme={theme} />
+                                <ProjectsCard project={project} theme={theme} />
                             </div>
                         </div>
                     ))}

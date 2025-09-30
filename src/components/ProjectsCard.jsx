@@ -2,13 +2,13 @@
 import React, { memo } from 'react';
 
 // CUSTOMIZED COMPONENT
-import Typography from '../Typography/Typography';
+import Typography from './Typography/Typography';
 
 // UTILS
 import { projectCardProps } from '@/utils/prop-types';
 import { useTranslation } from 'react-i18next';
 
-const ProjectCard = memo(function ProjectCard({ project }) {
+const ProjectsCard = memo(function ProjectsCard({ project }) {
     const {t} = useTranslation();
 
     return (
@@ -89,5 +89,5 @@ const ProjectCard = memo(function ProjectCard({ project }) {
     );
 })
 
-ProjectCard.propTypes = projectCardProps;
-export default ProjectCard;
+ProjectsCard.propTypes = projectCardProps;
+export default ProjectsCard;

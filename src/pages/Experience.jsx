@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
 // CUSTOMIZED COMPONENTS
-import ExperienceCard from "@/components/ExperienceCard/ExperienceCard";
+import ExperienceCard from "@/components/ExperienceCard";
 import SEO from "@/components/SEO/SEO";
-import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 
 // UTILITIES
 import { textVariant } from "@/utils/motion";

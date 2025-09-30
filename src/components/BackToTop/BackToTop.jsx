@@ -38,7 +38,7 @@ const BackToTop = memo(function BackToTop() {
     }, [listenScrollEvent]);
 
     return (
-        <div className={`back-to-top ${theme.global.headingBox}`}
+        <div className={`back-to-top flex justify-center items-center ${theme.global.headingBox}`}
             style={scrolling ? { display: display } : { display: "none" }}>
             <div onClick={goToTop} className="back-to-top-content">
                 <PiArrowFatLinesUpDuotone />

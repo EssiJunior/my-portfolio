@@ -6,9 +6,9 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import { useTheme } from "styled-components";
 
 // CUSTOMIZED COMPONENTS
-import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import SEO from "@/components/SEO/SEO";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 
 // UTILS
 import { textVariant } from "@/utils/motion";

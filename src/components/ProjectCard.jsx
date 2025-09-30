@@ -6,7 +6,7 @@ import { useTheme } from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 // UTILITIES
-import { projectCardProps } from "../../utils/prop-types";
+import { projectCardProps } from "../utils/prop-types";
 
 const ProjectCard = memo(function ProjectCard({ project }) {
   const theme = useTheme();
