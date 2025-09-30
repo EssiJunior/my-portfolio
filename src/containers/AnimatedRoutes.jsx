@@ -15,6 +15,9 @@ const About = lazy(() => import("@/pages/About"));
 // CUSTOMIZED CONTAINERS
 const Layout = lazy(() => import("@/layouts/Layout"));
 
+// COMPONENTS
+import PageLoader from "@/components/PageLoader";
+
 // UTILS
 import { toggleThemeProps } from "@/utils/prop-types";
 
@@ -28,7 +31,7 @@ const AnimatedRoutes = ({ toggle }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<PageLoader />}>
         <Routes location={location} key={location.pathname}>
           <Route path="*" element={<Navigate to="/notfound" replace />} />
           <Route path="/notfound" element={<NotFound />}></Route>
