@@ -1,5 +1,3 @@
-@import '../../index.scss';
-
 .hero {
     // background: url(../../assets/utilities/hero.svg) center/cover no-repeat;
     width: 100%;
@@ -8,7 +6,7 @@
     margin: 0 auto;
     padding: 4rem 0 0 0;
 
-    @media (max-width: #{$breakpoint-sm}) {
+    @media (max-width: #{var(--breakpoint-sm)}) {
         // styles for screens up to 700px
         // height: 40vh!important;
         grid-template-columns: 2fr;
@@ -22,20 +20,23 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        @media screen and (max-width: #{$breakpoint-sm}) {
+        @media screen and (max-width: #{var(--breakpoint-sm)}) {
             // styles for screens up to 700px
             grid-template-columns: 1fr;
         }
 
-        @media screen and (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md}) {
+        @media screen and (min-width: #{var(--breakpoint-sm)}) and (max-width: #{var(--breakpoint-md)}) {
             // styles for screens up to 700px
             grid-template-columns: 3fr 1fr;
         }
 
         .brand {
             // background-color: red;
-            // background-color: $primary;
-            @include flex(column);
+            // background-color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             align-items: flex-start;
             padding: 4rem;
 
@@ -44,7 +45,7 @@
                 padding: 4rem 0.75rem;
             }
 
-            @media screen and (min-width: 361px) and (max-width: #{$breakpoint-sm}) {
+            @media screen and (min-width: 361px) and (max-width: #{var(--breakpoint-sm)}) {
                 // styles for screens up to 700px
                 padding: 6rem 1.5rem;
             }
@@ -56,14 +57,17 @@
             }
 
             p {
-                @media (max-width: #{$breakpoint-sm}) {
+                @media (max-width: #{var(--breakpoint-sm)}) {
                     // styles for screens up to 700px
                     width: 90% !important;
                 }
             }
 
             .more {
-                @include flex(row);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
                 justify-content: space-between;
                 // width: 60%;
                 // @media screen and (max-width: 360px) {
@@ -95,7 +99,10 @@
         .actions {
             // background: url(../../assets/profile/profile.png) center/cover no-repeat;
             // background-color: red;
-            @include flex(row);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             height: 70%;
             width: 100%;
             margin: auto;

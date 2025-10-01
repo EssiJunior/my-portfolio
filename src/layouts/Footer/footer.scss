@@ -1,7 +1,5 @@
-@import '../../index.scss';
-
 footer {
-    background-color: $primary;
+    background-color: var(--primary);
     height: 70vh;
     // background-color: red;
 
@@ -24,7 +22,10 @@ footer {
     .footer-info {
         height: 90%;
         width: 100%;
-        @include flex(row);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
         @media screen and (max-width: 550px) {
             align-items: flex-start;
@@ -37,7 +38,10 @@ footer {
         }
 
         .logo {
-            @include flex(row);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
 
             img {
                 height: 50px;
@@ -76,7 +80,10 @@ footer {
             }
 
             aside {
-                @include flex(column);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 align-items: flex-start;
                 justify-content: space-evenly;
 
@@ -90,7 +97,7 @@ footer {
 
                 a {
                     text-decoration: none !important;
-                    color: $white;
+                    color: var(--white);
                     font-size: 13px;
                     line-height: 1.3rem;
 
@@ -104,7 +111,10 @@ footer {
 
                 // border: 1px solid yellow;
                 .links {
-                    @include flex(row);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     justify-content: space-between;
                     // width: 40%;
                     gap: 1rem;
@@ -116,7 +126,10 @@ footer {
                     svg {
                         padding: 0.2rem;
                         border-radius: 50%;
-                        @include flex(row);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
                         background-color: #f2610050;
                     }
                 }
@@ -145,13 +158,19 @@ footer {
             }
 
             .elts div {
-                @include flex(row);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
 
             .info a {
-                @include flex(row);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
                 margin: 0 0 0.5rem 0;
-                color: $white;
+                color: var(--white);
 
                 svg {
                     margin-right: 5px;
@@ -162,8 +181,11 @@ footer {
 
     .foot-toolbar {
         height: 10%;
-        background-color: $black;
-        @include flex(row);
+        background-color: var(--black);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
         @media screen and (max-width: 550px) {
             height: 3%;
@@ -174,7 +196,10 @@ footer {
         }
 
         div.container {
-            @include flex(row);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             width: 90%;
             max-width: 1300px;
             margin: 0 auto;

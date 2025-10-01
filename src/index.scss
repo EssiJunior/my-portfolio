@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary:#0183b4;
-$secondary:#0fcde7;
-$bg:#F2F2F2;
-$white:#FFFFFF;
-$black:#000000;
+:root {
+    --primary: #0183b4;
+    --secondary: #0fcde7;
+    --bg: #F2F2F2;
+    --white: #FFFFFF;
+    --black: #000000;
 
-$linear-gradient:linear-gradient($primary, $secondary);
-$font-family:'Space Mono',
-monospace;
+    --linear-gradient: linear-gradient(var(--primary), var(--secondary));
+    --font-family: 'Space Mono', monospace;
 
-$breakpoint-sm:700px;
-$breakpoint-md:1100px;
+    --breakpoint-sm: 700px;
+    --breakpoint-md: 1100px;
+}
 
 @mixin flex($direction) {
     display: flex;
@@ -23,13 +24,13 @@ $breakpoint-md:1100px;
 }
 
 body {
-    font-family: $font-family;
+    font-family: var(--font-family);
     font-weight: 400;
     font-style: normal;
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    background-color: $bg;
+    background-color: var(--bg);
 }
 
 
@@ -37,11 +38,11 @@ body {
     scrollbar-width: thin;
 
     @media (prefers-color-scheme:dark) {
-        scrollbar-color: $primary #000000;
+        scrollbar-color: var(--primary) #000000;
     }
 
     @media (prefers-color-scheme:light) {
-        scrollbar-color: $primary #ffffff;
+        scrollbar-color: var(--primary) #ffffff;
     }
 }
 
@@ -59,12 +60,12 @@ a,
     cursor: pointer;
 
     &:hover {
-        color: $primary;
+        color: var(--primary);
     }
 }
 
 .active {
-    color: $primary;
+    color: var(--primary);
 }
 
 .gradient__text {
@@ -85,15 +86,15 @@ a,
 }
 
 .primary-gradient {
-    background: $primary;
-    background: linear-gradient(-90deg, $primary 0%, rgba(10, 8, 14, 0) 100%);
-    background: -webkit-linear-gradient(-90deg, $primary 0%, rgba(10, 8, 14, 0) 100%);
+    background: var(--primary);
+    background: linear-gradient(-90deg, var(--primary) 0%, rgba(10, 8, 14, 0) 100%);
+    background: -webkit-linear-gradient(-90deg, var(--primary) 0%, rgba(10, 8, 14, 0) 100%);
 }
 
 .green-text-gradient {
-    background: $primary;
-    background: -webkit-linear-gradient(to top, $primary, $secondary);
-    background: linear-gradient(to top, $primary, $secondary);
+    background: var(--primary);
+    background: -webkit-linear-gradient(to top, var(--primary), var(--secondary));
+    background: linear-gradient(to top, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -102,7 +103,10 @@ a,
 .action {
     width: 50%;
     margin: 2rem auto;
-    @include flex(column);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #sticky-card-1 {

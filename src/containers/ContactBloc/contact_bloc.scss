@@ -1,24 +1,23 @@
-@import '../../index.scss';
-
-.contact-bloc-dark{
+.contact-bloc-dark {
     background: #171717;
     background: linear-gradient(180deg, #171717 48%, #111111 100%);
-    border:0px;
+    border: 0px;
 }
 
-.contact-bloc{
-    background: $secondary;
-    background: linear-gradient(180deg, $secondary 48%, $primary 100%);
-    border:0px;
+.contact-bloc {
+    background: var(--secondary);
+    background: linear-gradient(180deg, var(--secondary) 48%, var(--primary) 100%);
+    border: 0px;
 }
-.contact-bloc-contact-dark{
+
+.contact-bloc-contact-dark {
     background: #171717;
     background: linear-gradient(180deg, #171717 48%, #111111 100%);
-    border:0px;
+    border: 0px;
 }
 
-.contact-bloc-contact{
-    background: $bg;
-    background: linear-gradient(180deg, $bg 48%, $primary 100%);
-    border:0px;
+.contact-bloc-contact {
+    background: var(--bg);
+    background: linear-gradient(180deg, var(--bg) 48%, var(--primary) 100%);
+    border: 0px;
 }
