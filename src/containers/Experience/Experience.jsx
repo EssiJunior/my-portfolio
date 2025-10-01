@@ -20,7 +20,7 @@ import blur from '@/assets/utilities/blur-23.svg'
 import { experience } from "@/assets/lotties";
 
 // STYLES
-import './experience.scss'
+import './experience.css'
 
 const Experience = memo(function Experience() {
     const theme = useTheme()

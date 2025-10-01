@@ -17,7 +17,7 @@ import { EmailSharp, WorkHistory } from "@mui/icons-material";
 import { profile } from "@/assets/profile";
 
 // STYLES
-import "./hero.scss";
+import "./hero.css";
 import { memo } from "react";
 
 const Hero = memo(function Hero() {

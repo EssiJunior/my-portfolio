@@ -15,7 +15,7 @@ import { themeProps } from '@/utils/prop-types';
 import { social, tech } from '@/utils/utilities';
 
 // STYLES
-import './footer.scss'
+import './footer.css'
 
 // ASSETS
 import { logoLight } from "@/assets/logo";

@@ -7,7 +7,7 @@ import { useTheme } from 'styled-components'
 import { themeProps } from "@/utils/prop-types";
 
 // STYLE
-import './back_to_top.scss'
+import './back_to_top.css'
 
 const BackToTop = memo(function BackToTop() {
     const theme = useTheme()

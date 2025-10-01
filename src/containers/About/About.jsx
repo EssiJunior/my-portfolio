@@ -12,7 +12,7 @@ import { me, meDark, meGrey, meMozaic } from "@/assets/profile";
 
 // STYLES
 import { styles } from "@/styles/styles";
-import './about.scss'
+import './about.css'
 
 const About = memo(function About() {
     const theme = useTheme()

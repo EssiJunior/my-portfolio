@@ -9,7 +9,7 @@ import { themeProps } from "@/utils/prop-types";
 import { skills } from "@/utils/utilities";
 
 // STYLES
-import './skills.scss'
+import './skills.css'
 
 const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()

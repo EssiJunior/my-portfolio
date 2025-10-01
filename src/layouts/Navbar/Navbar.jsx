@@ -18,7 +18,7 @@ import { themeProps } from "@/utils/prop-types";
 import { navlinks } from "@/utils";
 
 // STYLE
-import "./navbar.scss";
+import "./navbar.css";
 
 const Navbar = memo(function Navbar({ themeToggler }) {
   const theme = useTheme();

@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { glowCardProps } from './prop-types';
 
 // STYLE
-import '../styles/glow.scss'
+import '../styles/glow.css'
 
 const GlowCard = ({ children , identifier}) => {
   useEffect(() => {

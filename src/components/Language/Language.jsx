@@ -15,7 +15,7 @@ import EN from '@/assets/languages/EN.svg'
 import { languageProps } from '@/utils/prop-types';
 
 // STYLE
-import './language.scss'
+import './language.css'
 
 function Language({ style, text = true, page = 'default', languageRef }) {
   const [language, setLanguage] = useState('en');

@@ -20,7 +20,7 @@ import { slideIn, textVariant } from "@/utils/motion";
 
 // STYLES
 import { styles } from "@/styles/styles";
-import './contact.scss'
+import './contact.css'
 
 const MemoisedContact = memo(function Contact() {
   const [page, setPage] = useState(window.location.pathname)

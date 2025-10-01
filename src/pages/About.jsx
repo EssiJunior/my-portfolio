@@ -22,7 +22,7 @@ import { me1, me2, me3, me4, me5 } from "@/assets/me";
 
 // STYLES
 import { styles } from "@/styles/styles";
-import "@/styles/about.scss";
+import "@/styles/about.css";
 import AboutObjectSnippet from "../components/AboutObjectSnippet";
 
 const About = memo(function About() {

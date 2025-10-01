@@ -2,7 +2,7 @@
 import { memo } from 'react';
 
 // STYLE
-import './button.scss'
+import './button.css'
 
 // UTILITIES
 import { buttonProps } from '@/utils/prop-types';

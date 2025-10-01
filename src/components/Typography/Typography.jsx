@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { typographyProps } from '@/utils/prop-types';
 
 // STYLE
-import './typography.scss'
+import './typography.css'
 
 const Typography = memo(function Typography({text, style, isGradient=false, className}) {
     return (

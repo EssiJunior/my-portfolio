@@ -11,7 +11,7 @@ import { StarsCanvas } from '@/components/canvas'
 import { themeProps } from '@/utils/prop-types'
 
 // STYLES
-import './contact_bloc.scss'
+import './contact_bloc.css'
 
 const ContactBloc = memo(function ContactBloc() {
   const theme = useTheme()

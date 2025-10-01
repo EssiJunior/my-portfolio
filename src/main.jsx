@@ -12,7 +12,7 @@ import "react-vertical-timeline-component/style.min.css";
 import App from './App.jsx'
 
 // GLOBAL APP STYLE
-import './index.scss'
+import './index.css'
 
 const helmetContext = {};
 ReactDOM.createRoot(document.getElementById('root')).render(
