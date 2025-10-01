@@ -14,7 +14,10 @@
     background-image: var(--linear-gradient);
     border: 0 solid;
     overflow: hidden;
-    @include flex('row');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
     &:hover {
         cursor: pointer;
