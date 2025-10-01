@@ -1,17 +1,17 @@
-.contact{
-    // backdrop-filter: blur(200px);
-    // backdrop-filter: brightness(60%);
-    // backdrop-filter: contrast(40%);
-    // backdrop-filter: drop-shadow(4px 4px 10px blue);
-    // backdrop-filter: grayscale(30%);
-    // backdrop-filter: hue-rotate(120deg);
+.contact {
+
+
+
+
+
+
     backdrop-filter: invert(50%);
-    // backdrop-filter: opacity(20%);
-    // backdrop-filter: sepia(90%);
-    // backdrop-filter: saturate(80%);
+
+
+
 
 }
 
-.contact-dark{
+.contact-dark {
     backdrop-filter: invert(20%);
 }
