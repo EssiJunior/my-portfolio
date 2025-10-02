@@ -16,13 +16,6 @@
     --breakpoint-md: 1100px;
 }
 
-@mixin flex($direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
     font-family: var(--font-family);
     font-weight: 400;
