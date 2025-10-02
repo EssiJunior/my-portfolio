@@ -11,9 +11,6 @@
 
     --linear-gradient: linear-gradient(var(--primary), var(--secondary));
     --font-family: 'Space Mono', monospace;
-
-    --breakpoint-sm: 700px;
-    --breakpoint-md: 1100px;
 }
 
 body {

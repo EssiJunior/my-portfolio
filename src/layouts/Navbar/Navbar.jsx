@@ -46,8 +46,8 @@ const Navbar = memo(function Navbar({ themeToggler }) {
     >
       <List>
         {navlinks(t).map((elt, i) => (
-          <NavLink to={elt.path} key={i} activeClassName="active">
-            <Typography text={elt.label} />
+          <NavLink to={elt.path} key={i} activeClassName="active" className={"hover:text-[var(--primary)]"}>
+            <Typography text={elt.label} className="!m-8 !text-[1rem] !font-semibold" />
           </NavLink>
         ))}
       </List>
@@ -73,36 +73,40 @@ const Navbar = memo(function Navbar({ themeToggler }) {
 
   return (
     <nav
-      className="navbar"
+      className="z-[1000] w-full h-16 fixed flex items-center justify-center"
       style={{
         backgroundColor: `${theme.colors.navbar}`,
         color: `${theme.colors.navbarText}`,
       }}
     >
-      <section className="toolbar">
+      <section className="toolbar w-full h-full max-w-[1300px] flex items-center justify-evenly max-[1100px]:justify-between">
         {is_mobile ? (
-          <>
-            <div className="menu">
-              <Link className="logo" to="/">
-                <img
-                  src={theme.tag === "light" ? logoDark : logoLight}
-                  alt="Logo"
-                  loading="lazy"
-                />
-              </Link>
-            </div>
-          </>
+          <div className="flex w-[40%] ml-4 max-[1100px]:w-full">
+            <Link to="/">
+              <img
+                src={theme.tag === "light" ? logoDark : logoLight}
+                alt="Logo"
+                title="Logo"
+                loading="eager"
+                height="50px"
+                width="50px"
+              />
+            </Link>
+          </div>
         ) : (
-          <Link className="logo" to="/">
+          <Link to="/">
             <img
               src={theme.tag === "light" ? logoDark : logoLight}
               alt="Logo"
-              loading="lazy"
+              title="Logo"
+              loading="eager"
+              height="50px"
+              width="50px"
             />
           </Link>
         )}
 
-        <nav className="links" style={is_mobile ? { display: "none" } : {}}>
+        <nav className="flex items-center justify-evenly w-[55%] h-[25px] my-2 mx-0" style={is_mobile ? { display: "none" } : {}}>
           {navlinks(t).map((elt, i) => {
             return (
               <NavLink to={elt.path} key={i} activeClassName="active">
@@ -112,7 +116,7 @@ const Navbar = memo(function Navbar({ themeToggler }) {
           })}
         </nav>
 
-        <section className="actions">
+        <section className="flex items-center justify-evenly h-[50px] w-[10%] max-[1100px]:w-[30%] max-[1100px]:mr-4">
           {is_mobile ? (
             <>
               <label className="ui-switch">
@@ -167,7 +171,7 @@ const Navbar = memo(function Navbar({ themeToggler }) {
       </Drawer>
     </nav>
   );
-})
+});
 
 Navbar.propTypes = themeProps;
 export default Navbar;

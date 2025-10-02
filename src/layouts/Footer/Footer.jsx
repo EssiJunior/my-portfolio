@@ -30,8 +30,8 @@ const Footer = memo(function Footer({languageRef }) {
     
     return (
         <footer>
-            <main className='footer-info' style={{ backgroundColor: `${theme.colors.footer}` }}>
-                <section className="container">
+            <section className='footer-info py-5 md:py-10 flex items-center justify-center w-full' style={{ backgroundColor: `${theme.colors.footer}` }}>
+                <section className="container w-[90%] max-w-[1300px] mx-auto h-[70%] grid grid-cols-[2.5fr_1fr_1fr_1fr]">
                     <aside className="company">
                         <NavLink className='logo' to='/'>
                             <img loading="lazy" src={logoLight} alt="Logo" />
@@ -87,13 +87,13 @@ const Footer = memo(function Footer({languageRef }) {
 
                     </aside>
                 </section>
-            </main>
-            <main className="foot-toolbar">
-                <div className='container'>
+            </section>
+            <section className="py-3 bg-black flex">
+                <div className='flex w-[90%] mx-auto max-w-[1300px]'>
                     <Typography text="@EssiJunior" style={{ color: 'white' }} />
                     <div className="lang"><Language languageRef={languageRef} /></div>
                 </div>
-            </main>
+            </section>
         </footer>
     )
 })
