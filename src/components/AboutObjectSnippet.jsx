@@ -1,8 +1,35 @@
 import { memo } from "react";
+import PropTypes from "prop-types";
+
+const languages = ["English", "French"];
+const skills = ["Next.js", "React.js", "React Native", "Express", "FastAPI", "MySql", "PostgreSQL", "MongoDB", "Docker", "AWS", "CPanel","OVH","Git", "GitHub", "GitLab", "Figma", "Canva", "Photoshop"];
+
+const ListData = ({data = [], tag}) => {
+  return (
+    <div className="ml-4 lg:ml-8 mr-2">
+      <span className=" text-white">{tag}: </span>
+      <span className="text-gray-400">{`['`}</span>
+        {
+          data.map((item, index) => (
+            <span key={index}>
+              <span className="text-amber-300">{item}</span>
+              {index < data.length - 1 && (<span className="text-gray-400">{"', '"}</span>)}
+            </span>
+          ))
+        }
+      <span className="text-gray-400">{"'],"}</span>
+    </div>
+  )
+}
+
+ListData.propTypes = {
+  data: PropTypes.array,
+  tag: PropTypes.string
+};
 
 const AboutObjectSnippet = memo(function AboutObjectSnippet() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12 w-11/12">
+    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12 w-11/12 max-w-2xl">
       <div className="grid">
         <div className="order-1 lg:order-2 from-[#0d1224] border-secondary relative  border bg-gradient-to-r to-[#0a0d37]">
           <div className="flex flex-row">
@@ -38,42 +65,10 @@ const AboutObjectSnippet = memo(function AboutObjectSnippet() {
                 <span className="text-amber-300">Cameroonian</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">languages:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">English</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">French</span>
-                <span className="text-gray-400">{"'],"}</span>
-              </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">Next</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">React Native</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">FastAPI</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"'"}</span>
-                <br />
-                <span className="text-gray-400">{", '"}</span>
-                <span className="text-amber-300">PostgreSQL</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">CPanel</span>
-                <span className="text-gray-400">{"'],"}</span>
-              </div>
+              
+              <ListData data={languages} tag={'languages'}/>
+              <ListData data={skills} tag={'skills'}/>
+              
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">
                   hardWorker:

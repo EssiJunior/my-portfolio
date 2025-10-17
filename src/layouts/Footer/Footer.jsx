@@ -75,9 +75,9 @@ const Footer = memo(function Footer({languageRef }) {
                     <aside className="help">
                         <Typography text={t('help')} style={is_mobile_1 ? { color: 'orange' } : { color: 'white' }} />
                         <aside className="info">
-                            <a href="mailto:nessipjunior@gmail.com">
+                            <a href="mailto:dev@essijunior.com">
                                 <Email />
-                                nessipjunior@gmail.com
+                                dev@essijunior.com
                             </a>
                             <a href='tel:+237690743737'>
                                 <Phone />
