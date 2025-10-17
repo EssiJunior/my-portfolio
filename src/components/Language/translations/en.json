@@ -50,6 +50,7 @@
     "se": "SOFTWARE ENGINEER",
     "itIns": "IT INSTRUCTOR",
     "gDes": "GRAPHIC DESIGNER",
+    "yearsOfExp": "years of exp",
 
     "///Experience Points": "This section contains all the experience section bullet points",
     "exp.graphic_designer.point1": "Creating Canva and PhotoShop Flyers for small businesses, and as benevolent.",

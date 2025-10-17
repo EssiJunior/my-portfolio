@@ -464,4 +464,11 @@ const myImage =
   // const baseURL = 'http://localhost:5173'
 const baseURL = "https://essijunior.com";
 
-export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL };
+const yearsOfExp = Number(
+(
+  (Date.now() - new Date("2022-01-01T00:00:00Z").getTime()) /
+  (1000 * 60 * 60 * 24 * 365.25)
+).toFixed(1)
+);
+
+export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL,yearsOfExp };

@@ -19,6 +19,7 @@ import { profile } from "@/assets/profile";
 // STYLES
 import "./hero.css";
 import { memo } from "react";
+import { yearsOfExp } from "../../utils";
 
 const Hero = memo(function Hero() {
   const theme = useTheme();
@@ -123,6 +124,19 @@ const Hero = memo(function Hero() {
                   </a>
                 );
               })}
+            </div>
+          </ScrollParallax>
+          <ScrollParallax isAbsolutelyPositioned>
+            <div
+              className={`absolute xl:right-10 right-0 max-xl:-translate-x-1/2 xl:bottom-[5rem] max-xl:top-5 px-1 py-1 bg-tertiary/25 backdrop-blur border border-tertiary rounded-xl flex `}
+            >
+              <p className="relative p-1">
+                <b>{yearsOfExp}</b> {t("yearsOfExp")}
+                <span className="absolute -top-2 -right-2 inline-flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-tertiary" />
+                </span>
+              </p>
             </div>
           </ScrollParallax>
         </div>

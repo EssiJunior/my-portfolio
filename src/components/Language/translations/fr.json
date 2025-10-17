@@ -50,6 +50,7 @@
     "se": "GéNIE LOGICIEL",
     "itIns": "INSTRUCTEUR IT",
     "gDes": "DESIGNEUR GRAPHIQUE",
+    "yearsOfExp": "années d'exp",
 
     "///Experience Points": "Cette section contient tous les points de la section expérience",
     "exp.graphic_designer.point1": "Création de flyers avec Canva et PhotoShop pour des petites entreprises, et à titre bénévole.",
