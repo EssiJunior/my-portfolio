@@ -128,7 +128,7 @@ const Hero = memo(function Hero() {
           </ScrollParallax>
           <ScrollParallax isAbsolutelyPositioned>
             <div
-              className={`absolute xl:right-10 right-0 max-xl:-translate-x-1/2 xl:bottom-[5rem] max-xl:top-5 px-1 py-1 bg-tertiary/25 backdrop-blur border border-tertiary rounded-xl flex `}
+              className={`absolute xl:right-10 right-0 max-xl:-translate-x-1/2 xl:bottom-[5rem] max-xl:top-5 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex `}
             >
               <p className="relative p-1">
                 <b>{yearsOfExp}</b> {t("yearsOfExp")}
