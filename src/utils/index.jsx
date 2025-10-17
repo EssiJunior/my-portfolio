@@ -1,3 +1,4 @@
+import { DesignServicesOutlined } from "@mui/icons-material";
 import {
   cara,
   flikart,
@@ -56,10 +57,17 @@ const services = [
 const experiences_tech = (t) => [
   {
     id: 1,
+    title: t("gDes"),
+    company: "Personal, Benevolent",
+    icon: <DesignServicesOutlined size={30} />,
+    date: `${t("since")} - Mar 2025`,
+  },
+  {
+    id: 2,
     title: t("itIns"),
     company: "CIA Formation",
     icon: <FaPersonChalkboard size={30} />,
-    date: `${t("since")} - Oct 2024`,
+    date: `${t("since")} - Aug 2024`,
   },
   {
     id: 2,
@@ -71,7 +79,7 @@ const experiences_tech = (t) => [
   {
     id: 3,
     title: t("js"),
-    company: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t("i")}`,
+    company: `PS Holdings, CIA Formation, Powerk-soft, Pro service, Flikart +, ${t("i")}`,
     icon: <SiJavascript size={30} />,
     date: `${t("since")} - Sept 2022`,
   },
@@ -87,9 +95,19 @@ const experiences_tech = (t) => [
 const experiences = (t) => [
   {
     id: 1,
+    title: t("gDes"),
+    company_name: "Personal, Benevolent",
+    date: `${t("since")} - Mar 2025`,
+    points: [
+      t("exp.graphic_designer.point1"),
+      t("exp.graphic_designer.point2"),
+    ],
+  },
+  {
+    id: 2,
     title: t("itIns"),
     company_name: "CIA Formation",
-    date: `${t("since")} - Oct 2024`,
+    date: `${t("since")} - Aug 2024`,
     points: [
       t("exp.it_instructor.point1"),
       t("exp.it_instructor.point2"),
@@ -100,7 +118,7 @@ const experiences = (t) => [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: t("js"),
     company_name: `CIA Formation, Powerk-soft, Pro service, Flikart +, ${t(
       "i"
@@ -118,7 +136,7 @@ const experiences = (t) => [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: t("py"),
     company_name: `${t("p")}, ${t("i")}, Powerk-soft, Pro service`,
     date: `${t("since")} - Sept 2021`,
@@ -129,7 +147,7 @@ const experiences = (t) => [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: t("se"),
     company_name: `${t("p")}, Powerk-soft, Pro service, Leratel, Acedmic`,
     date: `${t("since")} - Sept 2021`,

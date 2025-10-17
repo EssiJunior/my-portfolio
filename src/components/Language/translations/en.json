@@ -49,8 +49,11 @@
     "js": "JAVASCRIPT DEVELOPER",
     "se": "SOFTWARE ENGINEER",
     "itIns": "IT INSTRUCTOR",
+    "gDes": "GRAPHIC DESIGNER",
 
     "///Experience Points": "This section contains all the experience section bullet points",
+    "exp.graphic_designer.point1": "Creating Canva and PhotoShop Flyers for small businesses, and as benevolent.",
+    "exp.graphic_designer.point2": "Creating logos for new businesses, and as benevolent.",
     "exp.it_instructor.point1": "Teaching to already and not yet IT students about software engineering concepts.",
     "exp.it_instructor.point2": "Information systems and databases.",
     "exp.it_instructor.point3": "Introduction to web development.",

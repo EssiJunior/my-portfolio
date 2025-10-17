@@ -49,8 +49,11 @@
     "js": "DéVELOPEUR JAVASCRIPT",
     "se": "GéNIE LOGICIEL",
     "itIns": "INSTRUCTEUR IT",
+    "gDes": "DESIGNEUR GRAPHIQUE",
 
     "///Experience Points": "Cette section contient tous les points de la section expérience",
+    "exp.graphic_designer.point1": "Création de flyers avec Canva et PhotoShop pour des petites entreprises, et à titre bénévole.",
+    "exp.graphic_designer.point2": "Création de logos pour de nouvelles entreprises, et à titre bénévole.",
     "exp.it_instructor.point1": "Enseignement des concepts de génie logiciel à des étudiants en informatique et non-informaticiens.",
     "exp.it_instructor.point2": "Systèmes d'information et bases de données.",
     "exp.it_instructor.point3": "Introduction au développement web.",
