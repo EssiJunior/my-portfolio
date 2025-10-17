@@ -22,12 +22,18 @@ const Education = memo(function Education({ educationRef }) {
     const education = [
         {
             id: 1,
+            title: t('m1'),
+            school: t('uy1'),
+            date: `${t('since')} - Sept 2025`
+        },
+        {
+            id: 2,
             title: t('ud'),
             school: t('uy1'),
             date: `${t('since')} - Sept 2022`
         },
         {
-            id: 2,
+            id: 3,
             title: "GCE - Advanced level",
             school: t('gbhsy'),
             date: `${t('since')} - Sept 2018`
