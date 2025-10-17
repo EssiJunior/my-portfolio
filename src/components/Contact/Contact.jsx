@@ -21,8 +21,11 @@ import { slideIn, textVariant } from "@/utils/motion";
 // STYLES
 import { styles } from "@/styles/styles";
 import './contact.css'
+import { useTheme } from "styled-components";
 
 const MemoisedContact = memo(function Contact() {
+  const theme = useTheme();
+
   const [page, setPage] = useState(window.location.pathname)
 
   const { t } = useTranslation();
@@ -120,8 +123,12 @@ const MemoisedContact = memo(function Contact() {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className={page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl' : `contact flex-[0.75] p-8 rounded-2xl`}
+          className={page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl' : `contact bg-bg flex-[0.75] p-8 rounded-2xl`}
 
+          style={{
+            backgroundColor: `${page !== '/contact' && theme.colors.navbar}`,
+            color: `${page !== '/contact' && theme.colors.navbarText}`,
+          }}
         >
           {
             page !== '/contact' &&
@@ -137,36 +144,45 @@ const MemoisedContact = memo(function Contact() {
             className='mt-7 flex flex-col gap-8'
           >
             <label className='flex flex-col'>
-              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('name')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'font-medium mb-2'}>{t('name')}</span>
               <input
                 type='text'
                 name='from_name'
                 value={form.from_name}
                 onChange={handleChange}
                 placeholder={t('nameE')}
-                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : ' py-4 px-6 rounded-lg outline-none border-none font-medium'}
+                style={{
+                  background: `${page !== '/contact' && theme.colors.bg}`,
+                }}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('email')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : ' font-medium mb-2'}>{t('email')}</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t('emailE')}
-                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : ' py-4 px-6  rounded-lg outline-none border-none font-medium'}
+                style={{
+                  background: `${page !== '/contact' && theme.colors.bg}`,
+                }}
               />
             </label>
             <label className='flex flex-col'>
-              <span className={page === '/contact' ? 'text-white font-medium mb-2' : 'text-black font-medium mb-2'}>{t('message')}</span>
+              <span className={page === '/contact' ? 'text-white font-medium mb-2' : ' font-medium mb-2'}>{t('message')}</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
                 placeholder={t('messageE')}
-                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : 'bg-[#777777] py-4 px-6 placeholder:text-white text-white rounded-lg outline-none border-none font-medium'}
+                className={page === '/contact' ? 'bg-[#444] py-4 px-6 placeholder:text-[#aaa] text-white rounded-lg outline-none border-none font-medium' : ' py-4 px-6 rounded-lg outline-none border-none font-medium'}
+                style={{
+                  background: `${page !== '/contact' && theme.colors.bg}`,
+                }}
               />
             </label>
             {

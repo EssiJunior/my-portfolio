@@ -66,7 +66,7 @@ a,
 }
 
 .text-outline {
-    text-shadow: -1px -1px 0 #ff4a3f, 1px -1px 0 #ff4a3f, -1px 1px 0 #ff4a3f, 1px 1px 0 #ff4a3f;
+    text-shadow: -1px -1px 0 var(--secondary), 1px -1px 0 var(--secondary), -1px 1px 0 var(--secondary), 1px 1px 0 var(--secondary);
 }
 
 .black-gradient {
