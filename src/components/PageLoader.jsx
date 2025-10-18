@@ -19,6 +19,7 @@ const PageLoader = () => {
         src={theme.tag === "light" ? logoDark : logoLight}
         alt="Logo"
         loading="eager"
+        width={150}
       />
     </div>
   );

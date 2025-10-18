@@ -123,7 +123,7 @@ const MemoisedContact = memo(function Contact() {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className={page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl' : `contact bg-bg flex-[0.75] p-8 rounded-2xl`}
+          className={page === '/contact' ? 'bg-primary flex-[0.75] p-8 rounded-2xl' : `contact border border-secondary/20 flex-[0.75] p-8 rounded-2xl`}
 
           style={{
             backgroundColor: `${page !== '/contact' && theme.colors.navbar}`,
