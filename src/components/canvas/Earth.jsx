@@ -6,10 +6,19 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 // UTILITIES
 import CanvasLoader from "@/utils/Loader";
 
+useGLTF.preload("/planet/scene.gltf");
+
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const earth = useGLTF("/planet/scene.gltf");
+
+  // Check if model loaded correctly
+  if (!earth || !earth.scene) {
+    console.error("Failed to load Earth model");
+    return null;
+  }
 
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 };
