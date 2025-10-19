@@ -12,7 +12,7 @@ export const SEOProps = {
 };
 
 export const lottieProps = {
-    animation: PropTypes.string.isRequired,
+    animation: PropTypes.object.isRequired,
     width: PropTypes.string
 };
 
@@ -49,7 +49,7 @@ export const experienceCardProps = {
 }
 
 export const projectCardProps = {
-    project: PropTypes.string,
+    project: PropTypes.object,
     theme: PropTypes.object,
 }
 

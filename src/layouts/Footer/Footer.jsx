@@ -53,7 +53,7 @@ const Footer = memo(function Footer({languageRef }) {
                         <Typography text={t('links')} style={is_mobile_1 ? { color: 'orange' } : { color: 'white' }} />
                         <aside className="cats">
                             {navlinks(t).map((elt, i) => (
-                                <NavLink to={elt.path} key={i} activeClassName="active">
+                                <NavLink to={elt.path} key={i} activeclassname="active">
                                     <Typography text={elt.label} />
                                 </NavLink>
                             ))}

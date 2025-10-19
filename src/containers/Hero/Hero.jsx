@@ -88,7 +88,7 @@ const Hero = memo(function Hero() {
             title="Hero image"
             width="797"
             height="797"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
             style={{
               contentVisibility: "auto",

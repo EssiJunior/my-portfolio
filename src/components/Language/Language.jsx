@@ -45,7 +45,7 @@ function Language({ style, text = true, page = 'default', languageRef }) {
           <img src={EN} alt="English" loading='lazy' />
         </div>
         {text &&
-          <Typography text={language === 'fr' ? <>Fran&ccedil;ais</> : <>English</>} />
+          <Typography text={language === 'fr' ? "Français" : "English"} />
         }
       </div>
       :

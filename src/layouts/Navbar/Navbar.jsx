@@ -46,7 +46,7 @@ const Navbar = memo(function Navbar({ themeToggler }) {
     >
       <List>
         {navlinks(t).map((elt, i) => (
-          <NavLink to={elt.path} key={i} activeClassName="active" className={"hover:text-[var(--primary)]"}>
+          <NavLink to={elt.path} key={i} activeclassname="active" className={"hover:text-[var(--primary)]"}>
             <Typography text={elt.label} className="!m-8 !text-[1rem] !font-semibold" />
           </NavLink>
         ))}
@@ -109,7 +109,7 @@ const Navbar = memo(function Navbar({ themeToggler }) {
         <nav className="flex items-center justify-evenly w-[55%] h-[25px] my-2 mx-0" style={is_mobile ? { display: "none" } : {}}>
           {navlinks(t).map((elt, i) => {
             return (
-              <NavLink to={elt.path} key={i} activeClassName="active">
+              <NavLink to={elt.path} key={i} activeclassname="active">
                 <Typography text={elt.label} style={{ fontSize: "1.025rem" }} />
               </NavLink>
             );
