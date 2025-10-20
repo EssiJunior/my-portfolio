@@ -36,7 +36,7 @@ const Footer = memo(function Footer({languageRef }) {
                         <NavLink className='logo' to='/'>
                             <img loading="lazy" src={logoLight} alt="Logo" />
                         </NavLink>
-                        <aside className="[&_*]:text-[24px]">
+                        <aside className="[&_*]:text-[20px] space-y-2.5">
                             <NavLink to='/about'><Typography text={t('about')} /></NavLink>
                             <NavLink to='/contact'><Typography text={t('contact')} /></NavLink>
                         </aside>

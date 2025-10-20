@@ -75,7 +75,7 @@ const Hero = memo(function Hero() {
                     sx={{ color: theme.tag === "light" ? "white" : "black" }}
                   />
                 }
-                margin="0 1rem"
+                margin="0 0 0 1rem"
               />
             </Link>
           </div>
