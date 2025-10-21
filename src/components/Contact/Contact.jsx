@@ -2,7 +2,6 @@
 import { useRef, useState, useEffect, memo, useCallback } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { CircularProgress } from "@mui/joy";
 import { Alert } from "@mui/material";
 import { useParams } from "react-router-dom";
 
@@ -22,6 +21,7 @@ import { slideIn, textVariant } from "@/utils/motion";
 import { styles } from "@/styles/styles";
 import './contact.css'
 import { useTheme } from "styled-components";
+import { GiProgression } from "react-icons/gi";
 
 const MemoisedContact = memo(function Contact() {
   const theme = useTheme();
@@ -204,7 +204,7 @@ const MemoisedContact = memo(function Contact() {
             >
               {
                 loading ?
-                  <><CircularProgress color='success' variant='solid' size='sm' sx={{ marginRight: '1rem' }} />{t('sending')}</>
+                  <>{t('sending')}...</>
                   :
                   t('send')
               }
