@@ -55,13 +55,13 @@ const services = [
 ];
 
 const experiences_tech = (t) => [
-  {
-    id: 1,
-    title: t("gDes"),
-    company: "Personal, Benevolent",
-    icon: <DesignServicesOutlined size={30} />,
-    date: `${t("since")} - Mar 2025`,
-  },
+  // {
+  //   id: 1,
+  //   title: t("gDes"),
+  //   company: "Personal, Benevolent",
+  //   icon: <DesignServicesOutlined size={30} />,
+  //   date: `${t("since")} - Mar 2025`,
+  // },
   {
     id: 2,
     title: t("itIns"),
@@ -93,16 +93,16 @@ const experiences_tech = (t) => [
 ];
 
 const experiences = (t) => [
-  {
-    id: 1,
-    title: t("gDes"),
-    company_name: "Personal, Benevolent",
-    date: `${t("since")} - Mar 2025`,
-    points: [
-      t("exp.graphic_designer.point1"),
-      t("exp.graphic_designer.point2"),
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: t("gDes"),
+  //   company_name: "Personal, Benevolent",
+  //   date: `${t("since")} - Mar 2025`,
+  //   points: [
+  //     t("exp.graphic_designer.point1"),
+  //     t("exp.graphic_designer.point2"),
+  //   ],
+  // },
   {
     id: 2,
     title: t("itIns"),
