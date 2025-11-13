@@ -1,4 +1,3 @@
-import { DesignServicesOutlined } from "@mui/icons-material";
 import {
   cara,
   flikart,
@@ -466,7 +465,7 @@ const baseURL = "https://essijunior.com";
 
 const yearsOfExp = Number(
 (
-  (Date.now() - new Date("2022-01-01T00:00:00Z").getTime()) /
+  (Date.now() - new Date("2021-08-01T00:00:00Z").getTime()) /
   (1000 * 60 * 60 * 24 * 365.25)
 ).toFixed(1)
 );
