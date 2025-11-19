@@ -148,7 +148,7 @@ const experiences = (t) => [
   {
     id: 5,
     title: t("se"),
-    company_name: `${t("p")}, Powerk-soft, Pro service, Leratel, Acedmic`,
+    company_name: `${t("p")}, Powerk-soft, Pro service, Leratel`,
     date: `${t("since")} - Sept 2021`,
     points: [
       t("exp.software_engineer.point1"),
