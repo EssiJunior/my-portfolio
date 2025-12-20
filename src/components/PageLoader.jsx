@@ -9,7 +9,7 @@ const PageLoader = () => {
 
   return (
     <div
-      className="h-screen w-full flex items-center justify-center"
+      className="h-dvh md:h-screen w-full flex items-center justify-center"
       style={{
         backgroundColor: `${theme.colors.bg}`,
         color: `${theme.colors.text}`,
