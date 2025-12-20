@@ -98,7 +98,7 @@ const Hero = memo(function Hero() {
 
           <ScrollParallax isAbsolutelyPositioned>
             <ul
-              className={`absolute xl:-left-[7.5rem] left-1/2 max-xl:-translate-x-1/2 xl:bottom-[5rem] bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
+              className={`absolute xl:-left-[7.5rem] left-1/2 max-xl:-translate-x-1/2 xl:bottom-[5rem] -bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
             >
               {tech.map((elt, index) => (
                 <li className="p-3 text-white" key={index}>
