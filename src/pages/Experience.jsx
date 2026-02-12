@@ -40,7 +40,7 @@ const Experience = memo(function Experience() {
         link={`${baseURL}/experience`}
       />
 
-      <motion.div variants={textVariant()} className="mt-12">
+      <motion.div variants={textVariant()} initial="hidden" animate="show" className="mt-12">
         <p
           className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}
         >

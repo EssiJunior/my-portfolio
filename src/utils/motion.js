@@ -1,4 +1,4 @@
-export const textVariant = (delay) => {
+export const textVariant = (delay=0.3) => {
   return {
     hidden: {
       y: -50,
@@ -12,6 +12,7 @@ export const textVariant = (delay) => {
         duration: 1.25,
         delay: delay,
       },
+      ease: "easeIn",
     },
   };
 };
