@@ -13,6 +13,7 @@ import {
   syneduc,
   studentResultSystem,
   evShine,
+  ednShine
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard } from "react-icons/fa6";
 import { SiJavascript } from "react-icons/si";
@@ -227,20 +228,39 @@ const projects = [
 
 const realisations = [
   {
-    id: "ev-shine",
-    name: "Evangéliste Shine Ministries",
+    id: "edn-shine",
+    name: "Editions Shine Ministries",
     description:
-      "I built the web site of a Christian evangelist. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
+      "I built the web site of a house of editions. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
     tools: [
       "NextJS",
       "Tailwind CSS",
       "Aceternity UI",
+      "FastAPI",
+      "OVH Cloud",
+      "Git",
+      "Github"
+    ],
+    role: "Fullstack Developer",
+    code: "",
+    demo: "https://éditions-shine-ministries.com/",
+    image: ednShine,
+  },
+  {
+    id: "ev-shine",
+    name: "Evangéliste Shine Ministries",
+    description:
+      "I built the web site of a Christian evangelist. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
+    tools: [
+      "NextJS",
+      "Tailwind CSS",
+      "Aceternity UI",
+      "FastAPI",
       "OVH",
       "Git",
-      "Github",
-      "Github actions",
+      "Github"
     ],
-    role: "NextJS Developer",
+    role: "Fullstack Developer",
     code: "",
     demo: "https://evangeliste-shine-ministries.com/",
     image: evShine,
