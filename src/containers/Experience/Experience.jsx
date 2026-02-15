@@ -24,7 +24,7 @@ import './experience.css'
 
 const Experience = memo(function Experience() {
     const theme = useTheme()
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <section className={`experience ${theme.hero.gradient} `}>
@@ -48,56 +48,56 @@ const Experience = memo(function Experience() {
                     </div>
                 </div>
 
-                <div className="py-8">
+                <div className="relative py-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                        <div className="flex justify-center items-start">
-                            <div className="w-full h-full flex justify-center items-start">
+                        <div>
+                            <div className="sticky top-20 flex justify-start items-start">
+                            <div className="w-full h-full">
                                 <AnimationLottie animation={experience} width="90%" />
                             </div>
                         </div>
+                        </div>
 
-                        <div>
-                            <div className="flex flex-col gap-6">
-                                {
-                                    experiences_tech(t).map(experience => (
-                                        <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
-                                            <div className="p-3 relative">
-                                                <img
-                                                    loading="lazy"
-                                                    src={blur}
-                                                    alt="Hero"
-                                                    width={1080}
-                                                    height={200}
-                                                    className="absolute bottom-0 opacity-80"
-                                                />
-                                                <div className="flex justify-center">
-                                                    <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
-                                                        {experience.date}
+                        <div className="flex flex-col gap-6">
+                            {
+                                experiences_tech(t).map(experience => (
+                                    <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
+                                        <div className="p-3 relative">
+                                            <img
+                                                loading="lazy"
+                                                src={blur}
+                                                alt="Hero"
+                                                width={1080}
+                                                height={200}
+                                                className="absolute bottom-0 opacity-80"
+                                            />
+                                            <div className="flex justify-center">
+                                                <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
+                                                    {experience.date}
+                                                </p>
+                                            </div>
+                                            <div className="flex items-center gap-x-8 px-3 py-5">
+                                                <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
+                                                    {experience.icon}
+                                                </div>
+                                                <div>
+                                                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                                                        {experience.title}
+                                                    </p>
+                                                    <p className="text-sm sm:text-base">
+                                                        {experience.company}
                                                     </p>
                                                 </div>
-                                                <div className="flex items-center gap-x-8 px-3 py-5">
-                                                    <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
-                                                        {experience.icon}
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                                                            {experience.title}
-                                                        </p>
-                                                        <p className="text-sm sm:text-base">
-                                                            {experience.company}
-                                                        </p>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </GlowCard>
-                                    ))
-                                }
-                            </div>
+                                        </div>
+                                    </GlowCard>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <div className="action">
                 <Link to='/experience'><Button text={t('more')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
             </div>

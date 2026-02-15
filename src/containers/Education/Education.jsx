@@ -17,8 +17,8 @@ import { education as educationAnimation } from "@/assets/lotties";
 
 const Education = memo(function Education({ educationRef }) {
     const theme = useTheme()
-    const {t} = useTranslation();
-    
+    const { t } = useTranslation();
+
     const education = [
         {
             id: 1,
@@ -43,7 +43,7 @@ const Education = memo(function Education({ educationRef }) {
 
     return (
         <section className={`experience ${theme.hero.gradient}`} ref={educationRef} >
-            <div id="experience" className="relative z-50 my-12 lg:my-24 ">
+            <div id="education" className="relative z-50 my-12 lg:my-24 ">
                 <img
                     loading="lazy"
                     src={bg}
@@ -64,50 +64,50 @@ const Education = memo(function Education({ educationRef }) {
                 </div>
 
                 <div className="py-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                        <div className="flex justify-center items-start">
-                            <div className="w-full h-full">
-                                <AnimationLottie animation={educationAnimation} width='60%' />
+                    <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                        <div>
+                            <div className="sticky top-20 flex justify-center items-start">
+                                <div className="w-full h-full">
+                                    <AnimationLottie animation={educationAnimation} width='60%' />
+                                </div>
                             </div>
                         </div>
 
-                        <div>
-                            <div className="flex flex-col gap-6">
-                                {
-                                    education.map(education => (
-                                        <GlowCard key={education.id} identifier={`education-${education.id}`} >
-                                            <div className="p-3 relative">
-                                                <img
-                                                    loading="lazy"
-                                                    src={blur}
-                                                    alt="Hero"
-                                                    width={1080}
-                                                    height={200}
-                                                    className="absolute bottom-0 opacity-80"
-                                                />
-                                                <div className="flex justify-center">
-                                                    <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
-                                                        {education.date}
+                        <div className="flex flex-col gap-6">
+                            {
+                                education.map(education => (
+                                    <GlowCard key={education.id} identifier={`education-${education.id}`} >
+                                        <div className="p-3 relative">
+                                            <img
+                                                loading="lazy"
+                                                src={blur}
+                                                alt="Hero"
+                                                width={1080}
+                                                height={200}
+                                                className="absolute bottom-0 opacity-80"
+                                            />
+                                            <div className="flex justify-center">
+                                                <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
+                                                    {education.date}
+                                                </p>
+                                            </div>
+                                            <div className="flex items-center gap-x-8 px-3 py-5">
+                                                <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
+                                                    <GrCertificate size={30} />
+                                                </div>
+                                                <div>
+                                                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                                                        {education.title}
+                                                    </p>
+                                                    <p className="text-sm sm:text-base">
+                                                        {education.school}
                                                     </p>
                                                 </div>
-                                                <div className="flex items-center gap-x-8 px-3 py-5">
-                                                    <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
-                                                        <GrCertificate size={30} />
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                                                            {education.title}
-                                                        </p>
-                                                        <p className="text-sm sm:text-base">
-                                                            {education.school}
-                                                        </p>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </GlowCard>
-                                    ))
-                                }
-                            </div>
+                                        </div>
+                                    </GlowCard>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>

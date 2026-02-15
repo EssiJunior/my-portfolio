@@ -120,5 +120,6 @@ a,
 }
 
 .sticky-card {
+    position: sticky;
     top: calc(var(--index) * 4rem);
 }
