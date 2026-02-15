@@ -1,5 +1,7 @@
 // REACT COMPONENTS IMPORTS
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { cancelFrame, frame } from 'framer-motion';
+import { ReactLenis } from 'lenis/react';
 import { ThemeProvider } from 'styled-components';
 import { Worker } from '@react-pdf-viewer/core';
 
@@ -12,7 +14,21 @@ import { darkTheme, lightTheme } from '@/utils/theme';
 import { BrowserRouter } from 'react-router-dom';
 import FollowMouse from './components/FollowMouse';
 
+
 function App() {
+  const lenisRef = useRef(null)
+
+  useEffect(() => {
+    function update(data) {
+      const time = data.timestamp
+      lenisRef.current?.lenis?.raf(time)
+    }
+
+    frame.update(update, true)
+
+    return () => cancelFrame(update)
+  }, [])
+
   const [theme, setTheme] = useState(darkTheme);
   const toggleTheme = () => {
     setTheme(theme === lightTheme ? darkTheme : lightTheme);
@@ -25,6 +41,8 @@ function App() {
         <FollowMouse />
         <AnimatedRoutes toggle={toggleTheme} />
       </BrowserRouter>
+
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"></Worker>
     </ThemeProvider>
   )
