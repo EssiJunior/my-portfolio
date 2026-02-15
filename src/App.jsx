@@ -10,6 +10,7 @@ import AnimatedRoutes from '@/containers/AnimatedRoutes';
 import { ScrollToTop } from '@/utils/Scroll';
 import { darkTheme, lightTheme } from '@/utils/theme';
 import { BrowserRouter } from 'react-router-dom';
+import FollowMouse from './components/FollowMouse';
 
 function App() {
   const [theme, setTheme] = useState(darkTheme);
@@ -21,6 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <ScrollToTop />
+        <FollowMouse />
         <AnimatedRoutes toggle={toggleTheme} />
       </BrowserRouter>
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"></Worker>
