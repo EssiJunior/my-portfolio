@@ -13,17 +13,20 @@ import Button from "@/components/Button/Button";
 import AnimationLottie from "@/utils/animation-lottie";
 import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
-import { experiences_tech } from "@/utils";
+
+// COMPONENTS
+import SecondaryHeading from "../../components/Headings/Secondary";
+import SecondaryHeadingOverlay from "../../components/Overlays/SecondaryHeadingOverlay";
 
 // ASSETS
-import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
 import { experience } from "@/assets/lotties";
 
+// UTILS
+import { experiences_tech } from "@/utils";
+
 // STYLES
 import './experience.css'
-import SecondaryHeading from "../../components/Headings/Secondary";
-import { containerVariants } from "../../utils/animation-framer";
 
 const Experience = memo(function Experience() {
     const theme = useTheme()
@@ -34,14 +37,7 @@ const Experience = memo(function Experience() {
 
             className={`experience ${theme.hero.gradient} `}>
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
-                <img
-                    loading="lazy"
-                    src={bg}
-                    alt="Hero"
-                    width={1572}
-                    height={795}
-                    className="absolute top-0 -z-10"
-                />
+                <SecondaryHeadingOverlay />
 
                 <SecondaryHeading text={t('ex')} />
 

@@ -22,7 +22,7 @@ const SecondaryHeading = ({ text }) => {
                     initial="hidden"
                     whileInView="visible"
                     variants={itemVariants}
-                    className={`${theme.global.headingBox} !z-4 w-fit text-white p-2 px-5 my-14 text-xl rounded-md`}>
+                    className={`${theme.global.headingBox} !z-4 w-fit text-white p-2 px-5 my-14 text-xl rounded-md capitalize`}>
                     {text}
                 </motion.span>
                 <motion.span

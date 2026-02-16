@@ -14,6 +14,8 @@ import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
 
 import { education as educationAnimation } from "@/assets/lotties";
+import SecondaryHeadingOverlay from "../../components/Overlays/SecondaryHeadingOverlay";
+import SecondaryHeading from "../../components/Headings/Secondary";
 
 const Education = memo(function Education({ educationRef }) {
     const theme = useTheme()
@@ -44,24 +46,8 @@ const Education = memo(function Education({ educationRef }) {
     return (
         <section className={`experience ${theme.hero.gradient}`} ref={educationRef} >
             <div id="education" className="relative z-50 my-12 lg:my-24 ">
-                <img
-                    loading="lazy"
-                    src={bg}
-                    alt="Hero"
-                    width={1572}
-                    height={795}
-                    className="absolute top-0 -z-10"
-                />
-
-                <div className="flex justify-center my-5 lg:py-8">
-                    <div className="flex  items-center">
-                        <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
-                        <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md capitalize`}>
-                            {t('ed')}
-                        </span>
-                        <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
-                    </div>
-                </div>
+                <SecondaryHeadingOverlay />
+                <SecondaryHeading text={t('ed')} />
 
                 <div className="py-8">
                     <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
