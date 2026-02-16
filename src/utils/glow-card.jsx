@@ -1,13 +1,19 @@
 // REACT COMPONENT IMPORTS
 import { useEffect } from 'react';
 
+// ASSETS
+import blur from '@/assets/utilities/blur-23.svg'
+
 // UTIL
 import { glowCardProps } from './prop-types';
 
 // STYLE
 import '../styles/glow.css'
+import { useTheme } from 'styled-components';
 
-const GlowCard = ({ children , identifier}) => {
+const GlowCard = ({ identifier, icon, date, title, company }) => {
+  const theme = useTheme()
+
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
@@ -77,7 +83,34 @@ const GlowCard = ({ children , identifier}) => {
     <div className={`glow-container-${identifier} glow-container`}>
       <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-secondary transition-all duration-300 relative bg-[#171717] text-white rounded-xl hover:border-transparent w-4/5`}>
         <div className="glows"></div>
-        {children}
+        <div className="p-3 relative">
+          <img
+            loading="lazy"
+            src={blur}
+            alt="Blur"
+            width={1080}
+            height={200}
+            className="absolute bottom-0 opacity-80"
+          />
+          <div className="flex justify-center">
+            <p className={`text-xs sm:text-sm  font-space_mono ${theme.global.subHeading}`}>
+              {date}
+            </p>
+          </div>
+          <div className="flex items-center gap-x-8 px-3 py-5">
+            <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
+              {icon}
+            </div>
+            <div>
+              <p className="text-base sm:text-xl mb-2 font-medium font-space_mono uppercase">
+                {title}
+              </p>
+              <p className="text-sm sm:text-base font-extralight">
+                {company}
+              </p>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
   );

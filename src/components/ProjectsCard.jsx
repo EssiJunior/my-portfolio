@@ -12,7 +12,7 @@ const ProjectsCard = memo(function ProjectsCard({ project }) {
     const {t} = useTranslation();
 
     return (
-        <div className="from-[#171717] border-secondary relative rounded-lg border bg-gradient-to-r to-[#272727] w-full">
+        <div className="from-[#171717] border-secondary relative rounded-lg border bg-gradient-to-r to-[#272727] w-full font-space_mono">
             <div className="flex flex-row">
                 <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
                 <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>

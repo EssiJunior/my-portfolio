@@ -30,12 +30,18 @@ const Hero = memo(function Hero() {
     <section className={`overflow-hidden container pt-16 hero ${theme.hero.gradient}`}>
       <div className="container-hero h-full w-full grid grid-cols-1 md:grid-cols-2 py-12">
         <div className="brand flex flex-col justify-center items-start p-16 max-sm:px-8 max-md:items-center [&>p]:max-md:text-center [&>p]:max-md:!w-[90%]" style={{ color: theme.colors.text }}>
-          <Typography text={t("present")} style={{ fontSize: "1.25rem" }} />
+          <Typography
+            text={t("present")}
+            style={{ fontSize: "1.25rem" }}
+            className="font-space_mono" />
           <Typography
             text={t("me")}
             style={{ fontSize: "2.75rem", fontWeight: "700", color: "white" }}
+            className="font-space_mono"
           />
-          <Typography text={t("intro")} style={{ marginBottom: "3rem" }} />
+          <Typography
+            text={t("intro")}
+            className="font-space_mono !mb-12" />
 
           <div className="more flex-wrap">
             <Link to="/contact">
@@ -114,7 +120,7 @@ const Hero = memo(function Hero() {
             </div>
           </ScrollParallax>
           <div
-            className={`absolute right-12 -translate-x-1/2 top-10 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex animation-moveRotate`}
+            className={`absolute right-12 -translate-x-1/2 top-10 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex animation-moveRotate font-space_mono`}
           >
             <p className="relative p-1">
               <b>{yearsOfExp}</b> {t("yearsOfExp")}

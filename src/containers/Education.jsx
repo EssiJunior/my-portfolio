@@ -62,36 +62,8 @@ const Education = memo(function Education({ educationRef }) {
                         <div className="flex flex-col gap-6">
                             {
                                 education.map(education => (
-                                    <GlowCard key={education.id} identifier={`education-${education.id}`} >
-                                        <div className="p-3 relative">
-                                            <img
-                                                loading="lazy"
-                                                src={blur}
-                                                alt="Hero"
-                                                width={1080}
-                                                height={200}
-                                                className="absolute bottom-0 opacity-80"
-                                            />
-                                            <div className="flex justify-center">
-                                                <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
-                                                    {education.date}
-                                                </p>
-                                            </div>
-                                            <div className="flex items-center gap-x-8 px-3 py-5">
-                                                <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
-                                                    <GrCertificate size={30} />
-                                                </div>
-                                                <div>
-                                                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                                                        {education.title}
-                                                    </p>
-                                                    <p className="text-sm sm:text-base">
-                                                        {education.school}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </GlowCard>
+                                    <GlowCard key={education.id} identifier={`education-${education.id}`} icon={<GrCertificate size={30} />} date={education.date} title={education.title} company={education.school} />
+                                    
                                 ))
                             }
                         </div>

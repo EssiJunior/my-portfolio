@@ -18,7 +18,6 @@ import SecondaryHeadingOverlay from "@/components/Overlays/SecondaryHeadingOverl
 
 // ASSETS
 import { GrLinkNext } from "react-icons/gr";
-import blur from '@/assets/utilities/blur-23.svg'
 import { experience } from "@/assets/lotties";
 
 // UTILS
@@ -48,36 +47,7 @@ const Experience = memo(function Experience() {
                         <div className="flex flex-col gap-6">
                             {
                                 experiences_tech(t).map(experience => (
-                                    <GlowCard key={experience.id} identifier={`experience-${experience.id}`} >
-                                        <div className="p-3 relative">
-                                            <img
-                                                loading="lazy"
-                                                src={blur}
-                                                alt="Hero"
-                                                width={1080}
-                                                height={200}
-                                                className="absolute bottom-0 opacity-80"
-                                            />
-                                            <div className="flex justify-center">
-                                                <p className={`text-xs sm:text-sm ${theme.global.subHeading}`}>
-                                                    {experience.date}
-                                                </p>
-                                            </div>
-                                            <div className="flex items-center gap-x-8 px-3 py-5">
-                                                <div className={`text-${theme.global.headingBox}  transition-all duration-300 hover:scale-125`}>
-                                                    {experience.icon}
-                                                </div>
-                                                <div>
-                                                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                                                        {experience.title}
-                                                    </p>
-                                                    <p className="text-sm sm:text-base">
-                                                        {experience.company}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </GlowCard>
+                                    <GlowCard key={experience.id} identifier={`experience-${experience.id}`} icon={experience.icon} date={experience.date} title={experience.title} company={experience.company} />
                                 ))
                             }
                         </div>

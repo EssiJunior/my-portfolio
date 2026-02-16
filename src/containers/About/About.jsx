@@ -29,7 +29,7 @@ const About = memo(function About() {
 
             <PrimaryHeading subText={t('in')} text={t('aboutMe')} />
 
-            <section className="detail flex flex-wrap justify-center items-center gap-8 max-md:gap-16 md:px-10">
+            <section className="detail flex flex-wrap justify-center items-center gap-8 max-md:gap-16 md:px-10 font-space_mono">
                 <motion.p
                     className='w-1/2 max-md:w-full max-md:px-10 text-[17px]'
                     style={{ margin: 'auto' }}
