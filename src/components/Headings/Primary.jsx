@@ -22,7 +22,7 @@ const PrimaryHeading = ({subText, text}) => {
                 initial="hidden"
                 whileInView="visible"
                 variants={subTitleVariants}
-                className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`} >{subText}</motion.p>
+                className={`${styles.sectionSubText} text-center italic ${theme.global.subHeading}`} >{subText}</motion.p>
             <motion.p
                 initial="hidden"
                 whileInView="visible"

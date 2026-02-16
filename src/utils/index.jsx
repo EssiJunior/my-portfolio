@@ -203,7 +203,7 @@ const projects = [
     ],
     role: "Fullstack Developer",
     code: "",
-    demo: "https://exam-average-calculator.vercel.app",
+    demo: "https://scoreify.essijunior.com/",
     image: scoreify,
   },
   {
