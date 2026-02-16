@@ -17,6 +17,7 @@ import { baseURL, experiences } from "@/utils";
 
 // STYLES
 import { styles } from "@/styles/styles";
+import PrimaryHeading from "../components/Headings/Primary";
 
 const Experience = memo(function Experience() {
   const theme = useTheme();
@@ -40,14 +41,8 @@ const Experience = memo(function Experience() {
         link={`${baseURL}/experience`}
       />
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="mt-12">
-        <p
-          className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}
-        >
-          {t("e1")}
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>{t("e2")}</h2>
-      </motion.div>
+
+      <PrimaryHeading text={t("e2")} subText={t("e1")} once />
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

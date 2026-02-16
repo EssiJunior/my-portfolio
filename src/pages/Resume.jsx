@@ -18,7 +18,7 @@ const Resume = memo(function Resume() {
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
     const themePluginInstance = themePlugin();
     return (
-        <main className="resume !py-12 !w-full" style={{backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }} >
+        <main className="resume !py-12 !w-full min-h-screen" style={{backgroundColor: `${theme.colors.bg}`, color: `${theme.colors.text}` }} >
             <section className="wrapper m-12 max-[600px]:my-8 max-[600px]:mx-2">
                 <Viewer fileUrl={`${window.location.origin}/resume.pdf`}
                     plugins={[

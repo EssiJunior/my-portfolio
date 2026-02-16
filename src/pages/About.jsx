@@ -11,6 +11,7 @@ import SEO from "@/components/SEO/SEO";
 import Breadcrumb from "@/components/Breadcrumb";
 import Typography from "@/components/Typography/Typography";
 import Button from "@/components/Button/Button";
+import PrimaryHeading from "@/components/Headings/Primary"
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
@@ -51,16 +52,7 @@ const About = memo(function About() {
           link={`${baseURL}/about`}
         />
 
-        <motion.div variants={textVariant()} initial="hidden" animate="show" className="mt-12">
-          <p
-            className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}
-          >
-            {t("allA")}
-          </p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>
-            {t("about")}
-          </h2>
-        </motion.div>
+        <PrimaryHeading text={t("about")} subText={t("allA")} once/>
 
         <AboutObjectSnippet />
 

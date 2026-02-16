@@ -17,6 +17,7 @@ import { baseURL, projects, realisations } from "@/utils";
 
 // STYLES
 import { styles } from "@/styles/styles";
+import PrimaryHeading from "../components/Headings/Primary";
 
 const Projects = memo(function Projects() {
   const theme = useTheme();
@@ -40,10 +41,7 @@ const Projects = memo(function Projects() {
         link={`${baseURL}/projects`}
       />
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="mt-12">
-        <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>{t("p1")}</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>{t("projects")}.</h2>
-      </motion.div>
+        <PrimaryHeading text={t("projects")} subText={t("p1")} once/>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

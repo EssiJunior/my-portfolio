@@ -22,7 +22,7 @@ const Breadcrumb = memo(function Breadcrumb({ label, to, icon = 'ppyvfomi.json' 
         <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2, delay: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.2, delay: 2.3, ease: "easeInOut" }}
             className={is_mobile_1 ? 'my-4 mx-12 flex flex-col justify-center items-center' : 'my-2 mx-12 w-4/5 max-w-[1000px]'}
         >
             <Breadcrumbs aria-label="breadcrumb"  color={{ color: `${theme.colors.text}` }}>
