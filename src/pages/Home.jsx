@@ -7,7 +7,7 @@ import { useTheme } from "styled-components";
 // CUSTOMIZED CONTAINERS
 import Hero from "@/containers/Hero/Hero";
 import About from "@/containers/About/About";
-import Experience from "@/containers/Experience/Experience";
+import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills/Skills";
 import Education from "@/containers/Education/Education";
 import Projects from "@/containers/Projects/Projects";

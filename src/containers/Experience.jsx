@@ -24,17 +24,12 @@ import { experience } from "@/assets/lotties";
 // UTILS
 import { experiences_tech } from "@/utils";
 
-// STYLES
-import './experience.css'
-
 const Experience = memo(function Experience() {
     const theme = useTheme()
     const { t } = useTranslation();
 
     return (
-        <section
-
-            className={`experience ${theme.hero.gradient} `}>
+        <section className={`container pb-8 ${theme.hero.gradient}`}>
             <div id="experience" className="relative z-50 my-12 lg:my-24 ">
                 <SecondaryHeadingOverlay />
 
