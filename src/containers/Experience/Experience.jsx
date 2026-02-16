@@ -1,10 +1,8 @@
 // REACT COMPONENTS IMPORTS
 import { memo } from "react";
-import { GrNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useTheme } from 'styled-components'
-import { motion } from "framer-motion";
 
 // CUSTOMIZED COMPONENTS IMPORTS
 import Button from "@/components/Button/Button";
@@ -15,10 +13,11 @@ import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
 
 // COMPONENTS
-import SecondaryHeading from "../../components/Headings/Secondary";
-import SecondaryHeadingOverlay from "../../components/Overlays/SecondaryHeadingOverlay";
+import SecondaryHeading from "@/components/Headings/Secondary";
+import SecondaryHeadingOverlay from "@/components/Overlays/SecondaryHeadingOverlay";
 
 // ASSETS
+import { GrLinkNext } from "react-icons/gr";
 import blur from '@/assets/utilities/blur-23.svg'
 import { experience } from "@/assets/lotties";
 
@@ -92,7 +91,7 @@ const Experience = memo(function Experience() {
             </div>
 
             <div className="action">
-                <Link to='/experience'><Button text={t('more')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
+                <Link to='/experience'><Button text={t('more')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrLinkNext />} /></Link>
             </div>
 
         </section>

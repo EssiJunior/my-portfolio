@@ -1,7 +1,6 @@
 // REACT COMPONENTS
 import { memo } from 'react'
 import { Link } from 'react-router-dom';
-import { GrNext } from "react-icons/gr";
 import { useTheme } from 'styled-components'
 import { useTranslation } from 'react-i18next';
 
@@ -10,11 +9,14 @@ import ProjectsCard from '@/components/ProjectsCard';
 import Button from '@/components/Button/Button';
 import PrimaryHeadingOverlay from '@/components/Overlays/PrimaryHeadingOverlay';
 import PrimaryHeading from '@/components/Headings/Primary';
+import LineOverlay from '@/components/Overlays/LineOverlay';
 
 // UTILITIES
-import { themeProps } from '@/utils/prop-types';
 import { projects } from '@/utils';
-import LineOverlay from '../../components/Overlays/LineOverlay';
+import { themeProps } from '@/utils/prop-types';
+
+// ASSETS
+import { GrLinkNext } from "react-icons/gr";
 
 const Projects = memo(function Projects() {
     const theme = useTheme()
@@ -44,7 +46,7 @@ const Projects = memo(function Projects() {
 
 
             <div className="action">
-                <Link to='/projects'><Button text={t('all')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrNext />} /></Link>
+                <Link to='/projects'><Button text={t('all')} bg={theme.tag === 'light' ? 'black' : ''} icon={<GrLinkNext />} /></Link>
             </div>
         </main>
     );
