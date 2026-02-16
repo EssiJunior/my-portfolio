@@ -4,23 +4,22 @@ import { useTranslation } from "react-i18next";
 import Marquee from "react-fast-marquee";
 import { useTheme } from 'styled-components'
 
+// CUSTOMIZED COMPONENTS
+import PrimaryHeading from '@/components/Headings/Primary';
+import PrimaryHeadingOverlay from '@/components/Overlays/PrimaryHeadingOverlay';
+import LineOverlay from '@/components/Overlays/LineOverlay';
+
 // UTILS
 import { themeProps } from "@/utils/prop-types";
 import { skills } from "@/utils/utilities";
 
-// STYLES
-import './skills.css'
-import PrimaryHeading from '../../components/Headings/Primary';
-import PrimaryHeadingOverlay from '../../components/Overlays/PrimaryHeadingOverlay';
-import LineOverlay from '../../components/Overlays/LineOverlay';
 
 const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()
-
     const {t} = useTranslation();
 
     return (
-        <div id="skills" className={`skills relative z-50`} ref={skillsRef}>
+        <div id="skills" className={`relative z-50`} ref={skillsRef}>
             <PrimaryHeadingOverlay />
             <LineOverlay />
 

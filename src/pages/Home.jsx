@@ -8,7 +8,7 @@ import { useTheme } from "styled-components";
 import Hero from "@/containers/Hero/Hero";
 import About from "@/containers/About/About";
 import Experience from "@/containers/Experience";
-import Skills from "@/containers/Skills/Skills";
+import Skills from "@/containers/Skills";
 import Education from "@/containers/Education/Education";
 import Projects from "@/containers/Projects/Projects";
 import ContactBloc from "@/containers/ContactBloc/ContactBloc";
