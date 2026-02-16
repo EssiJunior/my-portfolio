@@ -9,7 +9,6 @@ import { Worker } from '@react-pdf-viewer/core';
 import AnimatedRoutes from '@/containers/AnimatedRoutes';
 
 // UTILS
-import { ScrollToTop } from '@/utils/Scroll';
 import { darkTheme, lightTheme } from '@/utils/theme';
 import { BrowserRouter } from 'react-router-dom';
 import FollowMouse from './components/FollowMouse';
@@ -37,7 +36,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <ScrollToTop />
         <FollowMouse />
         <AnimatedRoutes toggle={toggleTheme} />
       </BrowserRouter>
