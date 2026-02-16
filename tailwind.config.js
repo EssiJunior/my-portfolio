@@ -18,6 +18,7 @@ export default {
       },
       screens: {
         xs: "450px",
+        web: "990px"
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/utilities/hero.svg')",

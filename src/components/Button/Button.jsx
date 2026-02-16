@@ -41,7 +41,7 @@ const Button = memo(function Button({ text = null, margin, width, icon, bg, font
             transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
 
             style={{ background: bg, width: width, margin: margin }}
-            className='relative button-s rounded-full flex items-center justify-center gap-2 border-none font-normal tracking-wide px-4 h-40 w-40 text-white leading-3.5 text-lg overflow-hidden bg-gradient-to-b from-primary to-secondary cursor-pointer before:absolute before:inset-0 before:rounded-full before:translate-y-full before:bg-secondary before:opacity-0 before:hover:opacity-100 before:transition-all before:hover:translate-y-0 before:duration-300 before:ease-out border-2 border-black'>
+            className='relative button-s rounded-full flex items-center justify-center gap-2 border-none font-normal tracking-wide px-4 h-32 w-32 xl:h-40 xl:w-40 text-white leading-3.5 text-lg overflow-hidden bg-gradient-to-b from-primary to-secondary cursor-pointer before:absolute before:inset-0 before:rounded-full before:translate-y-full before:bg-secondary before:opacity-0 before:hover:opacity-100 before:transition-all before:hover:translate-y-0 before:duration-300 before:ease-out border-2 border-black'>
             <motion.span
                 animate={{ x: x * MAGNETO_TEXT_STRENGTH, y: y * MAGNETO_TEXT_STRENGTH }}
                 transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}

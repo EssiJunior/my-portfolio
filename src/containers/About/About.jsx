@@ -37,7 +37,7 @@ const About = memo(function About() {
                     {t('detail')}
                 </motion.p>
 
-                <motion.div className="illustration w-2/5  max-md:w-full flex justify-center items-center">
+                <motion.div className="illustration w-2/5 max-md:w-[90%] flex justify-center items-center">
                     <div className="gallery">
                         <img loading="lazy" src={me} alt="Me" />
                         <img loading="lazy" src={meDark} alt="Me dark" />

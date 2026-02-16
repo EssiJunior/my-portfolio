@@ -57,10 +57,10 @@ const Footer = memo(function Footer({ languageRef }) {
                 </div>
             </div>
 
-            <div className="flex w-[90%] justify-between items-center py-3 px-6 container">
+            <div className="flex flex-wrap w-[90%] justify-between items-center py-3 px-6 gap-6 container">
                 <p className={`${styles.sectionHeadText} text-center leading-none flex gap-1`}>
                     
-                    {t("contact")}
+                    <span>{t("contact")} <span className="sm:hidden">|</span></span> 
                     <div className="-mt-1.5">
                         {social.map((elt, i) => (
                             <a href={elt.link} key={i} aria-label={'Essi Junior\'s ' + elt.name + ' link'} target="_blank" className='hover:text-yellow-300'>
@@ -70,7 +70,7 @@ const Footer = memo(function Footer({ languageRef }) {
                     </div>
                 </p>
 
-                <aside className="grid flex-wrap items-center gap-2 [&>a]:text-xl [&>a]:flex [&>a]:items-center [&>a]:gap-4 ">
+                <aside className="grid flex-wrap items-center gap-x-2 gap-y-1 [&>a]:text-xl [&>a]:flex [&>a]:items-center [&>a]:gap-4 ">
                     <a href="mailto:dev@essijunior.com" className='hover:text-yellow-200'>
                         <Email />
                         dev@essijunior.com

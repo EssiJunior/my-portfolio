@@ -28,7 +28,7 @@ const Hero = memo(function Hero() {
 
   return (
     <section className={`overflow-hidden container pt-16 hero ${theme.hero.gradient}`}>
-      <div className="container-hero h-full w-full grid grid-cols-1 md:grid-cols-2 py-12">
+      <div className="container-hero h-full w-full grid grid-cols-1 md:grid-cols-[2fr_1fr] web:grid-cols-2 py-12">
         <div className="brand flex flex-col justify-center items-start p-16 max-sm:px-8 max-md:items-center [&>p]:max-md:text-center [&>p]:max-md:!w-[90%]" style={{ color: theme.colors.text }}>
           <Typography
             text={t("present")}
@@ -89,7 +89,7 @@ const Hero = memo(function Hero() {
 
           <ScrollParallax isAbsolutelyPositioned>
             <ul
-              className={`absolute left-1/3 -translate-x-1/2  -bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
+              className={`absolute left-1/2 -translate-x-1/2  -bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
             >
               {tech.map((elt, index) => (
                 <Tooltip title={elt.label} key={index} placement="top" arrow>
