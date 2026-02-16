@@ -14,8 +14,8 @@ import bg from '@/assets/utilities/section.svg'
 import blur from '@/assets/utilities/blur-23.svg'
 
 import { education as educationAnimation } from "@/assets/lotties";
-import SecondaryHeadingOverlay from "../../components/Overlays/SecondaryHeadingOverlay";
-import SecondaryHeading from "../../components/Headings/Secondary";
+import SecondaryHeadingOverlay from "../components/Overlays/SecondaryHeadingOverlay";
+import SecondaryHeading from "../components/Headings/Secondary";
 
 const Education = memo(function Education({ educationRef }) {
     const theme = useTheme()
@@ -44,7 +44,7 @@ const Education = memo(function Education({ educationRef }) {
 
 
     return (
-        <section className={`experience ${theme.hero.gradient}`} ref={educationRef} >
+        <section className={`container  pb-20 ${theme.hero.gradient}`} ref={educationRef} >
             <div id="education" className="relative z-50 my-12 lg:my-24 ">
                 <SecondaryHeadingOverlay />
                 <SecondaryHeading text={t('ed')} />

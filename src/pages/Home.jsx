@@ -9,7 +9,7 @@ import Hero from "@/containers/Hero/Hero";
 import About from "@/containers/About/About";
 import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills";
-import Education from "@/containers/Education/Education";
+import Education from "@/containers/Education";
 import Projects from "@/containers/Projects/Projects";
 import ContactBloc from "@/containers/ContactBloc/ContactBloc";
 
