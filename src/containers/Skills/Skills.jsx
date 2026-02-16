@@ -28,7 +28,7 @@ const Skills = memo(function Skills({ skillsRef }) {
                 </div>
             </div>
 
-            <PrimaryHeading subText={t('in')} text={t('sk')} />
+            <PrimaryHeading subText={t('skSub')} text={t('sk')} />
 
             <div className="w-full my-12">
                 <Marquee
