@@ -83,7 +83,7 @@ const Hero = memo(function Hero() {
 
           <ScrollParallax isAbsolutelyPositioned>
             <ul
-              className={`absolute xl:-left-[7.5rem] left-1/2 max-xl:-translate-x-1/2 xl:bottom-[5rem] -bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
+              className={`absolute left-1/3 -translate-x-1/2  -bottom-[2rem] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
             >
               {tech.map((elt, index) => (
                 <Tooltip title={elt.label} key={index} placement="top" arrow>
@@ -114,7 +114,7 @@ const Hero = memo(function Hero() {
             </div>
           </ScrollParallax>
           <div
-            className={`absolute xl:right-10 right-12 max-xl:-translate-x-1/2 xl:bottom-[5rem] max-xl:top-6 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex animation-moveRotate`}
+            className={`absolute right-12 -translate-x-1/2 top-10 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex animation-moveRotate`}
           >
             <p className="relative p-1">
               <b>{yearsOfExp}</b> {t("yearsOfExp")}

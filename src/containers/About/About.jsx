@@ -7,6 +7,7 @@ import { useTheme } from 'styled-components'
 // CUSTOMIZED COMPONENTS
 import PrimaryHeading from "@/components/Headings/Primary";
 import PrimaryHeadingOverlay from "@/components/Overlays/PrimaryHeadingOverlay";
+import LineOverlay from "@/components/Overlays/LineOverlay";
 
 // UTILS
 import { themeProps } from "@/utils/prop-types";
@@ -19,18 +20,19 @@ import './about.css'
 
 const About = memo(function About() {
     const theme = useTheme()
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     return (
-        <main className='relative container about py-14' id="about-me" style={{color:theme.colors.text}}>
+        <main className='relative container about' id="about-me" style={{ color: theme.colors.text }}>
             <PrimaryHeadingOverlay />
-            
+            <LineOverlay />
+
             <PrimaryHeading subText={t('in')} text={t('aboutMe')} />
-        
+
             <section className="detail flex flex-wrap justify-center items-center gap-8 max-md:gap-16 md:px-10">
                 <motion.p
-                className='w-1/2 max-md:w-full max-md:px-10 text-[17px]'
-                style={{ margin:'auto'}}
+                    className='w-1/2 max-md:w-full max-md:px-10 text-[17px]'
+                    style={{ margin: 'auto' }}
                 >
                     {t('detail')}
                 </motion.p>

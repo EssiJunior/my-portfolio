@@ -22,6 +22,10 @@ export default {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/utilities/hero.svg')",
       },
+      fontFamily:{
+        space_mono: "var(--font-space_mono)",
+        plus_jakarta_sans: "var(--font-plus_jakarta_sans)"
+      }
     },
   },
   plugins: [],
