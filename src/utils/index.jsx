@@ -15,9 +15,153 @@ import {
   evShine,
   ednShine
 } from "../assets/projects";
-import { FaPython, FaPersonChalkboard } from "react-icons/fa6";
-import { SiJavascript } from "react-icons/si";
+import { FaPython, FaPersonChalkboard,  FaNode, FaPhp, FaReact } from "react-icons/fa6";
+import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiFramer, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
 import { MdEngineering } from "react-icons/md";
+
+// Tech tools with icons and labels
+const toolsLibrary = {
+  react: {
+    icon: <SiReact size={30}/>, 
+    label: "React"
+  },
+  next: {
+    icon: <SiNextdotjs size={30}/>, 
+    label: "Next.js"
+  },
+  tailwind: {
+    icon: <SiTailwindcss size={30}/>,
+    label: "Tailwind CSS"
+  },
+  framer: {
+    icon: <SiFramer size={30}/>,
+    label: "Framer Motion"
+  },
+  aceternity: {
+    icon: null,
+    label: "Aceternity UI"
+  },
+  preline: {
+    icon: null,
+    label: "Preline UI"
+  },
+  javascript: {
+    icon: <SiJavascript size={30}/>,
+    label: "JavaScript"
+  },
+  python: {
+    icon: <FaPython size={30}/>,
+    label: "Python"
+  },
+  nodejs: {
+    icon: <FaNode size={30}/>,
+    label: "Node.js"
+  },
+  express: {
+    icon: <SiExpress size={30}/>,
+    label: "Express.js"
+  },
+  fastapi: {
+    icon: <SiFastapi size={30}/>,
+    label: "FastAPI"
+  },
+  django: {
+    icon: <SiDjango size={30}/>,
+    label: "Django"
+  },
+  php: {
+    icon: <FaPhp size={30}/>,
+    label: "PHP"
+  },
+  laravel: {
+    icon: <SiLaravel size={30}/>,
+    label: "Laravel"
+  },
+  mongodb: {
+    icon: <SiMongodb size={30}/>,
+    label: "MongoDB"
+  },
+  mysql: {
+    icon: <SiMysql size={30}/>,
+    label: "MySQL"
+  },
+  mongoose: {
+    icon: <SiMongoose size={30}/>,
+    label: "Mongoose"
+  },
+  threejs: {
+    icon: <SiThreedotjs size={30}/>,
+    label: "Three.js"
+  },
+  electron: {
+    icon: <SiElectron size={30}/>,
+    label: "Electron.js"
+  },
+  reactNative: {
+    icon: <FaReact size={30}/>,
+    label: "React Native"
+  },
+  redux: {
+    icon: <SiRedux size={30}/>,
+    label: "Redux"
+  },
+  reactHookForm: {
+    icon: <SiReacthookform size={30}/>,
+    label: "React Hook Form"
+  },
+  i18next: {
+    icon: <SiI18Next size={30}/>,
+    label: "i18next"
+  },
+  emailjs: {
+    icon: null,
+    label: "EmailJS"
+  },
+  nodemailer: {
+    icon: <FaNode size={30}/>,
+    label: "Nodemailer"
+  },
+  swagger: {
+    icon: <SiSwagger size={30}/>,
+    label: "Swagger UI"
+  },
+  git: {
+    icon: <SiGit size={30}/>,
+    label: "Git"
+  },
+  github: {
+    icon: <SiGithub size={30}/>,
+    label: "GitHub"
+  },
+  gitlab: {
+    icon: <SiGitlab size={30}/>,
+    label: "GitLab"
+  },
+  vercel: {
+    icon: <SiVercel size={30}/>,
+    label: "Vercel"
+  },
+  cpanel: {
+    icon: <SiCpanel size={30}/>,
+    label: "cPanel"
+  },
+  githubActions: {
+    icon: <SiGithubactions size={30}/>,
+    label: "GitHub Actions"
+  },
+  ovhCloud: {
+    icon: <SiOvh size={30}/>,
+    label: "OVH Cloud"
+  },
+  filezilla: {
+    icon: <SiFilezilla size={30}/>,
+    label: "FileZilla"
+  },
+  sass: {
+    icon: <SiSass size={30}/>,
+    label: "SASS"
+  }
+};
 
 export const navlinks = (t) => [
   {
@@ -160,25 +304,37 @@ const experiences = (t) => [
   },
 ];
 
+
+// Tech icons
+
+// const react = {
+//   icon: <SiReact size={30}/>, 
+//   label: "ReactJS"
+// }
+// const next = {
+//   icon: <SiNextdotjs size={30}/>, 
+//   label: "FrontEnd"
+// }
+
+
 const projects = [
   {
     id: 1,
     name: "My portfolio",
     description:
-      "This is my portfolio website (this site). I used ReactJS, TailwindCSS, Material UI, ThreeJS, and other npm libraries for the UI. I utilised emailJS to bear mail messages. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
+      "This is my portfolio website (this site). I used ReactJS, TailwindCSS, Framer motion, ThreeJS, and other npm libraries for the UI. I utilised emailJS to bear mail messages. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
     tools: [
-      "React",
-      "Tailwind CSS",
-      "Material UI",
-      "i18next",
-      "sass",
-      "emailJS",
-      "CPanel",
-      "Git",
-      "Github",
-      "Github actions",
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.framer,
+      toolsLibrary.i18next,
+      toolsLibrary.emailjs,
+      toolsLibrary.cpanel,
+      toolsLibrary.git,
+      toolsLibrary.github,
+      toolsLibrary.githubActions,
     ],
-    role: "React Developer",
+    role: "FrontEnd Developer",
     code: "https://github.com/EssiJunior/my-portfolio.git",
     demo: "https://essijunior.com",
     image: portfolio,
@@ -187,19 +343,20 @@ const projects = [
     id: 2,
     name: "Scoreify",
     description:
-      "I build the web app that manages exams results. I use ReactJS, TailwindCSS, Framer Motion, React Hook Form, and other npm libraries for the UI. I use FastAPI, Python, and other libraries to develop and document Rest APIs. The database is a NoSQL type, MongoDB. I use pymongo to bear it.",
+      "I build the web app that manages exams results. I use ReactJS, TailwindCSS, Framer Motion, React Hook Form, and other npm libraries for the UI. I use FastAPI, Python, and other libraries to develop and document Rest APIs. The database is a NoSQL type, MongoDB. I use pymongo to bear it. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
     tools: [
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "React Hook Form",
-      "FastAPI",
-      "Python",
-      "Swagger UI",
-      "MongoDB",
-      "Vercel",
-      "Git",
-      "Github",
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.framer,
+      toolsLibrary.reactHookForm,
+      toolsLibrary.fastapi,
+      toolsLibrary.python,
+      toolsLibrary.swagger,
+      toolsLibrary.mongodb,
+      toolsLibrary.cpanel,
+      toolsLibrary.git,
+      toolsLibrary.github,
+      toolsLibrary.githubActions,
     ],
     role: "Fullstack Developer",
     code: "",
@@ -210,16 +367,17 @@ const projects = [
     id: 3,
     name: "Reduce-Reuse-Recycle",
     description:
-      "I and my team built the web site for the 2024 Mountain Hub Hackathon. We used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an NoSQL type, MongoDB. I intervened in the development of the frontend. ",
+      "I and my team built the web site for the 2024 Mountain Hub Hackathon. We used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an NoSQL type, MongoDB. I intervened in the development of the frontend. ",
     tools: [
-      "NextJS",
-      "Tailwind CSS",
-      "Aceternity UI",
-      "Vercel",
-      "Git",
-      "Github"
+      toolsLibrary.next,
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.aceternity,
+      toolsLibrary.vercel,
+      toolsLibrary.git,
+      toolsLibrary.github
     ],
-    role: "NextJS Developer",
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://3r-platform.vercel.app/",
     image: threeR,
@@ -231,15 +389,15 @@ const realisations = [
     id: "edn-shine",
     name: "Editions Shine Ministries",
     description:
-      "I built the web site of a house of editions. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
+      "I built the web site of a house of editions. I used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
     tools: [
-      "NextJS",
-      "Tailwind CSS",
-      "Aceternity UI",
-      "FastAPI",
-      "OVH Cloud",
-      "Git",
-      "Github"
+      toolsLibrary.next,
+      toolsLibrary.tailwind,
+      toolsLibrary.aceternity,
+      toolsLibrary.fastapi,
+      toolsLibrary.ovhCloud,
+      toolsLibrary.git,
+      toolsLibrary.github
     ],
     role: "Fullstack Developer",
     code: "",
@@ -250,15 +408,15 @@ const realisations = [
     id: "ev-shine",
     name: "Evangéliste Shine Ministries",
     description:
-      "I built the web site of a Christian evangelist. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
+      "I built the web site of a Christian evangelist. I used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. FastAPI for the site's server (as it's a dynamic website). I deployed the site on OVH Cloud, using FileZilla.",
     tools: [
-      "NextJS",
-      "Tailwind CSS",
-      "Aceternity UI",
-      "FastAPI",
-      "OVH",
-      "Git",
-      "Github"
+      toolsLibrary.next,
+      toolsLibrary.tailwind,
+      toolsLibrary.aceternity,
+      toolsLibrary.fastapi,
+      toolsLibrary.ovhCloud,
+      toolsLibrary.git,
+      toolsLibrary.github
     ],
     role: "Fullstack Developer",
     code: "",
@@ -269,17 +427,17 @@ const realisations = [
     id: "vases-d-honneurs",
     name: "Assemblee des Vases d'honneur",
     description:
-      "I built the web site of a Christian association. I used NextJS, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
+      "I built the web site of a Christian association. I used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
     tools: [
-      "NextJS",
-      "Tailwind CSS",
-      "Aceternity UI",
-      "CPanel",
-      "Git",
-      "Github",
-      "Github actions",
+      toolsLibrary.next,
+      toolsLibrary.tailwind,
+      toolsLibrary.aceternity,
+      toolsLibrary.cpanel,
+      toolsLibrary.git,
+      toolsLibrary.github,
+      toolsLibrary.githubActions,
     ],
-    role: "NextJS Developer",
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://ass-vasesdhonneur.com/",
     image: vasesDhonneur,
@@ -289,8 +447,8 @@ const realisations = [
     name: "CARA",
     description:
       "I built the web site of a company that promotes services for African and Russian partneships. I used ReactJS, Tailwind CSS, Preline UI and other npm libraries for the UI. I utilized nodemailer to bear mail messages.",
-    tools: ["React", "Tailwind CSS", "Preline UI", "CPanel", "Git", "Github"],
-    role: "React Developer",
+    tools: [toolsLibrary.react, toolsLibrary.tailwind, toolsLibrary.preline, toolsLibrary.cpanel, toolsLibrary.git, toolsLibrary.github],
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://russiaafrica.org",
     image: cara,
@@ -301,15 +459,14 @@ const realisations = [
     description:
       "I built the static website of a traveling agency company. I used ReactJS, TailwindCSS, Material UI, emailJS, saas, i18next and other npm libraries for the UI.",
     tools: [
-      "React",
-      "Tailwind CSS",
-      "Material UI",
-      "sass",
-      "CPanel",
-      "Git",
-      "Github",
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.sass,
+      toolsLibrary.cpanel,
+      toolsLibrary.git,
+      toolsLibrary.github,
     ],
-    role: "React Developer",
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://flytravel.agency",
     image: flytravel,
@@ -319,8 +476,13 @@ const realisations = [
     name: "Colorfol artists",
     description:
       "I maintained and built new interfaces of Colorfol artists web app. I used ReactJS, TailwindCSS, Material UI and other npm libraries for the UI.",
-    tools: ["React", "Tailwind CSS", "Material UI", "Git", "Gitlab"],
-    role: "React Developer",
+    tools: [
+      toolsLibrary.react, 
+      toolsLibrary.tailwind, 
+      toolsLibrary.git, 
+      toolsLibrary.gitlab
+    ],
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://www.artists.colorfol.com/",
     image: colorfol,
@@ -330,8 +492,15 @@ const realisations = [
     name: "Student Result System",
     description:
       "I and my team worked on the development of a desktop app that manages exams results for a school in the South region of Cameroon. We used ElectronJS for the UI, NodeJS, ExpressJS, and other npm libraries for the backend, MySQL for the database, Git for version control, and Github for the hosting of the code.",
-    tools: ["ElectronJS", "NodeJS", "ExpressJS", "MySQL", "Git", "Github"],
-    role: "ElectronJS Developer",
+    tools: [
+      toolsLibrary.electron, 
+      toolsLibrary.nodejs, 
+      toolsLibrary.express, 
+      toolsLibrary.mysql, 
+      toolsLibrary.git, 
+      toolsLibrary.github
+    ],
+    role: "Desktop Frontend Developer",
     code: "",
     demo: "",
     image: studentResultSystem,
@@ -341,8 +510,14 @@ const realisations = [
     name: "Syneduc",
     description:
       "I worked in the development of an e-learning platform for a company. We used Laravel. I improved my PHP level and my knowledge of the Laravel framework.",
-    tools: ["Laravel", "PHP", "MySQL", "Git", "Gitlab"],
-    role: "React Developer",
+    tools: [
+      toolsLibrary.laravel, 
+      toolsLibrary.php, 
+      toolsLibrary.mysql, 
+      toolsLibrary.git, 
+      toolsLibrary.gitlab
+    ],
+    role: "FrontEnd Developer",
     code: "",
     demo: "https://syneduc.com/",
     image: syneduc,
@@ -351,21 +526,21 @@ const realisations = [
     id: "flikart",
     name: "Flikart +",
     description:
-      "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
+      "I built the web site of a company that promotes african culture. I used ReactJS, TailwindCSS, Material UI, ThreeJS and other npm libraries for the UI. I utilized NodeJS, ExpressJS, Nodemailer, Swagger UI, Mongoose and related libraries to develop and document Rest APIs. The database was a NoSQL type, MongoDB. We used Mongoose to bear it. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
     tools: [
-      "React",
-      "Tailwind CSS",
-      "Material UI",
-      "Threejs",
-      "node",
-      "ExpressJS",
-      "Swagger UI",
-      "MongoDB",
-      "CPanel",
-      "Git",
-      "Github",
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.threejs,
+      toolsLibrary.nodejs,
+      toolsLibrary.express,
+      toolsLibrary.swagger,
+      toolsLibrary.mongodb,
+      toolsLibrary.cpanel,
+      toolsLibrary.git,
+      toolsLibrary.github,
+      toolsLibrary.githubActions,
     ],
-    role: "Fullstack Developer",
+    role: "FullStack Developer",
     code: "",
     demo: "https://flikart.org",
     image: flikart,
@@ -375,8 +550,8 @@ const realisations = [
     name: "CHP compta",
     description:
       "I built a medical items task management cross platform mobile application. I used React native, and other npm libraries for the UI. I utilized FastAPI and related libraries to develop the server. The database was a NoSQL type, MongoDB.",
-    tools: ["React native", "FastAPI", "Redux", "MongoDB", "Git", "Github"],
-    role: "React native Developer",
+    tools: [toolsLibrary.reactNative, toolsLibrary.fastapi, toolsLibrary.redux, toolsLibrary.mongodb, toolsLibrary.git, toolsLibrary.github],
+    role: "FullStack Mobile Developer",
     code: "",
     demo: "",
     image: "",
@@ -387,7 +562,7 @@ const realisations = [
   //   description:
   //     "I and my team built an car items e-commerce web application. We used ReactJS, TailwindCSS, Material UI, and other npm libraries for the UI. We utilized Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an SQL type, PostgreSQL.",
   //   tools: [
-  //     "React",
+  //     toolsLibrary.react,
   //     "Tailwind CSS",
   //     "Material UI",
   //     "Django",
@@ -399,7 +574,7 @@ const realisations = [
   //     "Git",
   //     "Github",
   //   ],
-  //   role: "React Developer and software engineer",
+  //   role: "FrontEnd Developer and software engineer",
   //   code: "",
   //   demo: "",
   //   image: eCommerce,
@@ -410,7 +585,7 @@ const realisations = [
   //   description:
   //     "I developed a fullstack real estate web app. I used FastAPI, Python, Pymongo and related packages to develop the API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
   //   tools: [
-  //     "React",
+  //     toolsLibrary.react,
   //     "Material UI",
   //     "Redux",
   //     "FastAPI",
@@ -429,7 +604,7 @@ const realisations = [
   //   description:
   //     "I developed a fullstack bus tickets reservation web and desktop app. I used FastAPI, Python, Pymongo and related packages to develop the web and desktop API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the web UI, and ElectronJS to develop the desktop UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
   //   tools: [
-  //     "React",
+  //     toolsLibrary.react,
   //     "Material UI",
   //     "Redux",
   //     "FastAPI",
@@ -449,7 +624,7 @@ const realisations = [
   //   description:
   //     "I and a friend developed a web app for Echographic consultations. We created the UI using ReactJS, Material UI, TailwindCSS, Preline and related npm libraries. We developed the rest APIs with Node.JS, express.JS, nodemailer and related npm libraries. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
   //   tools: [
-  //     "React",
+  //     toolsLibrary.react,
   //     "Tailwind CSS",
   //     "Material UI",
   //     "Preline",
@@ -490,4 +665,4 @@ const yearsOfExp = Number(
 ).toFixed(1)
 );
 
-export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL,yearsOfExp };
+export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL, yearsOfExp, toolsLibrary };

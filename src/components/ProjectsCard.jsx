@@ -46,7 +46,7 @@ const ProjectsCard = memo(function ProjectsCard({ project }) {
                         {
                             project.tools.map((tag, i) => (
                                 <React.Fragment key={i}>
-                                    <span className="text-amber-300">{tag}</span>
+                                    <span className="text-amber-300">{tag.label}</span>
                                     {
                                         project.tools.length - 1 !== i &&
                                         <span className="text-gray-400">{`', '`}</span>

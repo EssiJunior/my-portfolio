@@ -21,6 +21,7 @@ import "./hero.css";
 import { memo } from "react";
 import { yearsOfExp } from "../../utils";
 import { Tooltip } from "@mui/material";
+import FloatingCard from "../../components/FloatingCard";
 
 const Hero = memo(function Hero() {
   const theme = useTheme();
@@ -119,9 +120,7 @@ const Hero = memo(function Hero() {
               })}
             </div>
           </ScrollParallax>
-          <div
-            className={`absolute right-12 -translate-x-1/2 top-10 px-1 py-1 bg-secondary/25 backdrop-blur border border-secondary rounded-xl flex animation-moveRotate font-space_mono`}
-          >
+          <FloatingCard>
             <p className="relative p-1">
               <b>{yearsOfExp}</b> {t("yearsOfExp")}
               <span className="absolute -top-2 -right-2 inline-flex h-3 w-3">
@@ -129,7 +128,7 @@ const Hero = memo(function Hero() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-tertiary" />
               </span>
             </p>
-          </div>
+          </FloatingCard>
         </div>
       </div>
     </section>

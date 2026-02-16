@@ -17,7 +17,6 @@ export const lottieProps = {
 };
 
 export const glowCardProps = {
-    children: PropTypes.object.isRequired,
     identifier: PropTypes.string.isRequired
 };
 
