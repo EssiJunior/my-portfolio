@@ -10,6 +10,8 @@ import { skills } from "@/utils/utilities";
 
 // STYLES
 import './skills.css'
+import PrimaryHeading from '../../components/Headings/Primary';
+import TitleOverlay from '../../components/TitleOverlay';
 
 const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()
@@ -18,23 +20,15 @@ const Skills = memo(function Skills({ skillsRef }) {
 
     return (
         <div id="skills" className={`skills relative z-50`} ref={skillsRef}>
-            <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+            <TitleOverlay />
 
-            <div className="flex justify-center -translate-y-[1px]">
+            <div className="flex justify-center -translate-y-[1px] mb-20">
                 <div className="w-3/4">
                     <div className={`h-[1px] bg-gradient-to-r from-transparent ${theme.skills.divider} to-transparent  w-full`} />
                 </div>
             </div>
 
-            <div className="flex justify-center lg:py-8">
-                <div className="flex  items-center">
-                    <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
-                    <span className={`${theme.global.headingBox} w-fit text-white p-2 px-5 my-10 text-xl rounded-md`}>
-                        {t('sk')}
-                    </span>
-                    <span className={`w-24 h-[2px] ${theme.global.headingBox}`}></span>
-                </div>
-            </div>
+            <PrimaryHeading subText={t('in')} text={t('sk')} />
 
             <div className="w-full my-12">
                 <Marquee

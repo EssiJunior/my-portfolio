@@ -13,22 +13,18 @@ import { me, meDark, meGrey, meMozaic } from "@/assets/profile";
 // STYLES
 import { styles } from "@/styles/styles";
 import './about.css'
+import PrimaryHeading from "../../components/Headings/Primary";
+import TitleOverlay from "../../components/TitleOverlay";
 
 const About = memo(function About() {
     const theme = useTheme()
     const {t} = useTranslation();
 
     return (
-        <main className='about' id="about-me" style={{color:theme.colors.text}}>
-            <section
-                className={`${styles.padding} min-h-[165px]`}
-            >
-                <motion.div 
-                    className="intro">
-                    <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`} >{t('in')}</p>
-                    <h1 className={`${styles.sectionHeadText} text-center`}>{t('aboutMe')}</h1>
-                </motion.div>
-            </section>
+        <main className='relative about py-14' id="about-me" style={{color:theme.colors.text}}>
+            <TitleOverlay />
+            
+            <PrimaryHeading subText={t('in')} text={t('aboutMe')} />
         
             <section className="detail">
                 <motion.p
