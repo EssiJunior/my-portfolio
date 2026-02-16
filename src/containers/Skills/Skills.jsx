@@ -12,6 +12,7 @@ import { skills } from "@/utils/utilities";
 import './skills.css'
 import PrimaryHeading from '../../components/Headings/Primary';
 import PrimaryHeadingOverlay from '../../components/Overlays/PrimaryHeadingOverlay';
+import LineOverlay from '../../components/Overlays/LineOverlay';
 
 const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()
@@ -21,12 +22,7 @@ const Skills = memo(function Skills({ skillsRef }) {
     return (
         <div id="skills" className={`skills relative z-50`} ref={skillsRef}>
             <PrimaryHeadingOverlay />
-
-            <div className="flex justify-center -translate-y-[1px] mb-20">
-                <div className="w-3/4">
-                    <div className={`h-[1px] bg-gradient-to-r from-transparent ${theme.skills.divider} to-transparent  w-full`} />
-                </div>
-            </div>
+            <LineOverlay />
 
             <PrimaryHeading subText={t('skSub')} text={t('sk')} />
 
