@@ -81,7 +81,7 @@
     "p1": "Projects I am working on",
     "p2": "Public projects where I intervened ",
     "p3": "Realisations",
-
+    
     "///Skills": "This section concerns translation in the Skills section",
     "sk": "Skills",
     "skSub": "Tools I'm hard using",
@@ -112,6 +112,7 @@
 
     "///Resume": "This section concerns translation in the Resume section",
     "download": "My work",
+    "r1": "Details of my work experience",
 
     "///Contact": "This section concerns translation in the Contact Us section",
     "contactMe": "Contact me",
