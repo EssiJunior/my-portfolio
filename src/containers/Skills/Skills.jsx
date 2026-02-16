@@ -11,7 +11,7 @@ import { skills } from "@/utils/utilities";
 // STYLES
 import './skills.css'
 import PrimaryHeading from '../../components/Headings/Primary';
-import TitleOverlay from '../../components/TitleOverlay';
+import PrimaryHeadingOverlay from '../../components/Overlays/PrimaryHeadingOverlay';
 
 const Skills = memo(function Skills({ skillsRef }) {
     const theme = useTheme()
@@ -20,7 +20,7 @@ const Skills = memo(function Skills({ skillsRef }) {
 
     return (
         <div id="skills" className={`skills relative z-50`} ref={skillsRef}>
-            <TitleOverlay />
+            <PrimaryHeadingOverlay />
 
             <div className="flex justify-center -translate-y-[1px] mb-20">
                 <div className="w-3/4">

@@ -11,10 +11,9 @@ import { themeProps } from "@/utils/prop-types";
 import { me, meDark, meGrey, meMozaic } from "@/assets/profile";
 
 // STYLES
-import { styles } from "@/styles/styles";
 import './about.css'
 import PrimaryHeading from "../../components/Headings/Primary";
-import TitleOverlay from "../../components/TitleOverlay";
+import PrimaryHeadingOverlay from "../../components/Overlays/PrimaryHeadingOverlay";
 
 const About = memo(function About() {
     const theme = useTheme()
@@ -22,7 +21,7 @@ const About = memo(function About() {
 
     return (
         <main className='relative about py-14' id="about-me" style={{color:theme.colors.text}}>
-            <TitleOverlay />
+            <PrimaryHeadingOverlay />
             
             <PrimaryHeading subText={t('in')} text={t('aboutMe')} />
         
