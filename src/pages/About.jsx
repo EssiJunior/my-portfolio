@@ -60,18 +60,15 @@ const About = memo(function About() {
           text={`_${t("ai")}`}
           style={{
             fontSize: "1.75rem",
-            width: "90%",
             margin: "2rem auto 0 auto",
-            fontStyle: "italic",
-            fontWeight: 600,
           }}
-          className={`${theme.global.subHeading}`}
+          className={`${theme.global.subHeading} font-space_mono italic !w-[90%]`}
         />
 
         <div className="parallax flex w-full h-screen box-border py-[1.125rem] px-[2%]">
           <div className={inTrans ? `box` : `box super-box`}>
             <img src={me1} alt="my image" loading="lazy" />
-            <span className={`bg-primary text-white`}>{t("a1")}</span>
+            <span className={`bg-primary text-white font-space_mono !px-4 !py-2`}>{t("a1")}</span>
           </div>
           {
             meImages.map((image, index) => (
@@ -82,7 +79,7 @@ const About = memo(function About() {
                 onMouseLeave={() => setInTrans(false)}
               >
                 <img src={image} alt="my image" loading="lazy" />
-                <span className={`bg-primary text-white`}>{t(`a${index + 2}`)}</span>
+                <span className={`bg-primary text-white font-space_mono !px-4 !py-2`}>{t(`a${index + 2}`)}</span>
               </div>
             ))
           }
@@ -90,10 +87,10 @@ const About = memo(function About() {
 
         <div className="footer-heading w-[90%] text-start my-8 mx-0">
           <Typography
-            className="gradient__text"
+            className="gradient__text font-space_mono italic"
             text={`_${t("newsMessage")}`}
           />
-          <div className="flex bg-red-400">
+          <div className="flex items-center gap-4">
             <Link to="/contact" className="pe-4">
               <Button
                 text={t("contactMe")}

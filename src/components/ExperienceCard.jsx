@@ -15,6 +15,7 @@ const ExperienceCard = memo(function ExperienceCard({ experience }) {
         contentStyle={{
             background: theme.experience.cardBackground,
             color: theme.experience.cardText,
+            fontFamily:"Space Mono"
         }}
         contentArrowStyle={{ borderRight: `7px solid  ${theme.experience.cardDot}` }}
         date={experience.date}
@@ -24,16 +25,16 @@ const ExperienceCard = memo(function ExperienceCard({ experience }) {
         }
         >
         <div>
-            <h3 className='text-[24px] font-bold'>{experience.title}</h3>
+            <h3 className='text-3xl font-extrabold whitespace-nowrap overflow-hidden text-ellipsis'>{experience.title}</h3>
             <p
-            className={`text-[16px] font-semibold`}
+            className={`text-[16px]  font-plus_jakarta_sans`}
             style={{ margin: 0, color:theme.experience.cardHeadingText }}
             >
             {experience.company_name}
             </p>
         </div>
 
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
+        <ul className='mt-5 list-disc ml-5 space-y-2 font-plus_jakarta_sans'>
             {experience.points.map((point, index) => (
             <li
                 key={`experience-point-${index}`}
