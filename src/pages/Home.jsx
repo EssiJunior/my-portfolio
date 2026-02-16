@@ -10,7 +10,7 @@ import About from "@/containers/About/About";
 import Experience from "@/containers/Experience";
 import Skills from "@/containers/Skills";
 import Education from "@/containers/Education";
-import Projects from "@/containers/Projects/Projects";
+import Projects from "@/containers/Projects";
 import ContactBloc from "@/containers/ContactBloc/ContactBloc";
 
 // CUSTOMIZED COMPONENTS

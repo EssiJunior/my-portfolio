@@ -23,7 +23,7 @@ const Projects = memo(function Projects() {
     const {t} = useTranslation();
 
     return (
-        <main id='projects' className="relative z-50 ">
+        <main id='projects' className="container relative z-50 ">
             <PrimaryHeadingOverlay />
             <LineOverlay />
 
