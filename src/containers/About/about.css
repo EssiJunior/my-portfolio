@@ -1,42 +1,6 @@
 .about {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-
     .detail {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        @media screen and (max-width: 990px) {
-            width: 100%;
-        }
-
-        .description {
-            width: 50%;
-
-            @media screen and (max-width: 990px) {
-                width: 70%;
-                height: 90%;
-            }
-        }
-
         .illustration {
-            width: 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            @media screen and (max-width: 990px) {
-
-                display: none;
-            }
-
             .gallery {
                 --g: 8px;
                 /* the gap */

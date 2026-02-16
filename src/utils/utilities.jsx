@@ -55,11 +55,11 @@ export const tech = [
         'icon': <SiFastapi size='20' />
     },
     {
-        'label': 'Next',
+        'label': 'Next.js',
         'icon': <SiNextdotjs size='20' />
     },
     {
-        'label': 'React',
+        'label': 'React.js',
         'icon': <FaReact size='20' />
     },
     {

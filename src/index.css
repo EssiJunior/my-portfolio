@@ -128,3 +128,21 @@ a,
     position: sticky;
     top: calc(var(--index) * 4rem);
 }
+
+.animation-moveRotate {
+    animation: 7s .3s ease-in-out infinite alternate moveRotate;
+}
+
+@keyframes moveRotate {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-10px) translateX(5px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+}
