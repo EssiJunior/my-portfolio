@@ -2,7 +2,7 @@ import { GitHub, LinkedIn, X } from "@mui/icons-material"
 import { RiReactjsLine } from "react-icons/ri";
 import { IoLogoElectron } from "react-icons/io5";
 import { BiLogoJavascript } from "react-icons/bi";
-import { SiMui, SiNextdotjs, SiPhp } from "react-icons/si";
+import { SiElectron, SiMui, SiNextdotjs, SiPhp } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { FaAndroid, FaAws, FaDocker, FaFigma, FaGit, FaJava, FaMarkdown, FaNodeJs, FaPython, FaReact, FaSass } from "react-icons/fa6";
 import { SiFastapi, SiJavascript, SiKotlin, SiMongodb, SiMysql, SiPostgresql, SiRedux, SiSwagger, SiTailwindcss } from "react-icons/si";
@@ -43,16 +43,8 @@ export const social = [
 
 export const tech = [
     {
-        'label': 'Python',
-        'icon': <FaPython size='20' />
-    },
-    {
         'label': 'JavaScript',
         'icon': <BiLogoJavascript size='20' />
-    },
-    {
-        'label': 'FastAPI',
-        'icon': <SiFastapi size='20' />
     },
     {
         'label': 'Next.js',
@@ -63,8 +55,20 @@ export const tech = [
         'icon': <FaReact size='20' />
     },
     {
+        'label': 'Python',
+        'icon': <FaPython size='20' />
+    },
+    {
+        'label': 'FastAPI',
+        'icon': <SiFastapi size='20' />
+    },
+    {
         'label': 'React Native',
         'icon': <RiReactjsLine size='20' />
+    },
+    {
+        'label': 'Electron.js',
+        'icon': <SiElectron size='20' />
     },
     {
         'label': 'PHP',

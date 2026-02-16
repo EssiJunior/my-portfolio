@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 // CONTAINERS
 import Navbar from './Navbar/Navbar'
-import Footer from './Footer/Footer'
+import Footer from './Footer'
 
 // COMPONENTS
 import ScrollToTop from '@/components/ScrollToTop'
