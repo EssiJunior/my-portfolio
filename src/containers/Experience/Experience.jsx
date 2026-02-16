@@ -43,7 +43,7 @@ const Experience = memo(function Experience() {
                 <div className="relative py-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                         <div>
-                            <div className="sticky top-20 flex justify-start items-start">
+                            <div className="sticky top-20 flex justify-start items-start -my-14">
                                 <div className="w-full h-full">
                                     <AnimationLottie animation={experience} width="90%" />
                                 </div>
