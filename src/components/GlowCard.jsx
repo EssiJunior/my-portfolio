@@ -5,10 +5,10 @@ import { useEffect } from 'react';
 import blur from '@/assets/utilities/blur-23.svg'
 
 // UTIL
-import { glowCardProps } from './prop-types';
+import { glowCardProps } from '@/utils/prop-types';
 
 // STYLE
-import '../styles/glow.css'
+import '@/styles/glow.css'
 import { useTheme } from 'styled-components';
 
 const GlowCard = ({ identifier, icon, date, title, company }) => {

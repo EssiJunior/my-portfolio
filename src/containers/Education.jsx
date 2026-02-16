@@ -4,18 +4,18 @@ import { useTranslation } from "react-i18next";
 import { GrCertificate } from "react-icons/gr";
 import { useTheme } from 'styled-components'
 
+// CUSTOMIZED COMPONENTS
+import SecondaryHeadingOverlay from "@/components/Overlays/SecondaryHeadingOverlay";
+import SecondaryHeading from "@/components/Headings/Secondary";
+import GlowCard from "@/components/GlowCard";
+
 // UTILS
 import AnimationLottie from "@/utils/animation-lottie";
-import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
 
 // ASSETS
-import bg from '@/assets/utilities/section.svg'
-import blur from '@/assets/utilities/blur-23.svg'
-
 import { education as educationAnimation } from "@/assets/lotties";
-import SecondaryHeadingOverlay from "../components/Overlays/SecondaryHeadingOverlay";
-import SecondaryHeading from "../components/Headings/Secondary";
+
 
 const Education = memo(function Education({ educationRef }) {
     const theme = useTheme()

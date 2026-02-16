@@ -9,7 +9,6 @@ import Button from "@/components/Button/Button";
 
 // UTILS
 import AnimationLottie from "@/utils/animation-lottie";
-import GlowCard from "@/utils/glow-card";
 import { themeProps } from "@/utils/prop-types";
 
 // COMPONENTS
@@ -22,6 +21,7 @@ import { experience } from "@/assets/lotties";
 
 // UTILS
 import { experiences_tech } from "@/utils";
+import GlowCard from "../components/GlowCard";
 
 const Experience = memo(function Experience() {
     const theme = useTheme()
