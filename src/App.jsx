@@ -11,8 +11,6 @@ import AnimatedRoutes from '@/containers/AnimatedRoutes';
 // UTILS
 import { darkTheme, lightTheme } from '@/utils/theme';
 import { BrowserRouter } from 'react-router-dom';
-import FollowMouse from './components/FollowMouse';
-
 
 function App() {
   const lenisRef = useRef(null)
@@ -36,7 +34,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <FollowMouse />
         <AnimatedRoutes toggle={toggleTheme} />
       </BrowserRouter>
 

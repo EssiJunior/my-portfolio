@@ -1,5 +1,5 @@
 // REACT COMPONENTS
-import { memo, useEffect, useRef } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 
 const FollowMouse = memo(function FollowMouse() {
     const circleRef = useRef(null);
@@ -7,11 +7,8 @@ const FollowMouse = memo(function FollowMouse() {
     const targetY = useRef(0);
     const currentX = useRef(0);
     const currentY = useRef(0);
-    const targetSize = useRef(30);
-    const currentSize = useRef(30);
+    const [circleState, setCircleState] = useState({ isAtQuarter: false, isAtHalf: false });
 
-    const MIN_SIZE = 30; // px at top
-    const MAX_SIZE = 120; // px at bottom
     const EASE = 0.2;
 
     useEffect(() => {
@@ -20,30 +17,25 @@ const FollowMouse = memo(function FollowMouse() {
             targetY.current = e.clientY;
         };
 
-        const updateTargetSize = () => {
-            const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-            const winH = window.innerHeight;
-            const maxScroll = Math.max(docHeight - winH, 1);
-            const progress = Math.min(window.scrollY / maxScroll, 1);
-            targetSize.current = MIN_SIZE + (MAX_SIZE - MIN_SIZE) * progress;
-        };
-
-        updateTargetSize();
         window.addEventListener('mousemove', handleMouseMove);
-        window.addEventListener('scroll', updateTargetSize, { passive: true });
-        window.addEventListener('resize', updateTargetSize);
 
         let rafId = 0;
         const animate = () => {
             currentX.current += (targetX.current - currentX.current) * EASE;
             currentY.current += (targetY.current - currentY.current) * EASE;
-            currentSize.current += (targetSize.current - currentSize.current) * EASE;
+
+            const viewportHeight = window.innerHeight;
+            const quarterHeight = viewportHeight * 0.25;
+            const halfHeight = viewportHeight * 0.5;
+
+            setCircleState({
+                isAtQuarter: currentY.current > quarterHeight,
+                isAtHalf: currentY.current > halfHeight,
+            });
 
             if (circleRef.current) {
-                const size = currentSize.current;
-                circleRef.current.style.width = `${size}px`;
-                circleRef.current.style.height = `${size}px`;
-                circleRef.current.style.transform = `translate(${currentX.current - size / 2}px, ${currentY.current - size / 2}px)`;
+                circleRef.current.style.left = `${currentX.current}px`;
+                circleRef.current.style.top = `${currentY.current}px`;
             }
 
             rafId = requestAnimationFrame(animate);
@@ -53,8 +45,6 @@ const FollowMouse = memo(function FollowMouse() {
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('scroll', updateTargetSize);
-            window.removeEventListener('resize', updateTargetSize);
             cancelAnimationFrame(rafId);
         };
     }, []);
@@ -62,8 +52,9 @@ const FollowMouse = memo(function FollowMouse() {
     return (
         <div
             ref={circleRef}
-            className='fixed z-[10000] pointer-events-none border border-secondary rounded-full '
-            style={{ width: `${MIN_SIZE}px`, height: `${MIN_SIZE}px`, transition: 'opacity 0.2s linear', }} />
+            id='mouse-circle'
+            className={`fixed z-[10000] pointer-events-none border border-secondary rounded-full w-8 h-8 left-0 top-0 -translate-x-1/2 -translate-y-1/2`}>
+                </div>
     );
 });
 
