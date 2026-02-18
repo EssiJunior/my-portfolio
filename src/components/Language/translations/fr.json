@@ -30,7 +30,7 @@
     "///Hero": "Cette section concerne la traduction dans le hero",
     "present": "Salut, je suis",
     "me": "Essi Junior",
-    "intro": "Je suis un développeur d'applications enthousiaste, instituteur IT et en Designeur Graphique (jun).",
+    "intro": "Je suis un développeur d'applications enthousiaste, instituteur IT et en Designeur Graphique (débutant).",
 
     "///About me": "Cette section concerne la traduction dans la section À propos de moi",
     "aboutMe": "À propos de moi",
@@ -125,10 +125,10 @@
     "newsMessage": "Voulez-vous créer un logiciel de haute qualité ?",
     "ai": "Je suis EssiJunior",
     "a1": "Je suis un développeur de logiciels full-stack web/mobile, et un ingénieur logiciel intermédiaire.",
-    "a2": "J'ai une expertise dans les langages de programmation Python, JavaScript, Java et Kotlin.",
+    "a2": "J'ai une expertise solides dans les frameworks React.js, Next.js, React Native, FastPI and Electron.js.",
     "a3": "Mon objectif est de travailler sur le plus grand nombre possible de projets logiciels à grande échelle.",
     "a4": "J'aime beaucoup concevoir des interfaces. Je m'efforce toujours de produire une bonne expérience utilisateur.",
-    "a5": "Tant que j'ai des mains, je peux coder n'importe quoi.",
+    "a5": "Ce qui compte le plus pour moi s'est la valeur ajouté.",
 
     "///Footer": "Cette section concerne la traduction dans le footer",
     "copyright": "Dévelopé avec amour par @EssiJunior",

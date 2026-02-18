@@ -30,7 +30,7 @@
     "///Hero": "This section concerns translation in the Hero section",
     "present": "Hi, i am",
     "me": "Essi Junior",
-    "intro": "I am an enthusiastic software developer, IT instructor and Graphic designer (jun).",
+    "intro": "I am an enthusiastic software developer, IT instructor and Graphic designer (beginner).",
 
     "///About me": "This section concerns translation in the About me section",
     "aboutMe": "About me",
@@ -125,10 +125,10 @@
     "newsMessage": "Do you want to create a high-quality software ?",
     "ai": "I am EssiJunior",
     "a1": "I am a full-stack web/mobile software developer, and an intermediate software engineer.",
-    "a2": "I have expertise in Python, JavaScript, Java and Kotlin programming languages.",
+    "a2": "I have strong expertise in React.js, Next.js, React Native, FastPI and Electron.js frameworks.",
     "a3": "My goal is to work on as many large-scale software projects as possible.",
     "a4": "I really love designing interfaces. I always work hard to produce a good user experience.",
-    "a5": "As long as I have hands, I can code anything.",
+    "a5": "What matters the most for me is to deliver value.",
 
     "///Footer": "This section concerns translation in the footer",
     "copyright": "Developed with love by @EssiJunior",
