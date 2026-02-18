@@ -103,7 +103,7 @@ const Hero = memo(function Hero() {
           </ScrollParallax>
           <ScrollParallax isAbsolutelyPositioned>
             <div
-              className={` absolute left-[3rem] -top-[0px] px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
+              className={` absolute left-[3rem] -top-0 px-1 py-1 bg-primary/30 backdrop-blur border ${theme.hero.glass} rounded-xl flex`}
             >
               {social.map((elt, i) => {
                 return (

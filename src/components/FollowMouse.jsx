@@ -53,7 +53,7 @@ const FollowMouse = memo(function FollowMouse() {
         <div
             ref={circleRef}
             id='mouse-circle'
-            className={`fixed z-[10000] pointer-events-none border border-secondary rounded-full w-8 h-8 left-0 top-0 -translate-x-1/2 -translate-y-1/2`}>
+            className={`max-md:hidden fixed z-[10000] pointer-events-none border border-secondary rounded-full w-8 h-8 left-0 top-0 -translate-x-1/2 -translate-y-1/2`}>
                 </div>
     );
 });
