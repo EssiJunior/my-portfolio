@@ -11,13 +11,12 @@ import SEO from "@/components/SEO/SEO";
 import ProjectCard from "@/components/ProjectCard";
 
 // UTILS
-import { textVariant } from "@/utils/motion";
 import { themeProps } from "@/utils/prop-types";
 import { baseURL, projects, realisations } from "@/utils";
 
 // STYLES
-import { styles } from "@/styles/styles";
 import PrimaryHeading from "../components/Headings/Primary";
+import { tests } from "../utils";
 
 const Projects = memo(function Projects() {
   const theme = useTheme();
@@ -40,33 +39,51 @@ const Projects = memo(function Projects() {
         type="projects"
         link={`${baseURL}/projects`}
       />
+      <aside>
 
-        <PrimaryHeading text={t("projects")} subText={t("p1")} once/>
+        <PrimaryHeading text={t("projects")} subText={t("p1")} once />
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} project={project} />
-          ))}
-        </VerticalTimeline>
-      </div>
+        <div className="mt-20 flex flex-col">
+          <VerticalTimeline>
+            {projects.map((project, index) => (
+              <ProjectCard key={`project-${index}`} project={project} />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </aside>
+      <aside>
+        <PrimaryHeading text={t("p3")} subText={t("p2")} className={"mt-24"} />
 
-      <motion.div variants={textVariant()} className="mt-24">
-        <p className={`${styles.sectionSubText} text-center ${theme.global.subHeading}`}>{t("p2")}</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>{t("p3")}.</h2>
-      </motion.div>
+        <div className="mt-20 flex flex-col">
+          <VerticalTimeline>
+            {realisations.map((project, index) => (
+              <ProjectCard
+                key={`project-${index}`}
+                project={project}
+                theme={theme}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </aside>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {realisations.map((project, index) => (
-            <ProjectCard
-              key={`project-${index}`}
-              project={project}
-              theme={theme}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <aside>
+        <PrimaryHeading text={t("p4")} subText={t("p5")} className={"mt-24"} />
+
+
+        <div className="mt-20 flex flex-col">
+          <VerticalTimeline>
+            {tests.map((project, index) => (
+              <ProjectCard
+                key={`project-${index}`}
+                project={project}
+                theme={theme}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </aside>
+
     </main>
   );
 })

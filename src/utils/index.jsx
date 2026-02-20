@@ -13,7 +13,9 @@ import {
   syneduc,
   studentResultSystem,
   evShine,
-  ednShine
+  ednShine,
+  cravies,
+  gpt3
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard,  FaNode, FaPhp, FaReact } from "react-icons/fa6";
 import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiFramer, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
@@ -36,6 +38,10 @@ const toolsLibrary = {
   framer: {
     icon: <SiFramer size={30}/>,
     label: "Framer Motion"
+  },
+  gsap: {
+    icon: null,
+    label: "GSAP"
   },
   aceternity: {
     icon: null,
@@ -652,6 +658,62 @@ const realisations = [
   // },
 ];
 
+
+const tests = [
+  {
+    id: "cravies",
+    name: "Cravies",
+    description:
+      "I was given this 2 pages app as a test tobe done in 2 days. I achieved the work in 20 hrs. Finally I didn't obtained the job, maybe someone did better. Nevertheles, this is an experience I loved.",
+    tools: [
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.vercel,
+      toolsLibrary.git,
+      toolsLibrary.github
+    ],
+    role: "FrontEnd Developer",
+    code: "",
+    demo: "https://nepj-cravies.vercel.app/",
+    image: cravies,
+  },
+  // {
+  //   id: "iphone-15pr0",
+  //   name: "iPhone 15 pro",
+  //   description:
+  //     "I worked step by step on a @jamastery tutorial on YouTube, which was my first ever Next.js application. I studied the difference between React and Next.js practically.",
+  //   tools: [
+  //     toolsLibrary.react,
+  //     toolsLibrary.next,
+  //     toolsLibrary.tailwind,
+  //     toolsLibrary.gsap,
+  //     toolsLibrary.vercel,
+  //     toolsLibrary.git,
+  //     toolsLibrary.github
+  //   ],
+  //   role: "FrontEnd Developer",
+  //   code: "",
+  //   demo: "https://apple-website-pink.vercel.app/",
+  //   image: gpt3,
+  // },
+  {
+    id: "gpt-3",
+    name: "GPT-3",
+    description:
+      "I worked step by step on a @jamastery tutorial on YouTube, understanding how each pat of the code is done. Above that, I incorporated the Code bespratices mentality that @jsmastery teaches. Implementing this tutorial was a crucial step in my career, it's why it is here.",
+    tools: [
+      toolsLibrary.react,
+      toolsLibrary.vercel,
+      toolsLibrary.git,
+      toolsLibrary.github
+    ],
+    role: "FrontEnd Developer",
+    code: "",
+    demo: "https://essijunior-gpt-3.vercel.app/",
+    image: gpt3,
+  },
+];
+
 const myImage =
   "https://z-p3-scontent.fnsi1-2.fna.fbcdn.net/v/t39.30808-6/422269500_1743037766183745_2393162712879109188_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE8hoVEqHlImYi7FT0iVx45OT-p4lnyOOs5P6niWfI4659BJzi1gBbU_JCiV4ybHxSXZXM5JRoZTTp8LUxNqm7f&_nc_ohc=hyuVx3kqXY8AX8PNgdR&_nc_zt=23&_nc_ht=z-p3-scontent.fnsi1-2.fna&oh=00_AfCnaQc0K-0otOsUXUzNpjR1UcJPYKza6QbIlllvpLTcYQ&oe=660769FB";
 
@@ -665,4 +727,4 @@ const yearsOfExp = Number(
 ).toFixed(1)
 );
 
-export { services, experiences_tech, experiences, projects, realisations, myImage, baseURL, yearsOfExp, toolsLibrary };
+export { services, experiences_tech, experiences, projects, realisations, tests, myImage, baseURL, yearsOfExp, toolsLibrary };

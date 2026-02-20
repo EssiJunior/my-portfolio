@@ -7,7 +7,7 @@ import { containerVariants, itemVariants, subTitleVariants } from '../../utils/a
 // STYLES
 import { styles } from "@/styles/styles";
 
-const PrimaryHeading = ({ subText, text, once = false }) => {
+const PrimaryHeading = ({ subText, text, className, once = false }) => {
     const theme = useTheme()
 
     return (
@@ -16,7 +16,7 @@ const PrimaryHeading = ({ subText, text, once = false }) => {
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className="my-10">
+                className={`${className} my-10`}>
 
                 <motion.p
                     initial="hidden"
@@ -34,7 +34,7 @@ const PrimaryHeading = ({ subText, text, once = false }) => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={containerVariants}
-                className="my-10">
+                className={`${className} my-10`}>
 
                 <motion.p
                     initial="hidden"
