@@ -22,6 +22,7 @@ import { memo } from "react";
 import { yearsOfExp } from "../../utils";
 import { Tooltip } from "@mui/material";
 import FloatingCard from "../../components/FloatingCard";
+import PingIndicator from "../../components/PingIndicator";
 
 const Hero = memo(function Hero() {
   const theme = useTheme();
@@ -80,7 +81,7 @@ const Hero = memo(function Hero() {
             title="Hero image"
             width="797"
             height="797"
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
             style={{
               contentVisibility: "auto",
@@ -123,10 +124,7 @@ const Hero = memo(function Hero() {
           <FloatingCard>
             <p className="relative p-1">
               <b>{yearsOfExp}</b> {t("yearsOfExp")}
-              <span className="absolute -top-2 -right-2 inline-flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75" />
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-tertiary" />
-              </span>
+              <PingIndicator/>
             </p>
           </FloatingCard>
         </div>
