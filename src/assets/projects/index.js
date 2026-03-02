@@ -15,6 +15,7 @@ import syneduc from "./syneduc.webp";
 import cravies from "./cravies.webp";
 import gpt3 from "./gpt3.webp";
 import studentResultSystem from "./studentResultSystem.webp";
+import expertLink from "./expert-link.webp";
 
 export {
     flikart,
@@ -33,5 +34,6 @@ export {
     syneduc,
     cravies,
     gpt3,
-    studentResultSystem
+    studentResultSystem,
+    expertLink
 };
