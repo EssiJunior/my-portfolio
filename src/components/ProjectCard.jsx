@@ -1,15 +1,13 @@
 // REACT COMPONENTS
 import { memo } from "react";
-import { Tooltip } from "@mui/material";
 import { useTheme } from "styled-components";
-import { motion } from "framer-motion";
 
 // PLUGIN
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 // UTILITIES
 import { projectCardProps } from "../utils/prop-types";
-import FloatingCard from "./FloatingCard";
+import PingIndicator from "./PingIndicator";
 
 const ProjectCard = memo(function ProjectCard({ project }) {
   const theme = useTheme();
@@ -18,7 +16,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
       contentStyle={{
         background: theme.experience.cardBackground,
         color: theme.experience.cardText,
-        position: "relative"
+        position: "relative",
       }}
       contentArrowStyle={{
         borderRight: `7px solid  ${theme.experience.cardDot}`,
@@ -26,15 +24,23 @@ const ProjectCard = memo(function ProjectCard({ project }) {
       date={project.role}
       iconStyle={{ background: theme.experience.cardDot }}
       icon={<div className="flex justify-center items-center w-3/5 h-3/5" />}
-
     >
       <div className="relative">
         {project.image !== "" && (
-          <img src={project.image} alt="" className="my-10 w-4/5 m-auto" loading="lazy" />
+          <img
+            src={project.image}
+            alt=""
+            className="my-10 w-4/5 m-auto"
+            loading="lazy"
+          />
         )}
-        <h3 className="text-[24px] font-bold">{project.name}</h3>
+        <h3 className="text-[24px] font-bold relative w-fit">
+          {project.name}
+          {project.inProgress && (
+            <PingIndicator className="absolute top-0 -right-3" />
+          )}
+        </h3>
         <p className={`text-[16px]`}>{project.description}</p>
-
       </div>
 
       <div className="mt-5 flex gap-2 items-center flex-wrap">
@@ -57,7 +63,8 @@ const ProjectCard = memo(function ProjectCard({ project }) {
 
               <span
                 className="absolute -top-1 left-1/2 -translate-x-1/2 translate-y-full bg-black text-white text-[12px] px-2 py-1 rounded pointer-events-none opacity-0
-              transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-100">
+              transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-100"
+              >
                 {tool?.label}
               </span>
             </div>
@@ -91,7 +98,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
       </div>
     </VerticalTimelineElement>
   );
-})
+});
 
 ProjectCard.propTypes = projectCardProps;
 export default ProjectCard;

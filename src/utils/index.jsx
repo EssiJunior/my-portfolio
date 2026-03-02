@@ -345,6 +345,7 @@ const projects = [
     code: "https://github.com/EssiJunior/my-portfolio.git",
     demo: "https://essijunior.com",
     image: portfolio,
+    inProgress: true,
   },
   {
     id: 2,
@@ -364,6 +365,7 @@ const projects = [
     code: "",
     demo: "https://expert-link-clwm.vercel.app/",
     image: expertLink,
+    inProgress: true,
   },
   {
     id: 3,
@@ -429,6 +431,7 @@ const realisations = [
     code: "",
     demo: "https://éditions-shine-ministries.com/",
     image: ednShine,
+    inProgress: true,
   },
   {
     id: "ev-shine",
@@ -448,6 +451,7 @@ const realisations = [
     code: "",
     demo: "https://evangeliste-shine-ministries.com/",
     image: evShine,
+    inProgress: true,
   },
   {
     id: "vases-d-honneurs",
