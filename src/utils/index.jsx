@@ -16,7 +16,8 @@ import {
   ednShine,
   cravies,
   gpt3,
-  expertLink
+  expertLink,
+  pythonCameroon
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard,  FaNode, FaPhp, FaReact } from "react-icons/fa6";
 import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiFramer, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
@@ -685,6 +686,22 @@ const realisations = [
 
 const tests = [
   {
+    id: "pythonCameroon",
+    name: "Python Cameroon",
+    description:
+      "In 2025, I had the chance to join Python Cameroon. I'm actually UI/UX and Graphic Designer there. I visitted the site, it was very nice, with cool animations. I contributted to provide a better UI/UX.",
+    tools: [
+      toolsLibrary.react,
+      toolsLibrary.tailwind,
+      toolsLibrary.git,
+      toolsLibrary.github
+    ],
+    role: "FrontEnd Developer",
+    code: "",
+    demo: "https://pythoncameroon.org/",
+    image: pythonCameroon,
+  },
+  {
     id: "cravies",
     name: "Cravies",
     description:
@@ -701,25 +718,6 @@ const tests = [
     demo: "https://nepj-cravies.vercel.app/",
     image: cravies,
   },
-  // {
-  //   id: "iphone-15pr0",
-  //   name: "iPhone 15 pro",
-  //   description:
-  //     "I worked step by step on a @jamastery tutorial on YouTube, which was my first ever Next.js application. I studied the difference between React and Next.js practically.",
-  //   tools: [
-  //     toolsLibrary.react,
-  //     toolsLibrary.next,
-  //     toolsLibrary.tailwind,
-  //     toolsLibrary.gsap,
-  //     toolsLibrary.vercel,
-  //     toolsLibrary.git,
-  //     toolsLibrary.github
-  //   ],
-  //   role: "FrontEnd Developer",
-  //   code: "",
-  //   demo: "https://apple-website-pink.vercel.app/",
-  //   image: gpt3,
-  // },
   {
     id: "gpt-3",
     name: "GPT-3",
