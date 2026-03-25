@@ -1,6 +1,5 @@
 // REACT COMPONENTS IMPORTS
 import { memo } from "react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { useTheme } from "styled-components";

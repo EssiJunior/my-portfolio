@@ -43,16 +43,16 @@ const ProjectCard = memo(function ProjectCard({ project }) {
         <p className={`text-[16px]`}>{project.description}</p>
       </div>
 
-      <div className="mt-5 flex gap-2 items-center flex-wrap">
+      <div className="mt-5 flex gap-2  flex-wrap">
         {project.tools.map((tool, index) =>
           tool?.icon === null ? (
-            <span
+            <code
               key={`project-tool-${index}`}
-              className={`hover:scale-105 transition-all duration-300 ease-in-out cursor-crosshair text-white-100 text-[15px] px-2 mx-2 tracking-wider ${theme.experience.skillDot} flex items-center justify-center rounded-xl`}
+              className={`font-space_mono hover:scale-105 transition-all duration-300 ease-in-out cursor-crosshair text-[15px] px-2 ${theme.experience.skillDot} flex items-center rounded-xl`}
               style={{ color: theme.experience.cardHeadingText }}
             >
               {tool?.label}
-            </span>
+            </code>
           ) : (
             <div
               key={`project-tool-${index}`}
@@ -73,25 +73,25 @@ const ProjectCard = memo(function ProjectCard({ project }) {
       </div>
 
       <div
-        className="demo mt-4 font-space_mono"
+        className="flex items-center gap-1 mt-10 font-space_mono"
         style={project.demo === "" ? { display: "none" } : {}}
       >
         Demo:{" "}
         <a
           href={project.demo}
-          className={`${theme.experience.links} text-[15px]`}
+          className={`${theme.experience.links} text-[15px] whitespace-nowrap overflow-hidden text-ellipsis`}
         >
           {project.demo}
         </a>
       </div>
       <div
-        className="demo mt-2 font-space_mono"
+        className="flex gap-1 mt-2 font-space_mono"
         style={project.code === "" ? { display: "none" } : {}}
       >
         Code:{" "}
         <a
           href={project.code}
-          className={`${theme.experience.links} text-[15px]`}
+          className={`${theme.experience.links} text-[15px] whitespace-nowrap overflow-hidden text-ellipsis`}
         >
           {project.code}
         </a>

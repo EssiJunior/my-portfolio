@@ -16,7 +16,6 @@
     "lang": "fr",
     "language": "Langue",
     "check": "En cliquant sur Créer un compte, je reconnais avoir lu et accepté les conditions d'utilisation et la politique de confidentialité.",
-
     "///Navbar": "Cette section concerne la traduction dans la navbar",
     "home": "Accueil",
     "about": "À propos",
@@ -26,17 +25,14 @@
     "education": "Education",
     "projects": "Projets",
     "resume": "CV",
-
     "///Hero": "Cette section concerne la traduction dans le hero",
     "present": "Salut, je suis",
     "me": "Essi Junior",
     "intro": "Je suis un développeur d'applications enthousiaste, instituteur IT et en Designeur Graphique (débutant).",
-
     "///About me": "Cette section concerne la traduction dans la section À propos de moi",
     "aboutMe": "À propos de moi",
     "in": "Qui suis-je ?",
     "detail": "Je suis NDANG ESSI Pierre Junior. Je suis un développeur de logiciels professionnel et enthousiaste, un instructeur IT et un graphiste débutant. J'aime apprendre et explorer de nouvelles technologies et je suis passionné par les belles interfaces. Je suis très compétitif dans les projets, mon objectif principal est de travailler sur un grand nombre d'applications de haute qualité. Je suis disponible pour tout type d'opportunité d'emploi qui correspond à mes compétences et intérêts.",
-
     "///Expériences": "Cette section concerne la traduction dans la section Expérience",
     "e1": "CE QUE J'AI FAIT JUSQU'À PRÉSENT",
     "e2": "Expériences professionnelles.",
@@ -51,7 +47,6 @@
     "itIns": "INSTRUCTEUR IT",
     "gDes": "DESIGNEUR GRAPHIQUE",
     "yearsOfExp": "années d'exp",
-
     "///Experience Points": "Cette section contient tous les points de la section expérience",
     "exp.graphic_designer.point1": "Création de flyers avec Canva et PhotoShop pour des petites entreprises, et à titre bénévole.",
     "exp.graphic_designer.point2": "Création de logos pour de nouvelles entreprises, et à titre bénévole.",
@@ -76,25 +71,21 @@
     "exp.software_engineer.point2": "Collaboration avec des équipes interfonctionnelles incluant des designers, des chefs de produit et d'autres développeurs pour créer des produits de haute qualité.",
     "exp.software_engineer.point3": "Participation aux revues de code et fourniture de retours constructifs aux autres développeurs.",
     "exp.software_engineer.point4": "Production d'une documentation de haute qualité avec Microsoft Office et des logiciels de modélisation UML.",
-
     "///Projets": "Cette section concerne la traduction dans la section Expérience",
     "p1": "Projets sur lesquels je travaille",
     "p2": "Projets publics où j'ai intervenu ",
     "p3": "Réalisations",
     "p4": "Autres",
-    "p5": "Quelques tests pratiques qui m'ont beaucoup appris",
-
+    "p5": "Projets communautaires / Tests qui m'ont beaucoup appris",
     "///Skills": "Cette section concerne la traduction dans la section Compétences",
     "sk": "Compétences",
     "skSub": "Outils que j'utilise activement",
-
     "///Education": "Cette section concerne la traduction dans la section Education",
     "ed": "éducation",
     "uy1": "Université de Yaoundé 1",
     "gbhsy": "Lycée BIlingue de Yaoundé",
     "ud": "Licence - Système d'information et génie logiciel",
     "m1": "Master I - Système d'information et génie logiciel",
-
     "///Projects": "Cette section concerne la traduction dans la section des projects",
     "prs": "projets",
     "pr": "projet",
@@ -108,21 +99,17 @@
     "swe": "Génie logiciel",
     "rnd": "Dévelopeur React native",
     "add": "Dévelopeur Android",
-
     "///About": "Cette section concerne la traduction dans la section des projects",
     "allA": "Tout savoir sur moi",
-
     "///Resume": "Cette section concerne la traduction dans la section CV",
     "download": "Mes travaux",
     "r1": "Détails de mon expérience professionnelle",
-
     "///Contact": "Cette section concerne la traduction dans la section Nous Contacter",
     "contactMe": "Me contacter",
     "callMe": "M'appeler",
     "send": "Envoyer",
     "sending": "Envoi...",
     "sendS": "Envoi de votre message reussi!",
-
     "///About page": "This section concerns translation in the About page",
     "newsMessage": "Voulez-vous créer un logiciel de haute qualité ?",
     "ai": "Je suis EssiJunior",
@@ -131,11 +118,9 @@
     "a3": "Mon objectif est de travailler sur le plus grand nombre possible de projets logiciels à grande échelle.",
     "a4": "J'aime beaucoup concevoir des interfaces. Je m'efforce toujours de produire une bonne expérience utilisateur.",
     "a5": "Ce qui compte le plus pour moi s'est la valeur ajouté.",
-
     "///Footer": "Cette section concerne la traduction dans le footer",
     "copyright": "Dévelopé avec amour par @EssiJunior",
     "links": "Liens rapides",
     "help": "Aide",
     "shops": "Boutiques"
-
 }

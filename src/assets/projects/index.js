@@ -17,6 +17,7 @@ import gpt3 from "./gpt3.webp";
 import pythonCameroon from "./pythoncameroon.webp";
 import studentResultSystem from "./studentResultSystem.webp";
 import expertLink from "./expert-link.webp";
+import photoJourneyLanding from "./photo-journey-landing.webp";
 
 export {
     pythonCameroon,
@@ -37,5 +38,6 @@ export {
     cravies,
     gpt3,
     studentResultSystem,
-    expertLink
+    expertLink,
+    photoJourneyLanding
 };

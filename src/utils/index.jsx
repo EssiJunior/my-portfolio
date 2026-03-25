@@ -3,10 +3,7 @@ import {
   flikart,
   flytravel,
   portfolio,
-  // recho,
   colorfol,
-  // eCommerce,
-  // realEstate,
   scoreify,
   vasesDhonneur,
   threeR,
@@ -17,13 +14,13 @@ import {
   cravies,
   gpt3,
   expertLink,
-  pythonCameroon
+  pythonCameroon,
+  photoJourneyLanding
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard,  FaNode, FaPhp, FaReact } from "react-icons/fa6";
-import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiFramer, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
+import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
 import { MdEngineering } from "react-icons/md";
 
-// Tech tools with icons and labels
 const toolsLibrary = {
   react: {
     icon: <SiReact size={30}/>, 
@@ -38,7 +35,7 @@ const toolsLibrary = {
     label: "Tailwind CSS"
   },
   framer: {
-    icon: <SiFramer size={30}/>,
+    icon: null,
     label: "Framer Motion"
   },
   gsap: {
@@ -168,6 +165,14 @@ const toolsLibrary = {
   sass: {
     icon: <SiSass size={30}/>,
     label: "SASS"
+  },
+  playwright:{
+    icon: null,
+    label: "Playwright"
+  },
+  backstopJS:{
+    icon: null,
+    label: "BackstopJS"
   }
 };
 
@@ -587,100 +592,6 @@ const realisations = [
     demo: "",
     image: "",
   },
-  // {
-  //   id: "e-c",
-  //   name: "Car components e-commerce",
-  //   description:
-  //     "I and my team built an car items e-commerce web application. We used ReactJS, TailwindCSS, Material UI, and other npm libraries for the UI. We utilized Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an SQL type, PostgreSQL.",
-  //   tools: [
-  //     toolsLibrary.react,
-  //     "Tailwind CSS",
-  //     "Material UI",
-  //     "Django",
-  //     "Django-rest",
-  //     "Swagger UI",
-  //     "PostgreSQL",
-  //     "AWS Amplify",
-  //     "AWS Apprunner",
-  //     "Git",
-  //     "Github",
-  //   ],
-  //   role: "FrontEnd Developer and software engineer",
-  //   code: "",
-  //   demo: "",
-  //   image: eCommerce,
-  // },
-  // {
-  //   id: "r-e",
-  //   name: "Real Estate",
-  //   description:
-  //     "I developed a fullstack real estate web app. I used FastAPI, Python, Pymongo and related packages to develop the API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
-  //   tools: [
-  //     toolsLibrary.react,
-  //     "Material UI",
-  //     "Redux",
-  //     "FastAPI",
-  //     "MongoDB",
-  //     "Git",
-  //     "Github",
-  //   ],
-  //   code: "",
-  //   role: "Fullstack Developer",
-  //   demo: "",
-  //   image: realEstate,
-  // },
-  // {
-  //   id: "b-t",
-  //   name: "Bus tickets",
-  //   description:
-  //     "I developed a fullstack bus tickets reservation web and desktop app. I used FastAPI, Python, Pymongo and related packages to develop the web and desktop API. I utilized ReactJS, Redux toolkit, Material UI, Bootstrap and other npm libraries for the web UI, and ElectronJS to develop the desktop UI. The database was a NoSQL type, MongoDB. i used Pymongo to bear it.",
-  //   tools: [
-  //     toolsLibrary.react,
-  //     "Material UI",
-  //     "Redux",
-  //     "FastAPI",
-  //     "MongoDB",
-  //     "ElectronJS",
-  //     "Git",
-  //     "Github",
-  //   ],
-  //   code: "",
-  //   role: "Fullstack Developer",
-  //   demo: "",
-  //   image: "",
-  // },
-  // {
-  //   id: "recho",
-  //   name: "Recho",
-  //   description:
-  //     "I and a friend developed a web app for Echographic consultations. We created the UI using ReactJS, Material UI, TailwindCSS, Preline and related npm libraries. We developed the rest APIs with Node.JS, express.JS, nodemailer and related npm libraries. The database was a NoSQL type, MongoDB. We used Mongoose to bear it.",
-  //   tools: [
-  //     toolsLibrary.react,
-  //     "Tailwind CSS",
-  //     "Material UI",
-  //     "Preline",
-  //     "node",
-  //     "Express",
-  //     "MongoDB",
-  //     "Git",
-  //     "Github",
-  //   ],
-  //   role: "Fullstack Developer",
-  //   code: "",
-  //   demo: "",
-  //   image: recho,
-  // },
-  // {
-  //   id: "pharma",
-  //   name: "Pharma",
-  //   description:
-  //     "I developed the beta version of an android mobile app which manages, organizes and presents medical drugs to users. I used Kotlin programming language to develop the backend. I utilized Android XML, Material Design, and related packages to develop the android UI. The database was an SQL type, SQLite.",
-  //   tools: ["Android", "Kotlin", "Material design", "XML", "SQLite"],
-  //   code: "",
-  //   demo: "",
-  //   image: "",
-  //   role: "Android Developer",
-  // },
 ];
 
 
@@ -702,10 +613,30 @@ const tests = [
     image: pythonCameroon,
   },
   {
+    id: "photoJourneyLanding",
+    name: "Photo Journey Landing Page",
+    description:
+      "I developed a landing page as practical test for a job. Here was the first time to implement regression and End to End (E2E) testing.",
+    tools: [
+      toolsLibrary.react,
+      toolsLibrary.next,
+      toolsLibrary.tailwind,
+      toolsLibrary.playwright,
+      toolsLibrary.backstopJS,
+      toolsLibrary.git,
+      toolsLibrary.github,
+      toolsLibrary.vercel
+    ],
+    role: "FrontEnd Developer",
+    code: "https://github.com/EssiJunior/photo-journey-landing",
+    demo: "https://photo-journey-landing.vercel.app/",
+    image: photoJourneyLanding,
+  },
+  {
     id: "cravies",
     name: "Cravies",
     description:
-      "I was given this 2 pages app as a test tobe done in 2 days. I achieved the work in 20 hrs. Finally I didn't obtained the job, maybe someone did better. Nevertheles, this is an experience I loved.",
+      "I was given this 2 pages app as a recruitment test, to done in 2 days. I achieved the work in 20 hrs. This is an experience I loved.",
     tools: [
       toolsLibrary.react,
       toolsLibrary.tailwind,

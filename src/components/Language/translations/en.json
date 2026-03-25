@@ -16,7 +16,6 @@
     "lang": "en",
     "language": "Language",
     "check": "By clicking Create account, I agree that I have read and accepted the Terms of Use and Privacy Policy.",
-
     "///Navbar": "This section concerns translation in the navbar",
     "home": "Home",
     "about": "About",
@@ -26,17 +25,14 @@
     "education": "Education",
     "projects": "Projects",
     "resume": "Resume",
-
     "///Hero": "This section concerns translation in the Hero section",
     "present": "Hi, i am",
     "me": "Essi Junior",
     "intro": "I am an enthusiastic software developer, IT instructor and Graphic designer (beginner).",
-
     "///About me": "This section concerns translation in the About me section",
     "aboutMe": "About me",
     "in": "Who am i ?",
     "detail": "I am NDANG ESSI Pierre Junior. I am a professional and enthusiastic software developer, IT instructor and beginner graphic designer. I love to learn and explore new technologies and am passionate about nice interfaces. I am highly competitive in projects, my main objective is to work in a large number of high quality applications. I am available for any kind of job opportunity that suits my skills and interests.",
-
     "///Experience": "This section concerns translation in the Experience section",
     "e1": "WHAT I HAVE DONE SO FAR",
     "e2": "Work Experience.",
@@ -51,7 +47,6 @@
     "itIns": "IT INSTRUCTOR",
     "gDes": "GRAPHIC DESIGNER",
     "yearsOfExp": "years of exp",
-
     "///Experience Points": "This section contains all the experience section bullet points",
     "exp.graphic_designer.point1": "Creating Canva and PhotoShop Flyers for small businesses, and as benevolent.",
     "exp.graphic_designer.point2": "Creating logos for new businesses, and as benevolent.",
@@ -76,25 +71,21 @@
     "exp.software_engineer.point2": "Collaborating with cross-functional teams including designers, product manager, and other developers to create high-quality products.",
     "exp.software_engineer.point3": "Participating in code reviews and providing constructive feedback to other developers.",
     "exp.software_engineer.point4": "Producing high quality documentation with Microsoft office and UML modeling softwares.",
-
     "///Projets": "Cette section concerne la traduction dans la section Expérience",
     "p1": "Projects I am working on",
     "p2": "Public projects where I intervened ",
     "p3": "Realisations",
     "p4": "Others",
-    "p5": "Some practical tests which taught me a lot",
-    
+    "p5": "Community projects / tests that taught me a lot",
     "///Skills": "This section concerns translation in the Skills section",
     "sk": "Skills",
     "skSub": "Tools I'm hard using",
-
     "///Education": "This section concerns translation in the Education section",
     "ed": "education",
     "uy1": "University of Yaounde 1",
     "gbhsy": "Government Bilingual High School Yaounde",
     "ud": "Bachelor degree - Information system and software engineering",
     "m1": "Master I - Information system and software engineering",
-
     "///Projects": "This section concerns translation in the Projects section",
     "prs": "projects",
     "pr": "project",
@@ -108,21 +99,17 @@
     "swe": "Software engineer",
     "rnd": "React native Developer",
     "add": "Android Developer",
-
     "///About": "Cette section concerne la traduction dans la section des projects",
     "allA": "All to know about me",
-
     "///Resume": "This section concerns translation in the Resume section",
     "download": "My work",
     "r1": "Details of my work experience",
-
     "///Contact": "This section concerns translation in the Contact Us section",
     "contactMe": "Contact me",
     "callMe": "Call me",
     "send": "Send",
     "sending": "Sending",
     "sendS": "Successfully sent us your message!",
-
     "///About page": "This section concerns translation in the About page",
     "newsMessage": "Do you want to create a high-quality software ?",
     "ai": "I am EssiJunior",
@@ -131,7 +118,6 @@
     "a3": "My goal is to work on as many large-scale software projects as possible.",
     "a4": "I really love designing interfaces. I always work hard to produce a good user experience.",
     "a5": "What matters the most for me is to deliver value.",
-
     "///Footer": "This section concerns translation in the footer",
     "copyright": "Developed with love by @EssiJunior",
     "links": "Quick links",
