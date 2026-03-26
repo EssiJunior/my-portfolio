@@ -38,8 +38,9 @@ const Projects = memo(function Projects() {
         type="projects"
         link={`${baseURL}/projects`}
       />
-      <aside>
 
+      {/* Projects */}
+      <aside>
         <PrimaryHeading text={t("projects")} subText={t("p1")} once />
 
         <div className="mt-20 flex flex-col">
@@ -50,6 +51,8 @@ const Projects = memo(function Projects() {
           </VerticalTimeline>
         </div>
       </aside>
+
+      {/* Realisations */}
       <aside>
         <PrimaryHeading text={t("p3")} subText={t("p2")} className={"mt-24"} />
 
