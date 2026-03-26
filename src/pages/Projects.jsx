@@ -69,9 +69,9 @@ const Projects = memo(function Projects() {
         </div>
       </aside>
 
+      {/* Others (Community & Tests) */}
       <aside>
         <PrimaryHeading text={t("p4")} subText={t("p5")} className={"mt-24"} />
-
 
         <div className="mt-20 flex flex-col">
           <VerticalTimeline>
