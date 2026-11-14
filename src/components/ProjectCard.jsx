@@ -80,6 +80,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
         <a
           href={project.demo}
           className={`${theme.experience.links} text-[15px] whitespace-nowrap overflow-hidden text-ellipsis`}
+          target="_blank"
         >
           {project.demo}
         </a>
@@ -92,6 +93,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
         <a
           href={project.code}
           className={`${theme.experience.links} text-[15px] whitespace-nowrap overflow-hidden text-ellipsis`}
+          target="_blank"
         >
           {project.code}
         </a>
