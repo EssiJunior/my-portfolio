@@ -18,6 +18,7 @@ import pythonCameroon from "./pythoncameroon.webp";
 import studentResultSystem from "./studentResultSystem.webp";
 import expertLink from "./expert-link.webp";
 import photoJourneyLanding from "./photo-journey-landing.webp";
+import tebunahTraining from "./tebunah-training.webp";
 
 export {
     pythonCameroon,
@@ -39,5 +40,6 @@ export {
     gpt3,
     studentResultSystem,
     expertLink,
-    photoJourneyLanding
+    photoJourneyLanding,
+    tebunahTraining
 };

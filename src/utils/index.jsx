@@ -15,7 +15,8 @@ import {
   gpt3,
   expertLink,
   pythonCameroon,
-  photoJourneyLanding
+  photoJourneyLanding,
+  tebunahTraining
 } from "../assets/projects";
 import { FaPython, FaPersonChalkboard,  FaNode, FaPhp, FaReact } from "react-icons/fa6";
 import { SiJavascript, SiNextdotjs, SiReact, SiGit, SiGithub, SiSwagger, SiThreedotjs, SiTailwindcss, SiReacthookform, SiExpress, SiFastapi, SiDjango, SiLaravel, SiMongodb, SiMysql, SiMongoose, SiRedux, SiI18Next, SiGitlab, SiVercel, SiCpanel, SiGithubactions, SiOvh, SiFilezilla, SiSass, SiElectron } from "react-icons/si";
@@ -355,6 +356,26 @@ const projects = [
   },
   {
     id: 2,
+    name: "Tebunah Training",
+    description:
+      "This is Tebunah Training, a platform for professional training. I used NextJS, TailwindCSS, Framer motion, ThreeJS, and other npm libraries for the UI. I utilised FastAPI, Python, and other libraries to develop and document Rest APIs. I deployed the site on Vercel which has a standalone CI/CD pipeline.",
+    tools: [
+      toolsLibrary.next,
+      toolsLibrary.tailwind,
+      toolsLibrary.framer,
+      toolsLibrary.vercel,
+      toolsLibrary.fastapi,
+      toolsLibrary.git,
+      toolsLibrary.github,
+    ],
+    role: "Fullstack Developer",
+    code: "",
+    demo: "https://tebunah-training.vercel.app/",
+    image: tebunahTraining,
+    inProgress: true,
+  },
+  {
+    id: 3,
     name: "Expert Link",
     description:
       "This is ExpertLink, a professional platform whose main objective is to connect the experts of the Cameroon Life Word Mission. I used NextJS, TailwindCSS, Framer motion, ThreeJS, and other npm libraries for the UI. I utilised FastAPI, Python, and other libraries to develop and document Rest APIs. I deployed the site on Vercel which has a standalone CI/CD pipeline.",
@@ -374,7 +395,7 @@ const projects = [
     inProgress: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Scoreify",
     description:
       "I build the web app that manages exams results. I use ReactJS, TailwindCSS, Framer Motion, React Hook Form, and other npm libraries for the UI. I use FastAPI, Python, and other libraries to develop and document Rest APIs. The database is a NoSQL type, MongoDB. I use pymongo to bear it. I deployed the site on CPanel with Github actions bearing the CI/CD pipeline.",
@@ -398,7 +419,7 @@ const projects = [
     image: scoreify,
   },
   {
-    id: 4,
+    id: 5,
     name: "Reduce-Reuse-Recycle",
     description:
       "I and my team built the web site for the 2024 Mountain Hub Hackathon. We used FrontEnd, TailwindCSS, Aceternity UI, and other npm libraries for the UI. Django, Django-rest, Swagger UI, and related libraries to develop and document Rest APIs. The database was an NoSQL type, MongoDB. I intervened in the development of the frontend. ",
